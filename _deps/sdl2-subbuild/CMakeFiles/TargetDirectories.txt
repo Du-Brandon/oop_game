@@ -1,0 +1,3 @@
+C:/oop_practice/oop_game/_deps/sdl2-subbuild/CMakeFiles/sdl2-populate.dir
+C:/oop_practice/oop_game/_deps/sdl2-subbuild/CMakeFiles/edit_cache.dir
+C:/oop_practice/oop_game/_deps/sdl2-subbuild/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,164 @@
+#ifndef UTIL_GAME_OBJECT_HPP
+#define UTIL_GAME_OBJECT_HPP
+
+#include "pch.hpp" // IWYU pragma: export
+
+#include "Core/Drawable.hpp"
+
+#include "Util/Transform.hpp"
+
+namespace Util {
+/**
+ * @class GameObject
+ * @brief 表示遊戲對象的類。
+ *
+ * 這個類封裝了遊戲對象的屬性和行為。
+ * @note 這是一個抽象類。繼承這個類來創建你自己的遊戲對象。
+ *
+ */
+class GameObject {
+public:
+    Util::Transform m_Transform; // IDC if this should be here. (不在乎這是否應該在這裡)
+
+public:
+    /**
+     * @brief 默認構造函數。
+     */
+    GameObject() = default;
+
+    /**
+     * @brief 帶參數的構造函數。
+     *
+     * @param drawable 遊戲對象的 Util::Drawable 組件。
+     * @param zIndex 遊戲對象的 z-index。
+     * @param pivot 遊戲對象的樞軸點。
+     * @param visible 遊戲對象的可見性。
+     * @param children 遊戲對象的子對象。
+     */
+    GameObject(const std::shared_ptr<Core::Drawable> &drawable,
+               const float zIndex, const glm::vec2 &pivot = {0, 0},
+               const bool visible = true,
+               const std::vector<std::shared_ptr<GameObject>> &children =
+                   std::vector<std::shared_ptr<GameObject>>())
+        : m_Drawable(drawable),
+          m_Children(children),
+          m_ZIndex(zIndex),
+          m_Visible(visible),
+          m_Pivot(pivot) {}
+
+    /**
+     * @brief 拷貝構造函數。
+     * @param other
+     *
+     * @note 這是一個淺拷貝構造函數，意味著 m_Drawable 指向與 other 相同的引用。
+     */
+    GameObject(const GameObject &other) = default;
+
+    /**
+     * @brief 默認移動構造函數。
+     */
+    GameObject(GameObject &&other) = default;
+
+    /**
+     * @brief 默認析構函數。
+     */
+    virtual ~GameObject() = default;
+
+    // 刪除賦值運算符。
+    GameObject &operator=(const GameObject &other) = delete;
+
+    /**
+     * @brief 獲取遊戲對象的 z-index。
+     *
+     * @return 遊戲對象的 z-index。
+     */
+    float GetZIndex() const { return m_ZIndex; }
+
+    /**
+     * @brief 獲取遊戲對象的變換。
+     *
+     * @return 遊戲對象的變換。
+     */
+    Transform GetTransform() const { return m_Transform; }
+
+    /**
+     * @brief 獲取其可繪製組件的大小。
+     *
+     * @return 表示可繪製組件大小的 vec2(x, y)。
+     */
+    glm::vec2 GetScaledSize() const {
+        return m_Drawable->GetSize() * m_Transform.scale;
+    };
+
+    /**
+     * @brief 獲取遊戲對象的子對象。
+     *
+     * @return 遊戲對象的子對象。
+     */
+    const std::vector<std::shared_ptr<GameObject>> &GetChildren() const {
+        return m_Children;
+    }
+
+    /**
+     * @brief 設置遊戲對象的樞軸點。
+     *
+     * @param pivot 遊戲對象的樞軸點。
+     */
+    void SetPivot(const glm::vec2 &pivot) { m_Pivot = pivot; }
+
+    /**
+     * @brief 設置遊戲對象的 z-index。
+     * z-index 用於確定遊戲對象的繪製順序，z-index 越大，其 Util::Drawable 越靠上。
+     *
+     * @param index 遊戲對象的新 z-index。
+     */
+    void SetZIndex(float index) { m_ZIndex = index; }
+
+    /**
+     * @brief 設置遊戲對象的可繪製組件。
+     *
+     * @param drawable 遊戲對象的新可繪製組件。
+     */
+    void SetDrawable(const std::shared_ptr<Core::Drawable> &drawable) {
+        m_Drawable = drawable;
+    }
+
+    /**
+     * @brief 設置遊戲對象的可見性。
+     *
+     * @param visible 遊戲對象的新可見性。
+     */
+    void SetVisible(const bool visible) { m_Visible = visible; }
+
+    /**
+     * @brief 添加一個子對象到遊戲對象。
+     *
+     * @param child 遊戲對象的新子對象。
+     */
+    void AddChild(const std::shared_ptr<GameObject> &child) {
+        m_Children.push_back(child);
+    }
+
+    /**
+     * @brief 從遊戲對象中移除一個子對象。
+     *
+     * @param child 要移除的子對象。
+     */
+    void RemoveChild(const std::shared_ptr<GameObject> &child) {
+        m_Children.erase(
+            std::remove(m_Children.begin(), m_Children.end(), child),
+            m_Children.end());
+    }
+
+    void Draw();
+
+protected:
+    std::shared_ptr<Core::Drawable> m_Drawable = nullptr;
+    std::vector<std::shared_ptr<GameObject>> m_Children;
+
+    float m_ZIndex = 0;
+    bool m_Visible = true;
+    glm::vec2 m_Pivot = {0, 0};
+};
+} // namespace Util
+#endif

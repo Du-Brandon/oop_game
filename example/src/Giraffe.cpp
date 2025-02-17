@@ -1,0 +1,101 @@
+#include "Giraffe.hpp"
+
+#include <cmath>
+#include <iostream>
+
+#include "Util/Image.hpp"
+#include "Util/Time.hpp"
+#include "Util/Transform.hpp"
+#include "Util/Input.hpp"
+
+#include "config.hpp"
+
+void Giraffe::Start() {
+    m_GiraffeText =
+        std::make_shared<GiraffeText>("../assets/fonts/Inter.ttf", 50);
+    m_GiraffeText->SetZIndex(this->GetZIndex() - 1);
+    m_GiraffeText->Start();
+    this->AddChild(m_GiraffeText);
+}
+
+void Giraffe::Update() {
+    glm::vec2 dir_Right = {1, 0}; //長頸鹿的移動方向
+    glm::vec2 dir_Left = {-1, 0};
+    glm::vec2 dir_Up= {0, 1};
+    glm::vec2 dir_Down = {0, -1};
+
+    // 此段已寫至hpp
+    // auto &pos = m_Transform.translation; // 長頸鹿的位置
+    // auto &scale = m_Transform.scale; // 長頸鹿的大小
+    // auto &rotation = m_Transform.rotation; //  長頸鹿的旋轉角度
+    // glm::vec2 &pos = m_Transform.translation; // 長頸鹿的位置
+    // glm::vec2 &scale = m_Transform.scale; // 長頸鹿的大小
+    // float &rotation = m_Transform.rotation; // 長頸鹿的旋轉角度
+
+    // std::cout << pos.y << std::endl;
+    if (pos.y >= static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2) {
+        dir_Up.y *= 0;
+    }
+    else if (pos.y + static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2 <= 0) {
+        dir_Down.y *= 0;
+    }
+
+    if (pos.x >= static_cast<float>(PTSD_Config::WINDOW_WIDTH) / 2) {
+        dir_Right.x *= 0;
+    }
+    else if (pos.x + static_cast<float>(PTSD_Config::WINDOW_WIDTH) / 2 <= 0) {
+        dir_Left.x *= 0;
+    }
+
+    // // sonarcloud called it redundant, but ms_t = float is just a coincidence.
+    auto delta = static_cast<float>(Util::Time::GetDeltaTimeMs()) / 2;
+
+    // std::cout << "delta: " << delta << std::endl;
+    Util::Transform deltaTransform_Right{
+        dir_Right * delta, 0.002F * delta,
+        glm::vec2(1, 1) * (std::sin(rotation / 2) + 1.0F) * 100.0F};
+    Util::Transform deltaTransform_Left{
+        dir_Left * delta, 0.002F * delta,
+        glm::vec2(1, 1) * (std::sin(rotation / 2) + 1.0F) * 100.0F};
+    Util::Transform deltaTransform_Up{
+        dir_Up * delta, 0.002F * delta,
+        glm::vec2(1, 1) * (std::sin(rotation / 2) + 1.0F) * 100.0F};
+    Util::Transform deltaTransform_Down{
+        dir_Down * delta, 0.002F * delta,
+        glm::vec2(1, 1) * (std::sin(rotation / 2) + 1.0F) * 100.0F};
+    // pos += deltaTransform.translation;
+    // rotation += deltaTransform.rotation;
+    bool anyKeyPressed = false;
+
+    if (Util::Input::IsKeyPressed(Util::Keycode::D)) {
+        pos += deltaTransform_Right.translation;
+        anyKeyPressed = true;
+    }
+
+    if (Util::Input::IsKeyPressed(Util::Keycode::A)) {
+        pos += deltaTransform_Left.translation;
+        anyKeyPressed = true;
+    }
+
+    if (Util::Input::IsKeyPressed(Util::Keycode::W)) {
+        pos += deltaTransform_Up.translation;
+        anyKeyPressed = true;
+    }
+
+    if (Util::Input::IsKeyPressed(Util::Keycode::S)) {
+        pos += deltaTransform_Down.translation;
+        anyKeyPressed = true;
+    }
+    //按空白鍵測試弓箭
+    if (Util::Input::IsKeyPressed(Util::Keycode::Q)) {
+        
+    }
+    m_GiraffeText->Update();
+}
+
+void Giraffe::ShootArrow() {
+}
+
+glm::vec2 Giraffe::coordinate() {
+    return pos;
+}
