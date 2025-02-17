@@ -102,14 +102,14 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/GiraffeText.cpp
     ${EXAMPLE_DIR}/src/Cat.cpp
     ${EXAMPLE_DIR}/src/main.cpp
-    # ${EXAMPLE_DIR}/src/Arrow.cpp
+    ${EXAMPLE_DIR}/src/Arrow.cpp
     ${EXAMPLE_DIR}/src/Enemy.cpp
 
     ${EXAMPLE_DIR}/include/App.hpp
     ${EXAMPLE_DIR}/include/Giraffe.hpp
     ${EXAMPLE_DIR}/include/GiraffeText.hpp
     ${EXAMPLE_DIR}/include/Cat.hpp
-    # ${EXAMPLE_DIR}/include/Arrow.hpp
+    ${EXAMPLE_DIR}/include/Arrow.hpp
     ${EXAMPLE_DIR}/include/Enemy.hpp
 )
 set(TEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/test)

@@ -87,15 +87,38 @@ void Giraffe::Update() {
         anyKeyPressed = true;
     }
     //按空白鍵測試弓箭
-    if (Util::Input::IsKeyPressed(Util::Keycode::Q)) {
-        
+    if (Util::Input::IsKeyPressed(Util::Keycode::Q)){
+        ShootArrow();
     }
+    for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
+        (*it)->Update();
+        if ((*it)->shouldDelete()) {
+            this->RemoveChild(*it); // 刪除箭
+            it = m_Arrows.erase(it); // 刪除箭並更新迭代器
+            std::cout << "Arrow deleted" << std::endl;
+        } else {
+            ++it;
+        }
+    }
+
     m_GiraffeText->Update();
 }
 
 void Giraffe::ShootArrow() {
+    auto arrow = std::make_shared<Arrow>();
+    arrow->setTarget(this);
+    arrow->setTarget(m_Enemy.get());
+    // std::cout << "Shoot Arrow" << std::endl;
+    arrow->Start();
+    // this->AddChild(arrow);
+    m_Arrows.push_back(arrow); // 將箭存儲到向量中
+    this->AddChild(arrow);
 }
 
 glm::vec2 Giraffe::coordinate() {
     return pos;
+}
+
+void Giraffe::setEnemy(std::shared_ptr<Enemy> enemy) {
+    m_Enemy = enemy;
 }

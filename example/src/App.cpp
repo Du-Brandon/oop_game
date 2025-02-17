@@ -68,13 +68,16 @@ void App::Update() {
         LOG_DEBUG("Cursor set to {}.", Util::Input::GetCursorPosition());
     }
 
+    m_Enemy->Update();
+    auto m_Enemy_pos = m_Enemy->coordinate();
+    m_Giraffe->setEnemy(m_Enemy);
+
     m_Giraffe->Update();
     auto m_Giraffe_pos = m_Giraffe->coordinate();
     
     m_Cat->Update();
     
-    m_Enemy->Update();
-    auto m_Enemy_pos = m_Enemy->coordinate();
+
 
     // 碰撞檢測，90為正常參數
     if (m_Giraffe_pos.x >= m_Enemy_pos.x - 90 && m_Giraffe_pos.x <= m_Enemy_pos.x + 90 && m_Giraffe_pos.y >= m_Enemy_pos.y - 90 && m_Giraffe_pos.y <= m_Enemy_pos.y + 90) {

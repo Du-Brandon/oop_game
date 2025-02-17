@@ -9,7 +9,7 @@
 #include "Giraffe.hpp"
 #include "GiraffeText.hpp"
 #include "Enemy.hpp"
-// #include "Arrow.hpp"
+#include "Arrow.hpp"
 #include <vector>
 
 class App {
@@ -35,7 +35,7 @@ private:
 
     std::shared_ptr<Cat> m_Cat = std::make_shared<Cat>();
     std::shared_ptr<Enemy> m_Enemy = std::make_shared<Enemy>();
-    // std::shared_ptr<Arrow> m_Arrow = std::make_shared<Arrow>();
+    std::shared_ptr<Arrow> m_Arrow = std::make_shared<Arrow>();
     // std::vector<std::shared_ptr<Arrow>> m_Arrows;
 
     Util::Renderer m_Root;
