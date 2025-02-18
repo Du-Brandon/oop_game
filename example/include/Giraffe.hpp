@@ -20,10 +20,15 @@ public:
 
     void Start();
     void ShootArrow(); // 添加生成 Arrow 的方法
+    void setEnemy(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemy 的指針
 
     glm::vec2 coordinate();
-    void setEnemy(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemy 的指針
+    int getHP() const ; // 添加這個方法來獲取長頸鹿的血量
+    int setHP(int hp); // 添加這個方法來設置長頸鹿的血量
+
 private:    
+    int m_HP = 100; // 添加這個成員變數來表示長頸鹿的血量
+
     glm::vec2 &pos = m_Transform.translation; // 長頸鹿的位置
     glm::vec2 &scale = m_Transform.scale; // 長頸鹿的大小
     float &rotation = m_Transform.rotation; // 長頸鹿的旋轉角度

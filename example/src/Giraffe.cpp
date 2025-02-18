@@ -86,11 +86,12 @@ void Giraffe::Update() {
         pos += deltaTransform_Down.translation;
         anyKeyPressed = true;
     }
-    //按空白鍵測試弓箭
-    if (Util::Input::IsKeyPressed(Util::Keycode::Q)){
+    //按Q鍵測試弓箭
+    if (Util::Input::IsKeyDown(Util::Keycode::Q)){
         ShootArrow();
     }
     for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
+        (*it)->setTarget(m_Enemy.get());
         (*it)->Update();
         if ((*it)->shouldDelete()) {
             this->RemoveChild(*it); // 刪除箭
@@ -117,6 +118,15 @@ void Giraffe::ShootArrow() {
 
 glm::vec2 Giraffe::coordinate() {
     return pos;
+}
+
+int Giraffe::getHP() const {
+    return m_HP;
+}
+
+int Giraffe::setHP(int hp) {
+    m_HP += hp;
+    return m_HP;
 }
 
 void Giraffe::setEnemy(std::shared_ptr<Enemy> enemy) {

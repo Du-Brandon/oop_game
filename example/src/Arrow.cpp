@@ -44,20 +44,26 @@ void Arrow::Start(){
     scale = {0.05f, 0.05f};
 
     // 初始化箭的旋轉角度
-    rotation = 5.49778f + atan2(m_Direction.x, m_Direction.y) -3.1415926f/2.0f;
+    rotation =atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
+    // std::cout << "Arrow rotation: " << rotation << std::endl;
 
     
 }
 
 void Arrow::Update() {
     // 更新箭的位置
-    pos += m_Direction * 12.0f; // 假設箭以固定速度移動
+    pos += m_Direction * 10.0f; // 假設箭以固定速度移動
 
     if (pos.y >= static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2 ||
         pos.y + static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2 <= 0 ||
         pos.x >= static_cast<float>(PTSD_Config::WINDOW_WIDTH) / 2 ||
         pos.x + static_cast<float>(PTSD_Config::WINDOW_WIDTH) / 2 <= 0) {
         m_ShouldDelete = true;
+    }
+    // 如果箭與敵人重合或正負50個像素，則應該刪除箭
+    else if (m_Enemy_ != nullptr && glm::distance(m_EnemyCoordinate, pos) <= 50.0f) {
+        m_ShouldDelete = true;
+        std::cout << "Arrow hit enemy" << std::endl;
     }
 }
 

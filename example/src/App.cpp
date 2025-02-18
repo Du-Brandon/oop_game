@@ -21,6 +21,7 @@ void App::Start() {
     m_Enemy->SetDrawable(
         std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
     m_Enemy->SetZIndex(5);
+    m_Enemy->Start();
     m_Enemy->m_Transform.scale = glm::vec2(0.5f, 0.5f); // 將圖片縮小一半
 
     // m_Arrow->SetDrawable(
@@ -75,6 +76,8 @@ void App::Update() {
     m_Giraffe->Update();
     auto m_Giraffe_pos = m_Giraffe->coordinate();
     
+
+
     m_Cat->Update();
     
 
@@ -84,7 +87,13 @@ void App::Update() {
         // static int count = 0; //測試碰撞次數
         // std::cout << "Collision detected! " << count << std::endl;
         // count++;
+        m_Giraffe->setHP(-1);
         LOG_DEBUG("Collision detected!");
+        std::cout << "Giraffe HP: " << m_Giraffe->getHP() << std::endl;
+    }
+
+    if (m_Giraffe->getHP() <= 0) {
+        m_CurrentState = State::END;
     }
 
 

@@ -14,22 +14,61 @@ Enemy::~Enemy() {
     // 解構元的具體實現
 }
 
-void Enemy::Update() {
-    
-    // 更新敵人的位置
-    auto dir = randomMove(); // 長頸鹿的移動方向
-    pos += dir *16.0f;
-    // pos += dir * 0.0f;
+void Enemy::Start() {
+    // 初始化敵人的位置
+    pos = {100, 100};
 
+    // // 初始化敵人的大小
+    // scale = {0.5f, 0.5f};
+
+    // // 初始化敵人的旋轉角度
+    // rotation = 0.0f;
+
+    dir = randomMove('z'); // 長頸鹿的移動方向
+}
+
+void Enemy::Update() {
     // 輸出新的位置
     // std::cout << "Enemy position: (" << pos.x << ", " << pos.y << ")" << std::endl;
+
+    // 確保敵人不會超出視窗範圍
+    if (pos.y >= static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2) {
+        // dir.y == randomMove('Y').y;
+        dir.y = -dir.y;
+    }
+    else if (pos.y + static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2 <= 0) {
+        // dir.y == randomMove('y').y;
+        dir.y = -dir.y;
+    }
+    if (pos.x >= static_cast<float>(PTSD_Config::WINDOW_WIDTH) / 2) {
+        // dir.x == randomMove('X').x;
+        dir.x = -dir.x;
+    }
+    else if (pos.x + static_cast<float>(PTSD_Config::WINDOW_WIDTH) / 2 <= 0) {
+        // dir.x == randomMove('x').x;
+        dir.x = -dir.x;
+    }
+
+    // 更新敵人的位置
+    pos += dir *8.0f;
+    // pos += dir * 0.0f;
 }
 
 glm::vec2 Enemy::coordinate() {
     return pos;
 }
 
-glm::vec2 Enemy::randomMove() {
+int Enemy::getHP() const {
+    return m_HP;
+}
+
+int Enemy::setHP(int hp) {
+    m_HP += hp;
+    return m_HP;
+}
+
+
+glm::vec2 Enemy::randomMove(char x) {
     // 創建亂數生成器
     std::random_device rd;
     std::mt19937 gen(rd()); // 以隨機設備為種子
@@ -46,6 +85,17 @@ glm::vec2 Enemy::randomMove() {
     if (std::abs(deltaY) > 1.0f) {
         deltaY = (deltaY > 0 ? 1.0f : -1.0f);
     }
-
-    return {deltaX, deltaY};
+    // 根據輸入的參數 x 生成移動方向
+    switch (x) {
+        case 'X': // 右邊界
+            return {-std::abs(deltaX), 0}; // 向左移動
+        case 'x': // 左邊界
+            return {std::abs(deltaX), 0}; // 向右移動
+        case 'Y': // 上邊界
+            return {0, -std::abs(deltaY)}; // 向下移動
+        case 'y': // 下邊界
+            return {0, std::abs(deltaY)}; // 向上移動
+        default: // 隨機移動
+            return {deltaX, deltaY};
+    }
 }
