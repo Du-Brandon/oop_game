@@ -1,5 +1,4 @@
-#ifndef ENEMY_HPP
-#define ENEMY_HPP
+#pragma once 
 
 #include "pch.hpp" // IWYU pragma: export
 #include "Util/GameObject.hpp"
@@ -34,5 +33,3 @@ private:
 
 
 
-
-#endif // ENEMY_HPP

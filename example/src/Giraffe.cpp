@@ -2,6 +2,7 @@
 
 #include <cmath>
 #include <iostream>
+#include <chrono>
 
 #include "Util/Image.hpp"
 #include "Util/Time.hpp"
@@ -11,6 +12,8 @@
 #include "config.hpp"
 
 void Giraffe::Start() {
+    start = std::chrono::high_resolution_clock::now();
+
     m_GiraffeText =
         std::make_shared<GiraffeText>("../assets/fonts/Inter.ttf", 50);
     m_GiraffeText->SetZIndex(this->GetZIndex() - 1);
@@ -23,7 +26,8 @@ void Giraffe::Update() {
     glm::vec2 dir_Left = {-1, 0};
     glm::vec2 dir_Up= {0, 1};
     glm::vec2 dir_Down = {0, -1};
-
+    // Is_move = false;
+    
     // 此段已寫至hpp
     // auto &pos = m_Transform.translation; // 長頸鹿的位置
     // auto &scale = m_Transform.scale; // 長頸鹿的大小
@@ -86,8 +90,10 @@ void Giraffe::Update() {
         pos += deltaTransform_Down.translation;
         anyKeyPressed = true;
     }
+
+
     //按Q鍵測試弓箭
-    if (Util::Input::IsKeyDown(Util::Keycode::Q)){
+    if ((Util::Input::IsKeyDown(Util::Keycode::Q) || !anyKeyPressed) && contral_Atk_Speed()) {
         ShootArrow();
     }
     for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
@@ -103,6 +109,16 @@ void Giraffe::Update() {
     }
 
     m_GiraffeText->Update();
+}
+
+bool Giraffe::contral_Atk_Speed() {
+    now = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<float> duration = now - start;
+    if (duration.count() >= atk_speed) {
+        start = std::chrono::high_resolution_clock::now();
+        return true;
+    }
+    return false;
 }
 
 void Giraffe::ShootArrow() {
@@ -124,9 +140,8 @@ int Giraffe::getHP() const {
     return m_HP;
 }
 
-int Giraffe::setHP(int hp) {
+void Giraffe::setHP(int hp) {
     m_HP += hp;
-    return m_HP;
 }
 
 void Giraffe::setEnemy(std::shared_ptr<Enemy> enemy) {
