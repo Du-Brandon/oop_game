@@ -12,16 +12,12 @@
 void App::Start() {
     LOG_TRACE("Start");
 
-    m_Giraffe->SetDrawable(
-        std::make_shared<Util::Image>("../assets/sprites/sticker.png"));
-    m_Giraffe->SetZIndex(6);
     m_Giraffe->Start();
-    m_Giraffe->m_Transform.scale = glm::vec2(0.5f, 0.5f); // 將圖片縮小一半
 
     m_Enemy->SetDrawable(
         std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
     m_Enemy->SetZIndex(5);
-    m_Enemy->Start();
+    m_Enemy->Start(glm::vec2(300, 300)); // 初始化敵人的位置
     m_Enemy->m_Transform.scale = glm::vec2(0.5f, 0.5f); // 將圖片縮小一半
 
     // m_Arrow->SetDrawable(

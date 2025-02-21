@@ -12,6 +12,11 @@
 #include "config.hpp"
 
 void Giraffe::Start() {
+    this->SetDrawable(
+        std::make_shared<Util::Image>("../assets/sprites/sticker.png"));
+    this->SetZIndex(6);
+    scale = glm::vec2(0.4f, 0.4f);
+    
     start = std::chrono::high_resolution_clock::now();
 
     m_GiraffeText =
@@ -136,6 +141,10 @@ glm::vec2 Giraffe::coordinate() {
     return pos;
 }
 
+int Giraffe::getAtk() const {
+    return atk;
+}
+
 int Giraffe::getHP() const {
     return m_HP;
 }
@@ -143,6 +152,10 @@ int Giraffe::getHP() const {
 void Giraffe::setHP(int hp) {
     m_HP += hp;
 }
+
+// void Giraffe::setEnemy(std::shared_ptr<Enemy> enemy) {
+//     m_Enemies.push_back(enemy);
+// }
 
 void Giraffe::setEnemy(std::shared_ptr<Enemy> enemy) {
     m_Enemy = enemy;

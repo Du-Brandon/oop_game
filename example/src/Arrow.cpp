@@ -63,7 +63,8 @@ void Arrow::Update() {
     // 如果箭與敵人重合或正負50個像素，則應該刪除箭
     else if (m_Enemy_ != nullptr && glm::distance(m_EnemyCoordinate, pos) <= 50.0f) {
         m_ShouldDelete = true;
-        std::cout << "Arrow hit enemy" << std::endl;
+        m_Enemy_ ->setHP(-(m_Giraffe_ ->getAtk()));
+        std::cout << "Arrow hit enemy" << m_Enemy_->getHP() <<std::endl;
     }
 }
 

@@ -27,6 +27,12 @@ void Enemy::Start() {
     dir = randomMove('z'); // 長頸鹿的移動方向
 }
 
+void Enemy::Start(glm::vec2 coordinate) {
+    // 初始化敵人的位置
+    pos = coordinate;
+    dir = randomMove('z'); // 長頸鹿的移動方向
+}
+
 void Enemy::Update() {
     // 輸出新的位置
     // std::cout << "Enemy position: (" << pos.x << ", " << pos.y << ")" << std::endl;
@@ -62,9 +68,8 @@ int Enemy::getHP() const {
     return m_HP;
 }
 
-int Enemy::setHP(int hp) {
+void Enemy::setHP(int hp) {
     m_HP += hp;
-    return m_HP;
 }
 
 

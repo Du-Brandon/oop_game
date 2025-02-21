@@ -17,6 +17,7 @@ void Wall::Start(glm::vec2 coordinate_center, float radius) {
 
 void Wall::Update() {
     // 可能用不到
+    
 }
 
 void Wall::end() {

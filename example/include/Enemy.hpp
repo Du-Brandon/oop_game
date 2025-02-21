@@ -1,5 +1,7 @@
 #pragma once 
 
+#include <string>
+
 #include "pch.hpp" // IWYU pragma: export
 #include "Util/GameObject.hpp"
 
@@ -9,10 +11,12 @@ public:
     ~Enemy() override; // 在 .hpp 文件中聲明解構元
     void Update();
     void Start();
+    void Start(glm::vec2 coordinate); // 添加這個方法來初始化敵人的位置
+    
 
     glm::vec2 coordinate();
     int getHP() const; // 添加這個方法來獲取敵人的血量
-    int setHP(int hp); // 添加這個方法來設置敵人的血量
+    void setHP(int hp); // 添加這個方法來設置敵人的血量
 
 private:
     int m_HP = 100; // 添加這個成員變數來表示敵人的血量

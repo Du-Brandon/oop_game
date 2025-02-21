@@ -49,7 +49,8 @@ private:
     bool anyKeyPressed ; // 判斷是否有按鍵被按下
 
     std::shared_ptr<GiraffeText> m_GiraffeText;
-    std::shared_ptr<Enemy> m_Enemy;
+    std::shared_ptr<Enemy> m_Enemy; // 添加這個成員變數來存儲敵人的指針
+    std::vector<std::shared_ptr<Enemy>> m_Enemies;
     std::vector<std::shared_ptr<Arrow>> m_Arrows; // 添加這個成員變數來存儲 Arrow 對象
 
 };

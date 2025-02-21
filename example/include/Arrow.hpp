@@ -1,6 +1,9 @@
 #ifndef ARROW_HPP
 #define ARROW_HPP
 
+#include <memory>
+#include <vector>
+
 #include "pch.hpp" // IWYU pragma: export
 #include "Util/GameObject.hpp"
 #include "Giraffe.hpp" 
@@ -28,6 +31,9 @@ private:
 
     Giraffe*  m_Giraffe_; // 定義主角的指針
     Enemy* m_Enemy_; // 定義敵人的指針
+    // std::shared_ptr<Enemy> m_Enemy_; // 定義敵人的指針
+    
+
 
 
     glm::vec2 m_EnemyCoordinate ; // 敵人的位置
