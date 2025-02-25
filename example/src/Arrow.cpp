@@ -15,7 +15,6 @@
 #include "config.hpp"
 
 Arrow::Arrow() : m_Giraffe_(nullptr), m_Enemy_(nullptr) {
-    
     // 構造元的具體實現
 }
 
@@ -27,6 +26,13 @@ void Arrow::setTarget(Giraffe* giraffe) {
 void Arrow::setTarget(Enemy* enemy) {
     m_Enemy_ = enemy;
     m_EnemyCoordinate = m_Enemy_ ->coordinate();
+}
+
+void Arrow::setTargets(std::vector<std::shared_ptr<Enemy>>& enemies) {
+    m_Enemies.clear();
+    for (auto enemy = enemies.begin(); enemy != enemies.end(); ++enemy) {
+        m_Enemies.push_back(*enemy);
+    }
 }
 
 void Arrow::Start(){
@@ -52,7 +58,7 @@ void Arrow::Start(){
 
 void Arrow::Update() {
     // 更新箭的位置
-    pos += m_Direction * 10.0f; // 假設箭以固定速度移動
+    pos += m_Direction * 20.0f; // 假設箭以固定速度移動
 
     if (pos.y >= static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2 ||
         pos.y + static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2 <= 0 ||
@@ -61,12 +67,21 @@ void Arrow::Update() {
         m_ShouldDelete = true;
     }
     // 如果箭與敵人重合或正負50個像素，則應該刪除箭
-    else if (m_Enemy_ != nullptr && glm::distance(m_EnemyCoordinate, pos) <= 50.0f) {
-        m_ShouldDelete = true;
-        m_Enemy_ ->setHP(-(m_Giraffe_ ->getAtk()));
-        std::cout << "Arrow hit enemy" << m_Enemy_->getHP() <<std::endl;
+    else {
+        for (auto enemy = m_Enemies.begin(); enemy != m_Enemies.end(); ++enemy) {
+            if (glm::distance((*enemy)->coordinate(), pos) <= 50.0f) {
+                m_ShouldDelete = true;
+                (*enemy)->setHP(-(m_Giraffe_ ->getAtk()));
+                std::cout << "Arrow hit enemy" << (*enemy)->getHP() <<std::endl;
+            // if (enemy != nullptr && glm::distance(m_EnemyCoordinate, pos) <= 50.0f) {
+            //     m_ShouldDelete = true;
+            //     enemy ->setHP(-(m_Giraffe_ ->getAtk()));
+            //     std::cout << "Arrow hit enemy" << enemy->getHP() <<std::endl;
+            }
+        }
     }
 }
+
 
 glm::vec2 Arrow::coordinate() {
     return pos;

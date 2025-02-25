@@ -1,5 +1,6 @@
 #include "App.hpp"
 
+#include "Enemy.hpp"
 #include "Util/Image.hpp"
 #include "Util/Input.hpp"
 #include "Util/Keycode.hpp"
@@ -14,21 +15,21 @@ void App::Start() {
 
     m_Giraffe->Start();
 
+    m_Enemy2->SetDrawable(
+        std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+    m_Enemy2->SetZIndex(5);
+    m_Enemy2->Start(glm::vec2(100, 100)); // 初始化敵人的位置
+
     m_Enemy->SetDrawable(
         std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
     m_Enemy->SetZIndex(5);
     m_Enemy->Start(glm::vec2(300, 300)); // 初始化敵人的位置
-    m_Enemy->m_Transform.scale = glm::vec2(0.5f, 0.5f); // 將圖片縮小一半
-
-    // m_Arrow->SetDrawable(
-    //     std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
-    // m_Arrow->SetZIndex(6);
-    // m_Arrow->Start();
 
     m_Root.AddChild(m_Giraffe);
     m_Root.AddChild(m_Cat);
     m_Root.AddChild(m_Enemy);
-    // m_Root.AddChild(m_Arrow);
+    m_Root.AddChild(m_Enemy2);
+
 
     m_CurrentState = State::UPDATE;
 }
@@ -66,20 +67,33 @@ void App::Update() {
     }
 
     m_Enemy->Update();
+    m_Enemy2->Update();
     auto m_Enemy_pos = m_Enemy->coordinate();
-    m_Giraffe->setEnemy(m_Enemy);
+    auto m_Enemy2_pos = m_Enemy2->coordinate();
+    // m_Giraffe->SetEnemy(m_Enemy);
+    m_Giraffe->ClearEnemies();
+    m_Giraffe->SetEnemies(m_Enemy);
+    m_Giraffe->SetEnemies(m_Enemy2);
 
     m_Giraffe->Update();
     auto m_Giraffe_pos = m_Giraffe->coordinate();
     
+    if (m_Enemy -> getHP() <= 0) {
+        m_Enemy->SetVisible(false);
+    }
 
+    if (m_Enemy2 -> getHP() <= 0) {
+        m_Enemy2->SetVisible(false);
+    }
 
     m_Cat->Update();
     
-
+    if (!m_Enemy -> getVisible() && !m_Enemy2 -> getVisible()) {
+        m_Giraffe->set_enemy_is_empty(true);
+    }
 
     // 碰撞檢測，90為正常參數
-    if (m_Giraffe_pos.x >= m_Enemy_pos.x - 90 && m_Giraffe_pos.x <= m_Enemy_pos.x + 90 && m_Giraffe_pos.y >= m_Enemy_pos.y - 90 && m_Giraffe_pos.y <= m_Enemy_pos.y + 90) {
+    if (glm::distance(m_Giraffe_pos, m_Enemy_pos) < 90 && m_Enemy -> getVisible()|| (glm::distance(m_Giraffe_pos, m_Enemy2_pos) < 90 && m_Enemy2 -> getVisible())) {
         // static int count = 0; //測試碰撞次數
         // std::cout << "Collision detected! " << count << std::endl;
         // count++;

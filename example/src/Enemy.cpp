@@ -31,9 +31,15 @@ void Enemy::Start(glm::vec2 coordinate) {
     // 初始化敵人的位置
     pos = coordinate;
     dir = randomMove('z'); // 長頸鹿的移動方向
+
+    // 初始化敵人的大小
+    scale = {0.5f, 0.5f};
 }
 
 void Enemy::Update() {
+    if (m_Visible == false){
+        return;
+    }
     // 輸出新的位置
     // std::cout << "Enemy position: (" << pos.x << ", " << pos.y << ")" << std::endl;
 
@@ -62,6 +68,10 @@ void Enemy::Update() {
 
 glm::vec2 Enemy::coordinate() {
     return pos;
+}
+
+bool Enemy::getVisible() const {
+    return m_Visible;
 }
 
 int Enemy::getHP() const {

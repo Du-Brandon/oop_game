@@ -21,16 +21,22 @@ public:
 
     void Start();
     void ShootArrow(); // 添加生成 Arrow 的方法
-    void setEnemy(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemy 的指針
+    void SetEnemy(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemy 的指針
+    void SetEnemies(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemies 的向量
+    void ClearEnemies(); // 添加這個方法來清除 m_Enemy 的指針
 
     glm::vec2 coordinate();
+
+    // 檢查最近的敵人
+    std::shared_ptr<Enemy> checkNearestEnemy();
 
     void setAtk(int atk); // 添加這個方法來設置長頸鹿的攻擊力
     int getAtk() const; // 添加這個方法來獲取長頸鹿的攻擊力
     void setSpeed(float speed); // 添加這個方法來設置長頸鹿的速度
     void setHP(int hp); // 添加這個方法來設置長頸鹿的血量
     int getHP() const ; // 添加這個方法來獲取長頸鹿的血量
-    
+
+    void set_enemy_is_empty(bool is_empty); // 添加這個方法來設置 enemy_is_empty
 
 private:    
     bool contral_Atk_Speed(); // 添加這個方法來獲取長頸鹿的速度
@@ -53,6 +59,7 @@ private:
     std::vector<std::shared_ptr<Enemy>> m_Enemies;
     std::vector<std::shared_ptr<Arrow>> m_Arrows; // 添加這個成員變數來存儲 Arrow 對象
 
+    bool enemy_is_empty = false; // 判斷敵人是否存在
 };
 
 #endif // GIRAFFE_HPP

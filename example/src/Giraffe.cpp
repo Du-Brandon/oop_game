@@ -3,6 +3,7 @@
 #include <cmath>
 #include <iostream>
 #include <chrono>
+#include <vector>
 
 #include "Util/Image.hpp"
 #include "Util/Time.hpp"
@@ -27,6 +28,9 @@ void Giraffe::Start() {
 }
 
 void Giraffe::Update() {
+    // if (enemy_is_empty){
+    //     return;
+    // }
     glm::vec2 dir_Right = {1, 0}; //長頸鹿的移動方向
     glm::vec2 dir_Left = {-1, 0};
     glm::vec2 dir_Up= {0, 1};
@@ -98,11 +102,11 @@ void Giraffe::Update() {
 
 
     //按Q鍵測試弓箭
-    if ((Util::Input::IsKeyDown(Util::Keycode::Q) || !anyKeyPressed) && contral_Atk_Speed()) {
+    if (((Util::Input::IsKeyDown(Util::Keycode::Q) || !anyKeyPressed) && contral_Atk_Speed()) && !enemy_is_empty) {
         ShootArrow();
     }
     for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
-        (*it)->setTarget(m_Enemy.get());
+        (*it)->setTargets(m_Enemies);
         (*it)->Update();
         if ((*it)->shouldDelete()) {
             this->RemoveChild(*it); // 刪除箭
@@ -116,6 +120,10 @@ void Giraffe::Update() {
     m_GiraffeText->Update();
 }
 
+void Giraffe::set_enemy_is_empty(bool is_empty) {
+    enemy_is_empty = is_empty;
+}
+
 bool Giraffe::contral_Atk_Speed() {
     now = std::chrono::high_resolution_clock::now();
     std::chrono::duration<float> duration = now - start;
@@ -126,10 +134,23 @@ bool Giraffe::contral_Atk_Speed() {
     return false;
 }
 
+std::shared_ptr<Enemy> Giraffe::checkNearestEnemy() {
+    std::shared_ptr<Enemy> nearestEnemy = nullptr;
+    float minDistance = 1000000.0f;
+    for (auto &enemy : m_Enemies) {
+        float distance = glm::distance(enemy->coordinate(), pos);
+        if (distance < minDistance) {
+            minDistance = distance;
+            nearestEnemy = enemy;
+        }
+    }
+    return nearestEnemy;
+}
+
 void Giraffe::ShootArrow() {
     auto arrow = std::make_shared<Arrow>();
     arrow->setTarget(this);
-    arrow->setTarget(m_Enemy.get());
+    arrow->setTarget(checkNearestEnemy().get());
     // std::cout << "Shoot Arrow" << std::endl;
     arrow->Start();
     // this->AddChild(arrow);
@@ -153,10 +174,17 @@ void Giraffe::setHP(int hp) {
     m_HP += hp;
 }
 
-// void Giraffe::setEnemy(std::shared_ptr<Enemy> enemy) {
-//     m_Enemies.push_back(enemy);
-// }
+void Giraffe::SetEnemies(std::shared_ptr<Enemy> enemy) {
+    if (enemy == nullptr ||enemy->getVisible() == false) {
+        return;
+    }
+    m_Enemies.push_back(enemy);
+}
 
-void Giraffe::setEnemy(std::shared_ptr<Enemy> enemy) {
+void Giraffe::ClearEnemies() {
+    m_Enemies.clear();
+}
+
+void Giraffe::SetEnemy(std::shared_ptr<Enemy> enemy) {
     m_Enemy = enemy;
 }

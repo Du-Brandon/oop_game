@@ -35,6 +35,7 @@ private:
 
     std::shared_ptr<Cat> m_Cat = std::make_shared<Cat>();
     std::shared_ptr<Enemy> m_Enemy = std::make_shared<Enemy>();
+    std::shared_ptr<Enemy> m_Enemy2 = std::make_shared<Enemy>();
     std::shared_ptr<Arrow> m_Arrow = std::make_shared<Arrow>();
     // std::vector<std::shared_ptr<Arrow>> m_Arrows;
 

@@ -17,6 +17,7 @@ public:
     Arrow(); // 構造元
     void setTarget(Giraffe* giraffe); // 設置射箭的人
     void setTarget(Enemy* enemy); // 設置射箭的目標
+    void setTargets(std::vector<std::shared_ptr<Enemy>>& enemies); // 設置射箭的目標
 
     void Update();
     void Start();
@@ -31,6 +32,7 @@ private:
 
     Giraffe*  m_Giraffe_; // 定義主角的指針
     Enemy* m_Enemy_; // 定義敵人的指針
+    std::vector<std::shared_ptr<Enemy>> m_Enemies ; // 定義敵人的指針
     // std::shared_ptr<Enemy> m_Enemy_; // 定義敵人的指針
     
 
