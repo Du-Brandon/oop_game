@@ -1,7 +1,6 @@
 #ifndef APP_HPP
 #define APP_HPP
 
-#include "background.hpp"
 #include "pch.hpp" // IWYU pragma: export
 
 #include "Util/Renderer.hpp"
@@ -28,19 +27,7 @@ public:
     void End(); // NOLINT(readability-convert-member-functions-to-static)
 
 private:
-void ValidTask();
-
-private:
-    enum class player_level  {
-        lobby,
-        first_level,
-        end
-    };
-
     State m_CurrentState = State::START;
-    player_level m_player_level = player_level::lobby;
-
-    // std::s
 
     std::shared_ptr<Giraffe> m_Giraffe = std::make_shared<Giraffe>();
     //    std::shared_ptr<GiraffeText> m_GiraffeText =

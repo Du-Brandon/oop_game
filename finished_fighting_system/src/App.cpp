@@ -23,7 +23,7 @@ void App::Start() {
     m_Enemy->SetDrawable(
         std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
     m_Enemy->SetZIndex(5);
-    m_Enemy->Start(glm::vec2(200, 200)); // 初始化敵人的位置
+    m_Enemy->Start(glm::vec2(300, 300)); // 初始化敵人的位置
 
     m_Root.AddChild(m_Giraffe);
     m_Root.AddChild(m_Cat);
@@ -121,23 +121,4 @@ void App::Update() {
 
 void App::End() { // NOLINT(this method will mutate members in the future)
     LOG_TRACE("End");
-}
-
-
-void App::ValidTask() {
-    LOG_TRACE("ValidTask");
-    switch (m_player_level) {
-    case player_level::lobby:
-        LOG_DEBUG("lobby");
-        break;
-
-    case player_level::first_level:
-        
-        break;
-
-    case player_level::end:
-        this->End();
-        break;
-
-    }
 }
