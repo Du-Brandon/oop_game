@@ -40,8 +40,8 @@ private:
     State m_CurrentState = State::START;
     player_level m_player_level = player_level::lobby;
 
-    // std::s
-
+    std::shared_ptr<BackgroundImage> m_Background = std::make_shared<BackgroundImage>();
+    bool m_Background_bool = false;
     std::shared_ptr<Giraffe> m_Giraffe = std::make_shared<Giraffe>();
     //    std::shared_ptr<GiraffeText> m_GiraffeText =
     //    std::make_shared<GiraffeText>();

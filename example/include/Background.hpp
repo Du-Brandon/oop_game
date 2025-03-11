@@ -9,4 +9,6 @@ class BackgroundImage : public Util::GameObject {
     
 public:
     void SetBackground(std::string Image_path);
+    bool getVisible() const;
+
 };

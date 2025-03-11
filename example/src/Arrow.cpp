@@ -36,7 +36,7 @@ void Arrow::setTargets(std::vector<std::shared_ptr<Enemy>>& enemies) {
 }
 
 void Arrow::Start(){
-    std::cout << "Shoot Arrow" << std::endl;
+    // std::cout << "Shoot Arrow" << std::endl;
     this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
     this -> SetZIndex(6);
 
@@ -69,7 +69,7 @@ void Arrow::Update() {
     // 如果箭與敵人重合或正負50個像素，則應該刪除箭
     else {
         for (auto enemy = m_Enemies.begin(); enemy != m_Enemies.end(); ++enemy) {
-            if (glm::distance((*enemy)->coordinate(), pos) <= 50.0f) {
+            if (glm::distance((*enemy)->coordinate(), pos) <= 20.0f) {
                 m_ShouldDelete = true;
                 (*enemy)->setHP(-(m_Giraffe_ ->getAtk()));
                 std::cout << "Arrow hit enemy" << (*enemy)->getHP() <<std::endl;

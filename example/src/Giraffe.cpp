@@ -20,11 +20,11 @@ void Giraffe::Start() {
     
     start = std::chrono::high_resolution_clock::now();
 
-    m_GiraffeText =
-        std::make_shared<GiraffeText>("../assets/fonts/Inter.ttf", 50);
-    m_GiraffeText->SetZIndex(this->GetZIndex() - 1);
-    m_GiraffeText->Start();
-    this->AddChild(m_GiraffeText);
+    // m_GiraffeText =
+    //     std::make_shared<GiraffeText>("../assets/fonts/Inter.ttf", 50);
+    // m_GiraffeText->SetZIndex(this->GetZIndex() - 1);
+    // m_GiraffeText->Start();
+    // this->AddChild(m_GiraffeText);
 }
 
 void Giraffe::Update() {
@@ -45,18 +45,18 @@ void Giraffe::Update() {
     // glm::vec2 &scale = m_Transform.scale; // 長頸鹿的大小
     // float &rotation = m_Transform.rotation; // 長頸鹿的旋轉角度
 
-    // std::cout << pos.y << std::endl;
-    if (pos.y >= static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2) {
+    // std::cout << pos.y << std::endl; 
+    if (pos.y >= (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 30) / 2) {
         dir_Up.y *= 0;
     }
-    else if (pos.y + static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2 <= 0) {
+    else if (pos.y + (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 60)/ 2 <= 0) {
         dir_Down.y *= 0;
     }
 
-    if (pos.x >= static_cast<float>(PTSD_Config::WINDOW_WIDTH) / 2) {
+    if (pos.x >= (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 480) / 2) {
         dir_Right.x *= 0;
     }
-    else if (pos.x + static_cast<float>(PTSD_Config::WINDOW_WIDTH) / 2 <= 0) {
+    else if (pos.x + (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 120) / 2 <= 0) {
         dir_Left.x *= 0;
     }
 
@@ -111,13 +111,13 @@ void Giraffe::Update() {
         if ((*it)->shouldDelete()) {
             this->RemoveChild(*it); // 刪除箭
             it = m_Arrows.erase(it); // 刪除箭並更新迭代器
-            std::cout << "Arrow deleted" << std::endl;
+            // std::cout << "Arrow deleted" << std::endl;
         } else {
             ++it;
         }
     }
 
-    m_GiraffeText->Update();
+    // m_GiraffeText->Update();
 }
 
 void Giraffe::set_enemy_is_empty(bool is_empty) {
@@ -166,12 +166,24 @@ int Giraffe::getAtk() const {
     return atk;
 }
 
+void Giraffe::setAtk(int atk) {
+    this->atk += atk;
+}
+
 int Giraffe::getHP() const {
     return m_HP;
 }
 
 void Giraffe::setHP(int hp) {
     m_HP += hp;
+}
+
+void Giraffe::setExp(int exp) {
+    this->exp += exp;
+}
+
+int Giraffe::getExp() const {
+    return exp;
 }
 
 void Giraffe::SetEnemies(std::shared_ptr<Enemy> enemy) {

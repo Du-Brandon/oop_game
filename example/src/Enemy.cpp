@@ -33,7 +33,7 @@ void Enemy::Start(glm::vec2 coordinate) {
     dir = randomMove('z'); // 長頸鹿的移動方向
 
     // 初始化敵人的大小
-    scale = {0.5f, 0.5f};
+    scale = {0.2f, 0.2f};
 }
 
 void Enemy::Update() {
@@ -44,19 +44,23 @@ void Enemy::Update() {
     // std::cout << "Enemy position: (" << pos.x << ", " << pos.y << ")" << std::endl;
 
     // 確保敵人不會超出視窗範圍
-    if (pos.y >= static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2) {
+    if (pos.y >= (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 30) / 2) {
         // dir.y == randomMove('Y').y;
+        // std::cout << static_cast<float>(PTSD_Config::WINDOW_HEIGHT) << std::endl;
         dir.y = -dir.y;
     }
-    else if (pos.y + static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2 <= 0) {
+    else if (pos.y + (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 60) / 2 <= 0) {
         // dir.y == randomMove('y').y;
+        // std::cout << static_cast<float>(PTSD_Config::WINDOW_HEIGHT) << std::endl;
+
         dir.y = -dir.y;
     }
-    if (pos.x >= static_cast<float>(PTSD_Config::WINDOW_WIDTH) / 2) {
+    if (pos.x >= (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 480) / 2) {
         // dir.x == randomMove('X').x;
+        // std::cout << static_cast<float>(PTSD_Config::WINDOW_WIDTH) << std::endl;
         dir.x = -dir.x;
     }
-    else if (pos.x + static_cast<float>(PTSD_Config::WINDOW_WIDTH) / 2 <= 0) {
+    else if (pos.x + (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 120)/ 2 <= 0) {
         // dir.x == randomMove('x').x;
         dir.x = -dir.x;
     }
