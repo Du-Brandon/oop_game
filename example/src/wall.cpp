@@ -5,12 +5,20 @@
 
 #include "Wall.hpp"
 
-void Wall::Start(glm::vec2 coordinate_left_bottom,glm::vec2  coordinate_right_top) {
+void Wall::Start(float up_boundary, float down_boundary, float left_boundary, float right_boundary) {
+    // up208 down590 left-458 right262
+    this->up_boundary = up_boundary;
+    this->down_boundary = down_boundary;
+    this->left_boundary = left_boundary;
+    this->right_boundary = right_boundary;
+}
+
+void Wall::setwall(glm::vec2 coordinate_left_bottom,glm::vec2  coordinate_right_top) {
     set_Square_Coordinate(coordinate_left_bottom, coordinate_right_top);
     is_circle = false;
 }
 
-void Wall::Start(glm::vec2 coordinate_center, float radius) {
+void Wall::setwall(glm::vec2 coordinate_center, float radius) {
     set_Circle_Coordinate(coordinate_center, radius);
     is_circle = true;
 }
@@ -22,6 +30,27 @@ void Wall::Update() {
 
 void Wall::end() {
     // 可能用不到
+}
+
+std::string Wall::boundary_collision_check_leftright(glm::vec2 coordinate){
+    // std::cout << up_boundary << " " << coordinate.y << std::endl;
+    if (coordinate.x <= left_boundary){
+        return "left";
+    }
+    else if (coordinate.x >= right_boundary){
+        return "right";
+    }
+    return "no";
+}
+
+std::string Wall::boundary_collision_check_updown(glm::vec2 coordinate){
+    if (coordinate.y >= up_boundary){
+        return "up";
+    }
+    else if (coordinate.y <= down_boundary){
+        return "down";
+    }
+    return "no";
 }
 
 bool Wall::collision_check(glm::vec2 coordinate) {

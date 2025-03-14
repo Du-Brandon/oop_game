@@ -6,6 +6,8 @@
 #include <chrono>
 #include "Arrow.hpp"
 #include "Enemy.hpp"
+#include "Wall.hpp"
+
 #include "pch.hpp" // IWYU pragma: export
 #include "Util/Renderer.hpp"
 #include "GiraffeText.hpp"
@@ -23,6 +25,8 @@ public:
     void ShootArrow(); // 添加生成 Arrow 的方法
     void SetEnemy(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemy 的指針
     void SetEnemies(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemies 的向量
+    void SetEnemies(std::vector<std::shared_ptr<Enemy>> enemies); // 添加這個方法來設置 m_Enemies 的向量
+    void Setwall(std::shared_ptr<Wall> wall); // 添加這個方法來設置 m_Wall 的指針
     void ClearEnemies(); // 添加這個方法來清除 m_Enemy 的指針
 
     glm::vec2 coordinate();
@@ -45,7 +49,7 @@ private:
     std::chrono::high_resolution_clock::time_point start ; // 添加這個成員變數來記錄開始時間
     std::chrono::high_resolution_clock::time_point now ; // 添加這個成員變數來記錄結束時間
     
-    int atk = 10; // 添加這個成員變數來表示長頸鹿的攻擊力
+    int atk = 100; // 添加這個成員變數來表示長頸鹿的攻擊力
     float atk_speed = 0.9f; // 添加這個成員變數來表示長頸鹿的攻擊速度
     int m_HP = 100; // 添加這個成員變數來表示長頸鹿的血量
     int exp = 0; // 添加這個成員變數來表示長頸鹿的經驗值
@@ -58,6 +62,7 @@ private:
     bool anyKeyPressed ; // 判斷是否有按鍵被按下
 
     std::shared_ptr<GiraffeText> m_GiraffeText;
+    std::shared_ptr<Wall> m_Wall; // 添加這個成員變數來存儲牆的指針
     std::shared_ptr<Enemy> m_Enemy; // 添加這個成員變數來存儲敵人的指針
     std::vector<std::shared_ptr<Enemy>> m_Enemies;
     std::vector<std::shared_ptr<Arrow>> m_Arrows; // 添加這個成員變數來存儲 Arrow 對象

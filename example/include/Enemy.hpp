@@ -6,25 +6,25 @@
 #include "Util/GameObject.hpp"
 
 class Enemy : public Util::GameObject {
-public:
+    public:
     Enemy() = default;
-    ~Enemy() override; // 在 .hpp 文件中聲明解構元
-    void Update();
-    void Start();
-    void Start(glm::vec2 coordinate); // 添加這個方法來初始化敵人的位置
-    
+    virtual ~Enemy() override = default; // 在 .hpp 文件中聲明虛擬解構元
 
-    glm::vec2 coordinate();
-    int getHP() const; // 添加這個方法來獲取敵人的血量
-    void setHP(int hp); // 添加這個方法來設置敵人的血量
-    void setAtk(int atk); // 添加這個方法來設置敵人的攻擊力
-    int getAtk() const; // 添加這個方法來獲取敵人的攻擊力
-    void setExp_supply(int exp); // 添加這個方法來設置敵人的經驗值
-    int getExp_supply() const; // 添加這個方法來獲取敵人的經驗值
-    bool getVisible() const; // 添加這個方法來獲取敵人是否存在
+    virtual void Update() = 0;  
+    virtual void Start() = 0;  
+    virtual void Start(glm::vec2 coordinate) = 0;  
 
-private:
-    // bool &IfExist = m_Visible; // 添加這個成員變數來表示敵人是否存在s
+    virtual glm::vec2 coordinate() const = 0;  
+    virtual void move() = 0;
+    virtual int getHP() const = 0;  
+    virtual void setHP(int hp) = 0;  
+    virtual void setAtk(int atk) = 0;  
+    virtual int getAtk() const = 0;  
+    virtual void setExp_supply(int exp) = 0;  
+    virtual int getExp_supply() const = 0;  
+    virtual bool getVisible() const = 0;  
+
+protected:
     int m_HP = 100; // 添加這個成員變數來表示敵人的血量
     int m_atk = 10; // 添加這個成員變數來表示敵人的攻擊力
     int exp_supply = 10; // 添加這個成員變數來表示敵人的經驗值
@@ -36,7 +36,6 @@ private:
 
     glm::vec2 randomMove(char x); // 生成隨機移動方向的方法
 };
-
 
 
 

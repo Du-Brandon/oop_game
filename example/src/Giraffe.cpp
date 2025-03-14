@@ -45,21 +45,35 @@ void Giraffe::Update() {
     // glm::vec2 &scale = m_Transform.scale; // 長頸鹿的大小
     // float &rotation = m_Transform.rotation; // 長頸鹿的旋轉角度
 
-    // std::cout << pos.y << std::endl; 
-    if (pos.y >= (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 30) / 2) {
-        dir_Up.y *= 0;
-    }
-    else if (pos.y + (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 60)/ 2 <= 0) {
-        dir_Down.y *= 0;
-    }
+    // std::cout << pos.x << "   "<< pos.y << std::endl; 
 
-    if (pos.x >= (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 480) / 2) {
+    // if (pos.y >= (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 30) / 2) {
+    //     dir_Up.y *= 0;
+    // }
+    // else if (pos.y + (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 60)/ 2 <= 0) {
+    //     dir_Down.y *= 0;
+    // }
+
+    // if (pos.x >= (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 480) / 2) {
+    //     dir_Right.x *= 0;
+    // }
+    // else if (pos.x + (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 120) / 2 <= 0) {
+    //     dir_Left.x *= 0;
+    // }
+
+    if ((m_Wall->boundary_collision_check_leftright(pos) == "right") && !enemy_is_empty) {
         dir_Right.x *= 0;
     }
-    else if (pos.x + (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 120) / 2 <= 0) {
+    else if (m_Wall->boundary_collision_check_leftright(pos) == "left") {
         dir_Left.x *= 0;
     }
 
+    if  (m_Wall->boundary_collision_check_updown(pos) == "up") {
+        dir_Up.y *= 0;
+    }
+    else if (m_Wall->boundary_collision_check_updown(pos) == "down") {
+        dir_Down.y *= 0;
+    }
     // // sonarcloud called it redundant, but ms_t = float is just a coincidence.
     auto delta = static_cast<float>(Util::Time::GetDeltaTimeMs()) / 2;
 
@@ -186,6 +200,10 @@ int Giraffe::getExp() const {
     return exp;
 }
 
+void Giraffe::SetEnemy(std::shared_ptr<Enemy> enemy) {
+    m_Enemy = enemy;
+}
+
 void Giraffe::SetEnemies(std::shared_ptr<Enemy> enemy) {
     if (enemy == nullptr ||enemy->getVisible() == false) {
         return;
@@ -193,10 +211,21 @@ void Giraffe::SetEnemies(std::shared_ptr<Enemy> enemy) {
     m_Enemies.push_back(enemy);
 }
 
+void Giraffe::SetEnemies(std::vector<std::shared_ptr<Enemy>> enemies) {
+    m_Enemies.clear();
+    for (auto &enemy : enemies) {
+        if (enemy->getVisible() == false) {
+            continue;
+        }
+        m_Enemies.push_back(enemy);
+    }
+}
+
+void Giraffe::Setwall(std::shared_ptr<Wall> wall) {
+    m_Wall = wall;
+}
+
 void Giraffe::ClearEnemies() {
     m_Enemies.clear();
 }
 
-void Giraffe::SetEnemy(std::shared_ptr<Enemy> enemy) {
-    m_Enemy = enemy;
-}

@@ -1,16 +1,20 @@
 #ifndef APP_HPP
 #define APP_HPP
 
+#include "App.hpp"
 #include "background.hpp"
 #include "pch.hpp" // IWYU pragma: export
 
 #include "Util/Renderer.hpp"
 
 #include "Cat.hpp"
+#include "Wall.hpp"
 #include "Giraffe.hpp"
 #include "GiraffeText.hpp"
 #include "Enemy.hpp"
+#include "Enemy_1.hpp"
 #include "Arrow.hpp"
+#include <glm/fwd.hpp>
 #include <vector>
 
 class App {
@@ -34,6 +38,7 @@ private:
     enum class player_level  {
         lobby,
         first_level,
+        second_level,
         end
     };
 
@@ -47,8 +52,11 @@ private:
     //    std::make_shared<GiraffeText>();
 
     std::shared_ptr<Cat> m_Cat = std::make_shared<Cat>();
-    std::shared_ptr<Enemy> m_Enemy = std::make_shared<Enemy>();
-    std::shared_ptr<Enemy> m_Enemy2 = std::make_shared<Enemy>();
+    std::shared_ptr<Wall> wall = std::make_shared<Wall>();
+    std::shared_ptr<Enemy_1> m_Enemy = std::make_shared<Enemy_1>();
+    std::shared_ptr<Enemy_1> m_Enemy2 = std::make_shared<Enemy_1>();
+    std::vector<std::shared_ptr<Enemy>> m_Enemies;
+    glm::vec2 m_Enemy_pos;
     std::shared_ptr<Arrow> m_Arrow = std::make_shared<Arrow>();
     // std::vector<std::shared_ptr<Arrow>> m_Arrows;
 
