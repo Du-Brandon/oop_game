@@ -105,6 +105,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/Arrow.cpp
     ${EXAMPLE_DIR}/src/Enemy.cpp
     ${EXAMPLE_DIR}/src/Enemy_1.cpp
+    ${EXAMPLE_DIR}/src/Enemy_2.cpp
     ${EXAMPLE_DIR}/src/Wall.cpp
     ${EXAMPLE_DIR}/src/Background.cpp
 
@@ -115,6 +116,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/include/Arrow.hpp
     ${EXAMPLE_DIR}/include/Enemy.hpp
     ${EXAMPLE_DIR}/include/Enemy_1.hpp
+    ${EXAMPLE_DIR}/include/Enemy_2.hpp
     ${EXAMPLE_DIR}/include/Wall.hpp
     ${EXAMPLE_DIR}/include/Background.hpp
 )

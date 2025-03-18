@@ -70,21 +70,9 @@
 //     // pos += dir * 0.0f;
 // }
 
-// glm::vec2 Enemy::coordinate() {
-//     return pos;
-// }
-
-// bool Enemy::getVisible() const {
-//     return m_Visible;
-// }
-
-// int Enemy::getHP() const {
-//     return m_HP;
-// }
-
-// void Enemy::setHP(int hp) {
-//     m_HP += hp;
-// }
+glm::vec2 Enemy::coordinate() {
+    return pos;
+}
 
 void Enemy::setWall(std::shared_ptr<Wall> wall) {
     m_wall = wall;
@@ -93,6 +81,39 @@ void Enemy::setWall(std::shared_ptr<Wall> wall) {
 void Enemy::setGiraffe(glm::vec2 giraffe_pos) {
     Giraffe_pos = giraffe_pos;
 }
+
+void Enemy::setGiraffe(std::shared_ptr<Giraffe> giraffe) {
+    m_Giraffe = giraffe;
+}
+
+bool Enemy::getVisible() const {
+    return m_Visible;
+}
+
+int Enemy::getHP() const {
+    return m_HP;
+}
+
+void Enemy::setHP(int hp) {
+    m_HP += hp;
+}
+
+void Enemy::setAtk(int atk) {
+    m_atk = atk;
+}
+
+int Enemy::getAtk() const {
+    return m_atk;
+}
+
+void Enemy::setExp_supply(int exp) {
+    exp_supply = exp;
+}
+
+int Enemy::getExp_supply() const {
+    return exp_supply;
+}
+
 
 glm::vec2 Enemy::randomMove(char x) {
     // 創建亂數生成器

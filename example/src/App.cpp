@@ -105,6 +105,7 @@ void App::Update() {
     
     bool is_enemy_empty = false;
     for (auto &enemy_it : m_Enemies) {
+        enemy_it->setGiraffe(m_Giraffe);
         enemy_it->Update();
         m_Enemy_pos = (enemy_it->coordinate());
         if (glm::distance(m_Giraffe_pos, m_Enemy_pos) < 50 && enemy_it->getVisible()) {

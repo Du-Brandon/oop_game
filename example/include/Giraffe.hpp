@@ -16,6 +16,7 @@
 
 
 class Arrow;
+class Enemy;
 class Giraffe : public Util::GameObject {
 
 public:

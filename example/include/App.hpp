@@ -1,7 +1,7 @@
 #ifndef APP_HPP
 #define APP_HPP
 
-#include "App.hpp"
+#include <memory>
 #include "background.hpp"
 #include "pch.hpp" // IWYU pragma: export
 
@@ -13,6 +13,7 @@
 #include "GiraffeText.hpp"
 #include "Enemy.hpp"
 #include "Enemy_1.hpp"
+#include "Enemy_2.hpp"
 #include "Arrow.hpp"
 #include <glm/fwd.hpp>
 #include <vector>
@@ -54,7 +55,9 @@ private:
     std::shared_ptr<Cat> m_Cat = std::make_shared<Cat>();
     std::shared_ptr<Wall> wall = std::make_shared<Wall>();
     std::shared_ptr<Enemy_1> m_Enemy = std::make_shared<Enemy_1>();
-    std::shared_ptr<Enemy_1> m_Enemy2 = std::make_shared<Enemy_1>();
+    // std::shared_ptr<Enemy_1> m_Enemy2 = std::make_shared<Enemy_1>();
+    std::shared_ptr<Enemy_2> m_Enemy2 = std::make_shared<Enemy_2>();
+
     std::vector<std::shared_ptr<Enemy>> m_Enemies;
     glm::vec2 m_Enemy_pos;
     std::shared_ptr<Arrow> m_Arrow = std::make_shared<Arrow>();

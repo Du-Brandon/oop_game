@@ -11,30 +11,30 @@
 #include "Util/GameObject.hpp"
 
 // class Wall;
-
+class Giraffe;
 class Enemy : public Util::GameObject {
     public:
     Enemy() = default;
     virtual ~Enemy() override = default; // 在 .hpp 文件中聲明虛擬解構元
-
-    virtual void Update() = 0;  
+    
     virtual void Start() = 0;  
     virtual void Start(glm::vec2 coordinate) = 0;  
+    virtual void Update() = 0;  
     void setWall(std::shared_ptr<Wall> wall); // 添加這個方法來設置 m_wall 的指針
     void setGiraffe(glm::vec2 giraffe_pos); // 添加這個方法來設置 m_Giraffe_pos 的值
+    void setGiraffe(std::shared_ptr<Giraffe> giraffe); // 添加這個方法來設置 m_Giraffe 的指針
 
-
-    virtual glm::vec2 coordinate() const = 0;  
-    virtual void move() = 0;
+    glm::vec2 coordinate() ;  
+    virtual glm::vec2 move() = 0;
     virtual void shoot() = 0;
 
-    virtual int getHP() const = 0;  
-    virtual void setHP(int hp) = 0;  
-    virtual void setAtk(int atk) = 0;  
-    virtual int getAtk() const = 0;  
-    virtual void setExp_supply(int exp) = 0;  
-    virtual int getExp_supply() const = 0;  
-    virtual bool getVisible() const = 0;  
+    int getHP()const;  
+    void setHP(int hp);  
+    void setAtk(int atk);  
+    int getAtk() const;  
+    void setExp_supply(int exp);  
+    int getExp_supply() const;  
+    bool getVisible() const;  
 
 protected:
     int m_HP = 100; // 添加這個成員變數來表示敵人的血量
@@ -46,6 +46,7 @@ protected:
     glm::vec2 dir; // 敵人的移動方向
     float &rotation = m_Transform.rotation; // 敵人的旋轉角度
     glm::vec2 Giraffe_pos; // 長頸鹿的位置
+    std::shared_ptr<Giraffe> m_Giraffe; // 長頸鹿的指針
     std::shared_ptr<Wall> m_wall; // 敵人的碰撞邊界
 
     glm::vec2 randomMove(char x); // 生成隨機移動方向的方法

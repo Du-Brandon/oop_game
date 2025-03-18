@@ -60,42 +60,10 @@ void Enemy_1::Update() {
     // pos += dir * 0.0f;
 }
 
-glm::vec2 Enemy_1::coordinate() const {
-    return pos;
-}
-
-void Enemy_1::move() {
-
+glm::vec2 Enemy_1::move() {
+    return dir;
 }
 
 void Enemy_1::shoot() {
 
-}
-
-int Enemy_1::getHP() const {
-    return m_HP;
-}
-
-void Enemy_1::setHP(int hp) {
-    m_HP += hp;
-}
-
-void Enemy_1::setAtk(int atk) {
-    m_atk = atk;
-}
-
-int Enemy_1::getAtk() const {
-    return m_atk;
-}
-
-void Enemy_1::setExp_supply(int exp) {
-    exp_supply = exp;
-}
-
-int Enemy_1::getExp_supply() const {
-    return exp_supply;
-}
-
-bool Enemy_1::getVisible() const {
-    return m_Visible;
 }
