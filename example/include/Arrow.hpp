@@ -8,8 +8,10 @@
 #include "Util/GameObject.hpp"
 #include "Giraffe.hpp" 
 #include "Enemy.hpp"
+#include "Wall.hpp"
 
 class Giraffe;
+class Enemy;
 class Arrow : public Util::GameObject {
 public:
     // Arrow() = default;

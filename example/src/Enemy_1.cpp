@@ -68,6 +68,10 @@ void Enemy_1::move() {
 
 }
 
+void Enemy_1::shoot() {
+
+}
+
 int Enemy_1::getHP() const {
     return m_HP;
 }

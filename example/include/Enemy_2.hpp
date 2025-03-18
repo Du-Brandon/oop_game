@@ -3,10 +3,10 @@
 #include "Enemy.hpp"
 #include "Wall.hpp"
 
-class Enemy_1 : public Enemy {
+class Enemy_2 : public Enemy {
 public:
-    Enemy_1() = default;
-    ~Enemy_1() override = default;
+    Enemy_2() = default;
+    ~Enemy_2() override = default;
 
     void Update() override;
     void Start() override;

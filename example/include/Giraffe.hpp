@@ -14,6 +14,7 @@
 #include "Util/GameObject.hpp"
 #include "Util/Text.hpp"
 
+
 class Arrow;
 class Giraffe : public Util::GameObject {
 

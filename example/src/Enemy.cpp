@@ -86,6 +86,13 @@
 //     m_HP += hp;
 // }
 
+void Enemy::setWall(std::shared_ptr<Wall> wall) {
+    m_wall = wall;
+}
+
+void Enemy::setGiraffe(glm::vec2 giraffe_pos) {
+    Giraffe_pos = giraffe_pos;
+}
 
 glm::vec2 Enemy::randomMove(char x) {
     // 創建亂數生成器

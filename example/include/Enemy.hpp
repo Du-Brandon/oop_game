@@ -1,9 +1,16 @@
 #pragma once 
 
+#include "Wall.hpp"
+#include "Giraffe.hpp"
+
+#include <glm/fwd.hpp>
+#include <memory>
 #include <string>
 
 #include "pch.hpp" // IWYU pragma: export
 #include "Util/GameObject.hpp"
+
+// class Wall;
 
 class Enemy : public Util::GameObject {
     public:
@@ -13,9 +20,14 @@ class Enemy : public Util::GameObject {
     virtual void Update() = 0;  
     virtual void Start() = 0;  
     virtual void Start(glm::vec2 coordinate) = 0;  
+    void setWall(std::shared_ptr<Wall> wall); // 添加這個方法來設置 m_wall 的指針
+    void setGiraffe(glm::vec2 giraffe_pos); // 添加這個方法來設置 m_Giraffe_pos 的值
+
 
     virtual glm::vec2 coordinate() const = 0;  
     virtual void move() = 0;
+    virtual void shoot() = 0;
+
     virtual int getHP() const = 0;  
     virtual void setHP(int hp) = 0;  
     virtual void setAtk(int atk) = 0;  
@@ -33,6 +45,8 @@ protected:
     glm::vec2 &scale = m_Transform.scale; // 敵人的大小
     glm::vec2 dir; // 敵人的移動方向
     float &rotation = m_Transform.rotation; // 敵人的旋轉角度
+    glm::vec2 Giraffe_pos; // 長頸鹿的位置
+    std::shared_ptr<Wall> m_wall; // 敵人的碰撞邊界
 
     glm::vec2 randomMove(char x); // 生成隨機移動方向的方法
 };
