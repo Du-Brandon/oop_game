@@ -16,8 +16,9 @@ void Giraffe::Start() {
     this->SetDrawable(
         std::make_shared<Util::Image>("../assets/sprites/sticker.png"));
     this->SetZIndex(6);
-    scale = glm::vec2(0.4f, 0.4f);
-    
+    scale = glm::vec2(0.35f, 0.35f);
+    pos = glm::vec2(-100, 0);
+
     start = std::chrono::high_resolution_clock::now();
 
     // m_GiraffeText =
@@ -45,23 +46,12 @@ void Giraffe::Update() {
     // glm::vec2 &scale = m_Transform.scale; // 長頸鹿的大小
     // float &rotation = m_Transform.rotation; // 長頸鹿的旋轉角度
 
-    // std::cout << pos.x << "   "<< pos.y << std::endl; 
-
-    // if (pos.y >= (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 30) / 2) {
-    //     dir_Up.y *= 0;
-    // }
-    // else if (pos.y + (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 60)/ 2 <= 0) {
-    //     dir_Down.y *= 0;
-    // }
-
-    // if (pos.x >= (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 480) / 2) {
-    //     dir_Right.x *= 0;
-    // }
-    // else if (pos.x + (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 120) / 2 <= 0) {
-    //     dir_Left.x *= 0;
-    // }
+    std::cout << pos.x << "   "<< pos.y << std::endl; 
 
     if ((m_Wall->boundary_collision_check_leftright(pos) == "right") && !enemy_is_empty) {
+        dir_Right.x *= 0;
+    }
+    else if (m_Wall->boundary_collision_check_leftright(pos) == "right" && enemy_is_empty && !m_Wall->boundary_collision_check_door(pos)) {
         dir_Right.x *= 0;
     }
     else if (m_Wall->boundary_collision_check_leftright(pos) == "left") {
@@ -174,6 +164,10 @@ void Giraffe::ShootArrow() {
 
 glm::vec2 Giraffe::coordinate() {
     return pos;
+}
+
+void Giraffe::setpos(glm::vec2 position) {
+    pos = position;
 }
 
 int Giraffe::getAtk() const {

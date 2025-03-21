@@ -34,29 +34,22 @@ void Enemy_1::Update() {
     // std::cout << "Enemy position: (" << pos.x << ", " << pos.y << ")" << std::endl;
 
     // 確保敵人不會超出視窗範圍
-    if (pos.y >= (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 30) / 2) {
-        // dir.y == randomMove('Y').y;
-        // std::cout << static_cast<float>(PTSD_Config::WINDOW_HEIGHT) << std::endl;
-        dir.y = -dir.y;
+    if ((m_wall->boundary_collision_check_leftright(pos) == "right") ) {
+        dir.x = - dir.x;
     }
-    else if (pos.y + (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 60) / 2 <= 0) {
-        // dir.y == randomMove('y').y;
-        // std::cout << static_cast<float>(PTSD_Config::WINDOW_HEIGHT) << std::endl;
-
-        dir.y = -dir.y;
+    else if (m_wall->boundary_collision_check_leftright(pos) == "left") {
+        dir.x = - dir.x;
     }
-    if (pos.x >= (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 480) / 2) {
-        // dir.x == randomMove('X').x;
-        // std::cout << static_cast<float>(PTSD_Config::WINDOW_WIDTH) << std::endl;
-        dir.x = -dir.x;
+    if (m_wall->boundary_collision_check_updown(pos) == "up") {
+        dir.y = - dir.y;
     }
-    else if (pos.x + (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 120)/ 2 <= 0) {
-        // dir.x == randomMove('x').x;
-        dir.x = -dir.x;
+    else if (m_wall->boundary_collision_check_updown(pos) == "down") {
+        dir.y = - dir.y;
     }
 
     // 更新敵人的位置
     pos += dir *8.0f;
+    
     // pos += dir * 0.0f;
 }
 

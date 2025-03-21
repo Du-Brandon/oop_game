@@ -1,12 +1,14 @@
 #include "App.hpp"
 
 #include "Enemy.hpp"
+#include "Enemy_2.hpp"
 #include "Util/Image.hpp"
 #include "Util/Input.hpp"
 #include "Util/Keycode.hpp"
 #include "Util/Logger.hpp"
 
 #include <iostream>
+#include <memory>
 
 #include "GiraffeText.hpp"
 #include "Wall.hpp"
@@ -26,21 +28,25 @@ void App::Start() {
     }
 
     if (Util::Input::IsKeyDown(Util::Keycode::KP_ENTER)) {
-        wall->Start(180.0f, -180.0f, -458.0f, 262.0f);
+        wall->Start(180.0f, -180.0f, -458.0f, 262.0f, 32.0f, -19.0f);
 
         m_Giraffe->Start();
         m_Giraffe->Setwall(wall);
-        m_Enemy2->SetDrawable(
+
+        std::shared_ptr<Enemy_2> m_Enemy2 = std::make_shared<Enemy_2>();
+        m_Enemy2->SetDrawable( 
             std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
         m_Enemy2->SetZIndex(5);
         m_Enemy2->Start(glm::vec2(100, 100)); // 初始化敵人的位置
+        m_Enemy2->setWall(wall);
     
         m_Enemy->SetDrawable(
             std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
         m_Enemy->SetZIndex(5);
         m_Enemy->Start(glm::vec2(100,100)); // 初始化敵人的位置
+        m_Enemy->setWall(wall);
         
-        m_Background->SetBackground("test1");
+        m_Background->SetBackground("test10");
 
         m_Root.AddChild(m_Giraffe);
         // m_Root.AddChild(m_Cat);
@@ -52,6 +58,7 @@ void App::Start() {
         
         m_player_level = player_level::first_level;
         m_CurrentState = State::UPDATE;
+        now_level = 1;
     }
     m_Root.Update();
 }
@@ -103,7 +110,6 @@ void App::Update() {
     m_Giraffe->Update();
     auto m_Giraffe_pos = m_Giraffe->coordinate();
     
-    bool is_enemy_empty = false;
     for (auto &enemy_it : m_Enemies) {
         enemy_it->setGiraffe(m_Giraffe);
         enemy_it->Update();
@@ -131,11 +137,14 @@ void App::Update() {
         }
     
     }
+    m_Giraffe->set_enemy_is_empty(is_enemy_empty);
     if (is_enemy_empty) {
-        m_Giraffe->set_enemy_is_empty(true);
-        m_Background->SetBackground("test2");
-        // m_player_level = player_level::second_level;
-        // ValidTask();
+        
+        m_Background->nextbackground(now_level);
+        if (wall->nextlevel_collision_check(m_Giraffe_pos)) {
+            m_player_level = player_level::second_level; 
+            ValidTask();
+        }
     }
 
     // // 碰撞檢測，90為正常參數
@@ -150,6 +159,7 @@ void App::Update() {
 
     if (m_Giraffe->getHP() <= 0) {
         m_player_level = player_level::end;
+        ValidTask();
     }
 
 
@@ -167,6 +177,13 @@ void App::Update() {
 
 void App::End() { // NOLINT(this method will mutate members in the future)
     LOG_TRACE("End");
+    
+}
+
+void App::removeEnemy() {
+    for (auto &enemy_it : m_Enemies) {
+        m_Root.RemoveChild(enemy_it);
+    }
 }
 
 
@@ -182,10 +199,32 @@ void App::ValidTask() {
         LOG_DEBUG("first_level");
         break;
     
-    case player_level::second_level:
+    case player_level::second_level:{
         LOG_DEBUG("second_level");
-        break;
+        now_level = 2;
+        m_Background->nextbackground(now_level);
+        this->removeEnemy();
+        m_Enemies.clear();
 
+        wall->Start(180.0f, -180.0f, -458.0f, 262.0f, 32.0f, -19.0f);
+        wall->setwall(glm::vec2 (-445.36f, 40.0f) , glm::vec2(-300.836f , 184.584f));
+        wall->setwall(glm::vec2 (-460.03f, -187.562f) , glm::vec2(-301.101f , -38.670f));
+
+        std::shared_ptr<Enemy_2> m_Enemy3 = std::make_shared<Enemy_2>();
+        m_Enemy3->SetDrawable(
+            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+        m_Enemy3->SetZIndex(5);
+        m_Enemy3->Start(glm::vec2(100, 100)); // 初始化敵人的位置
+        m_Enemy3->setWall(wall);
+        
+        m_Giraffe -> setpos(glm::vec2(-100, 0));
+        m_Giraffe -> Setwall(wall);
+
+        is_enemy_empty = false;
+        m_Enemies.push_back(m_Enemy3);
+        m_Root.AddChild(m_Enemy3);
+        break;
+    }
     case player_level::end:
         
         this->End();

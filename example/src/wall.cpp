@@ -5,12 +5,14 @@
 
 #include "Wall.hpp"
 
-void Wall::Start(float up_boundary, float down_boundary, float left_boundary, float right_boundary) {
+void Wall::Start(float up_boundary, float down_boundary, float left_boundary, float right_boundary , float nextleveldoorup , float nextleveldoordown) {
     // up208 down590 left-458 right262
     this->up_boundary = up_boundary;
     this->down_boundary = down_boundary;
     this->left_boundary = left_boundary;
     this->right_boundary = right_boundary;
+    this->nextleveldoorup = nextleveldoorup;
+    this->nextleveldoordown = nextleveldoordown;
 }
 
 void Wall::setwall(glm::vec2 coordinate_left_bottom,glm::vec2  coordinate_right_top) {
@@ -34,23 +36,39 @@ void Wall::end() {
 
 std::string Wall::boundary_collision_check_leftright(glm::vec2 coordinate){
     // std::cout << up_boundary << " " << coordinate.y << std::endl;
-    if (coordinate.x <= left_boundary){
+    if (coordinate.x <= left_boundary ||this->collision_check(coordinate)){
         return "left";
     }
-    else if (coordinate.x >= right_boundary){
+    else if (coordinate.x >= right_boundary || this->collision_check(coordinate)){
         return "right";
     }
     return "no";
 }
 
 std::string Wall::boundary_collision_check_updown(glm::vec2 coordinate){
-    if (coordinate.y >= up_boundary){
+    if (coordinate.y >= up_boundary || this->collision_check(coordinate)){
         return "up";
     }
-    else if (coordinate.y <= down_boundary){
+    else if (coordinate.y <= down_boundary || this->collision_check(coordinate)){
         return "down";
     }
     return "no";
+}
+
+bool Wall::boundary_collision_check_door(glm::vec2 coordinate) {
+    if (coordinate.y >= nextleveldoorup || coordinate.y <= nextleveldoordown) {
+        return false;
+    }
+    return true;
+}
+
+bool Wall::nextlevel_collision_check(glm::vec2 coordinate) {
+    if (coordinate.x - right_boundary >= 62) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 bool Wall::collision_check(glm::vec2 coordinate) {

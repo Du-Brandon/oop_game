@@ -10,7 +10,7 @@ class Wall : public Util::GameObject {
 public:
     // Wall(); // 構造元
 
-    void Start(float up_boundary, float down_boundary, float left_boundary, float right_boundary); // 添加這個方法來建立邊界的坐標
+    void Start(float up_boundary, float down_boundary, float left_boundary, float right_boundary,float nextleveldoorup , float nextleveldoordown); // 添加這個方法來建立邊界的坐標
     void setwall(glm::vec2 coordinate_left_bottom, glm::vec2 coordinate_right_top); 
     void setwall(glm::vec2 coordinate_center, float radius);
     void Update();
@@ -20,6 +20,8 @@ public:
 
     std::string boundary_collision_check_updown(glm::vec2 coordinate);
     std::string boundary_collision_check_leftright(glm::vec2 coordinate);
+    bool boundary_collision_check_door(glm::vec2 coordinate);
+    bool nextlevel_collision_check(glm::vec2 coordinate);
     bool collision_check(glm::vec2 coordinate);
 
 private:
@@ -35,6 +37,8 @@ private:
     float down_boundary;  
     float left_boundary;
     float right_boundary;
+    float nextleveldoorup;
+    float nextleveldoordown;
     glm::vec2 left_bottom;
     glm::vec2 right_top;
     glm::vec2 center;

@@ -12,7 +12,7 @@ void Enemy_2::Start() {
 void Enemy_2::Start(glm::vec2 coordinate) {
     pos = coordinate;
     scale = {0.2f, 0.2f};
-    this->setHP(1000);
+    this->setHP(100);
 }
 
 void Enemy_2::Update(){
@@ -21,17 +21,17 @@ void Enemy_2::Update(){
     if (m_Visible == false){
         return;
     }
-    if (pos.y >= (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 30) / 2) {
-        dir.y = -dir.y;
+    if ((m_wall->boundary_collision_check_leftright(pos) == "right") ) {
+        dir.x = 0;
     }
-    else if (pos.y + (static_cast<float>(PTSD_Config::WINDOW_HEIGHT) - 60) / 2 <= 0) {
-        dir.y = -dir.y;
+    else if (m_wall->boundary_collision_check_leftright(pos) == "left") {
+        dir.x = 0;
     }
-    if (pos.x >= (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 480) / 2) {
-        dir.x = -dir.x;
+    if (m_wall->boundary_collision_check_updown(pos) == "up") {
+        dir.y = 0;
     }
-    else if (pos.x + (static_cast<float>(PTSD_Config::WINDOW_WIDTH) - 120)/ 2 <= 0) {
-        dir.x = -dir.x;
+    else if (m_wall->boundary_collision_check_updown(pos) == "down") {
+        dir.y = 0;
     }
 
     pos += dir * 2.0f;

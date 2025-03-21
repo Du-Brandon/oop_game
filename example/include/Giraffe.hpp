@@ -36,6 +36,8 @@ public:
     // 檢查最近的敵人
     std::shared_ptr<Enemy> checkNearestEnemy();
 
+
+    void setpos(glm::vec2 position); // 添加這個方法來設置長頸鹿的位置
     void setAtk(int atk); // 添加這個方法來設置長頸鹿的攻擊力
     int getAtk() const; // 添加這個方法來獲取長頸鹿的攻擊力
     void setSpeed(float speed); // 添加這個方法來設置長頸鹿的速度
