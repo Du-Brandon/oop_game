@@ -28,6 +28,7 @@ class Enemy : public Util::GameObject {
     virtual glm::vec2 move() = 0;
     virtual void shoot() = 0;
 
+    
     int getHP()const;  
     void setHP(int hp);  
     void setAtk(int atk);  
@@ -40,6 +41,7 @@ protected:
     int m_HP = 100; // 添加這個成員變數來表示敵人的血量
     int m_atk = 10; // 添加這個成員變數來表示敵人的攻擊力
     int exp_supply = 10; // 添加這個成員變數來表示敵人的經驗值
+    float move_speed = 10.0f; 
 
     glm::vec2 &pos = m_Transform.translation; // 敵人的位置
     glm::vec2 &scale = m_Transform.scale; // 敵人的大小
