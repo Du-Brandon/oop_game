@@ -43,6 +43,19 @@ private:
         end
     };
 
+    inline player_level nextLevel(player_level current) {
+        // 將 enum class 轉換為整數
+        int next = static_cast<int>(current) + 1;
+    
+        // 確保不超出範圍
+        if (next >= static_cast<int>(player_level::end)) {
+            return player_level::end; // 如果超出範圍，返回最後一個值
+        }
+    
+        // 將整數轉回 enum class
+        return static_cast<player_level>(next);
+    }
+
     State m_CurrentState = State::START;
     player_level m_player_level = player_level::lobby;
     int now_level = 0;
