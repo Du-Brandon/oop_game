@@ -1,6 +1,5 @@
 #include "App.hpp"
 
-#include "Enemy.hpp"
 #include "Enemy_2.hpp"
 #include "Util/Image.hpp"
 #include "Util/Input.hpp"
@@ -10,8 +9,6 @@
 #include <iostream>
 #include <memory>
 
-#include "GiraffeText.hpp"
-#include "Wall.hpp"
 
 void App::Start() {
     LOG_TRACE("Start");
@@ -142,7 +139,8 @@ void App::Update() {
         
         m_Background->nextbackground(now_level);
         if (wall->nextlevel_collision_check(m_Giraffe_pos)) {
-            m_player_level = player_level::second_level; 
+            // m_player_level = player_level::second_level; 
+            m_player_level = nextLevel(m_player_level);
             ValidTask();
         }
     }
