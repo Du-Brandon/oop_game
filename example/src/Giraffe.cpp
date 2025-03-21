@@ -46,7 +46,7 @@ void Giraffe::Update() {
     // glm::vec2 &scale = m_Transform.scale; // 長頸鹿的大小
     // float &rotation = m_Transform.rotation; // 長頸鹿的旋轉角度
 
-    std::cout << pos.x << "   "<< pos.y << std::endl; 
+    // std::cout << pos.x << "   "<< pos.y << std::endl; 
 
     if ((m_Wall->boundary_collision_check_leftright(pos) == "right") && !enemy_is_empty) {
         dir_Right.x *= 0;
@@ -104,6 +104,10 @@ void Giraffe::Update() {
         anyKeyPressed = true;
     }
 
+    // 按下P取得位置
+    if(Util::Input::IsKeyPressed(Util::Keycode::P)){
+        std::cout << pos.x << "   "<< pos.y << std::endl; 
+    }
 
     //按Q鍵測試弓箭
     if (((Util::Input::IsKeyDown(Util::Keycode::Q) || !anyKeyPressed) && contral_Atk_Speed()) && !enemy_is_empty) {
