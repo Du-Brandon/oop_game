@@ -24,6 +24,7 @@ void Enemy_1::Start(glm::vec2 coordinate) {
 
     // 初始化敵人的大小
     scale = {0.2f, 0.2f};
+    
 }
 
 void Enemy_1::Update() {
