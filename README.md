@@ -1,70 +1,41 @@
-# Practical Tools for Simple Design
+# 弓箭傳說
 
-###### Officially Supported Platforms and IDEs
+## 專案簡介
+**弓箭傳說** 是一款基於物件導向設計的 2D 遊戲，玩家將控制角色（如長頸鹿）射擊敵人，並通過不同的關卡。遊戲使用 C++ 編寫，並結合現代 C++ 特性（如 `std::shared_ptr`）來管理遊戲物件的生命週期。
 
-|                                | Windows | macOS | Linux |
-|:------------------------------:|:-------:|:-----:|:-----:|
-|             CLion              |    V    |   V   |   V   |
-|        VSCode[^codeoss]        |    V    |   V   |   V   |
-| Visual Studio[^novs][^vsmacos] |    ?    |   X   |   X   |
-|             No IDE             |    V    |   V   |   V   |
+---
 
-[^vsmacos]: [Microsoft Kills Visual Studio for Mac](https://visualstudiomagazine.com/articles/2023/08/30/vs-for-mac-retirement.aspx)
-[^codeoss]: On Linux the support of Code - OSS and VSCodium aren't guaranteed.
-[^novs]: Due to lack of testing there may or may not be more issues on VS. Anyway, building PTSD on VS is available.
+## 功能特性
+- **角色控制**：玩家可以控制角色移動並射擊敵人。
+- **敵人 AI**：敵人會隨機移動並攻擊玩家。
+- **多關卡設計**：支持多個遊戲關卡，並根據進度切換背景。
+- **物件導向設計**：使用 C++ 的物件導向特性來實現遊戲邏輯。
+- **內存管理**：使用 `std::shared_ptr` 和 `std::vector` 來管理遊戲物件。
 
-## Getting Started
+---
+<!-- 
+W/A/S/D：移動角色
+Q：射擊弓箭
+P：顯示角色座標
+ESC：退出遊戲 -->
 
-Required: Git, CMake, C/C++ Compiler, OpenGL Implementation
 
-Optional: Ninja Build, Clang
+## 版本紀錄
+### ver 3.0.0 : 
+- **完成主遊戲框架**
 
-> You might get some issue like https://github.com/ntut-open-source-club/practical-tools-for-simple-design/issues/78 check it if you need.
+### ver 3.1.0 :
+- **交叉繼承有bug，修復中**
 
-### Command Line
+### ver 3.2.0 :
+- **完成enemy_2，會主動攻擊玩家**
 
-[//]: # (TODO: No IDE Quick Start)
-> [!WARNING]  
-> This section is work in progress.
+### ver 3.3.0 :
+- **進入第二關 物件wall有bug，待修復**
 
-```
-git clone https://github.com/ntut-open-source-club/practical-tools-for-simple-design.git
-cd practical-tools-for-simple-design
-cmake -B build
-cmake --build build
-```
+### ver 3.3.2 :
+- **完成nextLevel函式，讓主架構更新更便捷**
 
-> If Ninja Build is install use `cmake -B build -G Ninja` to speed compile time
+### ver 3.4.0 : (2025/03/25)
+- **完成物件 wall，第二關完成**
 
-> For older versions of CMake(`<3.13`? verification needed) use
-> ```
-> mkdir build
-> cd build
-> cmake .
-> cmake --build .
-> ```
-> if the `-B` flag is unsupported
-
-> If using Neovim or other LSP supported editors, append `-DCMAKE_EXPORT_COMPILE_COMMANDS=ON` to the generation command for `clangd` to work
-
-### VSCode
-
-[//]: # (TODO: VSCode Quick Start)
-> [!WARNING]  
-> This section is work in progress.
-
-### CLion
-
-[CLion Quick Start](.github/docs/CLionQuickStart/CLionQuickStart.md)
-
-###### NOTE: If you have time, read [OOP2023f Environment Setup](https://hackmd.io/@OOP2023f/rk2-8cVCh)
-
-## Generate Doxygen Documents
-
-Required: Doxygen 1.9.6
-
-```
-doxygen docs/Doxyfile
-```
-
-Open the generated documents with your favorite browser at `docs/html/index.html`

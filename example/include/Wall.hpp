@@ -2,6 +2,7 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 
 #include "pch.hpp" // IWYU pragma: export
 #include "Util/GameObject.hpp"
@@ -22,7 +23,7 @@ public:
     std::string boundary_collision_check_leftright(glm::vec2 coordinate);
     bool boundary_collision_check_door(glm::vec2 coordinate);
     bool nextlevel_collision_check(glm::vec2 coordinate);
-    bool collision_check(glm::vec2 coordinate);
+    bool collision_check(glm::vec2 coordinate); // 判斷是否碰撞
 
 private:
     void set_Square_Coordinate(glm::vec2 coordinate_left_bottom, glm::vec2 coordinate_right_top);
@@ -41,6 +42,9 @@ private:
     float nextleveldoordown;
     glm::vec2 left_bottom;
     glm::vec2 right_top;
+
+    std::vector<glm::vec2> square_coordinate; // 矩形的四個坐標
+    std::vector<std::vector<glm::vec2>> square_coordinate_list; // 矩形的四個坐標
     glm::vec2 center;
     float radius;
 };

@@ -10,6 +10,7 @@
 #include "Enemy.hpp"
 #include "Wall.hpp"
 
+
 class Giraffe;
 class Enemy;
 class Arrow : public Util::GameObject {
@@ -17,8 +18,10 @@ public:
     // Arrow() = default;
     // ~Arrow() override; // 在 .hpp 文件中聲明解構元
     Arrow(); // 構造元
-    void setTarget(Giraffe* giraffe); // 設置射箭的人
-    void setTarget(Enemy* enemy); // 設置射箭的目標
+    // void setTarget(Giraffe* giraffe); // 設置射箭的人
+    // void setTarget(Enemy* enemy); // 設置射箭的目標
+    void setTarget(std::shared_ptr<Giraffe> giraffe); // 設置射箭的人
+    void setTarget(std::shared_ptr<Enemy> enemy); // 設置射箭的目標
     void setTargets(std::vector<std::shared_ptr<Enemy>>& enemies); // 設置射箭的目標
 
     void Update();
@@ -32,8 +35,12 @@ private:
     glm::vec2 &scale = m_Transform.scale; // 箭的大小
     float &rotation = m_Transform.rotation; // 箭的旋轉角度
 
-    Giraffe*  m_Giraffe_; // 定義主角的指針
-    Enemy* m_Enemy_; // 定義敵人的指針
+    // Giraffe*  m_Giraffe_; // 定義主角的指針
+    // Enemy* m_Enemy_; // 定義敵人的指針
+    std::shared_ptr<Giraffe> m_Giraffe_; // 定義主角的指針
+    std::shared_ptr<Enemy> m_Enemy_; // 定義敵人的指針
+    std::shared_ptr<Wall> m_Wall; // 定義敵人的碰撞邊界
+    
     std::vector<std::shared_ptr<Enemy>> m_Enemies ; // 定義敵人的指針
     // std::shared_ptr<Enemy> m_Enemy_; // 定義敵人的指針
     

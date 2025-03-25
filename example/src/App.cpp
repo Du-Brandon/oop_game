@@ -204,23 +204,43 @@ void App::ValidTask() {
         this->removeEnemy();
         m_Enemies.clear();
 
-        wall->Start(180.0f, -180.0f, -458.0f, 262.0f, 32.0f, -19.0f);
-        wall->setwall(glm::vec2 (-445.36f, 40.0f) , glm::vec2(-300.836f , 184.584f));
-        wall->setwall(glm::vec2 (-460.03f, -187.562f) , glm::vec2(-301.101f , -38.670f));
+        wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
+        wall->setwall(glm::vec2 (-470.36f, 44.0f) , glm::vec2(-305.836f , 200.584f));
+        wall->setwall(glm::vec2 (-470.03f, -191.562f) , glm::vec2(-305.101f , -38.670f));
+        wall->setwall(glm::vec2 (-134.625f,62.9083f) , glm::vec2(-90.1393f , 162.386f));
+        wall->setwall(glm::vec2 (-134.625f,-163.9083f) , glm::vec2(-90.1393f , -70.2383f));                   
 
         std::shared_ptr<Enemy_2> m_Enemy3 = std::make_shared<Enemy_2>();
         m_Enemy3->SetDrawable(
             std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
         m_Enemy3->SetZIndex(5);
-        m_Enemy3->Start(glm::vec2(100, 100)); // 初始化敵人的位置
+        m_Enemy3->Start(glm::vec2(144, 116)); // 初始化敵人的位置
         m_Enemy3->setWall(wall);
+        m_Enemies.push_back(m_Enemy3);
+        m_Root.AddChild(m_Enemy3);
+        
+        std::shared_ptr<Enemy_2> m_Enemy4 = std::make_shared<Enemy_2>();
+        m_Enemy4->SetDrawable(
+            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+        m_Enemy4->SetZIndex(5);
+        m_Enemy4->Start(glm::vec2(144, -116)); // 初始化敵人的位置
+        m_Enemy4->setWall(wall);
+        m_Enemies.push_back(m_Enemy4);
+        m_Root.AddChild(m_Enemy4);
+
+        std::shared_ptr<Enemy_2> m_Enemy5 = std::make_shared<Enemy_2>();
+        m_Enemy5->SetDrawable(
+            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+        m_Enemy5->SetZIndex(5);
+        m_Enemy5->Start(glm::vec2(0, 0)); // 初始化敵人的位置
+        m_Enemy5->setWall(wall);
+        m_Enemies.push_back(m_Enemy5);
+        m_Root.AddChild(m_Enemy5);
         
         m_Giraffe -> setpos(glm::vec2(-100, 0));
         m_Giraffe -> Setwall(wall);
 
         is_enemy_empty = false;
-        m_Enemies.push_back(m_Enemy3);
-        m_Root.AddChild(m_Enemy3);
         break;
     }
     case player_level::end:

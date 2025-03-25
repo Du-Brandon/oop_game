@@ -18,16 +18,23 @@ Arrow::Arrow() : m_Giraffe_(nullptr), m_Enemy_(nullptr) {
     // 構造元的具體實現
 }
 
-void Arrow::setTarget(Giraffe* giraffe) {
+// void Arrow::setTarget(Giraffe* giraffe) {
+//     m_Giraffe_ = giraffe;
+//     m_PlayerCoordinate = m_Giraffe_ ->coordinate();
+// }
+void Arrow::setTarget(std::shared_ptr<Giraffe> giraffe) {
     m_Giraffe_ = giraffe;
     m_PlayerCoordinate = m_Giraffe_ ->coordinate();
 }
 
-void Arrow::setTarget(Enemy* enemy) {
+// void Arrow::setTarget(Enemy* enemy) {
+//     m_Enemy_ = enemy;
+//     m_EnemyCoordinate = m_Enemy_ ->coordinate();
+// }
+void Arrow::setTarget(std::shared_ptr<Enemy> enemy) {
     m_Enemy_ = enemy;
     m_EnemyCoordinate = m_Enemy_ ->coordinate();
 }
-
 void Arrow::setTargets(std::vector<std::shared_ptr<Enemy>>& enemies) {
     m_Enemies.clear();
     for (auto enemy = enemies.begin(); enemy != enemies.end(); ++enemy) {

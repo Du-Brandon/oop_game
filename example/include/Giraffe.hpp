@@ -4,6 +4,7 @@
 #include <utility>
 #include <vector>
 #include <chrono>
+#include <memory>
 #include "Arrow.hpp"
 #include "Enemy.hpp"
 #include "Wall.hpp"
@@ -15,9 +16,10 @@
 #include "Util/Text.hpp"
 
 
+
 class Arrow;
 class Enemy;
-class Giraffe : public Util::GameObject {
+class Giraffe : public Util::GameObject , public std::enable_shared_from_this<Giraffe> {
 
 public:
 

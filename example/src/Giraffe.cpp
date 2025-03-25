@@ -16,7 +16,7 @@ void Giraffe::Start() {
     this->SetDrawable(
         std::make_shared<Util::Image>("../assets/sprites/sticker.png"));
     this->SetZIndex(6);
-    scale = glm::vec2(0.35f, 0.35f);
+    scale = glm::vec2(0.25f, 0.25f);
     pos = glm::vec2(-100, 0);
 
     start = std::chrono::high_resolution_clock::now();
@@ -37,35 +37,28 @@ void Giraffe::Update() {
     glm::vec2 dir_Up= {0, 1};
     glm::vec2 dir_Down = {0, -1};
     // Is_move = false;
-    
-    // 此段已寫至hpp
-    // auto &pos = m_Transform.translation; // 長頸鹿的位置
-    // auto &scale = m_Transform.scale; // 長頸鹿的大小
-    // auto &rotation = m_Transform.rotation; //  長頸鹿的旋轉角度
-    // glm::vec2 &pos = m_Transform.translation; // 長頸鹿的位置
-    // glm::vec2 &scale = m_Transform.scale; // 長頸鹿的大小
-    // float &rotation = m_Transform.rotation; // 長頸鹿的旋轉角度
 
     // std::cout << pos.x << "   "<< pos.y << std::endl; 
 
-    if ((m_Wall->boundary_collision_check_leftright(pos) == "right") && !enemy_is_empty) {
+    auto delta = static_cast<float>(Util::Time::GetDeltaTimeMs()) / 2;
+    if (((m_Wall->boundary_collision_check_leftright(pos+dir_Right * 9.0f) == "right") && !enemy_is_empty ) ||(m_Wall->boundary_collision_check_leftright(pos+dir_Right * 9.0f) == "lr")) {
         dir_Right.x *= 0;
     }
-    else if (m_Wall->boundary_collision_check_leftright(pos) == "right" && enemy_is_empty && !m_Wall->boundary_collision_check_door(pos)) {
+    else if (m_Wall->boundary_collision_check_leftright(pos+dir_Right * 9.0f) == "right" && enemy_is_empty && !m_Wall->boundary_collision_check_door(pos+dir_Right * 9.0f)) {
         dir_Right.x *= 0;
     }
-    else if (m_Wall->boundary_collision_check_leftright(pos) == "left") {
+    if ((m_Wall->boundary_collision_check_leftright(pos+dir_Left * 9.0f) == "left")||(m_Wall->boundary_collision_check_leftright(pos+dir_Left * 9.0f) == "lr")) {
         dir_Left.x *= 0;
     }
 
-    if  (m_Wall->boundary_collision_check_updown(pos) == "up") {
+    if  ((m_Wall->boundary_collision_check_updown(pos+dir_Up * 9.0f) == "up") || (m_Wall->boundary_collision_check_updown(pos+dir_Up * 9.0f ) == "ud")) {
         dir_Up.y *= 0;
     }
-    else if (m_Wall->boundary_collision_check_updown(pos) == "down") {
+    if ((m_Wall->boundary_collision_check_updown(pos+dir_Down * 9.0f) == "down" )|| (m_Wall->boundary_collision_check_updown(pos+dir_Down * 9.0f) == "ud")) {
         dir_Down.y *= 0;
     }
     // // sonarcloud called it redundant, but ms_t = float is just a coincidence.
-    auto delta = static_cast<float>(Util::Time::GetDeltaTimeMs()) / 2;
+
 
     // std::cout << "delta: " << delta << std::endl;
     Util::Transform deltaTransform_Right{
@@ -105,7 +98,7 @@ void Giraffe::Update() {
     }
 
     // 按下P取得位置
-    if(Util::Input::IsKeyPressed(Util::Keycode::P)){
+    if(Util::Input::IsKeyDown(Util::Keycode::P)){
         std::cout << pos.x << "   "<< pos.y << std::endl; 
     }
 
@@ -157,8 +150,8 @@ std::shared_ptr<Enemy> Giraffe::checkNearestEnemy() {
 
 void Giraffe::ShootArrow() {
     auto arrow = std::make_shared<Arrow>();
-    arrow->setTarget(this);
-    arrow->setTarget(checkNearestEnemy().get());
+    arrow->setTarget(shared_from_this());
+    arrow->setTarget(checkNearestEnemy());
     // std::cout << "Shoot Arrow" << std::endl;
     arrow->Start();
     // this->AddChild(arrow);

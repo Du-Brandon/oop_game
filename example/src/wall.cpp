@@ -36,20 +36,29 @@ void Wall::end() {
 
 std::string Wall::boundary_collision_check_leftright(glm::vec2 coordinate){
     // std::cout << up_boundary << " " << coordinate.y << std::endl;
-    if (coordinate.x <= left_boundary ||this->collision_check(coordinate)){
+    if (this->collision_check(coordinate)) {
+        std::cout << "lscollision" << std::endl;
+        return "lr";
+    }
+    if (coordinate.x <= left_boundary){
         return "left";
     }
-    else if (coordinate.x >= right_boundary || this->collision_check(coordinate)){
+    else if (coordinate.x >= right_boundary){
         return "right";
     }
     return "no";
 }
 
 std::string Wall::boundary_collision_check_updown(glm::vec2 coordinate){
-    if (coordinate.y >= up_boundary || this->collision_check(coordinate)){
+    if (this->collision_check(coordinate)) {
+        std::cout << "udcollision" << std::endl;
+        return "ud";
+    }
+    
+    if (coordinate.y >= up_boundary){
         return "up";
     }
-    else if (coordinate.y <= down_boundary || this->collision_check(coordinate)){
+    else if (coordinate.y <= down_boundary){
         return "down";
     }
     return "no";
@@ -72,20 +81,28 @@ bool Wall::nextlevel_collision_check(glm::vec2 coordinate) {
 }
 
 bool Wall::collision_check(glm::vec2 coordinate) {
-    if (!is_circle && coordinate.x >= left_bottom.x && coordinate.x <= right_top.x && coordinate.y >= left_bottom.y && coordinate.y <= right_top.y) {
-        return true;
-    }
-    else if (is_circle && glm::distance(coordinate, center) <= radius) {
-        return true;
+    if (is_circle) {
+        float distance = glm::distance(coordinate, center);
+        if (distance <= radius) {
+            return true;
+        }
+    } else {
+        for (const auto& square : square_coordinate_list) {
+            if (coordinate.x >= square[0].x && coordinate.x <= square[1].x) {
+                if (coordinate.y >= square[0].y && coordinate.y <= square[1].y) {
+                    return true;
+                }
+            }
+        }
     }
     return false;
 }
 
 void Wall::set_Square_Coordinate(glm::vec2 coordinate_left_bottom, glm::vec2 coordinate_right_top) {
-    pos = (coordinate_left_bottom + coordinate_right_top) / 2.0f;
-    scale = coordinate_right_top - coordinate_left_bottom;
-    left_bottom = coordinate_left_bottom;
-    right_top = coordinate_right_top;
+    square_coordinate.clear();
+    square_coordinate.push_back(coordinate_left_bottom);
+    square_coordinate.push_back(coordinate_right_top);
+    square_coordinate_list.push_back(square_coordinate);
 }
 
 void Wall::set_Circle_Coordinate(glm::vec2 coordinate_center, float radius) {
