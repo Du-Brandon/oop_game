@@ -24,6 +24,8 @@ void Enemy_1::Start(glm::vec2 coordinate) {
 
     // 初始化敵人的大小
     scale = {0.2f, 0.2f};
+
+    move_speed = 8.0f;
     
 }
 
@@ -35,21 +37,21 @@ void Enemy_1::Update() {
     // std::cout << "Enemy position: (" << pos.x << ", " << pos.y << ")" << std::endl;
 
     // 確保敵人不會超出視窗範圍
-    if ((m_wall->boundary_collision_check_leftright(pos) == "right") ) {
+    if ((m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "right") || m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "lr") {
         dir.x = - dir.x;
     }
-    else if (m_wall->boundary_collision_check_leftright(pos) == "left") {
+    else if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "left") {
         dir.x = - dir.x;
     }
-    if (m_wall->boundary_collision_check_updown(pos) == "up") {
+    if ((m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "up") || m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "ud") {
         dir.y = - dir.y;
     }
-    else if (m_wall->boundary_collision_check_updown(pos) == "down") {
+    else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "down") {
         dir.y = - dir.y;
     }
 
     // 更新敵人的位置
-    pos += dir *8.0f;
+    pos += dir * move_speed;
     
     // pos += dir * 0.0f;
 }

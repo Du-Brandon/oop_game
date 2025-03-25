@@ -13,6 +13,7 @@ void Enemy_2::Start(glm::vec2 coordinate) {
     pos = coordinate;
     scale = {0.2f, 0.2f};
     this->setHP(100);
+    move_speed = 2.0f;
 }
 
 void Enemy_2::Update(){
@@ -21,20 +22,20 @@ void Enemy_2::Update(){
     if (m_Visible == false){
         return;
     }
-    if ((m_wall->boundary_collision_check_leftright(pos) == "right") ) {
+    if ((m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "right") ) {
         dir.x = 0;
     }
-    else if (m_wall->boundary_collision_check_leftright(pos) == "left") {
+    else if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "left") {
         dir.x = 0;
     }
-    if (m_wall->boundary_collision_check_updown(pos) == "up") {
+    if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "up") {
         dir.y = 0;
     }
-    else if (m_wall->boundary_collision_check_updown(pos) == "down") {
+    else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "down") {
         dir.y = 0;
     }
 
-    pos += dir * 2.0f;
+    pos += dir * move_speed;
 
 }
 
