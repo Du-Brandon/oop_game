@@ -14,8 +14,10 @@ public:
     void Start(float up_boundary, float down_boundary, float left_boundary, float right_boundary,float nextleveldoorup , float nextleveldoordown); // 添加這個方法來建立邊界的坐標
     void setwall(glm::vec2 coordinate_left_bottom, glm::vec2 coordinate_right_top); 
     void setwall(glm::vec2 coordinate_center, float radius);
+    void clear(); // 清除牆壁的坐標
     void Update();
     void end();
+
 
     glm::vec2 coordinate();
 

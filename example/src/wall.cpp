@@ -25,6 +25,12 @@ void Wall::setwall(glm::vec2 coordinate_center, float radius) {
     is_circle = true;
 }
 
+void Wall::clear(){
+    square_coordinate.clear();
+    square_coordinate_list.clear();
+    is_circle = false;
+}
+
 void Wall::Update() {
     // 可能用不到
     

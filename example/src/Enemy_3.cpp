@@ -22,6 +22,10 @@ void Enemy_3::Start(glm::vec2 coordinate) {
 
 void Enemy_3::Update() {
     if (m_Visible == false){
+        for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
+            this->RemoveChild(*it);
+            it = m_Arrows.erase(it); // 刪除箭
+        }
         return;
     }
 

@@ -232,7 +232,7 @@ void App::ValidTask() {
         m_Enemy5->SetDrawable(
             std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
         m_Enemy5->SetZIndex(5);
-        m_Enemy5->Start(glm::vec2(0, 0)); // 初始化敵人的位置
+        m_Enemy5->Start(glm::vec2(250, 0)); // 初始化敵人的位置
         m_Enemy5->setHP(500);
         m_Enemy5->setWall(wall);
         m_Enemies.push_back(m_Enemy5);
