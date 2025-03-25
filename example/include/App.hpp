@@ -14,6 +14,7 @@
 #include "Enemy.hpp"
 #include "Enemy_1.hpp"
 #include "Enemy_2.hpp"
+#include "Enemy_3.hpp"
 #include "Arrow.hpp"
 #include <glm/fwd.hpp>
 #include <vector>

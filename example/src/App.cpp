@@ -25,7 +25,7 @@ void App::Start() {
     }
 
     if (Util::Input::IsKeyDown(Util::Keycode::KP_ENTER)) {
-        wall->Start(180.0f, -180.0f, -458.0f, 262.0f, 32.0f, -19.0f);
+        wall->Start(180.0f, -180.0f, -464.0f, 267.0f, 32.0f, -19.0f);
 
         m_Giraffe->Start();
         m_Giraffe->Setwall(wall);
@@ -207,8 +207,8 @@ void App::ValidTask() {
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
         wall->setwall(glm::vec2 (-470.36f, 44.0f) , glm::vec2(-305.836f , 200.584f));
         wall->setwall(glm::vec2 (-470.03f, -191.562f) , glm::vec2(-305.101f , -38.670f));
-        wall->setwall(glm::vec2 (-134.625f,62.9083f) , glm::vec2(-90.1393f , 162.386f));
-        wall->setwall(glm::vec2 (-134.625f,-163.9083f) , glm::vec2(-90.1393f , -70.2383f));                   
+        wall->setwall(glm::vec2 (-134.625f,60.9083f) , glm::vec2(-90.1393f , 162.386f));
+        wall->setwall(glm::vec2 (-134.625f,-163.9083f) , glm::vec2(-90.1393f , -64.2383f));                   
 
         std::shared_ptr<Enemy_2> m_Enemy3 = std::make_shared<Enemy_2>();
         m_Enemy3->SetDrawable(
@@ -228,7 +228,7 @@ void App::ValidTask() {
         m_Enemies.push_back(m_Enemy4);
         m_Root.AddChild(m_Enemy4);
 
-        std::shared_ptr<Enemy_1> m_Enemy5 = std::make_shared<Enemy_1>();
+        std::shared_ptr<Enemy_3> m_Enemy5 = std::make_shared<Enemy_3>();
         m_Enemy5->SetDrawable(
             std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
         m_Enemy5->SetZIndex(5);

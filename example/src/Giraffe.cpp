@@ -152,6 +152,7 @@ void Giraffe::ShootArrow() {
     auto arrow = std::make_shared<Arrow>();
     arrow->setTarget(shared_from_this());
     arrow->setTarget(checkNearestEnemy());
+    arrow->setWall(m_Wall);
     // std::cout << "Shoot Arrow" << std::endl;
     arrow->Start();
     // this->AddChild(arrow);

@@ -23,6 +23,7 @@ public:
     void setTarget(std::shared_ptr<Giraffe> giraffe); // 設置射箭的人
     void setTarget(std::shared_ptr<Enemy> enemy); // 設置射箭的目標
     void setTargets(std::vector<std::shared_ptr<Enemy>>& enemies); // 設置射箭的目標
+    void setWall(std::shared_ptr<Wall> wall); // 設置射箭的牆壁
 
     void Update();
     void Start();
@@ -30,7 +31,7 @@ public:
     bool shouldDelete() const; // 添加這個方法來檢查箭是否應該被刪除
 
 private:
-    // 試著繼承enemy看看
+    
     glm::vec2 &pos = m_Transform.translation; // 箭的位置
     glm::vec2 &scale = m_Transform.scale; // 箭的大小
     float &rotation = m_Transform.rotation; // 箭的旋轉角度

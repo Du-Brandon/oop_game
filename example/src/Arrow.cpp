@@ -18,19 +18,11 @@ Arrow::Arrow() : m_Giraffe_(nullptr), m_Enemy_(nullptr) {
     // 構造元的具體實現
 }
 
-// void Arrow::setTarget(Giraffe* giraffe) {
-//     m_Giraffe_ = giraffe;
-//     m_PlayerCoordinate = m_Giraffe_ ->coordinate();
-// }
 void Arrow::setTarget(std::shared_ptr<Giraffe> giraffe) {
     m_Giraffe_ = giraffe;
     m_PlayerCoordinate = m_Giraffe_ ->coordinate();
 }
 
-// void Arrow::setTarget(Enemy* enemy) {
-//     m_Enemy_ = enemy;
-//     m_EnemyCoordinate = m_Enemy_ ->coordinate();
-// }
 void Arrow::setTarget(std::shared_ptr<Enemy> enemy) {
     m_Enemy_ = enemy;
     m_EnemyCoordinate = m_Enemy_ ->coordinate();
@@ -40,6 +32,10 @@ void Arrow::setTargets(std::vector<std::shared_ptr<Enemy>>& enemies) {
     for (auto enemy = enemies.begin(); enemy != enemies.end(); ++enemy) {
         m_Enemies.push_back(*enemy);
     }
+}
+
+void Arrow::setWall(std::shared_ptr<Wall> wall) {
+    m_Wall = wall;
 }
 
 void Arrow::Start(){
@@ -67,12 +63,19 @@ void Arrow::Update() {
     // 更新箭的位置
     pos += m_Direction * 20.0f; // 假設箭以固定速度移動
 
-    if (pos.y >= static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2 ||
-        pos.y + static_cast<float>(PTSD_Config::WINDOW_HEIGHT) / 2 <= 0 ||
-        pos.x >= static_cast<float>(PTSD_Config::WINDOW_WIDTH) / 2 ||
-        pos.x + static_cast<float>(PTSD_Config::WINDOW_WIDTH) / 2 <= 0) {
+    if (m_Wall->boundary_collision_check_leftright(pos) == "right" || m_Wall->boundary_collision_check_leftright(pos) == "left") {
         m_ShouldDelete = true;
+        std::cout << "Arrow hit wall" << std::endl;
     }
+    else if (m_Wall->boundary_collision_check_updown(pos) == "up" || m_Wall->boundary_collision_check_updown(pos) == "down") {
+        m_ShouldDelete = true;
+        std::cout << "Arrow hit wall" << std::endl;
+    }
+    else if (m_Wall -> boundary_collision_check_leftright(pos) == "lr" || m_Wall -> boundary_collision_check_updown(pos) == "ud") {
+        m_ShouldDelete = true;
+        std::cout << "Arrow hit wall" << std::endl;
+    }
+
     // 如果箭與敵人重合或正負50個像素，則應該刪除箭
     else {
         for (auto enemy = m_Enemies.begin(); enemy != m_Enemies.end(); ++enemy) {
@@ -80,15 +83,10 @@ void Arrow::Update() {
                 m_ShouldDelete = true;
                 (*enemy)->setHP(-(m_Giraffe_ ->getAtk()));
                 std::cout << "Arrow hit enemy" << (*enemy)->getHP() <<std::endl;
-            // if (enemy != nullptr && glm::distance(m_EnemyCoordinate, pos) <= 50.0f) {
-            //     m_ShouldDelete = true;
-            //     enemy ->setHP(-(m_Giraffe_ ->getAtk()));
-            //     std::cout << "Arrow hit enemy" << enemy->getHP() <<std::endl;
             }
         }
     }
 }
-
 
 glm::vec2 Arrow::coordinate() {
     return pos;
