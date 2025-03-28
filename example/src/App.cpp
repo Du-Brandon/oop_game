@@ -1,5 +1,6 @@
 #include "App.hpp"
 
+#include "Angel.hpp"
 #include "Enemy_2.hpp"
 #include "Util/Image.hpp"
 #include "Util/Input.hpp"
@@ -112,7 +113,7 @@ void App::Update() {
         enemy_it->Update();
         m_Enemy_pos = (enemy_it->coordinate());
         if (glm::distance(m_Giraffe_pos, m_Enemy_pos) < 50 && enemy_it->getVisible()) {
-            m_Giraffe->setHP(-1);
+            m_Giraffe->setHP(-enemy_it->getAtk());
             LOG_DEBUG("Collision detected!");
             std::cout << "Giraffe HP: " << m_Giraffe->getHP() << std::endl;
         }
@@ -237,8 +238,8 @@ void App::ValidTask() {
         m_Enemy5->SetDrawable(
             std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
         m_Enemy5->SetZIndex(5);
-        m_Enemy5->Start(glm::vec2(250, 0)); // 初始化敵人的位置
         m_Enemy5->setHP(100);
+        m_Enemy5->Start(glm::vec2(250, 0)); // 初始化敵人的位置
         m_Enemy5->setWall(wall);
         m_Enemies.push_back(m_Enemy5);
         m_Root.AddChild(m_Enemy5);
@@ -354,6 +355,34 @@ void App::ValidTask() {
         m_Root.AddChild(m_Enemy12);
         
         giraffe_exp = 0;
+        m_Giraffe -> setpos(glm::vec2(-420, 0));
+        m_Giraffe -> Setwall(wall);
+
+        is_enemy_empty = false;
+        break;
+    }
+
+    case player_level::fifth_level:{
+        LOG_DEBUG("fifth_level");
+        now_level = 5;
+        m_Background->nextbackground(now_level);
+        this->removeEnemy();
+        m_Enemies.clear();
+
+        wall->clear();
+        wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
+        // wall->setwall(glm::vec2 (-398.86f, 73.006f) , glm::vec2(-149.116f , 121.659f));
+        // wall->setwall(glm::vec2 (-398.523f, -131.287f) , glm::vec2(-364.459f , 124.414f));
+        
+        std::shared_ptr<Angel> m_Angel = std::make_shared<Angel>();
+        m_Angel->SetDrawable(
+            std::make_shared<Util::Image>("../assets/sprites/angel.png"));
+        m_Angel->SetZIndex(10);
+        m_Angel->Start(glm::vec2(200, 0)); // 初始化敵人的位置
+        m_Angel->setWall(wall);
+        m_Enemies.push_back(m_Angel);
+        m_Root.AddChild(m_Angel);
+
         m_Giraffe -> setpos(glm::vec2(-420, 0));
         m_Giraffe -> Setwall(wall);
 

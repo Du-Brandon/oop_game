@@ -108,7 +108,7 @@ void Giraffe::Update() {
     }
 
     //按Q鍵測試弓箭
-    if (((Util::Input::IsKeyDown(Util::Keycode::Q) || !anyKeyPressed) && contral_Atk_Speed()) && !enemy_is_empty) {
+    if (((Util::Input::IsKeyDown(Util::Keycode::Q) || !anyKeyPressed) && contral_Atk_Speed()) && !enemy_is_empty && m_Enemies.size() > 0) {
         ShootArrow();
     }
     for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
@@ -205,7 +205,7 @@ void Giraffe::SetEnemy(std::shared_ptr<Enemy> enemy) {
 }
 
 void Giraffe::SetEnemies(std::shared_ptr<Enemy> enemy) {
-    if (enemy == nullptr ||enemy->getVisible() == false) {
+    if (enemy == nullptr ||enemy->getVisible() == false || enemy->getName() == "Angel") {
         return;
     }
     m_Enemies.push_back(enemy);
@@ -213,8 +213,8 @@ void Giraffe::SetEnemies(std::shared_ptr<Enemy> enemy) {
 
 void Giraffe::SetEnemies(std::vector<std::shared_ptr<Enemy>> enemies) {
     m_Enemies.clear();
-    for (auto &enemy : enemies) {
-        if (enemy->getVisible() == false) {
+    for (auto &enemy : enemies) { //|| enemy->getName() == "Angel"
+        if (enemy->getVisible() == false || enemy->getName() == "Angel") {
             continue;
         }
         m_Enemies.push_back(enemy);

@@ -111,6 +111,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/Wall.cpp
     ${EXAMPLE_DIR}/src/Background.cpp
     ${EXAMPLE_DIR}/src/hp.cpp
+    ${EXAMPLE_DIR}/src/Angel.cpp
 
     ${EXAMPLE_DIR}/include/App.hpp
     ${EXAMPLE_DIR}/include/Giraffe.hpp
@@ -125,6 +126,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/include/Wall.hpp
     ${EXAMPLE_DIR}/include/Background.hpp
     ${EXAMPLE_DIR}/include/hp.hpp
+    ${EXAMPLE_DIR}/include/Angel.hpp
     
 )
 set(TEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/test)

@@ -37,13 +37,15 @@ class Enemy : public Util::GameObject {
     int getAtk() const;  
     void setExp_supply(int exp);  
     int getExp_supply() const;  
-    bool getVisible() const;  
+    std::string getName() const;
+    virtual bool getVisible() const;  
 
 protected:
     int m_HP = 100; // 添加這個成員變數來表示敵人的血量
-    int m_atk = 10; // 添加這個成員變數來表示敵人的攻擊力
+    int m_atk = 1; // 添加這個成員變數來表示敵人的攻擊力
     int exp_supply = 10; // 添加這個成員變數來表示敵人的經驗值
     float move_speed = 10.0f; 
+    std::string name = ""; // 敵人的名稱
 
     glm::vec2 &pos = m_Transform.translation; // 敵人的位置
     glm::vec2 &scale = m_Transform.scale; // 敵人的大小

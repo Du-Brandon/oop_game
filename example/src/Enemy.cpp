@@ -86,6 +86,10 @@ void Enemy::setGiraffe(std::shared_ptr<Giraffe> giraffe) {
     m_Giraffe = giraffe;
 }
 
+std::string Enemy::getName() const {
+    return name;
+}
+
 bool Enemy::getVisible() const {
     return m_Visible;
 }
@@ -149,7 +153,7 @@ glm::vec2 Enemy::randomMove(char x) {
 
 void Enemy::enemy_hp_start() {
     // 初始化血量
-    
+
     m_hp_pic->Start(pos);
     m_hp_pic->set_maxhp(m_HP);
     this->AddChild(m_hp_pic);

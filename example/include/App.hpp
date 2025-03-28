@@ -14,6 +14,7 @@
 #include "Enemy_1.hpp"
 #include "Enemy_2.hpp"
 #include "Enemy_3.hpp"
+#include "Angel.hpp"
 #include "Arrow.hpp"
 #include <glm/fwd.hpp>
 #include <vector>
@@ -42,6 +43,7 @@ private:
         second_level,
         third_level,
         fourth_level,
+        fifth_level,
         end
     };
 
