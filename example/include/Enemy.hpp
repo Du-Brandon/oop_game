@@ -2,6 +2,7 @@
 
 #include "Wall.hpp"
 #include "Giraffe.hpp"
+#include "hp.hpp"
 
 #include <glm/fwd.hpp>
 #include <memory>
@@ -51,6 +52,8 @@ protected:
     glm::vec2 Giraffe_pos; // 長頸鹿的位置
     std::shared_ptr<Giraffe> m_Giraffe; // 長頸鹿的指針
     std::shared_ptr<Wall> m_wall; // 敵人的碰撞邊界
+    std::shared_ptr<hp_pic> m_hp; // 血量的指針
+
 
     glm::vec2 randomMove(char x); // 生成隨機移動方向的方法
 };
