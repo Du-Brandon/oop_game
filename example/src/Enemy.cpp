@@ -146,3 +146,17 @@ glm::vec2 Enemy::randomMove(char x) {
             return {deltaX, deltaY};
     }
 }
+
+void Enemy::enemy_hp_start() {
+    // 初始化血量
+    
+    m_hp_pic->Start(pos);
+    m_hp_pic->set_maxhp(m_HP);
+    this->AddChild(m_hp_pic);
+}
+
+void Enemy::enemy_hp_update() {
+    // 更新血量
+    m_hp_pic->setpic(m_HP);
+    m_hp_pic->Update(pos);
+}

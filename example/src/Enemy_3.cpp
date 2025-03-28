@@ -13,11 +13,15 @@ void Enemy_3::Start() {
     pos = {100, 100};
 
     scale = {0.2f, 0.2f};
+
+    enemy_hp_start();
 }
 void Enemy_3::Start(glm::vec2 coordinate) {
     pos = coordinate;
     scale = {0.2f, 0.2f};
     move_speed = 0.0f;
+
+    enemy_hp_start();
 }
 
 void Enemy_3::Update() {
@@ -46,6 +50,8 @@ void Enemy_3::Update() {
         }
     
     }
+
+    enemy_hp_update();
 }
 
 glm::vec2 Enemy_3::move() {

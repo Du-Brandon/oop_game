@@ -15,6 +15,8 @@ void Enemy_1::Start() {
     // rotation = 0.0f;
 
     dir = randomMove('z'); // 長頸鹿的移動方向
+
+    enemy_hp_start();
 }
 
 void Enemy_1::Start(glm::vec2 coordinate) {
@@ -27,6 +29,7 @@ void Enemy_1::Start(glm::vec2 coordinate) {
 
     move_speed = 8.0f;
     
+    enemy_hp_start();
 }
 
 void Enemy_1::Update() {
@@ -53,7 +56,7 @@ void Enemy_1::Update() {
     // 更新敵人的位置
     pos += dir * move_speed;
     
-    // pos += dir * 0.0f;
+    enemy_hp_update();
 }
 
 glm::vec2 Enemy_1::move() {

@@ -73,7 +73,7 @@ private:
     std::shared_ptr<Enemy> m_Enemy; // 添加這個成員變數來存儲敵人的指針
     std::vector<std::shared_ptr<Enemy>> m_Enemies;
     std::vector<std::shared_ptr<Arrow>> m_Arrows; // 添加這個成員變數來存儲 Arrow 對象
-    std::shared_ptr<hp_pic> m_hp_pic; // 添加這個成員變數來存儲血量的指針
+    std::shared_ptr<hp_pic> m_hp_pic = std::make_shared<hp_pic>(); // 添加這個成員變數來存儲血量的指針
 
     bool enemy_is_empty = false; // 判斷敵人是否存在
 };

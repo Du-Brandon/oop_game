@@ -7,6 +7,7 @@ void Enemy_2::Start() {
 
     scale = {0.2f, 0.2f};
 
+    enemy_hp_start();
 }
 
 void Enemy_2::Start(glm::vec2 coordinate) {
@@ -14,6 +15,8 @@ void Enemy_2::Start(glm::vec2 coordinate) {
     scale = {0.2f, 0.2f};
     this->setHP(100);
     move_speed = 2.0f;
+
+    enemy_hp_start();
 }
 
 void Enemy_2::Update(){
@@ -42,6 +45,8 @@ void Enemy_2::Update(){
     }
 
     pos += dir * move_speed;
+
+    enemy_hp_update();
 
 }
 

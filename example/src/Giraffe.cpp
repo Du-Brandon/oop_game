@@ -20,7 +20,10 @@ void Giraffe::Start() {
     pos = glm::vec2(-100, 0);
 
     start = std::chrono::high_resolution_clock::now();
-
+    
+    m_hp_pic -> Start(pos);
+    m_hp_pic -> set_maxhp(m_HP);
+    this -> AddChild(m_hp_pic);
     // m_GiraffeText =
     //     std::make_shared<GiraffeText>("../assets/fonts/Inter.ttf", 50);
     // m_GiraffeText->SetZIndex(this->GetZIndex() - 1);
@@ -32,6 +35,8 @@ void Giraffe::Update() {
     // if (enemy_is_empty){
     //     return;
     // }
+
+
     glm::vec2 dir_Right = {1, 0}; //長頸鹿的移動方向
     glm::vec2 dir_Left = {-1, 0};
     glm::vec2 dir_Up= {0, 1};
@@ -117,6 +122,9 @@ void Giraffe::Update() {
             ++it;
         }
     }
+
+    m_hp_pic -> setpic(m_HP);
+    m_hp_pic -> Update(pos);
 
     // m_GiraffeText->Update();
 }
