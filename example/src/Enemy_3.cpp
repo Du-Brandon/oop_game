@@ -36,7 +36,7 @@ void Enemy_3::Update() {
     }
     for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
         (*it)->setTarget(m_Giraffe);
-        (*it)->Update();
+        (*it)->Update(true);
         if ((*it)->shouldDelete()) {
             this->RemoveChild(*it);
             it = m_Arrows.erase(it); // 刪除箭

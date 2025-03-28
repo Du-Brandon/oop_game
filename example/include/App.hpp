@@ -1,5 +1,4 @@
-#ifndef APP_HPP
-#define APP_HPP
+#pragma once
 
 #include <memory>
 #include "background.hpp"
@@ -41,6 +40,8 @@ private:
         lobby,
         first_level,
         second_level,
+        third_level,
+        fourth_level,
         end
     };
 
@@ -67,12 +68,11 @@ private:
     std::shared_ptr<Giraffe> m_Giraffe = std::make_shared<Giraffe>();
     //    std::shared_ptr<GiraffeText> m_GiraffeText =
     //    std::make_shared<GiraffeText>();
+    int giraffe_exp = 0;
 
     std::shared_ptr<Cat> m_Cat = std::make_shared<Cat>();
     std::shared_ptr<Wall> wall = std::make_shared<Wall>();
     std::shared_ptr<Enemy_1> m_Enemy = std::make_shared<Enemy_1>();
-    // std::shared_ptr<Enemy_1> m_Enemy2 = std::make_shared<Enemy_1>();
-    // std::shared_ptr<Enemy_2> m_Enemy2 = std::make_shared<Enemy_2>();
 
     std::vector<std::shared_ptr<Enemy>> m_Enemies;
     glm::vec2 m_Enemy_pos;
@@ -85,4 +85,4 @@ private:
     bool showDemoWindow = true;
 };
 
-#endif
+

@@ -28,10 +28,16 @@ void Enemy_2::Update(){
     else if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "left") {
         dir.x = 0;
     }
+    else if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "lr") {
+        dir.x = 0;
+    }
     if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "up") {
         dir.y = 0;
     }
     else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "down") {
+        dir.y = 0;
+    }
+    else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "ud") {
         dir.y = 0;
     }
 

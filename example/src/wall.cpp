@@ -43,7 +43,7 @@ void Wall::end() {
 std::string Wall::boundary_collision_check_leftright(glm::vec2 coordinate){
     // std::cout << up_boundary << " " << coordinate.y << std::endl;
     if (this->collision_check(coordinate)) {
-        std::cout << "lscollision" << std::endl;
+        // std::cout << "lscollision" << std::endl;
         return "lr";
     }
     if (coordinate.x <= left_boundary){
@@ -57,7 +57,7 @@ std::string Wall::boundary_collision_check_leftright(glm::vec2 coordinate){
 
 std::string Wall::boundary_collision_check_updown(glm::vec2 coordinate){
     if (this->collision_check(coordinate)) {
-        std::cout << "udcollision" << std::endl;
+        // std::cout << "udcollision" << std::endl;
         return "ud";
     }
     

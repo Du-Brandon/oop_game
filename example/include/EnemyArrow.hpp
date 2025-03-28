@@ -24,6 +24,7 @@ public:
 
     void Start();
     void Update();
+    void Update(bool ignorewall);
     glm::vec2 coordinate();
     bool shouldDelete() const; // 添加這個方法來檢查箭是否應該被刪除
 
