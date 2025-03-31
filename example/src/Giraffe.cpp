@@ -29,6 +29,12 @@ void Giraffe::Start() {
     // m_GiraffeText->SetZIndex(this->GetZIndex() - 1);
     // m_GiraffeText->Start();
     // this->AddChild(m_GiraffeText);
+
+    std::vector<std::string> skill_list_name = {"double_arrow", "rebound_arrow", "skill_smart", "skill_4"}; // 技能名稱列表
+    bool skill_double_arrow = false; // 判斷技能1是否被使用
+    bool skill_rebound_arrow = false; // 判斷技能2是否被使用
+    bool skill_smart = false; // 判斷技能3是否被使用
+    bool skill_4 = false; // 判斷技能4是否被使用
 }
 
 void Giraffe::Update() {
@@ -156,13 +162,22 @@ std::shared_ptr<Enemy> Giraffe::checkNearestEnemy() {
     return nearestEnemy;
 }
 
-void Giraffe::ShootArrow() {
+void Giraffe::ShootArrow(bool double_arrow , bool rebound_arrow) {
     auto arrow = std::make_shared<Arrow>();
     arrow->setTarget(shared_from_this());
     arrow->setTarget(checkNearestEnemy());
     arrow->setWall(m_Wall);
     // std::cout << "Shoot Arrow" << std::endl;
-    arrow->Start();
+    if (rebound_arrow) {
+        arrow->Start(true);
+    } 
+    else{
+        arrow->Start();
+    }
+    
+    if (double_arrow) {
+        // arrow->setDoubleArrow();
+    }
     // this->AddChild(arrow);
     m_Arrows.push_back(arrow); // 將箭存儲到向量中
     this->AddChild(arrow);
@@ -227,5 +242,11 @@ void Giraffe::Setwall(std::shared_ptr<Wall> wall) {
 
 void Giraffe::ClearEnemies() {
     m_Enemies.clear();
+}
+
+// skill function
+void Giraffe::judge_skill() {
+    // 判斷技能
+    
 }
 

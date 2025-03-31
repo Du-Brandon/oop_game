@@ -1,4 +1,7 @@
-#pragma once
+#pragma  once
+
+#include "Enemy.hpp"
+#include "Wall.hpp"
 
 #include <cmath>
 #include <vector>
@@ -8,10 +11,10 @@
 #include "Wall.hpp"
 #include "EnemyArrow.hpp"
 
-class Enemy_3 : public Enemy , public std::enable_shared_from_this<Enemy> {
+class Boss_1 : public Enemy , public std::enable_shared_from_this<Enemy> {
 public:
-    Enemy_3() = default;
-    ~Enemy_3() override = default;
+    Boss_1() = default;
+    ~Boss_1() override = default;
 
     void Update() override;
     void Start() override;
@@ -21,8 +24,8 @@ public:
     void shoot() override;
 
 
-private:
     std::vector<std::shared_ptr<EnemyArrow>> m_Arrows; // 射出的箭
+private:
 
     float attect_interval = 0.0f; // 攻擊間隔
 };

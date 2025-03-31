@@ -55,8 +55,11 @@ void Arrow::Start(){
     // 初始化箭的旋轉角度
     rotation =atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
     // std::cout << "Arrow rotation: " << rotation << std::endl;
+}
 
-    
+void Arrow::Start(bool rebound_arrow){
+    bool rebound = rebound_arrow;
+    this->Start();
 }
 
 void Arrow::Update() {

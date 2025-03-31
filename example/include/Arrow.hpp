@@ -27,6 +27,7 @@ public:
 
     void Update();
     void Start();
+    void Start(bool rebound_arrow); // 設置射箭的目標
     glm::vec2 coordinate();
     bool shouldDelete() const; // 添加這個方法來檢查箭是否應該被刪除
 

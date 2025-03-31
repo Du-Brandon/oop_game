@@ -325,7 +325,7 @@ void App::ValidTask() {
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
         wall->setwall(glm::vec2 (-398.86f, 73.006f) , glm::vec2(-149.116f , 121.659f));
         wall->setwall(glm::vec2 (-398.523f, -131.287f) , glm::vec2(-364.459f , 124.414f));
-        wall->setwall(glm::vec2 (-398.883f,-124.099f) , glm::vec2(-146.449f , -72.8387f));
+        wall->setwall(glm::vec2 (-398.883f,-124.099f) , glm::vec2(-146.449f , -52.8387f));
         
         wall->setwall(glm::vec2 (-35.7017f,72.0359f) , glm::vec2(210.873f , 123.596f));                
         wall->setwall(glm::vec2 (166.669f,-122.415f) , glm::vec2(211.375f , 123.596f));                

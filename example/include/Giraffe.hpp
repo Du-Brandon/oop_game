@@ -27,7 +27,7 @@ public:
     void Update();
 
     void Start();
-    void ShootArrow(); // 添加生成 Arrow 的方法
+    void ShootArrow(bool double_arrow , bool rebound_arrow); // 添加生成 Arrow 的方法
     void SetEnemy(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemy 的指針
     void SetEnemies(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemies 的向量
     void SetEnemies(std::vector<std::shared_ptr<Enemy>> enemies); // 添加這個方法來設置 m_Enemies 的向量
@@ -64,6 +64,13 @@ private:
     glm::vec2 &pos = m_Transform.translation; // 長頸鹿的位置
     glm::vec2 &scale = m_Transform.scale; // 長頸鹿的大小
     float &rotation = m_Transform.rotation; // 長頸鹿的旋轉角度
+
+    // skill list
+    void judge_skill(); // 判斷技能
+    // void skill_double_arrow(); // 技能1
+    // void skill_rebound_arrow(); // 技能2
+    // void skill_smart(); // 技能3
+
 
     // bool Is_move; // 判斷長頸鹿是否移動
     bool anyKeyPressed ; // 判斷是否有按鍵被按下
