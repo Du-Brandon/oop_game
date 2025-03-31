@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <memory>
+#include <ostream>
 
 
 void App::Start() {
@@ -109,6 +110,9 @@ void App::Update() {
     auto m_Giraffe_pos = m_Giraffe->coordinate();
     
     for (auto &enemy_it : m_Enemies) {
+        if (Util::Input::IsKeyDown(Util::Keycode::R)){
+            std::cout << "running"<<std::endl;
+        }
         enemy_it->setGiraffe(m_Giraffe);
         enemy_it->Update();
         m_Enemy_pos = (enemy_it->coordinate());
@@ -355,7 +359,7 @@ void App::ValidTask() {
         m_Root.AddChild(m_Enemy12);
         
         giraffe_exp = 0;
-        m_Giraffe -> setpos(glm::vec2(-420, 0));
+        m_Giraffe -> setpos(glm::vec2(-500, 0));
         m_Giraffe -> Setwall(wall);
 
         is_enemy_empty = false;
