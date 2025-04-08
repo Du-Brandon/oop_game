@@ -10,6 +10,7 @@
 #include "Wall.hpp"
 #include "Giraffe.hpp"
 #include "GiraffeText.hpp"
+#include "Boss.hpp"
 #include "Enemy.hpp"
 #include "Enemy_1.hpp"
 #include "Enemy_2.hpp"
@@ -24,6 +25,7 @@ public:
     enum class State {
         START,
         UPDATE,
+        BOSSUPDATE,
         END,
     };
 
@@ -31,6 +33,7 @@ public:
 
     void Start();
     void Update();
+    void Boss_Update();
     void End(); // NOLINT(readability-convert-member-functions-to-static)
 
 private:
@@ -44,6 +47,7 @@ private:
         third_level,
         fourth_level,
         fifth_level,
+        tenth_level,
         end
     };
 
@@ -58,6 +62,10 @@ private:
     
         // 將整數轉回 enum class
         return static_cast<player_level>(next);
+    }
+
+    bool contains(const std::string& text, const std::string& keyword) {
+        return text.find(keyword) != std::string::npos;
     }
 
     State m_CurrentState = State::START;

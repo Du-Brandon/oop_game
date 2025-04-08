@@ -86,8 +86,16 @@ void Enemy::setGiraffe(std::shared_ptr<Giraffe> giraffe) {
     m_Giraffe = giraffe;
 }
 
+void Enemy::setName(std::string name) {
+    this->name = name;
+}
+
 std::string Enemy::getName() const {
     return name;
+}
+
+std::string Enemy::getFinal_wish() const {
+    return final_wish;
 }
 
 bool Enemy::getVisible() const {

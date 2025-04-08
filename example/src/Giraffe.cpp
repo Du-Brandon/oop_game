@@ -115,7 +115,7 @@ void Giraffe::Update() {
 
     //按Q鍵測試弓箭
     if (((Util::Input::IsKeyDown(Util::Keycode::Q) || !anyKeyPressed) && contral_Atk_Speed()) && !enemy_is_empty && m_Enemies.size() > 0) {
-        ShootArrow();
+        ShootArrow(false, false);
     }
     for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
         (*it)->setTargets(m_Enemies);

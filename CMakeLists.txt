@@ -103,6 +103,9 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/Cat.cpp
     ${EXAMPLE_DIR}/src/main.cpp
     ${EXAMPLE_DIR}/src/Arrow.cpp
+    ${EXAMPLE_DIR}/src/Boss_1_1.cpp
+    ${EXAMPLE_DIR}/src/Boss_1_2.cpp
+    ${EXAMPLE_DIR}/src/Boss_1_3.cpp
     ${EXAMPLE_DIR}/src/Enemy.cpp
     ${EXAMPLE_DIR}/src/Enemy_1.cpp
     ${EXAMPLE_DIR}/src/Enemy_2.cpp
@@ -118,6 +121,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/include/GiraffeText.hpp
     ${EXAMPLE_DIR}/include/Cat.hpp
     ${EXAMPLE_DIR}/include/Arrow.hpp
+    ${EXAMPLE_DIR}/include/Boss.hpp
     ${EXAMPLE_DIR}/include/Enemy.hpp
     ${EXAMPLE_DIR}/include/Enemy_1.hpp
     ${EXAMPLE_DIR}/include/Enemy_2.hpp

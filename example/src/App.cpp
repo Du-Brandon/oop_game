@@ -1,5 +1,6 @@
 #include "App.hpp"
 
+#include "log_my.hpp"
 #include "Angel.hpp"
 #include "Enemy_2.hpp"
 #include "Util/Image.hpp"
@@ -181,6 +182,118 @@ void App::Update() {
     if (showDemoWindow) {
         ImGui::ShowDemoWindow();
     }
+}
+
+void App::Boss_Update() {
+    LOG_TRACE("Boss_Update");
+
+
+    if (Util::Input::IsKeyUp(Util::Keycode::ESCAPE) || Util::Input::IfExit()) {
+        m_CurrentState = State::END;
+    }
+
+    m_Giraffe->ClearEnemies();
+
+    m_Giraffe->SetEnemies(m_Enemies);
+
+    m_Giraffe->Update();
+    auto m_Giraffe_pos = m_Giraffe->coordinate();
+    
+    for (auto &enemy_it : m_Enemies) {
+        if (Util::Input::IsKeyDown(Util::Keycode::R)){
+            std::cout << "running"<<std::endl;
+        }
+        enemy_it->setGiraffe(m_Giraffe);
+        enemy_it->Update();
+        m_Enemy_pos = (enemy_it->coordinate());
+        if (glm::distance(m_Giraffe_pos, m_Enemy_pos) < 50 && enemy_it->getVisible()) {
+            m_Giraffe->setHP(-enemy_it->getAtk());
+            LOG_DEBUG("Collision detected!");
+            std::cout << "Giraffe HP: " << m_Giraffe->getHP() << std::endl;
+        }
+
+
+        if (enemy_it->getHP() <= 0 && enemy_it->getVisible()) {
+            if(enemy_it->getFinal_wish() == "Add two Boss_1_2") {
+                std::shared_ptr<Boss_1_2> m_Boss_1_2_1 = std::make_shared<Boss_1_2>();
+                m_Boss_1_2_1->Start(enemy_it->coordinate());
+                m_Boss_1_2_1->setWall(wall);
+                m_Enemies.push_back(m_Boss_1_2_1);
+                m_Root.AddChild(m_Boss_1_2_1);
+                std::shared_ptr<Boss_1_2> m_Boss_1_2_2 = std::make_shared<Boss_1_2>();
+                m_Boss_1_2_2->Start(enemy_it->coordinate());
+                m_Boss_1_2_2->setWall(wall);
+                m_Enemies.push_back(m_Boss_1_2_2);
+                m_Root.AddChild(m_Boss_1_2_2);
+            }
+            // else if (enemy_it->getFinal_wish() == "Add two Boss_1_3") {
+            //     std::cout << "Add two Boss_1_3" << std::endl;
+            //     std::shared_ptr<Boss_1_3> m_Boss_1_3_1 = std::make_shared<Boss_1_3>();
+            //     m_Boss_1_3_1->Start(enemy_it->coordinate());
+            //     m_Boss_1_3_1->setWall(wall);
+            //     m_Enemies.push_back(m_Boss_1_3_1);
+            //     m_Root.AddChild(m_Boss_1_3_1);
+            //     std::shared_ptr<Boss_1_3> m_Boss_1_3_2 = std::make_shared<Boss_1_3>();
+            //     m_Boss_1_3_2->Start(enemy_it->coordinate());
+            //     m_Boss_1_3_2->setWall(wall);
+            //     m_Enemies.push_back(m_Boss_1_3_2);
+            //     m_Root.AddChild(m_Boss_1_3_2);
+
+            //     // 印出enemies中所有物件的名稱
+            //     for (const auto& enemy : m_Enemies) {
+            //         std::cout << "Enemy name: " << enemy->getName() << std::endl;
+            //     }
+
+            //     std::cout << "Add two Boss_1_3 finish" << std::endl;
+            
+            // }
+
+        
+            enemy_it->SetVisible(false);
+
+            // m_Enemies.erase(std::remove(m_Enemies.begin(), m_Enemies.end(), enemy_it), m_Enemies.end());
+        }
+    }
+    
+    for (auto &enemy_it : m_Enemies) {
+        if (enemy_it->getVisible()) {
+            is_enemy_empty = false;
+            break;
+        } else {
+            giraffe_exp += enemy_it->getExp_supply();
+            enemy_it -> setExp_supply(0);
+            is_enemy_empty = true;
+        }
+    
+    }
+    m_Giraffe->set_enemy_is_empty(is_enemy_empty);
+    if (is_enemy_empty) {
+        
+        m_Background->nextbackground(now_level);
+        m_Giraffe -> setExp(giraffe_exp);
+        giraffe_exp = 0;
+        if (wall->nextlevel_collision_check(m_Giraffe_pos)) {
+            m_player_level = nextLevel(m_player_level);
+            std::cout << "m_player_level: " << m_Giraffe->getExp() << std::endl;
+            ValidTask();
+        }
+    }
+
+    if (m_Giraffe->getHP() <= 0) {
+        m_player_level = player_level::end;
+        ValidTask();
+    }
+
+    m_Root.Update();
+
+    // press SPACE to toggle demo window
+    if (Util::Input::IsKeyDown(Util::Keycode::SPACE)) {
+        showDemoWindow = !showDemoWindow;
+    }
+    if (showDemoWindow) {
+        ImGui::ShowDemoWindow();
+    }
+
 }
 
 void App::End() { // NOLINT(this method will mutate members in the future)
@@ -375,8 +488,8 @@ void App::ValidTask() {
 
         wall->clear();
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
-        // wall->setwall(glm::vec2 (-398.86f, 73.006f) , glm::vec2(-149.116f , 121.659f));
-        // wall->setwall(glm::vec2 (-398.523f, -131.287f) , glm::vec2(-364.459f , 124.414f));
+        wall->setwall(glm::vec2 (-460.86f, 83.006f) , glm::vec2(267.116f , 125.659f));
+        wall->setwall(glm::vec2 (-462.523f, -119.287f) , glm::vec2(267.459f , -85.414f));
         
         std::shared_ptr<Angel> m_Angel = std::make_shared<Angel>();
         m_Angel->SetDrawable(
@@ -388,6 +501,35 @@ void App::ValidTask() {
         m_Root.AddChild(m_Angel);
 
         m_Giraffe -> setpos(glm::vec2(-420, 0));
+        m_Giraffe -> Setwall(wall);
+
+        giraffe_exp = 0;
+        is_enemy_empty = false;
+        break;
+    }
+
+    case player_level::tenth_level:{
+        LOG_DEBUG("tenth_level");
+        m_CurrentState = State::BOSSUPDATE;
+        now_level = 6;
+        m_Background->nextbackground(now_level);
+        this->removeEnemy();
+        m_Enemies.clear();
+
+        wall->clear();
+        wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
+        // wall->setwall(glm::vec2 (-460.86f, 83.006f) , glm::vec2(267.116f , 125.659f));
+        // wall->setwall(glm::vec2 (-462.523f, -119.287f) , glm::vec2(267.459f , -85.414f));
+        
+        std::shared_ptr<Boss_1_1> m_Boss_1_1 = std::make_shared<Boss_1_1>();
+        m_Boss_1_1->Start();
+        m_Boss_1_1->setWall(wall);
+        m_Enemies.push_back(m_Boss_1_1);
+        m_Root.AddChild(m_Boss_1_1);    
+
+        std::cout << "m_Boss_1_1 finish" << std::endl;
+        m_Giraffe -> setpos(glm::vec2(-420, 0));
+        std::cout << "m_Giraffe set finish" << std::endl;
         m_Giraffe -> Setwall(wall);
 
         is_enemy_empty = false;

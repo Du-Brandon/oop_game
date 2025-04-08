@@ -37,7 +37,9 @@ class Enemy : public Util::GameObject {
     int getAtk() const;  
     void setExp_supply(int exp);  
     int getExp_supply() const;  
+    void setName(std::string name);
     std::string getName() const;
+    std::string getFinal_wish() const;
     virtual bool getVisible() const;  
 
 protected:
@@ -46,6 +48,7 @@ protected:
     int exp_supply = 10; // 添加這個成員變數來表示敵人的經驗值
     float move_speed = 10.0f; 
     std::string name = ""; // 敵人的名稱
+    std::string final_wish = ""; // 敵人的最終願望
 
     glm::vec2 &pos = m_Transform.translation; // 敵人的位置
     glm::vec2 &scale = m_Transform.scale; // 敵人的大小
@@ -55,6 +58,7 @@ protected:
     std::shared_ptr<Giraffe> m_Giraffe; // 長頸鹿的指針
     std::shared_ptr<Wall> m_wall; // 敵人的碰撞邊界
     std::shared_ptr<hp_pic> m_hp_pic = std::make_shared<hp_pic>(); // 敵人的血量
+    
 
 
     glm::vec2 randomMove(char x); // 生成隨機移動方向的方法

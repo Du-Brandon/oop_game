@@ -8,13 +8,14 @@
 #include <memory>
 
 #include "Enemy.hpp"
+#include "hp.hpp"
 #include "Wall.hpp"
 #include "EnemyArrow.hpp"
 
-class Boss_1 : public Enemy , public std::enable_shared_from_this<Enemy> {
+class Boss_1_1 : public Enemy , public std::enable_shared_from_this<Enemy> {
 public:
-    Boss_1() = default;
-    ~Boss_1() override = default;
+    Boss_1_1() = default;
+    ~Boss_1_1() override = default;
 
     void Update() override;
     void Start() override;
@@ -24,8 +25,46 @@ public:
     void shoot() override;
 
 
-    std::vector<std::shared_ptr<EnemyArrow>> m_Arrows; // 射出的箭
+    // std::vector<std::shared_ptr<EnemyArrow>> m_Arrows; // 射出的箭
 private:
 
     float attect_interval = 0.0f; // 攻擊間隔
 };
+
+class Boss_1_2 : public Enemy , public std::enable_shared_from_this<Enemy> {
+    public:
+        Boss_1_2() = default;
+        ~Boss_1_2() override = default;
+    
+        void Update() override;
+        void Start() override;
+        void Start(glm::vec2 coordinate) override;
+    
+        glm::vec2 move() override;
+        void shoot() override;
+    
+    
+        // std::vector<std::shared_ptr<EnemyArrow>> m_Arrows; // 射出的箭
+    private:
+    
+        float attect_interval = 0.0f; // 攻擊間隔
+    };
+
+class Boss_1_3 : public Enemy , public std::enable_shared_from_this<Enemy> {
+    public:
+        Boss_1_3() = default;
+        ~Boss_1_3() override = default;
+    
+        void Update() override;
+        void Start() override;
+        void Start(glm::vec2 coordinate) override;
+    
+        glm::vec2 move() override;
+        void shoot() override;
+    
+    
+        // std::vector<std::shared_ptr<EnemyArrow>> m_Arrows; // 射出的箭
+    private:
+    
+        float attect_interval = 0.0f; // 攻擊間隔
+    };
