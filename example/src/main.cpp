@@ -8,7 +8,7 @@
 int main(int, char **) {
     auto context = Core::Context::GetInstance();
     App app;
-    Logger::init("C:/oop_practice/oop_game/assets/log/log.txt");
+    Logger::init("../assets/log/log.txt");
     // set icon in window.
     context->SetWindowIcon(ASSETS_DIR "/icon.jpg"); //設定exe圖式
     Logger::info("Game start");

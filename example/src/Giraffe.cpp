@@ -1,4 +1,5 @@
 #include "Giraffe.hpp"
+#include "log_my.hpp"
 
 #include <cmath>
 #include <iostream>
@@ -38,10 +39,11 @@ void Giraffe::Start() {
 }
 
 void Giraffe::Update() {
-    // if (enemy_is_empty){
-    //     return;
-    // }
 
+    if (!m_Wall) {
+        Logger::error("m_Wall is nullptr in Giraffe::Update");
+        return;
+    }
 
     glm::vec2 dir_Right = {1, 0}; //長頸鹿的移動方向
     glm::vec2 dir_Left = {-1, 0};
@@ -118,6 +120,11 @@ void Giraffe::Update() {
         ShootArrow(false, false);
     }
     for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
+        if (!(*it)) {
+            Logger::warn("Arrow is nullptr in Giraffe::Update");
+            it = m_Arrows.erase(it); // 刪除箭並更新迭代器
+            continue;
+        }
         (*it)->setTargets(m_Enemies);
         (*it)->Update();
         if ((*it)->shouldDelete()) {
@@ -129,8 +136,12 @@ void Giraffe::Update() {
         }
     }
 
-    m_hp_pic -> setpic(m_HP);
-    m_hp_pic -> Update(pos);
+    if (m_hp_pic) {
+        m_hp_pic->setpic(m_HP);
+        m_hp_pic->Update(pos);
+    } else {
+        Logger::warn("m_hp_pic is nullptr in Giraffe::Update");
+    }
 
     // m_GiraffeText->Update();
 }
@@ -153,6 +164,10 @@ std::shared_ptr<Enemy> Giraffe::checkNearestEnemy() {
     std::shared_ptr<Enemy> nearestEnemy = nullptr;
     float minDistance = 1000000.0f;
     for (auto &enemy : m_Enemies) {
+        if (!enemy) {
+            Logger::warn("Enemy is nullptr in Giraffe::checkNearestEnemy");
+            continue;
+        }
         float distance = glm::distance(enemy->coordinate(), pos);
         if (distance < minDistance) {
             minDistance = distance;
@@ -164,6 +179,10 @@ std::shared_ptr<Enemy> Giraffe::checkNearestEnemy() {
 
 void Giraffe::ShootArrow(bool double_arrow , bool rebound_arrow) {
     auto arrow = std::make_shared<Arrow>();
+    if (!arrow) {
+        Logger::error("Failed to create arrow in Giraffe::ShootArrow");
+        return;
+    }
     arrow->setTarget(shared_from_this());
     arrow->setTarget(checkNearestEnemy());
     arrow->setWall(m_Wall);
