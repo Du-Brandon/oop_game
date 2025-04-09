@@ -28,6 +28,7 @@ void App::Start() {
     }
 
     if (Util::Input::IsKeyDown(Util::Keycode::KP_ENTER)) {
+        Logger::info("First level");
         wall->Start(180.0f, -180.0f, -464.0f, 267.0f, 32.0f, -19.0f);
 
         m_Giraffe->Start();
@@ -85,25 +86,7 @@ void App::Update() {
         m_CurrentState = State::END;
     }
 
-    // if (Util::Input::IsKeyDown(Util::Keycode::A)) {
-    //     LOG_DEBUG("A Down");
-    // }
-
-    // if (Util::Input::IsKeyPressed(Util::Keycode::B)) {
-    //     LOG_DEBUG("B Pressed. Setting the cursor to (0, 0).");
-    //     Util::Input::SetCursorPosition({0.0F, 0.0F});
-    //     LOG_DEBUG("Cursor set to {}.", Util::Input::GetCursorPosition());
-    // }
-
-    // m_Enemy->Update();
-    // m_Enemy2->Update();
-    
-    // auto m_Enemy_pos = m_Enemy->coordinate();
-    // auto m_Enemy2_pos = m_Enemy2->coordinate();
-    // m_Giraffe->SetEnemy(m_Enemy);
     m_Giraffe->ClearEnemies();
-    // m_Giraffe->SetEnemies(m_Enemy);
-    // m_Giraffe->SetEnemies(m_Enemy2);
 
     m_Giraffe->SetEnemies(m_Enemies);
 
@@ -112,6 +95,7 @@ void App::Update() {
     
     for (auto &enemy_it : m_Enemies) {
         if (Util::Input::IsKeyDown(Util::Keycode::R)){
+            Logger::info("running");
             std::cout << "running"<<std::endl;
         }
         enemy_it->setGiraffe(m_Giraffe);
@@ -226,29 +210,28 @@ void App::Boss_Update() {
                 m_Enemies.push_back(m_Boss_1_2_2);
                 m_Root.AddChild(m_Boss_1_2_2);
             }
-            // else if (enemy_it->getFinal_wish() == "Add two Boss_1_3") {
-            //     std::cout << "Add two Boss_1_3" << std::endl;
-            //     std::shared_ptr<Boss_1_3> m_Boss_1_3_1 = std::make_shared<Boss_1_3>();
-            //     m_Boss_1_3_1->Start(enemy_it->coordinate());
-            //     m_Boss_1_3_1->setWall(wall);
-            //     m_Enemies.push_back(m_Boss_1_3_1);
-            //     m_Root.AddChild(m_Boss_1_3_1);
-            //     std::shared_ptr<Boss_1_3> m_Boss_1_3_2 = std::make_shared<Boss_1_3>();
-            //     m_Boss_1_3_2->Start(enemy_it->coordinate());
-            //     m_Boss_1_3_2->setWall(wall);
-            //     m_Enemies.push_back(m_Boss_1_3_2);
-            //     m_Root.AddChild(m_Boss_1_3_2);
+            else if (enemy_it->getFinal_wish() == "Add two Boss_1_3") {
+                std::cout << "Add two Boss_1_3" << std::endl;
+                std::shared_ptr<Boss_1_3> m_Boss_1_3_1 = std::make_shared<Boss_1_3>();
+                m_Boss_1_3_1->Start(enemy_it->coordinate());
+                m_Boss_1_3_1->setWall(wall);
+                m_Enemies.push_back(m_Boss_1_3_1);
+                m_Root.AddChild(m_Boss_1_3_1);
+                std::shared_ptr<Boss_1_3> m_Boss_1_3_2 = std::make_shared<Boss_1_3>();
+                m_Boss_1_3_2->Start(enemy_it->coordinate());
+                m_Boss_1_3_2->setWall(wall);
+                m_Enemies.push_back(m_Boss_1_3_2);
+                m_Root.AddChild(m_Boss_1_3_2);
 
-            //     // 印出enemies中所有物件的名稱
-            //     for (const auto& enemy : m_Enemies) {
-            //         std::cout << "Enemy name: " << enemy->getName() << std::endl;
-            //     }
+                // 印出enemies中所有物件的名稱
+                for (const auto& enemy : m_Enemies) {
+                    std::cout << "Enemy name: " << enemy->getName() << std::endl;
+                }
 
-            //     std::cout << "Add two Boss_1_3 finish" << std::endl;
+                std::cout << "Add two Boss_1_3 finish" << std::endl;
             
-            // }
+            }
 
-        
             enemy_it->SetVisible(false);
 
             // m_Enemies.erase(std::remove(m_Enemies.begin(), m_Enemies.end(), enemy_it), m_Enemies.end());
@@ -256,16 +239,22 @@ void App::Boss_Update() {
     }
     
     for (auto &enemy_it : m_Enemies) {
-        if (enemy_it->getVisible()) {
-            is_enemy_empty = false;
-            break;
-        } else {
-            giraffe_exp += enemy_it->getExp_supply();
-            enemy_it -> setExp_supply(0);
+        if (enemy_it != nullptr) {
+            if (enemy_it->getVisible()) {
+                is_enemy_empty = false;
+                break;
+            } else {
+                giraffe_exp += enemy_it->getExp_supply();
+                enemy_it -> setExp_supply(0);
+                is_enemy_empty = true;
+            }
+        }
+        else {
+            Logger::info("enemy_it is nullptr in judge enemy hp");
             is_enemy_empty = true;
         }
-    
     }
+    
     m_Giraffe->set_enemy_is_empty(is_enemy_empty);
     if (is_enemy_empty) {
         
