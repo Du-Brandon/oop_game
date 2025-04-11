@@ -1,12 +1,12 @@
 #include "Boss.hpp"
 
-void Boss_1_3::Start() {
+void Boss_1_4::Start() {
     this->SetDrawable(
         std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
     this->SetZIndex(5);
         
-    final_wish = "Add two Boss_1_4";
-    name = "Boss_1_3";
+    final_wish = "Add player's hp";
+    name = "Boss_1_4";
 
     dir = randomMove('z'); // 長頸鹿的移動方向
 
@@ -17,13 +17,13 @@ void Boss_1_3::Start() {
     enemy_hp_start();
 }
 
-void Boss_1_3::Start(glm::vec2 coordinate) {
+void Boss_1_4::Start(glm::vec2 coordinate) {
     this->SetDrawable(
         std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
     this->SetZIndex(5);
         
-    final_wish = "Add two Boss_1_4";
-    name = "Boss_1_3";
+    final_wish = "Add player's hp";
+    name = "Boss_1_4";
 
     dir = randomMove('z'); // 長頸鹿的移動方向
 
@@ -34,7 +34,7 @@ void Boss_1_3::Start(glm::vec2 coordinate) {
     enemy_hp_start();
 }
 
-void Boss_1_3::Update() {
+void Boss_1_4::Update() {
     if (m_Visible == false){
         return;
     }
@@ -59,10 +59,10 @@ void Boss_1_3::Update() {
     enemy_hp_update();
 }
 
-glm::vec2 Boss_1_3::move() {
+glm::vec2 Boss_1_4::move() {
     return dir;
 }
 
-void Boss_1_3::shoot() {
+void Boss_1_4::shoot() {
 
 }

@@ -22,7 +22,7 @@ namespace Logger {
 
     inline void init(const std::string& filename = "log.txt") {
         std::lock_guard<std::mutex> lock(logMutex);
-        logFile.open(filename, std::ios::app);
+        logFile.open(filename, std::ios::trunc);
         if (!logFile) {
             throw std::runtime_error("無法打開 log 檔案");
         }

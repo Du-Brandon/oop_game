@@ -58,7 +58,7 @@ private:
     
     int atk = 100; // 添加這個成員變數來表示長頸鹿的攻擊力
     float atk_speed = 0.9f; // 添加這個成員變數來表示長頸鹿的攻擊速度
-    int m_HP = 100; // 添加這個成員變數來表示長頸鹿的血量
+    int m_HP = 150; // 添加這個成員變數來表示長頸鹿的血量
     int exp = 0; // 添加這個成員變數來表示長頸鹿的經驗值
 
     glm::vec2 &pos = m_Transform.translation; // 長頸鹿的位置

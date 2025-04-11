@@ -169,7 +169,9 @@ void App::Boss_Update() {
     Logger::info("m_Giraffe->Update();");
     auto m_Giraffe_pos = m_Giraffe->coordinate();
 
-    for (auto &enemy_it : m_Enemies) {
+    for (unsigned i = 0; i < m_Enemies.size(); ++i) {
+        // auto enemy_it = m_Enemies.at(i);
+        auto enemy_it = m_Enemies[i];
         if (!enemy_it) {
             Logger::warn("enemy_it is nullptr in Boss_Update");
             continue;
@@ -215,11 +217,24 @@ void App::Boss_Update() {
                 m_Root.AddChild(m_Boss_1_3_2);
 
                 // 印出 enemies 中所有物件的名稱
-                for (const auto &enemy : m_Enemies) {
-                    Logger::info("Enemy name: " + enemy->getName());
-                }
+                // for (const auto &enemy : m_Enemies) {
+                //     Logger::info("Enemy name: " + enemy->getName());
+                // }
 
                 Logger::info("Add two Boss_1_3 finish");
+            } else if (enemy_it->getFinal_wish() == "Add two Boss_1_4") {
+                Logger::info("Spawning two Boss_1_4");
+                std::shared_ptr<Boss_1_4> m_Boss_1_4_1 = std::make_shared<Boss_1_4>();
+                m_Boss_1_4_1->Start(enemy_it->coordinate());
+                m_Boss_1_4_1->setWall(wall);
+                m_Enemies.push_back(m_Boss_1_4_1);
+                m_Root.AddChild(m_Boss_1_4_1);
+
+                std::shared_ptr<Boss_1_4> m_Boss_1_4_2 = std::make_shared<Boss_1_4>();
+                m_Boss_1_4_2->Start(enemy_it->coordinate());
+                m_Boss_1_4_2->setWall(wall);
+                m_Enemies.push_back(m_Boss_1_4_2);
+                m_Root.AddChild(m_Boss_1_4_2);
             }
 
             if (enemy_it) {
