@@ -53,7 +53,7 @@ void Giraffe::Update() {
 
     // std::cout << pos.x << "   "<< pos.y << std::endl; 
 
-    auto delta = static_cast<float>(Util::Time::GetDeltaTimeMs()) / 2;
+    delta = static_cast<float>(Util::Time::GetDeltaTimeMs()) / 2;
     if (((m_Wall->boundary_collision_check_leftright(pos+dir_Right * 9.0f) == "right") && !enemy_is_empty ) ||(m_Wall->boundary_collision_check_leftright(pos+dir_Right * 9.0f) == "lr")) {
         dir_Right.x *= 0;
     }
@@ -116,7 +116,7 @@ void Giraffe::Update() {
     }
 
     //按Q鍵測試弓箭
-    if (((Util::Input::IsKeyDown(Util::Keycode::Q) || !anyKeyPressed) && contral_Atk_Speed()) && !enemy_is_empty && m_Enemies.size() > 0) {
+    if (((Util::Input::IsKeyDown(Util::Keycode::Q) || !anyKeyPressed) && (contral_Atk_Speed() )) && !enemy_is_empty && m_Enemies.size() > 0) {
         ShootArrow(false, false);
     }
     for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
@@ -188,7 +188,10 @@ void Giraffe::ShootArrow(bool double_arrow , bool rebound_arrow) {
     arrow->setWall(m_Wall);
     // std::cout << "Shoot Arrow" << std::endl;
     if (rebound_arrow) {
-        arrow->Start(true);
+        arrow->Start();
+        double_arrow_is_shoot = true; // 準備設第二發箭
+        auto arrowCooldown = std::chrono::high_resolution_clock::now();
+
     } 
     else{
         arrow->Start();
@@ -197,7 +200,7 @@ void Giraffe::ShootArrow(bool double_arrow , bool rebound_arrow) {
     if (double_arrow) {
         // arrow->setDoubleArrow();
     }
-    // this->AddChild(arrow);
+    
     m_Arrows.push_back(arrow); // 將箭存儲到向量中
     this->AddChild(arrow);
 }
@@ -269,3 +272,13 @@ void Giraffe::judge_skill() {
     
 }
 
+void Giraffe::skill_double_arrow() {
+    // 技能1
+    now = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<float> duration = now - arrowCooldown;
+    if (duration.count() >= 2 * delta) {
+        ShootArrow(false, false); // 發射第二發箭
+        double_arrow_is_shoot = false; // 重置技能狀態
+    }
+
+}

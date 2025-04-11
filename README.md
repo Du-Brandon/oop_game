@@ -56,8 +56,18 @@ ESC：退出遊戲 -->
 
 
 ## 代辦事項
-### 第5關的天使
-### 技能
-### 血條 (製作中)
+### 技能(螢幕調暗+選擇框)
 ### 經驗值&等級
 ### 技能輪盤
+### 6~9關
+
+## 技能列表&進度
+- [x] double_arrow
+- [ ] rebound_arrow
+- [ ] skill_smart
+- [ ] add_atk_speed
+- [ ] add_hp
+- [ ] add_atk
+- [ ] angry
+- [ ] heart
+- [ ] 

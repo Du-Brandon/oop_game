@@ -65,6 +65,11 @@ void App::Start() {
 }
 
 void App::Update() {
+
+    if (Util::Input::IsKeyUp(Util::Keycode::ESCAPE) || Util::Input::IfExit()) {
+        m_CurrentState = State::END;
+    }
+
     if (!m_Giraffe) {
         Logger::error("m_Giraffe is nullptr in Update");
         return;
@@ -146,6 +151,10 @@ void App::Update() {
 
 void App::Boss_Update() {
     LOG_TRACE("Boss_Update");
+
+    if (Util::Input::IsKeyUp(Util::Keycode::ESCAPE) || Util::Input::IfExit()) {
+        m_CurrentState = State::END;
+    }
 
     if (!m_Giraffe) {
         Logger::error("m_Giraffe is nullptr in Boss_Update");

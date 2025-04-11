@@ -60,6 +60,7 @@ private:
     float atk_speed = 0.9f; // 添加這個成員變數來表示長頸鹿的攻擊速度
     int m_HP = 150; // 添加這個成員變數來表示長頸鹿的血量
     int exp = 0; // 添加這個成員變數來表示長頸鹿的經驗值
+    float delta = 0.0f; // 添加這個成員變數來表示長頸鹿的速度
 
     glm::vec2 &pos = m_Transform.translation; // 長頸鹿的位置
     glm::vec2 &scale = m_Transform.scale; // 長頸鹿的大小
@@ -67,9 +68,14 @@ private:
 
     // skill list
     void judge_skill(); // 判斷技能
-    // void skill_double_arrow(); // 技能1
+    void skill_double_arrow(); // 技能1
     // void skill_rebound_arrow(); // 技能2
     // void skill_smart(); // 技能3
+
+    // 各技能的布林直 or 參數
+        // skill_double_arrow
+        std::chrono::high_resolution_clock::time_point arrowCooldown ; // 記錄累積的 delta 時間
+        bool double_arrow_is_shoot = false; // 判斷技能1是否被使用
 
 
     // bool Is_move; // 判斷長頸鹿是否移動
