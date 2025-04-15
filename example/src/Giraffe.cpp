@@ -21,10 +21,15 @@ void Giraffe::Start() {
     pos = glm::vec2(-100, 0);
 
     start = std::chrono::high_resolution_clock::now();
-    
+    arrowCooldown = std::chrono::high_resolution_clock::now(); // 初始化 arrowCooldown
+
     m_hp_pic -> Start(pos);
     m_hp_pic -> set_maxhp(m_HP);
     this -> AddChild(m_hp_pic);
+
+    m_exp_pic -> Start();
+    m_exp_pic -> set_maxexp(m_exp_list);
+    this -> AddChild(m_exp_pic);
     // m_GiraffeText =
     //     std::make_shared<GiraffeText>("../assets/fonts/Inter.ttf", 50);
     // m_GiraffeText->SetZIndex(this->GetZIndex() - 1);
@@ -32,10 +37,7 @@ void Giraffe::Start() {
     // this->AddChild(m_GiraffeText);
 
     std::vector<std::string> skill_list_name = {"double_arrow", "rebound_arrow", "skill_smart", "skill_4"}; // 技能名稱列表
-    bool skill_double_arrow = false; // 判斷技能1是否被使用
-    bool skill_rebound_arrow = false; // 判斷技能2是否被使用
-    bool skill_smart = false; // 判斷技能3是否被使用
-    bool skill_4 = false; // 判斷技能4是否被使用
+
 }
 
 void Giraffe::Update() {
@@ -117,7 +119,7 @@ void Giraffe::Update() {
 
     //按Q鍵測試弓箭
     if (((Util::Input::IsKeyDown(Util::Keycode::Q) || !anyKeyPressed) && (contral_Atk_Speed() )) && !enemy_is_empty && m_Enemies.size() > 0) {
-        ShootArrow(false, false);
+        ShootArrow(bool_skill_double_arrow, false);
     }
     for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
         if (!(*it)) {
@@ -134,6 +136,10 @@ void Giraffe::Update() {
         } else {
             ++it;
         }
+    }
+
+    if (double_arrow_is_shoot){
+        skill_double_arrow();
     }
 
     if (m_hp_pic) {
@@ -187,10 +193,10 @@ void Giraffe::ShootArrow(bool double_arrow , bool rebound_arrow) {
     arrow->setTarget(checkNearestEnemy());
     arrow->setWall(m_Wall);
     // std::cout << "Shoot Arrow" << std::endl;
-    if (rebound_arrow) {
+    if (double_arrow) {
         arrow->Start();
         double_arrow_is_shoot = true; // 準備設第二發箭
-        auto arrowCooldown = std::chrono::high_resolution_clock::now();
+        arrowCooldown = std::chrono::high_resolution_clock::now();
 
     } 
     else{
@@ -231,6 +237,7 @@ void Giraffe::setHP(int hp) {
 
 void Giraffe::setExp(int exp) {
     this->exp += exp;
+    m_exp_pic->add_exp(exp);
 }
 
 int Giraffe::getExp() const {
@@ -276,7 +283,9 @@ void Giraffe::skill_double_arrow() {
     // 技能1
     now = std::chrono::high_resolution_clock::now();
     std::chrono::duration<float> duration = now - arrowCooldown;
-    if (duration.count() >= 2 * delta) {
+    // std::cout << "delta" << delta << std::endl;
+    // std::cout << duration.count() << std::endl;
+    if ((duration.count())*1000 >=3 * delta) {
         ShootArrow(false, false); // 發射第二發箭
         double_arrow_is_shoot = false; // 重置技能狀態
     }

@@ -135,7 +135,7 @@ void App::Update() {
 
         if (wall->nextlevel_collision_check(m_Giraffe_pos)) {
             m_player_level = nextLevel(m_player_level);
-            Logger::info("Level up! Current level: " + std::to_string(static_cast<int>(m_player_level)));
+            Logger::info("Now exp " + std::to_string(static_cast<int>(m_Giraffe->getExp())));
             ValidTask();
         }
     }
@@ -173,9 +173,14 @@ void App::Boss_Update() {
     } else {
         Logger::warn("m_Enemies is empty in Boss_Update");
     }
-    Logger::info("m_giraffe->SetEnemies(m_Enemies);");
+    if (log){
+        Logger::info("m_giraffe->SetEnemies(m_Enemies);");
+    }
     m_Giraffe->Update();
-    Logger::info("m_Giraffe->Update();");
+    if (log){
+        Logger::info("m_giraffe->Update();");
+    }
+
     auto m_Giraffe_pos = m_Giraffe->coordinate();
 
     for (unsigned i = 0; i < m_Enemies.size(); ++i) {
@@ -196,7 +201,9 @@ void App::Boss_Update() {
         }
 
         if (enemy_it->getHP() <= 0 && enemy_it->getVisible()) {
-            Logger::info("Enemy defeated: " + enemy_it->getName());
+            if (log) {
+                Logger::info("Enemy defeated: " + enemy_it->getName());
+            }
 
             if (enemy_it->getFinal_wish() == "Add two Boss_1_2") {
                 Logger::info("Spawning two Boss_1_2");
@@ -255,7 +262,10 @@ void App::Boss_Update() {
             }
         }
     }
-    Logger::info("m_Enemies loop finish");
+    if (log) {
+        Logger::info("m_Enemies loop finish");
+    }
+
     
     for (auto &enemy_it : m_Enemies) {
         if (!enemy_it) {
@@ -272,7 +282,10 @@ void App::Boss_Update() {
             is_enemy_empty = true;
         }
     }
-    Logger::info("m_Enemies loop finish (visibility check)");
+    if (log) {
+        Logger::info("m_Enemies loop finish (visibility check)");
+    }
+
     m_Giraffe->set_enemy_is_empty(is_enemy_empty);
     if (is_enemy_empty) {
         m_Background->nextbackground(now_level);
@@ -281,20 +294,28 @@ void App::Boss_Update() {
 
         if (wall->nextlevel_collision_check(m_Giraffe_pos)) {
             m_player_level = nextLevel(m_player_level);
-            Logger::info("Level up! Current level: " + std::to_string(static_cast<int>(m_player_level)));
+            Logger::info("Now exp " + std::to_string(static_cast<int>(m_Giraffe->getExp())));
             ValidTask();
         }
     }
-    Logger::info("m_Giraffe->set_enemy_is_empty(is_enemy_empty);");
+
+    if (log) {
+        Logger::info("m_Giraffe->set_enemy_is_empty(is_enemy_empty);");
+    }
     if (m_Giraffe->getHP() <= 0) {
         m_player_level = player_level::end;
         Logger::info("Giraffe HP is 0. Game over.");
         ValidTask();
     }
-    Logger::info("m_Giraffe->getHP() <= 0 check finish");
+    if (log) {
+        Logger::info("m_Giraffe->getHP() <= 0 check finish");
+    }
 
     m_Root.Update();
-    Logger::info("m_Root.Update();");
+    if (log) {
+        Logger::info("m_Root.Update();");
+    }
+
 
     // press SPACE to toggle demo window
     if (Util::Input::IsKeyDown(Util::Keycode::SPACE)) {

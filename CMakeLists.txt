@@ -112,6 +112,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/Enemy_2.cpp
     ${EXAMPLE_DIR}/src/Enemy_3.cpp
     ${EXAMPLE_DIR}/src/EnemyArrow.cpp
+    ${EXAMPLE_DIR}/src/Exp.cpp
     ${EXAMPLE_DIR}/src/Wall.cpp
     ${EXAMPLE_DIR}/src/Background.cpp
     ${EXAMPLE_DIR}/src/hp.cpp
@@ -129,6 +130,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/include/Enemy_3.hpp
 
     ${EXAMPLE_DIR}/include/EnemyArrow.hpp
+    ${EXAMPLE_DIR}/include/Exp.hpp
     ${EXAMPLE_DIR}/include/Wall.hpp
     ${EXAMPLE_DIR}/include/Background.hpp
     ${EXAMPLE_DIR}/include/hp.hpp

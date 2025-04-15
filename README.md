@@ -65,11 +65,13 @@ ESC：退出遊戲 -->
 
 ## 技能列表&進度
 - [x] double_arrow
-- [ ] rebound_arrow
+- [ ] rebound_arrow(反彈箭，約1000禎之後自殺)
 - [ ] skill_smart
+- [ ] angry
+- [ ] heart
 - [ ] add_atk_speed
 - [ ] add_hp
 - [ ] add_atk
-- [ ] angry
-- [ ] heart
-- [ ] 
+- [ ] invincible(無敵)
+- [ ] side_arrow
+- [ ] element arrow
