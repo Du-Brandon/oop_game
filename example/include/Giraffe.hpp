@@ -50,6 +50,7 @@ public:
     void setExp(int exp); // 添加這個方法來設置長頸鹿的經驗值
     int getExp() const; // 添加這個方法來獲取長頸鹿的經驗值
 
+    void DrawDarkOverlay(); // 添加這個方法來繪製黑色遮罩
     void set_enemy_is_empty(bool is_empty); // 添加這個方法來設置 enemy_is_empty
 
 private:    
@@ -73,7 +74,7 @@ private:
     // void skill_rebound_arrow(); // 技能2
     // void skill_smart(); // 技能3
 
-    bool bool_skill_double_arrow = true; // 判斷技能1是否被使用
+    bool bool_skill_double_arrow = false; // 判斷技能1是否被使用
     bool bool_skill_rebound_arrow = false; // 判斷技能2是否被使用
     bool bool_skill_smart = false; // 判斷技能3是否被使用
     bool bool_skill_4 = false; // 判斷技能4是否被使用
@@ -94,7 +95,7 @@ private:
     std::vector<std::shared_ptr<Arrow>> m_Arrows; // 添加這個成員變數來存儲 Arrow 對象
     std::shared_ptr<hp_pic> m_hp_pic = std::make_shared<hp_pic>(); // 添加這個成員變數來存儲血量的指針
     std::shared_ptr<exp_pic> m_exp_pic = std::make_shared<exp_pic>(); // 添加這個成員變數來存儲經驗值的指針
-    std::vector<int> m_exp_list = {100, 200, 300, 400, 500}; // 經驗值列表
+    std::vector<int> m_exp_list = {50, 100, 200, 300, 400, 500}; // 經驗值列表
 
     bool enemy_is_empty = false; // 判斷敵人是否存在
 };

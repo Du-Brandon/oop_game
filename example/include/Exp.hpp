@@ -36,7 +36,7 @@ private:
     glm::vec2 center ; //校正用
 
     glm::vec2 &pos = m_Transform.translation; // 位置
-    glm::vec2 &scale = m_Transform.scale; // 長頸鹿的縮放比例
+    glm::vec2 &scale = m_Transform.scale; // 縮放比例
 
     std::shared_ptr<exp_pic_background> m_Background; // 用於顯示經驗條的背景
     // std::shared_ptr<Util::Text> m_Text; // 用於顯示血量的文本
@@ -52,6 +52,21 @@ public:
 private:
 
     glm::vec2 &pos = m_Transform.translation; // 位置
-    glm::vec2 &scale = m_Transform.scale; // 長頸鹿的縮放比例
+    glm::vec2 &scale = m_Transform.scale; // 縮放比例
 
+};
+
+class exp_pic_text : public Util::GameObject {
+public:
+    exp_pic_text() = default;
+    ~exp_pic_text() override = default;
+
+    void Start();
+    void setpos(glm::vec2 position);
+private:
+    glm::vec2 &pos = m_Transform.translation; // 位置
+    glm::vec2 &scale = m_Transform.scale; // 縮放比例
+
+    int level = 1; // 等級
+    std::shared_ptr<Util::Text> m_Text; // 用於顯示血量的文本
 };

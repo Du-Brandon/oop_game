@@ -96,8 +96,6 @@ private:
     void removeEnemy();
     Util::Renderer m_Root;
 
-    void DrawDarkOverlay(); // 新增畫面變暗的函式
-
     bool showDemoWindow = true;
 };
 

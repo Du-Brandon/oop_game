@@ -12,6 +12,6 @@
 #include <memory>
 #include <ostream>
 
-void App::DrawDarkOverlay() {
+// void App::DrawDarkOverlay() {
     
-}
+// }
