@@ -15,6 +15,7 @@
 
 class exp_pic_background;
 class Giraffe;
+class Dark_pic; // 前向宣告
 class exp_pic : public Util::GameObject {
 public:
     exp_pic() = default;

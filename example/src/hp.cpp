@@ -17,6 +17,11 @@ void hp_pic::Update(glm::vec2 tp) {
 
     hp_scale = static_cast<float>(current_hp) / max_hp;
 
+    if (current_hp <= 0){
+        m_Visible = false;
+        return;
+    }
+
     pos = Target_pos + glm::vec2(0.0f, 25.0f) - glm::vec2(20.0f,0.0f)+(hp_scale * glm::vec2(20.0f, 0.0f));
     scale = glm::vec2(hp_scale, 1.0f);
     

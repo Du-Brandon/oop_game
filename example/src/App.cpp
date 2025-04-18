@@ -569,7 +569,7 @@ void App::ValidTask() {
         m_Enemy13->SetZIndex(5);
         m_Enemy13->Start(glm::vec2(200, 0)); // 初始化敵人的位置
         m_Enemy13->setWall(wall);
-        m_Enemy13->setHP(1000);
+        m_Enemy13->setHP(200);
         m_Enemies.push_back(m_Enemy13);
         m_Root.AddChild(m_Enemy13);
 
