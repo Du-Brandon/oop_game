@@ -47,8 +47,6 @@ private:
     // std::shared_ptr<Enemy> m_Enemy_; // 定義敵人的指針
     
 
-
-
     glm::vec2 m_EnemyCoordinate ; // 敵人的位置
     glm::vec2 m_PlayerCoordinate ;// 玩家的位置
 
@@ -56,6 +54,8 @@ private:
     glm::vec2 arrowDirection; // 箭的方向
     glm::vec2 m_Direction; // 箭的方向
 
+    int Frame_rate = 0; // 設置幀率
+    bool bool_skill_rebound_arrow = false; // 設置技能反彈箭
     bool m_ShouldDelete; // 添加這個成員變數來指示箭是否應該被刪除
 };
 

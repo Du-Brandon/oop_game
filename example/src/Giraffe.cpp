@@ -14,6 +14,7 @@
 #include "config.hpp"
 
 void Giraffe::Start() {
+
     this->SetDrawable(
         std::make_shared<Util::Image>("../assets/sprites/sticker.png"));
     this->SetZIndex(6);
@@ -138,7 +139,7 @@ void Giraffe::Update() {
         }
     }
 
-    if (double_arrow_is_shoot){
+    if (double_arrow_is_shoot && m_Enemies.size() > 0) {
         skill_double_arrow();
     }
 
@@ -236,6 +237,9 @@ void Giraffe::setHP(int hp) {
 }
 
 void Giraffe::setExp(int exp) {
+    if (bool_skill_smart) {
+        exp = exp * 2; // 如果使用技能，經驗值翻倍
+    }
     this->exp += exp;
     m_exp_pic->add_exp(exp);
 }

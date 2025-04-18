@@ -150,7 +150,7 @@ void App::Update() {
 }
 
 void App::Boss_Update() {
-    LOG_TRACE("Boss_Update");
+    // LOG_TRACE("Boss_Update");
 
     if (Util::Input::IsKeyUp(Util::Keycode::ESCAPE) || Util::Input::IfExit()) {
         m_CurrentState = State::END;
@@ -176,6 +176,7 @@ void App::Boss_Update() {
     if (log){
         Logger::info("m_giraffe->SetEnemies(m_Enemies);");
     }
+
     m_Giraffe->Update();
     if (log){
         Logger::info("m_giraffe->Update();");
@@ -567,7 +568,6 @@ void App::ValidTask() {
     }
 
     case player_level::end:
-        
         this->End();
         m_CurrentState = State::END;
         break;

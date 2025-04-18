@@ -50,10 +50,13 @@ public:
     void setExp(int exp); // 添加這個方法來設置長頸鹿的經驗值
     int getExp() const; // 添加這個方法來獲取長頸鹿的經驗值
 
+    bool getSkill_rebound_arrow() const { return bool_skill_rebound_arrow; } // 添加這個方法來獲取長頸鹿的技能
+
     void DrawDarkOverlay(); // 添加這個方法來繪製黑色遮罩
     void set_enemy_is_empty(bool is_empty); // 添加這個方法來設置 enemy_is_empty
 
-private:    
+private:
+
     bool contral_Atk_Speed(); // 添加這個方法來獲取長頸鹿的速度
     std::chrono::high_resolution_clock::time_point start ; // 添加這個成員變數來記錄開始時間
     std::chrono::high_resolution_clock::time_point now ; // 添加這個成員變數來記錄結束時間
@@ -74,10 +77,10 @@ private:
     // void skill_rebound_arrow(); // 技能2
     // void skill_smart(); // 技能3
 
-    bool bool_skill_double_arrow = false; // 判斷技能1是否被使用
-    bool bool_skill_rebound_arrow = false; // 判斷技能2是否被使用
+    bool bool_skill_double_arrow = true; // 判斷技能1是否被使用
+    bool bool_skill_rebound_arrow = true; // 判斷技能2是否被使用
     bool bool_skill_smart = false; // 判斷技能3是否被使用
-    bool bool_skill_4 = false; // 判斷技能4是否被使用
+    bool bool_skill_angry = false; // 判斷技能4是否被使用
 
     // 各技能的布林直 or 參數
         // skill_double_arrow

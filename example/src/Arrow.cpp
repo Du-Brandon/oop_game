@@ -40,6 +40,7 @@ void Arrow::setWall(std::shared_ptr<Wall> wall) {
 
 void Arrow::Start(){
     // std::cout << "Shoot Arrow" << std::endl;
+    bool_skill_rebound_arrow = m_Giraffe_ ->getSkill_rebound_arrow();
     this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
     this -> SetZIndex(6);
 
@@ -64,28 +65,61 @@ void Arrow::Start(bool rebound_arrow){
 
 void Arrow::Update() {
     // 更新箭的位置
+    Frame_rate += 1; 
     pos += m_Direction * 20.0f; // 假設箭以固定速度移動
 
-    if (m_Wall->boundary_collision_check_leftright(pos) == "right" || m_Wall->boundary_collision_check_leftright(pos) == "left") {
-        m_ShouldDelete = true;
-        std::cout << "Arrow hit wall" << std::endl;
-    }
-    else if (m_Wall->boundary_collision_check_updown(pos) == "up" || m_Wall->boundary_collision_check_updown(pos) == "down") {
-        m_ShouldDelete = true;
-        std::cout << "Arrow hit wall" << std::endl;
-    }
-    else if (m_Wall -> boundary_collision_check_leftright(pos) == "lr" || m_Wall -> boundary_collision_check_updown(pos) == "ud") {
-        m_ShouldDelete = true;
-        std::cout << "Arrow hit wall" << std::endl;
-    }
-
+    if (!bool_skill_rebound_arrow){
+        if (m_Wall->boundary_collision_check_leftright(pos) == "right" || m_Wall->boundary_collision_check_leftright(pos) == "left") {
+            m_ShouldDelete = true;
+            std::cout << "Arrow hit wall" << std::endl;
+        }
+        else if (m_Wall->boundary_collision_check_updown(pos) == "up" || m_Wall->boundary_collision_check_updown(pos) == "down") {
+            m_ShouldDelete = true;
+            std::cout << "Arrow hit wall" << std::endl;
+        }
+        else if (m_Wall -> boundary_collision_check_leftright(pos) == "lr" || m_Wall -> boundary_collision_check_updown(pos) == "ud") {
+            m_ShouldDelete = true;
+            std::cout << "Arrow hit wall" << std::endl;
+        }
+        
     // 如果箭與敵人重合或正負50個像素，則應該刪除箭
+        else {
+            for (auto enemy = m_Enemies.begin(); enemy != m_Enemies.end(); ++enemy) {
+                if (glm::distance((*enemy)->coordinate(), pos) <= 20.0f) {
+                    m_ShouldDelete = true;
+                    (*enemy)->setHP(-(m_Giraffe_ ->getAtk()));
+                    std::cout << "Arrow hit enemy" << (*enemy)->getHP() <<std::endl;
+                }
+            }
+        }
+    }
     else {
-        for (auto enemy = m_Enemies.begin(); enemy != m_Enemies.end(); ++enemy) {
-            if (glm::distance((*enemy)->coordinate(), pos) <= 20.0f) {
-                m_ShouldDelete = true;
-                (*enemy)->setHP(-(m_Giraffe_ ->getAtk()));
-                std::cout << "Arrow hit enemy" << (*enemy)->getHP() <<std::endl;
+        if (Frame_rate >= 120) { // 每100幀檢查一次
+            Frame_rate = 0; // 重置幀率計數器
+            m_ShouldDelete = true;
+        }
+        // 反彈箭的邊界檢查
+        else if (m_Wall->boundary_collision_check_leftright(pos) == "right" || m_Wall->boundary_collision_check_leftright(pos) == "left") {
+            m_Direction.x *= -1; // 反彈
+            std::cout << "Arrow rebound wall" << std::endl;
+        }
+        else if (m_Wall->boundary_collision_check_updown(pos) == "up" || m_Wall->boundary_collision_check_updown(pos) == "down") {
+            m_Direction.y *= -1; // 反彈
+            std::cout << "Arrow rebound wall" << std::endl;
+        }
+        else if (m_Wall -> boundary_collision_check_leftright(pos) == "lr" || m_Wall -> boundary_collision_check_updown(pos) == "ud") {
+            m_Direction.x *= -1; // 反彈
+            m_Direction.y *= -1; // 反彈
+            std::cout << "Arrow rebound wall" << std::endl;
+        }
+
+        else {
+            for (auto enemy = m_Enemies.begin(); enemy != m_Enemies.end(); ++enemy) {
+                if (glm::distance((*enemy)->coordinate(), pos) <= 20.0f) {
+                    m_ShouldDelete = true;
+                    (*enemy)->setHP(-(m_Giraffe_ ->getAtk()));
+                    std::cout << "Arrow hit enemy" << (*enemy)->getHP() <<std::endl;
+                }
             }
         }
     }

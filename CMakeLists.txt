@@ -99,6 +99,7 @@ set(EXAMPLE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/example)
 set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/App.cpp
     ${EXAMPLE_DIR}/src/Giraffe.cpp
+    ${EXAMPLE_DIR}/src/Giraffe_other_func.cpp
     ${EXAMPLE_DIR}/src/GiraffeText.cpp
     ${EXAMPLE_DIR}/src/Cat.cpp
     ${EXAMPLE_DIR}/src/main.cpp
@@ -107,6 +108,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/Boss_1_2.cpp
     ${EXAMPLE_DIR}/src/Boss_1_3.cpp
     ${EXAMPLE_DIR}/src/Boss_1_4.cpp
+    ${EXAMPLE_DIR}/src/Button.cpp
     ${EXAMPLE_DIR}/src/Enemy.cpp
     ${EXAMPLE_DIR}/src/Enemy_1.cpp
     ${EXAMPLE_DIR}/src/Enemy_2.cpp
@@ -128,7 +130,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/include/Enemy_1.hpp
     ${EXAMPLE_DIR}/include/Enemy_2.hpp
     ${EXAMPLE_DIR}/include/Enemy_3.hpp
-
+    ${EXAMPLE_DIR}/include/Button.hpp
     ${EXAMPLE_DIR}/include/EnemyArrow.hpp
     ${EXAMPLE_DIR}/include/Exp.hpp
     ${EXAMPLE_DIR}/include/Wall.hpp
