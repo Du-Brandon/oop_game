@@ -21,6 +21,8 @@
 
 class Arrow;
 class Enemy;
+class exp_pic;
+class Dark_pic;
 class Giraffe : public Util::GameObject , public std::enable_shared_from_this<Giraffe> {
 
 public:
@@ -54,6 +56,7 @@ public:
 
     void DrawDarkOverlay(); // 添加這個方法來繪製黑色遮罩
     void set_enemy_is_empty(bool is_empty); // 添加這個方法來設置 enemy_is_empty
+    void cleararrow(); // 添加這個方法來清除箭矢
 
 private:
 
@@ -92,6 +95,7 @@ private:
     bool anyKeyPressed ; // 判斷是否有按鍵被按下
 
     std::shared_ptr<GiraffeText> m_GiraffeText;
+    std::shared_ptr<Dark_pic> m_Dark_pic = std::make_shared<Dark_pic>(); // 添加這個成員變數來存儲黑色遮罩的指針
     std::shared_ptr<Wall> m_Wall; // 添加這個成員變數來存儲牆的指針
     std::shared_ptr<Enemy> m_Enemy; // 添加這個成員變數來存儲敵人的指針
     std::vector<std::shared_ptr<Enemy>> m_Enemies;
@@ -101,6 +105,16 @@ private:
     std::vector<int> m_exp_list = {50, 100, 200, 300, 400, 500}; // 經驗值列表
 
     bool enemy_is_empty = false; // 判斷敵人是否存在
+};
+
+class Dark_pic : public Util::GameObject {
+public:
+    void Appear() ;
+    void Disappear();
+
+private:
+    glm::vec2 &pos = m_Transform.translation; // 
+    glm::vec2 &scale = m_Transform.scale; // 
 };
 
 #endif // GIRAFFE_HPP

@@ -57,6 +57,9 @@ void App::Start() {
         m_Enemies.push_back(m_Enemy);
         m_Enemies.push_back(m_Enemy2);
         
+        m_Ground_Spikes->clear();
+        m_Root.AddChild(m_Ground_Spikes);
+
         m_player_level = player_level::first_level;
         m_CurrentState = State::UPDATE;
         now_level = 1;
@@ -90,6 +93,11 @@ void App::Update() {
 
     m_Giraffe->Update();
     auto m_Giraffe_pos = m_Giraffe->coordinate();
+
+    if (m_Ground_Spikes->collision_check(m_Giraffe_pos)){
+        m_Giraffe->setHP(-1);
+        Logger::info("Ground_Spikes collision detected! Giraffe HP: " + std::to_string(m_Giraffe->getHP()));
+    }
 
     for (auto &enemy_it : m_Enemies) {
         if (!enemy_it) {
@@ -183,6 +191,7 @@ void App::Boss_Update() {
     }
 
     auto m_Giraffe_pos = m_Giraffe->coordinate();
+
 
     for (unsigned i = 0; i < m_Enemies.size(); ++i) {
         // auto enemy_it = m_Enemies.at(i);
@@ -356,6 +365,7 @@ void App::ValidTask() {
         now_level = 2;
         m_Background->nextbackground(now_level);
         this->removeEnemy();
+        m_Giraffe->cleararrow();
         m_Enemies.clear();
 
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
@@ -404,6 +414,7 @@ void App::ValidTask() {
         now_level = 3;
         m_Background->nextbackground(now_level);
         this->removeEnemy();
+        m_Giraffe->cleararrow();
         m_Enemies.clear();
 
         wall->clear();
@@ -463,6 +474,7 @@ void App::ValidTask() {
         now_level = 4;
         m_Background->nextbackground(now_level);
         this->removeEnemy();
+        m_Giraffe->cleararrow();
         m_Enemies.clear();
 
         wall->clear();
@@ -515,6 +527,7 @@ void App::ValidTask() {
         now_level = 5;
         m_Background->nextbackground(now_level);
         this->removeEnemy();
+        m_Giraffe->cleararrow();
         m_Enemies.clear();
 
         wall->clear();
@@ -539,13 +552,74 @@ void App::ValidTask() {
         break;
     }
 
-    case player_level::tenth_level:{
-        LOG_DEBUG("tenth_level");
-        m_CurrentState = State::BOSSUPDATE;
+    case player_level::sixth_level:{
+        LOG_DEBUG("sixth_level");
         now_level = 6;
         m_Background->nextbackground(now_level);
         this->removeEnemy();
+        m_Giraffe->cleararrow();
         m_Enemies.clear();
+
+        wall->clear();
+        wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
+        
+        std::shared_ptr<Enemy_2> m_Enemy13 = std::make_shared<Enemy_2>();
+        m_Enemy13->SetDrawable(
+            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+        m_Enemy13->SetZIndex(5);
+        m_Enemy13->Start(glm::vec2(200, 0)); // 初始化敵人的位置
+        m_Enemy13->setWall(wall);
+        m_Enemy13->setHP(1000);
+        m_Enemies.push_back(m_Enemy13);
+        m_Root.AddChild(m_Enemy13);
+
+        std::shared_ptr<Enemy_3> m_Enemy10 = std::make_shared<Enemy_3>();
+        m_Enemy10->SetDrawable(
+            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+        m_Enemy10->SetZIndex(5);
+        m_Enemy10->Start(glm::vec2(237, 157)); // 初始化敵人的位置
+        m_Enemy10->setWall(wall);
+        m_Enemies.push_back(m_Enemy10);
+        m_Root.AddChild(m_Enemy10);
+        
+        std::shared_ptr<Enemy_3> m_Enemy11 = std::make_shared<Enemy_3>();
+        m_Enemy11->SetDrawable(
+            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+        m_Enemy11->SetZIndex(5);
+        m_Enemy11->Start(glm::vec2(237, -162)); // 初始化敵人的位置
+        m_Enemy11->setWall(wall);
+        m_Enemies.push_back(m_Enemy11);
+        m_Root.AddChild(m_Enemy11);
+
+        m_Ground_Spikes -> Add_Spikes(glm::vec2(55, -160));
+        m_Ground_Spikes -> Add_Spikes(glm::vec2(55, -105));
+        m_Ground_Spikes -> Add_Spikes(glm::vec2(55, -50));
+        m_Ground_Spikes -> Add_Spikes(glm::vec2(0, -160));
+        m_Ground_Spikes -> Add_Spikes(glm::vec2(-55, -160));
+
+        m_Ground_Spikes -> Add_Spikes(glm::vec2(55, 50));
+        m_Ground_Spikes -> Add_Spikes(glm::vec2(55, 105));
+        m_Ground_Spikes -> Add_Spikes(glm::vec2(55, 160));
+        m_Ground_Spikes -> Add_Spikes(glm::vec2(0, 160));
+        m_Ground_Spikes -> Add_Spikes(glm::vec2(-55, 160));
+
+        giraffe_exp = 0;
+        m_Giraffe -> setpos(glm::vec2(-420, 0));
+        m_Giraffe -> Setwall(wall);
+
+        is_enemy_empty = false;
+        break;
+    }
+
+    case player_level::tenth_level:{
+        LOG_DEBUG("tenth_level");
+        m_CurrentState = State::BOSSUPDATE;
+        now_level = 7;
+        m_Background->nextbackground(now_level);
+        this->removeEnemy();
+        m_Giraffe->cleararrow();
+        m_Enemies.clear();
+        m_Ground_Spikes->Start();
 
         wall->clear();
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);

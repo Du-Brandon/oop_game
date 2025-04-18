@@ -8,6 +8,7 @@
 
 #include "Cat.hpp"
 #include "Wall.hpp"
+#include "Ground_Spikes.hpp"
 #include "Giraffe.hpp"
 #include "GiraffeText.hpp"
 #include "Boss.hpp"
@@ -51,6 +52,7 @@ private:
         third_level,
         fourth_level,
         fifth_level,
+        sixth_level,
         tenth_level,
         end
     };
@@ -86,6 +88,7 @@ private:
 
     std::shared_ptr<Cat> m_Cat = std::make_shared<Cat>();
     std::shared_ptr<Wall> wall = std::make_shared<Wall>();
+    std::shared_ptr<Vecter_Ground_Spikes> m_Ground_Spikes = std::make_shared<Vecter_Ground_Spikes>();
     std::shared_ptr<Enemy_1> m_Enemy = std::make_shared<Enemy_1>();
 
     std::vector<std::shared_ptr<Enemy>> m_Enemies;

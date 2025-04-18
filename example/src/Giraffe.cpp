@@ -15,6 +15,7 @@
 
 void Giraffe::Start() {
 
+
     this->SetDrawable(
         std::make_shared<Util::Image>("../assets/sprites/sticker.png"));
     this->SetZIndex(6);
@@ -36,6 +37,10 @@ void Giraffe::Start() {
     // m_GiraffeText->SetZIndex(this->GetZIndex() - 1);
     // m_GiraffeText->Start();
     // this->AddChild(m_GiraffeText);
+
+    // m_Dark_pic->Appear();
+    // this->AddChild(m_Dark_pic);
+    // m_Dark_pic->Disappear(); // 初始時不顯示黑色遮罩
 
     std::vector<std::string> skill_list_name = {"double_arrow", "rebound_arrow", "skill_smart", "skill_4"}; // 技能名稱列表
 
@@ -276,6 +281,22 @@ void Giraffe::Setwall(std::shared_ptr<Wall> wall) {
 void Giraffe::ClearEnemies() {
     m_Enemies.clear();
 }
+
+void Giraffe::cleararrow() {
+    if (m_Arrows.empty()) {
+        // Logger::warn("m_Arrows is empty in Giraffe::cleararrow");
+        return;
+    }
+    for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
+        this->RemoveChild(*it); // 刪除箭
+        it = m_Arrows.erase(it); // 刪除箭並更新迭代器
+
+    }
+    
+}
+
+
+
 
 // skill function
 void Giraffe::judge_skill() {

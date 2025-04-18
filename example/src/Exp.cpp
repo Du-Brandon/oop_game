@@ -1,4 +1,5 @@
 #include "Exp.hpp"
+#include "Giraffe.hpp"
 #include "Util/Image.hpp"
 #include "log_my.hpp"
 #include <glm/fwd.hpp>
@@ -17,6 +18,10 @@ void exp_pic::Start(){
     m_Background->Start();
     m_Background->setpos(glm::vec2(0.0f, 250.0f));
     this->AddChild(m_Background);
+
+    m_Dark_pic->Appear();
+    this->AddChild(m_Dark_pic);
+    m_Dark_pic->Disappear();
 }
 
 void exp_pic::Update(){
