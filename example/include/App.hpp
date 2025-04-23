@@ -26,7 +26,6 @@ public:
     enum class State {
         START,
         UPDATE,
-        BOSSUPDATE,
         END,
     };
 
@@ -34,6 +33,7 @@ public:
 
     void Start();
     void Update();
+    void normal_level_Update();
     void Boss_Update();
     void End(); // NOLINT(readability-convert-member-functions-to-static)
 
@@ -44,6 +44,11 @@ private:
     // log or not
 
     bool log = false; // 是否開啟log
+
+    enum class levelstatus {
+        normal_level,
+        boss_level
+    };
 
     enum class player_level  {
         lobby,
@@ -74,6 +79,7 @@ private:
         return text.find(keyword) != std::string::npos;
     }
 
+    levelstatus levelstatus = levelstatus::normal_level; // 判斷當前是普通關卡還是boss關卡
     State m_CurrentState = State::START;
     player_level m_player_level = player_level::lobby;
     int now_level = 0;
@@ -82,8 +88,7 @@ private:
     bool m_Background_bool = false; // 判斷背景是否已經加載
     bool is_enemy_empty = false; // 判斷敵人是否為空
     std::shared_ptr<Giraffe> m_Giraffe = std::make_shared<Giraffe>();
-    //    std::shared_ptr<GiraffeText> m_GiraffeText =
-    //    std::make_shared<GiraffeText>();
+    std::shared_ptr<Dark_pic> m_Dark_pic = std::make_shared<Dark_pic>();
     int giraffe_exp = 0;
 
     std::shared_ptr<Cat> m_Cat = std::make_shared<Cat>();

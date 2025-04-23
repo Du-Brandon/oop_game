@@ -67,11 +67,37 @@ void App::Start() {
     m_Root.Update();
 }
 
-void App::Update() {
+void App::Update(){
 
     if (Util::Input::IsKeyUp(Util::Keycode::ESCAPE) || Util::Input::IfExit()) {
         m_CurrentState = State::END;
     }
+    
+    bool skill_choose = false;
+
+    if (skill_choose == false){
+        switch (levelstatus) {
+            case levelstatus::normal_level:{
+                normal_level_Update();
+                break;
+            }
+
+            case levelstatus::boss_level:{
+                Boss_Update();
+                break;
+            }
+            
+        }
+    }
+    else{
+        m_Dark_pic->Appear();
+        
+    }
+
+    m_Root.Update();
+}
+
+void App::normal_level_Update() {
 
     if (!m_Giraffe) {
         Logger::error("m_Giraffe is nullptr in Update");
@@ -154,15 +180,11 @@ void App::Update() {
         ValidTask();
     }
 
-    m_Root.Update();
+    
 }
 
 void App::Boss_Update() {
     // LOG_TRACE("Boss_Update");
-
-    if (Util::Input::IsKeyUp(Util::Keycode::ESCAPE) || Util::Input::IfExit()) {
-        m_CurrentState = State::END;
-    }
 
     if (!m_Giraffe) {
         Logger::error("m_Giraffe is nullptr in Boss_Update");
@@ -321,7 +343,7 @@ void App::Boss_Update() {
         Logger::info("m_Giraffe->getHP() <= 0 check finish");
     }
 
-    m_Root.Update();
+    
     if (log) {
         Logger::info("m_Root.Update();");
     }
@@ -613,7 +635,8 @@ void App::ValidTask() {
 
     case player_level::tenth_level:{
         LOG_DEBUG("tenth_level");
-        m_CurrentState = State::BOSSUPDATE;
+        
+        levelstatus = levelstatus::boss_level;
         now_level = 7;
         m_Background->nextbackground(now_level);
         this->removeEnemy();

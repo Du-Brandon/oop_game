@@ -25,9 +25,6 @@ int main(int, char **) {
             app.Update();
             break;
         
-        case App::State::BOSSUPDATE:
-            app.Boss_Update();
-            break;
         case App::State::END:
             
             app.End();
