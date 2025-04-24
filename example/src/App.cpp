@@ -76,6 +76,7 @@ void App::Update(){
     bool skill_choose = false;
 
     if (skill_choose == false){
+        m_Dark_pic->Disappear();
         switch (levelstatus) {
             case levelstatus::normal_level:{
                 normal_level_Update();
@@ -91,6 +92,7 @@ void App::Update(){
     }
     else{
         m_Dark_pic->Appear();
+        
         
     }
 

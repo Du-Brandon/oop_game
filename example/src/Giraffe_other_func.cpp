@@ -14,16 +14,20 @@
 #include "config.hpp"
 
 void Dark_pic::Appear() {
-        this->SetDrawable(
-            std::make_shared<Util::Image>("../assets/other/low.png"));
-        this->SetZIndex(100);
-        scale = glm::vec2(1024.0f / 1920.0f, 800.0f / 1080.0f);
-        this->m_Visible = true;
+    if (!this->m_Visible) {
+            this->SetDrawable(
+                std::make_shared<Util::Image>("../assets/other/low.png"));
+            this->SetZIndex(100);
+            scale = glm::vec2(1024.0f / 1920.0f, 800.0f / 1080.0f);
+            this->m_Visible = true;
     }
+}
 
 void Dark_pic::Disappear() {
+    if (this->m_Visible) {
         this->m_Visible = false;
     }
+}
  
 
 void Giraffe::DrawDarkOverlay(){
