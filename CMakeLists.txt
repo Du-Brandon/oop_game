@@ -118,6 +118,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/Giraffe_other_func.cpp
     ${EXAMPLE_DIR}/src/Ground_Spikes.cpp
     ${EXAMPLE_DIR}/src/Hp.cpp
+    ${EXAMPLE_DIR}/src/Skill.cpp
     ${EXAMPLE_DIR}/src/Wall.cpp
     ${EXAMPLE_DIR}/src/main.cpp
 
@@ -138,6 +139,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/include/GiraffeText.hpp
     ${EXAMPLE_DIR}/include/Ground_Spikes.hpp
     ${EXAMPLE_DIR}/include/Hp.hpp
+    ${EXAMPLE_DIR}/include/Skill.hpp
     ${EXAMPLE_DIR}/include/Wall.hpp
     
 )

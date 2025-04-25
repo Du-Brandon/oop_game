@@ -19,14 +19,17 @@ void Button::Start( const std::string& name,
     this -> left_bottom = left_bottom;
     this -> right_top = right_top;
     this -> pos = left_bottom + (right_top - left_bottom) / 2.0f; // 設定按鈕的中心位置
+    this -> m_Visible = true; // 設定為可見
 
     this -> SetDrawable(std::make_shared<Util::Image>(imagePath));
-    this -> SetZIndex(15);
+    this -> SetZIndex(30);
+
+    this -> scale = scale; // 設定按鈕的大小
 
 }
 
 void Button::Update() {
-    auto mouse_pos = Util::Input::GetCursorPosition();	
+    glm::vec2 mouse_pos = Util::Input::GetCursorPosition();	
     bool inside = IsMouseInside(mouse_pos);
     bool mouseDown = Util::Input::IsKeyDown(Util::Keycode::MOUSE_LB);   // 0 代表左鍵，可視情況改變
     bool mouseUp   = Util::Input::IsKeyUp(Util::Keycode::MOUSE_LB);

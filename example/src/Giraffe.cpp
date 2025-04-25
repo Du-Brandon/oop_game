@@ -38,8 +38,9 @@ void Giraffe::Start() {
     // m_GiraffeText->Start();
     // this->AddChild(m_GiraffeText);
 
-    // m_Dark_pic->Appear();
+    // m_Dark_pic->Start();
     // this->AddChild(m_Dark_pic);
+    // m_Dark_pic->Appear(); // 初始時顯示黑色遮罩
     // m_Dark_pic->Disappear(); // 初始時不顯示黑色遮罩
 
     std::vector<std::string> skill_list_name = {"double_arrow", "rebound_arrow", "skill_smart", "skill_4"}; // 技能名稱列表
@@ -251,6 +252,10 @@ void Giraffe::setExp(int exp) {
 
 int Giraffe::getExp() const {
     return exp;
+}
+
+int Giraffe::getLevel() const {
+    return m_exp_pic->getLevel();
 }
 
 void Giraffe::SetEnemy(std::shared_ptr<Enemy> enemy) {

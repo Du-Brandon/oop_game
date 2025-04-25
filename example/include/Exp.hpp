@@ -31,6 +31,7 @@ public:
     void add_exp(int exp);
     void setpic(int exp);
     int getEXP() const; 
+    int getLevel() const; // 獲取當前等級
 private:
 
     float exp_scale = 1.0f;

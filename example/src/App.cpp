@@ -27,6 +27,13 @@ void App::Start() {
         m_Background_bool = true;
     }
 
+    m_Skill_choose->setGiraffe(m_Giraffe); // 只設定 m_Skill_choose
+    m_Root.AddChild(m_Skill_choose);       // 只加 m_Skill_choose
+
+    // m_Dark_pic->Start();
+    // // // m_Dark_pic->Disappear();
+    // m_Root.AddChild(m_Dark_pic); // 只加 m_Dark_pic
+
     if (Util::Input::IsKeyDown(Util::Keycode::KP_ENTER)) {
         Logger::info("First level");
         wall->Start(180.0f, -180.0f, -464.0f, 267.0f, 32.0f, -19.0f);
@@ -73,10 +80,13 @@ void App::Update(){
         m_CurrentState = State::END;
     }
     
-    bool skill_choose = false;
+    if (giraffe_level < m_Giraffe->getLevel()) {
+        giraffe_level = m_Giraffe->getLevel();
+        skill_choose = true;
+    }
 
     if (skill_choose == false){
-        m_Dark_pic->Disappear();
+        // m_Dark_pic->Disappear();
         switch (levelstatus) {
             case levelstatus::normal_level:{
                 normal_level_Update();
@@ -90,10 +100,19 @@ void App::Update(){
             
         }
     }
-    else{
-        m_Dark_pic->Appear();
-        
-        
+    else{        
+        // m_Dark_pic->Appear();
+        m_Skill_choose->SetVisible(true);
+        m_Skill_choose->run(); 
+        if (m_Skill_choose->has_clicked_bool()) {
+            skill_choose = false;
+            m_Skill_choose->SetVisible(false);  // 選擇完後隱藏
+        }
+    }
+
+    // 按r測試程式是否正常運行
+    if (Util::Input::IsKeyDown(Util::Keycode::R)) {
+        Logger::info("R key pressed, restarting level.");
     }
 
     m_Root.Update();

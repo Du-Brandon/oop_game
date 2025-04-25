@@ -13,13 +13,21 @@
 
 #include "config.hpp"
 
+void Dark_pic::Start() {
+    Logger::info("Dark_pic Start");
+
+    // scale = {0.0f, 0.0f};
+    this->SetDrawable(
+        std::make_shared<Util::Image>("../assets/other/low.png"));
+    this->SetZIndex(20);
+    // pos = glm::vec2(0.0f, 0.0f);
+    scale = glm::vec2(1024.0f / 1920.0f, 800.0f / 1080.0f);
+    this->m_Visible = false;
+}
+
 void Dark_pic::Appear() {
     if (!this->m_Visible) {
-            this->SetDrawable(
-                std::make_shared<Util::Image>("../assets/other/low.png"));
-            this->SetZIndex(100);
-            scale = glm::vec2(1024.0f / 1920.0f, 800.0f / 1080.0f);
-            this->m_Visible = true;
+        this->m_Visible = true;
     }
 }
 

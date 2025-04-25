@@ -18,7 +18,10 @@
 #include "Enemy_3.hpp"
 #include "Angel.hpp"
 #include "Arrow.hpp"
+#include "Skill.hpp"
+
 #include <glm/fwd.hpp>
+#include <string>
 #include <vector>
 
 class App {
@@ -89,7 +92,9 @@ private:
     bool is_enemy_empty = false; // 判斷敵人是否為空
     std::shared_ptr<Giraffe> m_Giraffe = std::make_shared<Giraffe>();
     std::shared_ptr<Dark_pic> m_Dark_pic = std::make_shared<Dark_pic>();
+    std::shared_ptr<Skill_choose> m_Skill_choose = std::make_shared<Skill_choose>();
     int giraffe_exp = 0;
+    int giraffe_level = 0;
 
     std::shared_ptr<Cat> m_Cat = std::make_shared<Cat>();
     std::shared_ptr<Wall> wall = std::make_shared<Wall>();
@@ -100,6 +105,7 @@ private:
     glm::vec2 m_Enemy_pos;
     std::shared_ptr<Arrow> m_Arrow = std::make_shared<Arrow>();
     // std::vector<std::shared_ptr<Arrow>> m_Arrows;
+    bool skill_choose = false;
 
     void removeEnemy();
     Util::Renderer m_Root;

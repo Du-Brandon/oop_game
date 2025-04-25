@@ -65,6 +65,10 @@ int exp_pic::getEXP() const{
     return exp;
 }
 
+int exp_pic::getLevel() const{
+    return max_exp_iterator;
+}
+
 void exp_pic_background::Start(){
     this->SetDrawable(
         std::make_shared<Util::Image>("../assets/other/exp_.png"));

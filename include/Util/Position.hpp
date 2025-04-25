@@ -39,8 +39,8 @@ struct PTSDPosition {
         return (*this) + (vec2 * (-1.0f));
     }
 
-    [[deprecated("Implicit conversion will be removed. Use explicit conversion "
-                 "instead")]]
+    // [[deprecated("Implicit conversion will be removed. Use explicit conversion "
+    //              "instead")]]
     operator glm::vec2() const {
         return {x, y};
     }
