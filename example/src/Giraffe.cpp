@@ -226,7 +226,17 @@ void Giraffe::setpos(glm::vec2 position) {
     pos = position;
 }
 
-int Giraffe::getAtk() const {
+int Giraffe::getAtk()  {
+    if (bool_skill_angry ){
+        // 計算當前血量與最大血量的比例
+        float hp_ratio = static_cast<float>(m_HP) / max_hp;
+
+        // 使用非線性公式計算倍率（例如：2 - sqrt(hp_ratio)）
+        float multiplier = 2.0f - std::sqrt(hp_ratio);
+
+        // 確保倍率不低於 1 倍
+        multiplier = std::max(multiplier, 1.0f);
+    }
     return atk;
 }
 

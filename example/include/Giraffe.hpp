@@ -45,7 +45,7 @@ public:
 
     void setpos(glm::vec2 position); // 添加這個方法來設置長頸鹿的位置
     void setAtk(int atk); // 添加這個方法來設置長頸鹿的攻擊力
-    int getAtk() const; // 添加這個方法來獲取長頸鹿的攻擊力
+    int getAtk() ; // 添加這個方法來獲取長頸鹿的攻擊力
     void setSpeed(float speed); // 添加這個方法來設置長頸鹿的速度
     void setHP(int hp); // 添加這個方法來設置長頸鹿的血量
     int getHP() const ; // 添加這個方法來獲取長頸鹿的血量
@@ -73,6 +73,7 @@ private:
     int atk = 100; // 添加這個成員變數來表示長頸鹿的攻擊力
     float atk_speed = 0.9f; // 添加這個成員變數來表示長頸鹿的攻擊速度
     int m_HP = 150; // 添加這個成員變數來表示長頸鹿的血量
+    int max_hp = 150; // 添加這個成員變數來表示長頸鹿的最大血量
     int exp = 0; // 添加這個成員變數來表示長頸鹿的經驗值
     float delta = 0.0f; // 添加這個成員變數來表示長頸鹿的速度
 

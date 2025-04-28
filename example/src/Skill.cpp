@@ -93,6 +93,15 @@ void Skill_choose::trigger_skill3() {
     if (giraffe) giraffe->bool_skill_smart = true;
 }
 
+void Skill_choose::trigger_skill4() {
+    // 觸發技能4（未實現）
+    Logger::info("技能4被選擇：未實現");
+    bool_skill_angry = true;
+    if (giraffe) giraffe->bool_skill_angry = true;
+}
+
+
+
 void Skill_choose::end() {
     // 結束技能選擇
     is_running = false;

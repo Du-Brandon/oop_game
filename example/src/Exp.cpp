@@ -45,7 +45,7 @@ void exp_pic::set_maxexp(std::vector<int> max_exp_list){
 
 void exp_pic::add_exp(int exp){
     this->exp += exp;
-    if (this->exp > this->max_exp_list[max_exp_iterator]) {
+    if (this->exp >= this->max_exp_list[max_exp_iterator]) {
         if (this->max_exp_iterator == this->max_exp_list.size() - 1){
             Logger::warn("exp_pic: max_exp_iterator out of range");
             this->exp = this->max_exp_list[max_exp_iterator];

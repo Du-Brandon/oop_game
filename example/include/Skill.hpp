@@ -29,6 +29,8 @@ private:
     void trigger_skill1();
     void trigger_skill2();
     void trigger_skill3();
+    void trigger_skill4();
+    void trigger_skill5();
     void end();
 
     std::shared_ptr<Dark_pic> m_Dark_pic = std::make_shared<Dark_pic>();
@@ -41,6 +43,7 @@ private:
     bool bool_skill_double_arrow = false;
     bool bool_skill_rebound_arrow = false;
     bool bool_skill_smart = false;
+    bool bool_skill_angry = false;
 
     // 外部傳入的 giraffe 指標
     std::shared_ptr<Giraffe> giraffe = nullptr;
