@@ -27,6 +27,10 @@ void Enemy_4::Start(glm::vec2 coordinate) {
 
 void Enemy_4::Update() {
     if (m_Visible == false){
+        for (auto it = m_stones.begin(); it != m_stones.end();) {
+            this->RemoveChild(*it);
+            it = m_stones.erase(it); // 刪除箭
+        }
         return;
     }
     
@@ -36,7 +40,7 @@ void Enemy_4::Update() {
         rotation_count = 0;
     }
     else{
-        if (count >= 90 && count <=270){
+        if (count >= 90 && count <=260){
             dir = move();
             
             if ((m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "right") ) {
@@ -63,13 +67,26 @@ void Enemy_4::Update() {
         count ++;
 
     }
-    if (rotation_count <= 100 && rotation_count >= 0) {
+    if (rotation_count <= 100 && rotation_count >= 260) {
         rotation += glm::radians(3.6f); // 每次更新旋轉 36 度（轉換為弧度）
         rotation_count ++ ;
     }
     else {
         rotation_count = 0;
     }
+
+    for (auto it = m_stones.begin(); it != m_stones.end();) {
+        (*it)->setTarget(m_Giraffe);
+        (*it)->Update(true);
+        if ((*it)->shouldDelete()) {
+            this->RemoveChild(*it);
+            it = m_stones.erase(it); // 刪除箭
+        } else {
+            ++it;
+        }
+    }
+    
+
     enemy_hp_update();
 }
 

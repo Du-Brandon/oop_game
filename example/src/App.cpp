@@ -467,7 +467,7 @@ void App::ValidTask() {
         wall->setwall(glm::vec2 (-399.625f,-122.9083f) , glm::vec2(-143.606f , -88.7307f));
         wall->setwall(glm::vec2 (-74.625f,-122.9083f) , glm::vec2(169.1393f , -88.7307f));                   
 
-        std::shared_ptr<Enemy_3> m_Enemy6 = std::make_shared<Enemy_3>();
+        std::shared_ptr<Enemy_4> m_Enemy6 = std::make_shared<Enemy_4>();
         m_Enemy6->SetDrawable(
             std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
         m_Enemy6->SetZIndex(5);
