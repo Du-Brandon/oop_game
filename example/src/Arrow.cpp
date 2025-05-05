@@ -51,7 +51,7 @@ void Arrow::Start(){
     pos = m_PlayerCoordinate;
     
     // 初始化箭的大小
-    scale = {0.05f, 0.05f};
+    scale = {0.03f, 0.03f};
 
     // 初始化箭的旋轉角度
     rotation =atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;

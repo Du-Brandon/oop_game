@@ -1,0 +1,115 @@
+#include "Enemy_4.hpp"
+#include "log_my.hpp"
+#include <cstdlib>
+
+void Enemy_4::Start() { // 之後刪除
+    // 初始化敵人的位置
+    pos = {100, 100};
+
+    // 初始化敵人的大小
+    scale = {0.2f, 0.2f};
+
+    move_speed = 8.0f;
+    
+    enemy_hp_start();
+}
+
+// 新式寫法
+void Enemy_4::Start(glm::vec2 coordinate) {
+    pos = coordinate;
+    scale = {0.2f, 0.2f};
+    move_speed = 6.0f;
+    this->SetZIndex(5);
+    this->SetDrawable(std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+
+    enemy_hp_start();
+}
+
+void Enemy_4::Update() {
+    if (m_Visible == false){
+        return;
+    }
+    
+    if(count >= atk_speed) {
+        shoot();
+        count = 0;
+        rotation_count = 0;
+    }
+    else{
+        if (count >= 90 && count <=270){
+            dir = move();
+            
+            if ((m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "right") ) {
+                dir.x = 0;
+            }
+            else if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "left") {
+                dir.x = 0;
+            }
+            else if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "lr") {
+                dir.x = 0;
+            }
+            if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "up") {
+                dir.y = 0;
+            }
+            else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "down") {
+                dir.y = 0;
+            }
+            else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "ud") {
+                dir.y = 0;
+            }
+
+            pos += dir * move_speed;
+        }
+        count ++;
+
+    }
+    if (rotation_count <= 100 && rotation_count >= 0) {
+        rotation += glm::radians(3.6f); // 每次更新旋轉 36 度（轉換為弧度）
+        rotation_count ++ ;
+    }
+    else {
+        rotation_count = 0;
+    }
+    enemy_hp_update();
+}
+
+
+// 隨便移動
+glm::vec2 Enemy_4::move() {
+    if (count >= 15 && !decide_dir){
+        decide_dir = true;
+        dir = randomMove('x');
+    }
+    else if (count <= 45 && decide_dir){
+        decide_dir = false;
+    }
+    return dir;
+}
+
+// 同時向giraffe和兩側射擊
+void Enemy_4::shoot() {
+    glm::vec2 toGiraffe = m_Giraffe->coordinate() - pos;
+    
+    // 計算敵人到長頸鹿的距離
+    std::shared_ptr<EnemyArrow> m_stone_mid = std::make_shared<EnemyArrow>();
+    std::shared_ptr<EnemyArrow> m_stone_left = std::make_shared<EnemyArrow>();
+    std::shared_ptr<EnemyArrow> m_stone_right = std::make_shared<EnemyArrow>();
+
+    stone_shoot(m_stone_mid); // 射向長頸鹿
+    stone_shoot(m_stone_left, glm::vec2(-1, 0)); // 向左射擊
+    stone_shoot(m_stone_right, glm::vec2(1, 0)); // 向右射擊
+    if (bool_logger) {
+        Logger::info("Enemy_4 shoot: finish shoot stone to Giraffe and left and right");
+    }
+}
+
+void Enemy_4::stone_shoot(std::shared_ptr<EnemyArrow> m_stone , glm::vec2 direction) {
+    m_stone->setTarget(shared_from_this());
+    m_stone->setTarget(m_Giraffe);
+    m_stone->setWall(m_wall);
+    m_stone->Start("../assets/sprites/redball.png", direction); // 設置箭的圖片和方向
+    m_stones.push_back(m_stone); // 將箭存儲到向量中
+    this->AddChild(m_stone);
+}
+
+

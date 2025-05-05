@@ -1,4 +1,5 @@
 #include "EnemyArrow.hpp"
+#include <string>
 
 void EnemyArrow::setTarget(std::shared_ptr<Enemy> enemy) {
     m_Enemy_ = enemy;
@@ -14,7 +15,10 @@ void EnemyArrow::setWall(std::shared_ptr<Wall> wall) {
     m_Wall = wall;
 }
 
-void EnemyArrow::Start() {
+void EnemyArrow::Start(std::string image_path , glm::vec2 direction) {
+    if (image_path == "") {
+        image_path = "../assets/sprites/redball.png"; // 使用默認圖片路徑
+    }
     this->SetDrawable(std::make_shared<Util::Image>("../assets/sprites/redball.png"));
     this->SetZIndex(6);
 
@@ -23,6 +27,7 @@ void EnemyArrow::Start() {
     m_ShouldDelete = false;
 
     m_Direction = glm::normalize(m_PlayerCoordinate - m_EnemyCoordinate);
+    m_Direction += direction; // 設置箭的方向
 
     // 初始化箭的位置
     pos = m_EnemyCoordinate;
@@ -65,7 +70,7 @@ void EnemyArrow::Update(bool ignorewall) {
     else {
         if ((glm::distance(m_PlayerCoordinate,pos)) <=18.0f) {
             m_ShouldDelete = true;
-            m_Giraffe_->setHP(- (m_Enemy_->getAtk()));
+            m_Giraffe_->addHP(- (m_Enemy_->getAtk()));
             std::cout << "Arrow hit player" << m_Giraffe_->getHP() << std::endl;
         }
     }

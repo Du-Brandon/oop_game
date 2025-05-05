@@ -252,8 +252,12 @@ float Giraffe::getAtk_speed() const {
     return atk_speed;
 }
 
-void Giraffe::setHP(int hp) {
+void Giraffe::addHP(int hp) {
     m_HP += hp;
+}
+
+void Giraffe::setHP(int hp) {
+    m_HP = hp;
 }
 
 int Giraffe::getHP() const {
@@ -263,6 +267,7 @@ int Giraffe::getHP() const {
 void Giraffe::addMaxHP(int max_hp) {
     this->max_hp += max_hp;
     m_hp_pic->set_maxhp(this->max_hp);
+    m_HP += max_hp; // 增加當前血量
 }
 
 void Giraffe::setExp(int exp) {
@@ -332,7 +337,7 @@ void Giraffe::skill_double_arrow() {
     std::chrono::duration<float> duration = now - arrowCooldown;
     // std::cout << "delta" << delta << std::endl;
     // std::cout << duration.count() << std::endl;
-    if ((duration.count())*1000 >=3 * delta) {
+    if ((duration.count())*1000 >=9 * delta) {
         ShootArrow(false, false); // 發射第二發箭
         double_arrow_is_shoot = false; // 重置技能狀態
     }

@@ -8,7 +8,13 @@ Skill_choose::Skill_choose() {
         {"聰明", [this]() { this->trigger_skill3(); }, "../assets/buttons/smart.png"},
         {"憤怒", [this]() { this->trigger_skill4(); }, "../assets/buttons/angry.png"},
         {"加速攻擊", [this]() { this->trigger_skill5(); }, "../assets/buttons/atk_speed.png"},
+        {"提升最大血量", [this]() { this->trigger_skill6(); }, "../assets/buttons/add_hp.png"},
+        // {"無敵", [this]() { this->trigger_skill7(); }, "../assets/buttons/invincible.png"}
+    };
+    present = {
+        {"加速攻擊", [this]() { this->trigger_skill5(); }, "../assets/buttons/atk_speed.png"},
         {"加血", [this]() { this->trigger_skill6(); }, "../assets/buttons/add_hp.png"},
+        {"補血", [this]() { this->trigger_skill0(); }, "../assets/buttons/add_hp.png"},
         // {"無敵", [this]() { this->trigger_skill7(); }, "../assets/buttons/invincible.png"}
     };
 }
@@ -86,6 +92,19 @@ void Skill_choose::Start() {
     m_Button3->Start(std::get<0>(skill3), std::get<2>(skill3), skill3_callback,
         glm::vec2(180.0f, -30.0f), glm::vec2(240.0f, 30.0f), glm::vec2(1.0f, 1.0f));
 
+    // 設置按鈕文本
+    m_Skill_choose_text1 ->Start(std::get<0>(skill1), glm::vec2(-330.0f, -50.0f));
+    m_Skill_choose_text2 ->Start(std::get<0>(skill2), glm::vec2(-60.0f, -50.0f));
+    m_Skill_choose_text3 ->Start(std::get<0>(skill3), glm::vec2(220.0f, -50.0f));
+
+    this->AddChild(m_Skill_choose_text1);
+    this->AddChild(m_Skill_choose_text2);
+    this->AddChild(m_Skill_choose_text3);
+
+    m_Skill_choose_text1->SetVisible(true);
+    m_Skill_choose_text2->SetVisible(true);
+    m_Skill_choose_text3->SetVisible(true);
+
     has_clicked = false;
 
     // 顯示黑色遮罩
@@ -99,6 +118,12 @@ void Skill_choose::Start() {
     this->AddChild(m_Button3);
 
     Logger::info("技能選擇界面已啟動");
+}
+
+void Skill_choose::trigger_skill0() {
+    // 觸發補血技能
+    Logger::info("技能0被選擇：補血");
+    
 }
 
 void Skill_choose::trigger_skill1() {
@@ -143,8 +168,6 @@ void Skill_choose::trigger_skill6() {
 
 
 
-
-
 void Skill_choose::end() {
     // 結束技能選擇
     is_running = false;
@@ -152,6 +175,10 @@ void Skill_choose::end() {
     m_Button1->SetVisible(false);
     m_Button2->SetVisible(false);
     m_Button3->SetVisible(false);
+
+    m_Skill_choose_text1->SetVisible(false);
+    m_Skill_choose_text2->SetVisible(false);
+    m_Skill_choose_text3->SetVisible(false);
 
     m_Dark_pic->Disappear();
 
@@ -179,4 +206,16 @@ void Skill_choose::removeSkill(const std::string& name) {
     if (skills.size() < 3) {
         Logger::error("技能列表不足三個，可能導致技能選擇界面無法正常運行");
     }
+}
+
+Skill_choose_text::Skill_choose_text() {
+    // m_Font = "../assets/fonts/Inter.ttf";
+    // m_Size = 18;
+    m_Text = std::make_shared<Util::Text>(m_Font, m_Size, fmt::format("{}", "name"), Util::Color::FromRGB(0, 0, 0));
+}
+
+void Skill_choose_text::Start(std::string name , glm::vec2 pos) {
+    m_Text->SetText(fmt::format("{}", name));
+    this ->pos = pos;
+    SetDrawable(m_Text);
 }

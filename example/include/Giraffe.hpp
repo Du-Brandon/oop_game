@@ -49,8 +49,9 @@ public:
     void setAtk_speed(float atk_speed); // 添加這個方法來設置長頸鹿的攻擊速度
     float getAtk_speed() const; // 添加這個方法來獲取長頸鹿的攻擊速度
     void setSpeed(float speed); // 添加這個方法來設置長頸鹿的速度
-    int getHP() const ; // 添加這個方法來獲取長頸鹿的血量
+    void addHP(int hp); // 添加這個方法來增加長頸鹿的血量
     void setHP(int hp); // 添加這個方法來設置長頸鹿的血量
+    int getHP() const ; // 添加這個方法來獲取長頸鹿的血量
     void addMaxHP(int max_hp); // 添加這個方法來設置長頸鹿的最大血量
     void setExp(int exp); // 添加這個方法來設置長頸鹿的經驗值
     int getExp() const; // 添加這個方法來獲取長頸鹿的經驗值

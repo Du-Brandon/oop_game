@@ -76,8 +76,8 @@ private:
     glm::vec2 &pos = m_Transform.translation; // 位置
     glm::vec2 &scale = m_Transform.scale; // 縮放比例
 
-    std::string m_Font;
-    int m_Size;
+    std::string m_Font = "../assets/fonts/Inters.ttf";
+    int m_Size = 36;
     int level = 1; // 等級
     std::shared_ptr<Util::Text> m_LevelText; // 用於顯示血量的文本
 };

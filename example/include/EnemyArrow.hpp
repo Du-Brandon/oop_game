@@ -1,5 +1,6 @@
 #pragma once
 
+#include <glm/fwd.hpp>
 #include <memory>
 #include <vector>
 #include <cmath>
@@ -22,7 +23,7 @@ public:
     void setTarget(std::shared_ptr<Giraffe> giraffe); // 設置目標(玩家)
     void setWall(std::shared_ptr<Wall> wall); // 設置射箭的牆壁
 
-    void Start();
+    void Start(std::string image_path = "", glm::vec2 direction = glm::vec2(0.0f,0.0f)); // 初始化箭的屬性
     void Update();
     void Update(bool ignorewall);
     glm::vec2 coordinate();

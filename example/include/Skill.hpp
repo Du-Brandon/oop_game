@@ -12,7 +12,7 @@
 #include "Util/Keycode.hpp"
 #include "Util/Input.hpp"
 
-
+class Skill_choose_text;
 class Skill_choose : public Util::GameObject {
 public:
     Skill_choose();
@@ -30,6 +30,7 @@ public:
 
 private:
     void Start();
+    void trigger_skill0(); 
     void trigger_skill1();
     void trigger_skill2();
     void trigger_skill3();
@@ -61,6 +62,29 @@ private:
     std::shared_ptr<Button> m_Button2 = std::make_shared<Button>();
     std::shared_ptr<Button> m_Button3 = std::make_shared<Button>();
 
+    std::shared_ptr<Skill_choose_text> m_Skill_choose_text1 = std::make_shared<Skill_choose_text>();
+    std::shared_ptr<Skill_choose_text> m_Skill_choose_text2 = std::make_shared<Skill_choose_text>();
+    std::shared_ptr<Skill_choose_text> m_Skill_choose_text3 = std::make_shared<Skill_choose_text>();
     // 新增：技能列表
     std::vector<std::tuple<std::string, std::function<void()>, std::string>> skills;
+    std::vector<std::tuple<std::string, std::function<void()>, std::string>> present;
+
+};
+
+class Skill_choose_text : public Util::GameObject {
+public:
+    Skill_choose_text() ;
+    ~Skill_choose_text() override = default;
+
+    void Start(std::string name , glm::vec2 pos);
+    void Update();  
+
+private:
+    glm::vec2 &pos = m_Transform.translation; // 位置
+    glm::vec2 &scale = m_Transform.scale; // 縮放比例
+
+    std::string m_Font = "../assets/fonts/wb.ttf";
+    int m_Size = 36;
+    std::shared_ptr<Util::Text> m_Text;
+
 };

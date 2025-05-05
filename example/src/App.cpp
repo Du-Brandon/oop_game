@@ -142,7 +142,7 @@ void App::normal_level_Update() {
     auto m_Giraffe_pos = m_Giraffe->coordinate();
 
     if (m_Ground_Spikes->collision_check(m_Giraffe_pos)){
-        m_Giraffe->setHP(-1);
+        m_Giraffe->addHP(-1);
         Logger::info("Ground_Spikes collision detected! Giraffe HP: " + std::to_string(m_Giraffe->getHP()));
     }
 
@@ -157,7 +157,7 @@ void App::normal_level_Update() {
         m_Enemy_pos = enemy_it->coordinate();
 
         if (glm::distance(m_Giraffe_pos, m_Enemy_pos) < 50 && enemy_it->getVisible()) {
-            m_Giraffe->setHP(-enemy_it->getAtk());
+            m_Giraffe->addHP(-enemy_it->getAtk());
             Logger::info("Collision detected! Giraffe HP: " + std::to_string(m_Giraffe->getHP()));
         }
 
@@ -249,7 +249,7 @@ void App::Boss_Update() {
         m_Enemy_pos = enemy_it->coordinate();
 
         if (glm::distance(m_Giraffe_pos, m_Enemy_pos) < 50 && enemy_it->getVisible()) {
-            m_Giraffe->setHP(-enemy_it->getAtk());
+            m_Giraffe->addHP(-enemy_it->getAtk());
             Logger::info("Collision detected! Giraffe HP: " + std::to_string(m_Giraffe->getHP()));
         }
 
@@ -625,7 +625,7 @@ void App::ValidTask() {
         m_Enemies.push_back(m_Enemy10);
         m_Root.AddChild(m_Enemy10);
         
-        std::shared_ptr<Enemy_3> m_Enemy11 = std::make_shared<Enemy_3>();
+        std::shared_ptr<Enemy_4> m_Enemy11 = std::make_shared<Enemy_4>();
         m_Enemy11->SetDrawable(
             std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
         m_Enemy11->SetZIndex(5);

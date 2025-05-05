@@ -16,6 +16,7 @@
 #include "Enemy_1.hpp"
 #include "Enemy_2.hpp"
 #include "Enemy_3.hpp"
+#include "Enemy_4.hpp"
 #include "Angel.hpp"
 #include "Arrow.hpp"
 #include "Skill.hpp"

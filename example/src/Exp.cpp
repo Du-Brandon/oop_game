@@ -92,7 +92,6 @@ void exp_pic_text::Start(){
     m_Size = 36;
     m_LevelText = std::make_unique<Util::Text>(m_Font, m_Size, fmt::format("Level: {}", level),
         Util::Color::FromRGB(255, 255, 255));
-
     
     pos = glm::vec2(0.0f, 300.0f);
 
