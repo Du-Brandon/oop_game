@@ -1,4 +1,17 @@
+#include <random>
 #include "Skill.hpp"
+
+Skill_choose::Skill_choose() {
+    skills = {
+        {"雙重射擊", [this]() { this->trigger_skill1(); }, "../assets/buttons/double_arrow.png"},
+        {"反彈箭矢", [this]() { this->trigger_skill2(); }, "../assets/buttons/rebound_arrow.png"},
+        {"聰明", [this]() { this->trigger_skill3(); }, "../assets/buttons/smart.png"},
+        {"憤怒", [this]() { this->trigger_skill4(); }, "../assets/buttons/angry.png"},
+        {"加速攻擊", [this]() { this->trigger_skill5(); }, "../assets/buttons/atk_speed.png"},
+        {"加血", [this]() { this->trigger_skill6(); }, "../assets/buttons/add_hp.png"},
+        // {"無敵", [this]() { this->trigger_skill7(); }, "../assets/buttons/invincible.png"}
+    };
+}
 
 void Skill_choose::run() {
     if (is_running) {
@@ -29,47 +42,63 @@ void Skill_choose::run() {
 
 
 void Skill_choose::Start() {
-    // 初始化三個按鈕，設置它們的回調函數
-    auto skill1_callback = [this]() {
-        this->trigger_skill1();
+    if (skills.size() < 3) {
+        Logger::error("技能列表不足三個，無法啟動技能選擇界面");
+        return;
+    }
+
+    // 隨機打亂技能列表
+    std::random_device rd;
+    std::mt19937 g(rd());
+    std::shuffle(skills.begin(), skills.end(), g);
+
+    // 選擇前三個技能
+    auto skill1 = skills[0];
+    auto skill2 = skills[1];
+    auto skill3 = skills[2];
+
+    // 動態生成回調函數並綁定到按鈕
+    auto skill1_callback = [this, skill1]() {
+        std::get<1>(skill1)();  // 執行技能的回調函數
         this->has_clicked = true;
         this->end();
     };
 
-    auto skill2_callback = [this]() {
-        this->trigger_skill2();
+    auto skill2_callback = [this, skill2]() {
+        std::get<1>(skill2)();
         this->has_clicked = true;
         this->end();
     };
 
-    auto skill3_callback = [this]() {
-        this->trigger_skill3();
+    auto skill3_callback = [this, skill3]() {
+        std::get<1>(skill3)();
         this->has_clicked = true;
         this->end();
     };
 
-    m_Dark_pic->Start();
-    this->AddChild(m_Dark_pic);
-    m_Dark_pic->Appear(); // 初始時顯示黑色遮罩
+    // 設置按鈕
+    m_Button1->Start(std::get<0>(skill1), std::get<2>(skill1), skill1_callback,
+        glm::vec2(-370.0f, -30.0f), glm::vec2(-310.0f, 30.0f), glm::vec2(1.0f, 1.0f));
+
+    m_Button2->Start(std::get<0>(skill2), std::get<2>(skill2), skill2_callback,
+        glm::vec2(-100.0f, -30.0f), glm::vec2(-40.0f, 30.0f), glm::vec2(1.0f, 1.0f));
+
+    m_Button3->Start(std::get<0>(skill3), std::get<2>(skill3), skill3_callback,
+        glm::vec2(180.0f, -30.0f), glm::vec2(240.0f, 30.0f), glm::vec2(1.0f, 1.0f));
 
     has_clicked = false;
 
-    // 設置三個按鈕的位置和圖片
-    m_Button1->Start("雙重射擊", "../assets/buttons/double_arrow.png", skill1_callback,
-        glm::vec2(-370.0f,-30.0f), glm::vec2(-310.0f,30.0f), glm::vec2(1.0f,1.0f));
+    // 顯示黑色遮罩
+    m_Dark_pic->Start();
+    this->AddChild(m_Dark_pic);
+    m_Dark_pic->Appear();
 
-    m_Button2->Start("反彈箭矢", "../assets/buttons/rebound_arrow.png", skill2_callback,
-        glm::vec2(-100.0f,-30.0f), glm::vec2(-40.0f,30.0f), glm::vec2(1.0f,1.0f));
-
-    m_Button3->Start("聰明", "../assets/buttons/smart.png", skill3_callback,
-        glm::vec2(180.0f,-30.0f), glm::vec2(240.0f,30.0f), glm::vec2(1.0f,1.0f));
-
+    // 添加按鈕到渲染樹
     this->AddChild(m_Button1);
     this->AddChild(m_Button2);
     this->AddChild(m_Button3);
 
     Logger::info("技能選擇界面已啟動");
-
 }
 
 void Skill_choose::trigger_skill1() {
@@ -94,11 +123,25 @@ void Skill_choose::trigger_skill3() {
 }
 
 void Skill_choose::trigger_skill4() {
-    // 觸發技能4（未實現）
-    Logger::info("技能4被選擇：未實現");
+
+    Logger::info("技能4被選擇：憤怒");
     bool_skill_angry = true;
     if (giraffe) giraffe->bool_skill_angry = true;
 }
+
+void Skill_choose::trigger_skill5() {
+    Logger::info("技能5被選擇：加速攻擊");
+    skill_atk_speed = skill_atk_speed + 1; // 增加攻擊速度
+    if (giraffe) giraffe-> setAtk_speed(giraffe->getAtk_speed()*0.1); // 設置長頸鹿的攻擊速度
+}
+
+void Skill_choose::trigger_skill6() {
+    Logger::info("技能6被選擇：加血");
+    skill_add_hp = skill_add_hp + 1; // 增加血量
+    if (giraffe) giraffe-> addMaxHP(200); // 設置長頸鹿的血量
+}
+
+
 
 
 
@@ -111,4 +154,29 @@ void Skill_choose::end() {
     m_Button3->SetVisible(false);
 
     m_Dark_pic->Disappear();
+
+    this->RemoveChild(m_Button1);
+    this->RemoveChild(m_Button2);
+    this->RemoveChild(m_Button3);
+}
+
+void Skill_choose::addSkill(const std::string& name, const std::function<void()>& callback, const std::string& iconPath) {
+    skills.emplace_back(name, callback, iconPath);
+}
+
+void Skill_choose::removeSkill(const std::string& name) {
+    auto it = std::remove_if(skills.begin(), skills.end(),
+        [&name](const auto& skill) {
+            return std::get<0>(skill) == name;
+        });
+    if (it != skills.end()) {
+        Logger::info("技能已刪除：" + name);
+        skills.erase(it, skills.end());
+    } else {
+        Logger::warn("嘗試刪除不存在的技能：" + name);
+    }
+
+    if (skills.size() < 3) {
+        Logger::error("技能列表不足三個，可能導致技能選擇界面無法正常運行");
+    }
 }

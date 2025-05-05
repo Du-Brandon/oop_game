@@ -16,6 +16,7 @@
 class exp_pic_background;
 class Giraffe;
 class Dark_pic; // 前向宣告
+class exp_pic_text;
 class exp_pic : public Util::GameObject {
 public:
     exp_pic() = default;
@@ -45,7 +46,7 @@ private:
 
     std::shared_ptr<exp_pic_background> m_Background; // 用於顯示經驗條的背景
     std::shared_ptr<Dark_pic> m_Dark_pic = std::make_shared<Dark_pic>(); // 用於顯示黑色遮罩
-    // std::shared_ptr<Util::Text> m_Text; // 用於顯示血量的文本
+    std::shared_ptr<exp_pic_text> m_LevelText; // 用於顯示經驗條的文本
 };
 
 class exp_pic_background : public Util::GameObject {
@@ -68,11 +69,15 @@ public:
     ~exp_pic_text() override = default;
 
     void Start();
-    void setpos(glm::vec2 position);
+    void Update(); // 更新文本顯示
+    void addlevel(int level); // 設置等級
+
 private:
     glm::vec2 &pos = m_Transform.translation; // 位置
     glm::vec2 &scale = m_Transform.scale; // 縮放比例
 
+    std::string m_Font;
+    int m_Size;
     int level = 1; // 等級
-    std::shared_ptr<Util::Text> m_Text; // 用於顯示血量的文本
+    std::shared_ptr<Util::Text> m_LevelText; // 用於顯示血量的文本
 };

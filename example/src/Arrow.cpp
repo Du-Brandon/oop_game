@@ -94,7 +94,7 @@ void Arrow::Update() {
         }
     }
     else {
-        if (Frame_rate >= 120) { // 每100幀檢查一次
+        if (Frame_rate >= 180) { // 每180幀檢查一次
             Frame_rate = 0; // 重置幀率計數器
             m_ShouldDelete = true;
         }

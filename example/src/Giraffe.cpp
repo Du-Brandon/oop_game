@@ -34,7 +34,7 @@ void Giraffe::Start() {
     this -> AddChild(m_exp_pic);
     // m_GiraffeText =
     //     std::make_shared<GiraffeText>("../assets/fonts/Inter.ttf", 50);
-    // m_GiraffeText->SetZIndex(this->GetZIndex() - 1);
+    // m_GiraffeText->SetZIndex(this->GetZ Index() - 1);
     // m_GiraffeText->Start();
     // this->AddChild(m_GiraffeText);
 
@@ -244,12 +244,25 @@ void Giraffe::setAtk(int atk) {
     this->atk += atk;
 }
 
-int Giraffe::getHP() const {
-    return m_HP;
+void Giraffe::setAtk_speed(float atk_speed) {
+    this->atk_speed = this->atk_speed - atk_speed;
+}
+
+float Giraffe::getAtk_speed() const {
+    return atk_speed;
 }
 
 void Giraffe::setHP(int hp) {
     m_HP += hp;
+}
+
+int Giraffe::getHP() const {
+    return m_HP;
+}
+
+void Giraffe::addMaxHP(int max_hp) {
+    this->max_hp += max_hp;
+    m_hp_pic->set_maxhp(this->max_hp);
 }
 
 void Giraffe::setExp(int exp) {
@@ -311,13 +324,7 @@ void Giraffe::cleararrow() {
 }
 
 
-
-
 // skill function
-void Giraffe::judge_skill() {
-    // 判斷技能
-    
-}
 
 void Giraffe::skill_double_arrow() {
     // 技能1

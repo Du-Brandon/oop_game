@@ -46,9 +46,12 @@ public:
     void setpos(glm::vec2 position); // 添加這個方法來設置長頸鹿的位置
     void setAtk(int atk); // 添加這個方法來設置長頸鹿的攻擊力
     int getAtk() ; // 添加這個方法來獲取長頸鹿的攻擊力
+    void setAtk_speed(float atk_speed); // 添加這個方法來設置長頸鹿的攻擊速度
+    float getAtk_speed() const; // 添加這個方法來獲取長頸鹿的攻擊速度
     void setSpeed(float speed); // 添加這個方法來設置長頸鹿的速度
-    void setHP(int hp); // 添加這個方法來設置長頸鹿的血量
     int getHP() const ; // 添加這個方法來獲取長頸鹿的血量
+    void setHP(int hp); // 添加這個方法來設置長頸鹿的血量
+    void addMaxHP(int max_hp); // 添加這個方法來設置長頸鹿的最大血量
     void setExp(int exp); // 添加這個方法來設置長頸鹿的經驗值
     int getExp() const; // 添加這個方法來獲取長頸鹿的經驗值
     int getLevel() const; // 添加這個方法來獲取長頸鹿的等級
@@ -82,7 +85,6 @@ private:
     float &rotation = m_Transform.rotation; // 長頸鹿的旋轉角度
 
     // skill list
-    void judge_skill(); // 判斷技能
     void skill_double_arrow(); // 技能1
     // void skill_rebound_arrow(); // 技能2
     // void skill_smart(); // 技能3

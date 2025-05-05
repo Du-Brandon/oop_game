@@ -22,6 +22,10 @@ void exp_pic::Start(){
     m_Dark_pic->Appear();
     this->AddChild(m_Dark_pic);
     m_Dark_pic->Disappear();
+
+    m_LevelText = std::make_shared<exp_pic_text>();
+    m_LevelText->Start();
+    this->AddChild(m_LevelText);
 }
 
 void exp_pic::Update(){
@@ -29,6 +33,8 @@ void exp_pic::Update(){
     exp_scale = static_cast<float>(exp) / max_exp_list[max_exp_iterator];
     pos = glm::vec2(-200.0f, 250.0f) + (exp_scale * glm::vec2(200.0f, 0.0f));
     scale = glm::vec2(exp_scale, 1.0f);
+
+    m_LevelText->Update();
 }
 
 void exp_pic::setpos(glm::vec2 position){
@@ -52,7 +58,7 @@ void exp_pic::add_exp(int exp){
         }
         this->exp = this->exp - this->max_exp_list[max_exp_iterator];
         this->max_exp_iterator++;
-        
+        m_LevelText->addlevel(1);
     }
     this->Update();
 }
@@ -79,4 +85,25 @@ void exp_pic_background::Start(){
 
 void exp_pic_background::setpos(glm::vec2 position){
     pos = position;
+}
+
+void exp_pic_text::Start(){
+    m_Font = "../assets/fonts/Inter.ttf";
+    m_Size = 36;
+    m_LevelText = std::make_unique<Util::Text>(m_Font, m_Size, fmt::format("Level: {}", level),
+        Util::Color::FromRGB(255, 255, 255));
+
+    
+    pos = glm::vec2(0.0f, 300.0f);
+
+    SetDrawable(m_LevelText);
+}
+
+void exp_pic_text::Update(){
+    m_LevelText->SetText(fmt::format("Level: {}", level));
+
+}
+
+void exp_pic_text::addlevel(int level){
+    this->level += level;
 }

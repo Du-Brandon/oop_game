@@ -1,6 +1,6 @@
 #ifndef GIRAFFE_TEXT_HPP
 #define GIRAFFE_TEXT_HPP
-
+ 
 #include "Util/GameObject.hpp"
 #include "Util/Text.hpp"
 
