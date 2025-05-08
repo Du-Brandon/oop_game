@@ -66,7 +66,9 @@ public:
     bool bool_skill_double_arrow = false; // 判斷技能1是否被使用
     bool bool_skill_rebound_arrow = false; // 判斷技能2是否被使用
     bool bool_skill_smart = false; // 判斷技能3是否被使用
-    bool bool_skill_angry = false; // 判斷技能4是否被使用
+    bool bool_skill_angry = false; // 判斷技能憤怒是否被使用
+    bool bool_skill_invincible = false; // 判斷技能無敵是否被使用
+    
 
 private:
 

@@ -90,8 +90,8 @@ ESC：退出遊戲 -->
 - [x] angry
 - [ ] heart
 - [ ] add_atk_speed
-- [ ] add_hp
-- [ ] add_atk
+- [x] add_hp
+- [x] add_atk
 - [ ] invincible(無敵)
 - [ ] side_arrow
 - [ ] element arrow

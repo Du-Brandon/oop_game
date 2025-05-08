@@ -253,7 +253,14 @@ float Giraffe::getAtk_speed() const {
 }
 
 void Giraffe::addHP(int hp) {
+    if (hp < 0 && bool_skill_invincible){ //每1000偵無敵50偵，待重寫
+        // 如果使用了無敵技能，則不減少血量
+        return;
+    }
     m_HP += hp;
+    if (m_HP > max_hp) {
+        m_HP = max_hp; // 確保血量不會超過最大值
+    }
 }
 
 void Giraffe::setHP(int hp) {

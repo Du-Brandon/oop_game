@@ -107,6 +107,7 @@ private:
     std::shared_ptr<Arrow> m_Arrow = std::make_shared<Arrow>();
     // std::vector<std::shared_ptr<Arrow>> m_Arrows;
     bool skill_choose = false;
+    bool angel_skill_choose = false;
 
     void removeEnemy();
     Util::Renderer m_Root;

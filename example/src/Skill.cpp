@@ -9,7 +9,7 @@ Skill_choose::Skill_choose() {
         {"憤怒", [this]() { this->trigger_skill4(); }, "../assets/buttons/angry.png"},
         {"加速攻擊", [this]() { this->trigger_skill5(); }, "../assets/buttons/atk_speed.png"},
         {"提升最大血量", [this]() { this->trigger_skill6(); }, "../assets/buttons/add_hp.png"},
-        // {"無敵", [this]() { this->trigger_skill7(); }, "../assets/buttons/invincible.png"}
+        {"無敵", [this]() { this->trigger_skill7(); }, "../assets/buttons/invincible.png"}
     };
     present = {
         {"加速攻擊", [this]() { this->trigger_skill5(); }, "../assets/buttons/atk_speed.png"},
@@ -19,7 +19,7 @@ Skill_choose::Skill_choose() {
     };
 }
 
-void Skill_choose::run() {
+void Skill_choose::choose_three_skill() {
     if (is_running) {
 
         // Logger::info("Skill_choose is running");
@@ -40,90 +40,180 @@ void Skill_choose::run() {
         }
     }
     else {
-        this->Start();
+        this->Start("three");
         is_running = true;
     }
 }
 
+void Skill_choose::choose_two_skill() {
+    if (is_running) {
+        m_Button1->SetVisible(true);   // 確保按鈕可見
+        m_Button2->SetVisible(true);
 
+        m_Button1->Update();
+        m_Button2->Update(); 
 
-void Skill_choose::Start() {
-    if (skills.size() < 3) {
-        Logger::error("技能列表不足三個，無法啟動技能選擇界面");
-        return;
+        if (Util::Input::IsKeyDown(Util::Keycode::R)) {
+            Logger::info("R key pressed, restarting skill selection.");
+        }
     }
-
-    // 隨機打亂技能列表
-    std::random_device rd;
-    std::mt19937 g(rd());
-    std::shuffle(skills.begin(), skills.end(), g);
-
-    // 選擇前三個技能
-    auto skill1 = skills[0];
-    auto skill2 = skills[1];
-    auto skill3 = skills[2];
-
-    // 動態生成回調函數並綁定到按鈕
-    auto skill1_callback = [this, skill1]() {
-        std::get<1>(skill1)();  // 執行技能的回調函數
-        this->has_clicked = true;
-        this->end();
-    };
-
-    auto skill2_callback = [this, skill2]() {
-        std::get<1>(skill2)();
-        this->has_clicked = true;
-        this->end();
-    };
-
-    auto skill3_callback = [this, skill3]() {
-        std::get<1>(skill3)();
-        this->has_clicked = true;
-        this->end();
-    };
-
-    // 設置按鈕
-    m_Button1->Start(std::get<0>(skill1), std::get<2>(skill1), skill1_callback,
-        glm::vec2(-370.0f, -30.0f), glm::vec2(-310.0f, 30.0f), glm::vec2(1.0f, 1.0f));
-
-    m_Button2->Start(std::get<0>(skill2), std::get<2>(skill2), skill2_callback,
-        glm::vec2(-100.0f, -30.0f), glm::vec2(-40.0f, 30.0f), glm::vec2(1.0f, 1.0f));
-
-    m_Button3->Start(std::get<0>(skill3), std::get<2>(skill3), skill3_callback,
-        glm::vec2(180.0f, -30.0f), glm::vec2(240.0f, 30.0f), glm::vec2(1.0f, 1.0f));
-
-    // 設置按鈕文本
-    m_Skill_choose_text1 ->Start(std::get<0>(skill1), glm::vec2(-330.0f, -50.0f));
-    m_Skill_choose_text2 ->Start(std::get<0>(skill2), glm::vec2(-60.0f, -50.0f));
-    m_Skill_choose_text3 ->Start(std::get<0>(skill3), glm::vec2(220.0f, -50.0f));
-
-    this->AddChild(m_Skill_choose_text1);
-    this->AddChild(m_Skill_choose_text2);
-    this->AddChild(m_Skill_choose_text3);
-
-    m_Skill_choose_text1->SetVisible(true);
-    m_Skill_choose_text2->SetVisible(true);
-    m_Skill_choose_text3->SetVisible(true);
-
-    has_clicked = false;
-
-    // 顯示黑色遮罩
-    m_Dark_pic->Start();
-    this->AddChild(m_Dark_pic);
-    m_Dark_pic->Appear();
-
-    // 添加按鈕到渲染樹
-    this->AddChild(m_Button1);
-    this->AddChild(m_Button2);
-    this->AddChild(m_Button3);
-
-    Logger::info("技能選擇界面已啟動");
+    else {
+        this->Start("two");
+        is_running = true;
+    }
 }
 
+void Skill_choose::Start(std::string name) {
+    if (name == "three") {
+        if (skills.size() < 3) {
+            Logger::error("技能列表不足三個，無法啟動技能選擇界面");
+            return;
+        }
+    
+        // 隨機打亂技能列表
+        std::random_device rd;
+        std::mt19937 g(rd());
+        std::shuffle(skills.begin(), skills.end(), g);
+    
+        // 選擇前三個技能
+        auto skill1 = skills[0];
+        auto skill2 = skills[1];
+        auto skill3 = skills[2];
+    
+        // 動態生成回調函數並綁定到按鈕
+        auto skill1_callback = [this, skill1]() {
+            std::get<1>(skill1)();  // 執行技能的回調函數
+            this->has_clicked = true;
+            this->end();
+        };
+    
+        auto skill2_callback = [this, skill2]() {
+            std::get<1>(skill2)();
+            this->has_clicked = true;
+            this->end();
+        };
+    
+        auto skill3_callback = [this, skill3]() {
+            std::get<1>(skill3)();
+            this->has_clicked = true;
+            this->end();
+        };
+    
+        // 設置按鈕
+        m_Button1->Start(std::get<0>(skill1), std::get<2>(skill1), skill1_callback,
+            glm::vec2(-370.0f, -30.0f), glm::vec2(-310.0f, 30.0f), glm::vec2(1.0f, 1.0f));
+    
+        m_Button2->Start(std::get<0>(skill2), std::get<2>(skill2), skill2_callback,
+            glm::vec2(-100.0f, -30.0f), glm::vec2(-40.0f, 30.0f), glm::vec2(1.0f, 1.0f));
+    
+        m_Button3->Start(std::get<0>(skill3), std::get<2>(skill3), skill3_callback,
+            glm::vec2(180.0f, -30.0f), glm::vec2(240.0f, 30.0f), glm::vec2(1.0f, 1.0f));
+        
+        m_Button1->SetZIndex(50);
+        m_Button2->SetZIndex(50);
+        m_Button3->SetZIndex(50);
+    
+        // 添加按鈕到渲染樹
+        this->AddChild(m_Button1);
+        this->AddChild(m_Button2);
+        this->AddChild(m_Button3);
+    
+        // 顯示黑色遮罩
+        m_Dark_pic->Start();
+        this->AddChild(m_Dark_pic);
+        m_Dark_pic->Appear();
+    
+        // 設置按鈕文本
+        m_Skill_choose_text1 ->Start(std::get<0>(skill1), glm::vec2(-330.0f, -50.0f));
+        m_Skill_choose_text2 ->Start(std::get<0>(skill2), glm::vec2(-60.0f, -50.0f));
+        m_Skill_choose_text3 ->Start(std::get<0>(skill3), glm::vec2(220.0f, -50.0f));
+    
+        this->AddChild(m_Skill_choose_text1);
+        this->AddChild(m_Skill_choose_text2);
+        this->AddChild(m_Skill_choose_text3);
+    
+        m_Skill_choose_text1->SetZIndex(50);
+        m_Skill_choose_text2->SetZIndex(50);
+        m_Skill_choose_text3->SetZIndex(50);
+    
+        m_Skill_choose_text1->SetVisible(true);
+        m_Skill_choose_text2->SetVisible(true);
+        m_Skill_choose_text3->SetVisible(true);
+    
+        has_clicked = false;
+    
+        Logger::info("技能選擇界面已啟動");
+    }
+    else if (name == "two") {
+        if (present.size() < 2) {
+            Logger::error("技能列表不足兩個，無法啟動技能選擇界面");
+            return;
+        }
+    
+        // 隨機打亂技能列表
+        std::random_device rd;
+        std::mt19937 g(rd());
+        std::shuffle(present.begin(), present.end(), g);
+    
+        // 選擇前兩個技能
+        auto skill1 = present[0];
+        auto skill2 = present[1];
+    
+        // 動態生成回調函數並綁定到按鈕
+        auto skill1_callback = [this, skill1]() {
+            std::get<1>(skill1)();  // 執行技能的回調函數
+            this->has_clicked = true;
+            this->end();
+        };
+    
+        auto skill2_callback = [this, skill2]() {
+            std::get<1>(skill2)();
+            this->has_clicked = true;
+            this->end();
+        };
+    
+        // 設置按鈕
+        m_Button1->Start(std::get<0>(skill1), std::get<2>(skill1), skill1_callback,
+            glm::vec2(-280.0f, -30.0f), glm::vec2(-220.0f, 30.0f), glm::vec2(1.0f, 1.0f));
+    
+        m_Button2->Start(std::get<0>(skill2), std::get<2>(skill2), skill2_callback,
+            glm::vec2(160.0f, -30.0f), glm::vec2(220.0f, 30.0f), glm::vec2(1.0f, 1.0f));
+    
+        m_Button1->SetZIndex(50);
+        m_Button2->SetZIndex(50);
+    
+        // 添加按鈕到渲染樹
+        this->AddChild(m_Button1);
+        this->AddChild(m_Button2);
+    
+        // 顯示黑色遮罩
+        m_Dark_pic->Start();
+        this->AddChild(m_Dark_pic);
+        m_Dark_pic->Appear();
+    
+        // 設置按鈕文本
+        m_Skill_choose_text1
+            ->Start(std::get<0>(skill1), glm::vec2(-250.0f, -50.0f));
+        m_Skill_choose_text2
+            ->Start(std::get<0>(skill2), glm::vec2(-190.0f, -50.0f));
+        
+        this->AddChild(m_Skill_choose_text1);
+        this->AddChild(m_Skill_choose_text2);
+
+        m_Skill_choose_text1->SetZIndex(50);
+        m_Skill_choose_text2->SetZIndex(50);
+
+        m_Skill_choose_text1->SetVisible(true);
+        m_Skill_choose_text2->SetVisible(true);
+
+        has_clicked = false;
+        Logger::info("禮物技能選擇界面已啟動");
+    }
+}
 void Skill_choose::trigger_skill0() {
     // 觸發補血技能
     Logger::info("技能0被選擇：補血");
-    
+    if (giraffe) giraffe->addHP(200); // 設置長頸鹿的血量
 }
 
 void Skill_choose::trigger_skill1() {
@@ -131,6 +221,7 @@ void Skill_choose::trigger_skill1() {
     Logger::info("技能1被選擇：雙重射擊");
     bool_skill_double_arrow = true;
     if (giraffe) giraffe->bool_skill_double_arrow = true;
+    removeSkill("雙重射擊");
 }
 
 void Skill_choose::trigger_skill2() {
@@ -138,6 +229,7 @@ void Skill_choose::trigger_skill2() {
     Logger::info("技能2被選擇：反彈箭矢");
     bool_skill_rebound_arrow = true;
     if (giraffe) giraffe->bool_skill_rebound_arrow = true;
+    removeSkill("反彈箭矢");
 }
 
 void Skill_choose::trigger_skill3() {
@@ -145,6 +237,7 @@ void Skill_choose::trigger_skill3() {
     Logger::info("技能3被選擇：聰明");
     bool_skill_smart = true;
     if (giraffe) giraffe->bool_skill_smart = true;
+    removeSkill("聰明");
 }
 
 void Skill_choose::trigger_skill4() {
@@ -152,6 +245,7 @@ void Skill_choose::trigger_skill4() {
     Logger::info("技能4被選擇：憤怒");
     bool_skill_angry = true;
     if (giraffe) giraffe->bool_skill_angry = true;
+    removeSkill("憤怒");
 }
 
 void Skill_choose::trigger_skill5() {
@@ -209,8 +303,6 @@ void Skill_choose::removeSkill(const std::string& name) {
 }
 
 Skill_choose_text::Skill_choose_text() {
-    // m_Font = "../assets/fonts/Inter.ttf";
-    // m_Size = 18;
     m_Text = std::make_shared<Util::Text>(m_Font, m_Size, fmt::format("{}", "name"), Util::Color::FromRGB(0, 0, 0));
 }
 

@@ -24,8 +24,8 @@ void Angel::Update() {
     }
 
     if (glm::distance(pos, m_Giraffe->coordinate()) <= 50.0f) {
-        // 
         // 選禮物
+        m_Triggered = true;
         std::cout << "Angel: " << "present" << std::endl;
         m_Visible = false;
     }
@@ -36,6 +36,10 @@ void Angel::Update() {
     }
 
 }
+
+// bool Angel::shouldTriggerSkillChoose() const {
+//     return m_Triggered; 
+// }
 
 bool Angel::getVisible() const {
     if (m_Visible == true){

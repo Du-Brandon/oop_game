@@ -99,6 +99,7 @@ set(EXAMPLE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/example)
 set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/Angel.cpp
     ${EXAMPLE_DIR}/src/App.cpp
+    ${EXAMPLE_DIR}/src/App_otherfunc.cpp
     ${EXAMPLE_DIR}/src/Arrow.cpp
     ${EXAMPLE_DIR}/src/Background.cpp
     ${EXAMPLE_DIR}/src/Boss_1_1.cpp

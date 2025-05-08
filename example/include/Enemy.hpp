@@ -42,6 +42,8 @@ class Enemy : public Util::GameObject {
     std::string getFinal_wish() const;
     virtual bool getVisible() const;  
 
+    virtual bool isAngel() const { return false; } // 添加這個方法來檢查是否為天使
+
 protected:
     int m_HP = 100; // 添加這個成員變數來表示敵人的血量
     int m_atk = 1; // 添加這個成員變數來表示敵人的攻擊力

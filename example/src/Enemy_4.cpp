@@ -18,7 +18,7 @@ void Enemy_4::Start() { // 之後刪除
 void Enemy_4::Start(glm::vec2 coordinate) {
     pos = coordinate;
     scale = {0.2f, 0.2f};
-    move_speed = 6.0f;
+    move_speed = 3.0f;
     this->SetZIndex(5);
     this->SetDrawable(std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
 
@@ -43,23 +43,17 @@ void Enemy_4::Update() {
         if (count >= 90 && count <=260){
             dir = move();
             
-            if ((m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "right") ) {
-                dir.x = 0;
+            if ((m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "right") || m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "lr") {
+                dir.x = - dir.x;
             }
             else if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "left") {
-                dir.x = 0;
+                dir.x = - dir.x;
             }
-            else if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "lr") {
-                dir.x = 0;
-            }
-            if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "up") {
-                dir.y = 0;
+            if ((m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "up") || m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "ud") {
+                dir.y = - dir.y;
             }
             else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "down") {
-                dir.y = 0;
-            }
-            else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "ud") {
-                dir.y = 0;
+                dir.y = - dir.y;
             }
 
             pos += dir * move_speed;
@@ -67,8 +61,8 @@ void Enemy_4::Update() {
         count ++;
 
     }
-    if (rotation_count <= 100 && rotation_count >= 260) {
-        rotation += glm::radians(3.6f); // 每次更新旋轉 36 度（轉換為弧度）
+    if (rotation_count <= 20 && rotation_count >= 270) {
+        rotation += glm::radians(18.0f); // 每次更新旋轉 36 度（轉換為弧度）
         rotation_count ++ ;
     }
     else {
@@ -86,7 +80,6 @@ void Enemy_4::Update() {
         }
     }
     
-
     enemy_hp_update();
 }
 
@@ -95,7 +88,7 @@ void Enemy_4::Update() {
 glm::vec2 Enemy_4::move() {
     if (count >= 15 && !decide_dir){
         decide_dir = true;
-        dir = randomMove('x');
+        dir = randomMove('z');
     }
     else if (count <= 45 && decide_dir){
         decide_dir = false;

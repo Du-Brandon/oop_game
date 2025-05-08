@@ -18,7 +18,8 @@ public:
     Skill_choose();
     ~Skill_choose() override = default;
 
-    void run();
+    void choose_three_skill();
+    void choose_two_skill();
     bool has_clicked_bool() const { return has_clicked; }
 
     // 新增：設定外部 giraffe
@@ -29,7 +30,7 @@ public:
     void removeSkill(const std::string& name);
 
 private:
-    void Start();
+    void Start(std::string name);
     void trigger_skill0(); 
     void trigger_skill1();
     void trigger_skill2();
