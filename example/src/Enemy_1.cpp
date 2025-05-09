@@ -4,22 +4,10 @@
 #include "config.hpp"
 #include <iostream>
 
-void Enemy_1::Start() {
-    // 初始化敵人的位置
-    pos = {100, 100};
-
-    // // 初始化敵人的大小
-    // scale = {0.5f, 0.5f};
-
-    // // 初始化敵人的旋轉角度
-    // rotation = 0.0f;
-
-    dir = randomMove('z'); // 長頸鹿的移動方向
-
-    enemy_hp_start();
-}
-
 void Enemy_1::Start(glm::vec2 coordinate) {
+    this->SetDrawable(
+    std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+    this->SetZIndex(5);
     // 初始化敵人的位置
     pos = coordinate;
     dir = randomMove('z'); // 長頸鹿的移動方向

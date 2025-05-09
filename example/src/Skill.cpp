@@ -193,9 +193,9 @@ void Skill_choose::Start(std::string name) {
     
         // 設置按鈕文本
         m_Skill_choose_text1
-            ->Start(std::get<0>(skill1), glm::vec2(-250.0f, -50.0f));
+            ->Start(std::get<0>(skill1), glm::vec2(-240.0f, -50.0f));
         m_Skill_choose_text2
-            ->Start(std::get<0>(skill2), glm::vec2(-190.0f, -50.0f));
+            ->Start(std::get<0>(skill2), glm::vec2(200.0f, -50.0f));
         
         this->AddChild(m_Skill_choose_text1);
         this->AddChild(m_Skill_choose_text2);
@@ -221,7 +221,7 @@ void Skill_choose::trigger_skill1() {
     Logger::info("技能1被選擇：雙重射擊");
     bool_skill_double_arrow = true;
     if (giraffe) giraffe->bool_skill_double_arrow = true;
-    removeSkill("雙重射擊");
+    if (giraffe) giraffe->addSkill_double_arrow(); // 設置長頸鹿的雙重射擊技能
 }
 
 void Skill_choose::trigger_skill2() {
@@ -258,6 +258,13 @@ void Skill_choose::trigger_skill6() {
     Logger::info("技能6被選擇：加血");
     skill_add_hp = skill_add_hp + 1; // 增加血量
     if (giraffe) giraffe-> addMaxHP(200); // 設置長頸鹿的血量
+}
+
+void Skill_choose::trigger_skill7() {
+    Logger::info("技能7被選擇：無敵");
+    bool_skill_invincible = true;
+    if (giraffe) giraffe->bool_skill_invincible = true;
+    removeSkill("無敵");
 }
 
 

@@ -2,18 +2,6 @@
 #include "log_my.hpp"
 #include <cstdlib>
 
-void Enemy_4::Start() { // 之後刪除
-    // 初始化敵人的位置
-    pos = {100, 100};
-
-    // 初始化敵人的大小
-    scale = {0.2f, 0.2f};
-
-    move_speed = 8.0f;
-    
-    enemy_hp_start();
-}
-
 // 新式寫法
 void Enemy_4::Start(glm::vec2 coordinate) {
     pos = coordinate;

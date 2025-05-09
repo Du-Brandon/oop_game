@@ -11,7 +11,6 @@ public:
     Enemy_4() = default;
     ~Enemy_4() override = default;
 
-    void Start() override;
     void Start(glm::vec2 coordinate) override;
     void Update() override;
 

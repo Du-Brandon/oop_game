@@ -15,7 +15,6 @@
 
 void Giraffe::Start() {
 
-
     this->SetDrawable(
         std::make_shared<Util::Image>("../assets/sprites/sticker.png"));
     this->SetZIndex(6);
@@ -32,16 +31,6 @@ void Giraffe::Start() {
     m_exp_pic -> Start();
     m_exp_pic -> set_maxexp(m_exp_list);
     this -> AddChild(m_exp_pic);
-    // m_GiraffeText =
-    //     std::make_shared<GiraffeText>("../assets/fonts/Inter.ttf", 50);
-    // m_GiraffeText->SetZIndex(this->GetZ Index() - 1);
-    // m_GiraffeText->Start();
-    // this->AddChild(m_GiraffeText);
-
-    // m_Dark_pic->Start();
-    // this->AddChild(m_Dark_pic);
-    // m_Dark_pic->Appear(); // 初始時顯示黑色遮罩
-    // m_Dark_pic->Disappear(); // 初始時不顯示黑色遮罩
 
     std::vector<std::string> skill_list_name = {"double_arrow", "rebound_arrow", "skill_smart", "skill_4"}; // 技能名稱列表
 
@@ -58,9 +47,6 @@ void Giraffe::Update() {
     glm::vec2 dir_Left = {-1, 0};
     glm::vec2 dir_Up= {0, 1};
     glm::vec2 dir_Down = {0, -1};
-    // Is_move = false;
-
-    // std::cout << pos.x << "   "<< pos.y << std::endl; 
 
     delta = static_cast<float>(Util::Time::GetDeltaTimeMs()) / 2;
     if (((m_Wall->boundary_collision_check_leftright(pos+dir_Right * 9.0f) == "right") && !enemy_is_empty ) ||(m_Wall->boundary_collision_check_leftright(pos+dir_Right * 9.0f) == "lr")) {
@@ -81,8 +67,6 @@ void Giraffe::Update() {
     }
     // // sonarcloud called it redundant, but ms_t = float is just a coincidence.
 
-
-    // std::cout << "delta: " << delta << std::endl;
     Util::Transform deltaTransform_Right{
         dir_Right * delta, 0.002F * delta,
         glm::vec2(1, 1) * (std::sin(rotation / 2) + 1.0F) * 100.0F};
@@ -145,7 +129,7 @@ void Giraffe::Update() {
         }
     }
 
-    if (double_arrow_is_shoot && m_Enemies.size() > 0) {
+    if (std::get<0>(double_arrow_is_shoot) && m_Enemies.size() > 0) {
         skill_double_arrow();
     }
 
@@ -154,6 +138,10 @@ void Giraffe::Update() {
         m_hp_pic->Update(pos);
     } else {
         Logger::warn("m_hp_pic is nullptr in Giraffe::Update");
+    }
+
+    if (bool_skill_invincible){
+        skill_invincible_time_count++;
     }
 
     // m_GiraffeText->Update();
@@ -190,7 +178,7 @@ std::shared_ptr<Enemy> Giraffe::checkNearestEnemy() {
     return nearestEnemy;
 }
 
-void Giraffe::ShootArrow(bool double_arrow , bool rebound_arrow) {
+void Giraffe::ShootArrow(int double_arrow , bool rebound_arrow) {
     auto arrow = std::make_shared<Arrow>();
     if (!arrow) {
         Logger::error("Failed to create arrow in Giraffe::ShootArrow");
@@ -200,9 +188,10 @@ void Giraffe::ShootArrow(bool double_arrow , bool rebound_arrow) {
     arrow->setTarget(checkNearestEnemy());
     arrow->setWall(m_Wall);
     // std::cout << "Shoot Arrow" << std::endl;
-    if (double_arrow) {
+    if (double_arrow > 0) {
         arrow->Start();
-        double_arrow_is_shoot = true; // 準備設第二發箭
+        std::get<0>(double_arrow_is_shoot) = true; // 準備設第二發箭
+        // double_arrow_is_shoot = true; // 準備設第二發箭
         arrowCooldown = std::chrono::high_resolution_clock::now();
 
     } 
@@ -253,8 +242,11 @@ float Giraffe::getAtk_speed() const {
 }
 
 void Giraffe::addHP(int hp) {
-    if (hp < 0 && bool_skill_invincible){ //每1000偵無敵50偵，待重寫
+    if (hp < 0 && bool_skill_invincible && skill_invincible_time_count > 1000 && skill_invincible_time_count < 1080) { 
         // 如果使用了無敵技能，則不減少血量
+        if (skill_invincible_time_count > 1080) {
+            skill_invincible_time_count = 0; // 重置計數器
+        }
         return;
     }
     m_HP += hp;
@@ -338,15 +330,27 @@ void Giraffe::cleararrow() {
 
 // skill function
 
+void Giraffe::addSkill_double_arrow() {
+    std::get<0>(double_arrow_is_shoot) = true; // 設置雙發箭的狀態
+    std::get<2>(double_arrow_is_shoot) += 1; // 設置雙發箭的發射次數
+}
+
 void Giraffe::skill_double_arrow() {
     // 技能1
     now = std::chrono::high_resolution_clock::now();
     std::chrono::duration<float> duration = now - arrowCooldown;
     // std::cout << "delta" << delta << std::endl;
     // std::cout << duration.count() << std::endl;
-    if ((duration.count())*1000 >=9 * delta) {
+    if ((duration.count())*1000 >=6 * delta) {
         ShootArrow(false, false); // 發射第二發箭
-        double_arrow_is_shoot = false; // 重置技能狀態
+        std::get<1>(double_arrow_is_shoot) -= 1; // 減少發射次數
+        if (std::get<1>(double_arrow_is_shoot) <= 0) {
+            std::get<0>(double_arrow_is_shoot) = false; // 重置技能狀態
+            std::get<1>(double_arrow_is_shoot) = std::get<2>(double_arrow_is_shoot); // 重置發射次數
+            return;
+        }
+        arrowCooldown = std::chrono::high_resolution_clock::now(); // 更新冷卻時間
+        // double_arrow_is_shoot = false; // 重置技能狀態
     }
 
 }

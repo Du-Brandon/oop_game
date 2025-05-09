@@ -30,10 +30,6 @@ void App::Start() {
     m_Skill_choose->setGiraffe(m_Giraffe); // 只設定 m_Skill_choose
     m_Root.AddChild(m_Skill_choose);       // 只加 m_Skill_choose
 
-    // m_Dark_pic->Start();
-    // // // m_Dark_pic->Disappear();
-    // m_Root.AddChild(m_Dark_pic); // 只加 m_Dark_pic
-
     if (Util::Input::IsKeyDown(Util::Keycode::KP_ENTER)) {
         Logger::info("First level");
         wall->Start(180.0f, -180.0f, -464.0f, 267.0f, 32.0f, -19.0f);
@@ -332,7 +328,7 @@ void App::Boss_Update() {
                 m_Root.AddChild(m_Boss_1_4_2);
             } else if (enemy_it->getFinal_wish() == "Add player's hp") {
                 Logger::info("Adding player's HP");
-                m_Giraffe->addHP(50);
+                m_Giraffe->addHP(10);
                 Logger::info("Giraffe HP: " + std::to_string(m_Giraffe->getHP()));
             }
 
@@ -401,12 +397,12 @@ void App::Boss_Update() {
 
 
     // press SPACE to toggle demo window
-    if (Util::Input::IsKeyDown(Util::Keycode::SPACE)) {
-        showDemoWindow = !showDemoWindow;
-    }
-    if (showDemoWindow) {
-        ImGui::ShowDemoWindow();
-    }
+    // if (Util::Input::IsKeyDown(Util::Keycode::SPACE)) {
+    //     showDemoWindow = !showDemoWindow;
+    // }
+    // if (showDemoWindow) {
+    //     ImGui::ShowDemoWindow();
+    // }
 }
 
 void App::End() { // NOLINT(this method will mutate members in the future)

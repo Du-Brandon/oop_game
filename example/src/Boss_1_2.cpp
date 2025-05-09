@@ -1,21 +1,5 @@
 #include "Boss.hpp"
 
-void Boss_1_2::Start() {
-    this->SetDrawable(
-        std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
-    this->SetZIndex(5);
-    
-    final_wish = "Add two Boss_1_3";
-    name = "Boss_1_2";
-
-    dir = randomMove('z'); // 長頸鹿的移動方向
-
-    pos = {100, 0};
-    scale = {0.2f, 0.2f};
-
-    move_speed = 10.0f;
-    enemy_hp_start();
-}
 
 void Boss_1_2::Start(glm::vec2 coordinate) {
     this->SetDrawable(

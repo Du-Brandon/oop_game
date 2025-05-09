@@ -5,6 +5,8 @@
 #include <vector>
 #include <chrono>
 #include <memory>
+#include <tuple>
+
 #include "Arrow.hpp"
 #include "Enemy.hpp"
 #include "Wall.hpp"
@@ -30,7 +32,7 @@ public:
     void Update();
 
     void Start();
-    void ShootArrow(bool double_arrow , bool rebound_arrow); // 添加生成 Arrow 的方法
+    void ShootArrow(int double_arrow , bool rebound_arrow); // 添加生成 Arrow 的方法
     void SetEnemy(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemy 的指針
     void SetEnemies(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemies 的向量
     void SetEnemies(std::vector<std::shared_ptr<Enemy>> enemies); // 添加這個方法來設置 m_Enemies 的向量
@@ -64,10 +66,12 @@ public:
     void cleararrow(); // 添加這個方法來清除箭矢
 
     bool bool_skill_double_arrow = false; // 判斷技能1是否被使用
+    void addSkill_double_arrow(); // 添加這個方法來增加箭數量
     bool bool_skill_rebound_arrow = false; // 判斷技能2是否被使用
     bool bool_skill_smart = false; // 判斷技能3是否被使用
     bool bool_skill_angry = false; // 判斷技能憤怒是否被使用
     bool bool_skill_invincible = false; // 判斷技能無敵是否被使用
+    int skill_invincible_time_count = 0; // 設置技能無敵的時間計數器
     
 
 private:
@@ -97,7 +101,8 @@ private:
     // 各技能的布林直 or 參數
         // skill_double_arrow
         std::chrono::high_resolution_clock::time_point arrowCooldown ; // 記錄累積的 delta 時間
-        bool double_arrow_is_shoot = false; // 判斷技能1是否被使用
+        // bool double_arrow_is_shoot = false; // 判斷雙發
+        std::tuple<bool,int,int> double_arrow_is_shoot = {false, 0,0}; // 判斷雙發的參數
 
 
     // bool Is_move; // 判斷長頸鹿是否移動

@@ -247,9 +247,6 @@ void App::ValidTask() {
         m_Root.AddChild(m_Enemy10);
         
         std::shared_ptr<Enemy_3> m_Enemy11 = std::make_shared<Enemy_3>();
-        m_Enemy11->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
-        m_Enemy11->SetZIndex(5);
         m_Enemy11->Start(glm::vec2(237, -162)); // 初始化敵人的位置
         m_Enemy11->setWall(wall);
         m_Enemies.push_back(m_Enemy11);
@@ -275,11 +272,86 @@ void App::ValidTask() {
         break;
     }
 
+    case player_level::seventh_level:{
+        LOG_DEBUG("seventh_level");
+        now_level = 7;
+        m_Background->nextbackground(now_level);
+        this->removeEnemy();
+        m_Giraffe->cleararrow();
+        m_Enemies.clear();
+        m_Ground_Spikes->clear();
+
+        wall->clear();
+        wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
+        wall->setwall(glm::vec2(-327.061f, 48.5351f), glm::vec2(-185.372f, 116.312f));
+        wall->setwall(glm::vec2(-327.383f, -126.515f), glm::vec2(-185.092f, -59.2642f));
+        wall->setwall(glm::vec2(-111.49f, 56.3841f), glm::vec2(-60.9309f, 156.414f));
+        wall->setwall(glm::vec2(-120.458f, -153.443f), glm::vec2(-53.4003f, -60.0543f));
+        wall->setwall(glm::vec2(66.9633f, 16.8441f), glm::vec2(175.582f, 125.904f),"lake");
+        wall->setwall(glm::vec2(64.9195f, -119.798f), glm::vec2(174.31f, -17.4799f),"lake");
+
+        std::shared_ptr<Enemy_3> m_Enemy14 = std::make_shared<Enemy_3>();
+        m_Enemy14->Start(glm::vec2(123.611,70.2924)); // 初始化敵人的位置
+        m_Enemy14->setWall(wall);
+        m_Enemies.push_back(m_Enemy14);
+        m_Root.AddChild(m_Enemy14);
+
+        std::shared_ptr<Enemy_3> m_Enemy15 = std::make_shared<Enemy_3>();
+        m_Enemy15->Start(glm::vec2(123.611,-72.401)); // 初始化敵人的位置
+        m_Enemy15->setWall(wall);
+        m_Enemies.push_back(m_Enemy15);
+        m_Root.AddChild(m_Enemy15);
+
+        giraffe_exp = 0;
+        m_Giraffe -> setpos(glm::vec2(-420, 0));
+        m_Giraffe -> Setwall(wall);
+
+        is_enemy_empty = false;
+        break;
+    }
+
+    case player_level::eighth_level:{
+        LOG_DEBUG("eighth_level");
+        now_level = 8;
+        m_Background->nextbackground(now_level);
+        this->removeEnemy();
+        m_Giraffe->cleararrow();
+        m_Enemies.clear();
+        m_Ground_Spikes->clear();
+
+        wall->clear();
+        wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
+        wall->setwall(glm::vec2(-378.354,79.6777) , glm::vec2(234.131, 122.405),"lake");
+        wall->setwall(glm::vec2(-463.447,86.7026) , glm::vec2(-378.354, 121.696));
+        wall->setwall(glm::vec2(-381.412,-132.446) , glm::vec2(234.358, -90.0606),"lake");
+        wall->setwall(glm::vec2(-458.084,-134.085) , glm::vec2(-381.412, -92.4253));
+        
+        std::shared_ptr<Enemy_3> m_Enemy16 = std::make_shared<Enemy_3>();
+        m_Enemy16->Start(glm::vec2(123.611,-72)); // 初始化敵人的位置
+        m_Enemy16->setWall(wall);
+        m_Enemies.push_back(m_Enemy16);
+        m_Root.AddChild(m_Enemy16);
+
+        // std::shared_ptr<Enemy_3> m_Enemy17 = std::make_shared<Enemy_3>();
+        // m_Enemy17->Start(glm::vec2(123.611,-72)); // 初始化敵人的位置
+        // m_Enemy17->setWall(wall);
+        // m_Enemies.push_back(m_Enemy17);
+        // m_Root.AddChild(m_Enemy17);
+
+        giraffe_exp = 0;
+        m_Giraffe -> setpos(glm::vec2(-420, 0));
+        m_Giraffe -> Setwall(wall);
+
+        is_enemy_empty = false;
+        break;
+    
+    }
+
     case player_level::tenth_level:{
         LOG_DEBUG("tenth_level");
         
         levelstatus = levelstatus::boss_level;
-        now_level = 7;
+        now_level = 9;
         m_Background->nextbackground(now_level);
         this->removeEnemy();
         m_Giraffe->cleararrow();
@@ -292,7 +364,7 @@ void App::ValidTask() {
         // wall->setwall(glm::vec2 (-462.523f, -119.287f) , glm::vec2(267.459f , -85.414f));
         
         std::shared_ptr<Boss_1_1> m_Boss_1_1 = std::make_shared<Boss_1_1>();
-        m_Boss_1_1->Start();
+        m_Boss_1_1->Start(glm::vec2(0, 0)); // 初始化敵人的位置
         m_Boss_1_1->setWall(wall);
         m_Enemies.push_back(m_Boss_1_1);
         m_Root.AddChild(m_Boss_1_1);    

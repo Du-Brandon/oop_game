@@ -10,6 +10,7 @@
 
 #include "pch.hpp" // IWYU pragma: export
 #include "Util/GameObject.hpp"
+#include "Util/Image.hpp"
 
 
 // class Wall;
@@ -19,7 +20,6 @@ class Enemy : public Util::GameObject {
     Enemy() = default;
     virtual ~Enemy() override = default; // 在 .hpp 文件中聲明虛擬解構元
     
-    virtual void Start() = 0;  
     virtual void Start(glm::vec2 coordinate) = 0;  
     virtual void Update() = 0;  
     void setWall(std::shared_ptr<Wall> wall); // 添加這個方法來設置 m_wall 的指針

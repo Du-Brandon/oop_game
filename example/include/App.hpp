@@ -62,6 +62,8 @@ private:
         fourth_level,
         fifth_level,
         sixth_level,
+        seventh_level,
+        eighth_level,
         tenth_level,
         end
     };

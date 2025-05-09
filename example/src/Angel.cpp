@@ -2,19 +2,13 @@
 #include "Util/Input.hpp"
 #include <glm/geometric.hpp>
 
-void Angel::Start() {
-    setExp_supply(0);
-    
-    pos = {100, 100};
-    scale = {0.2f, 0.2f};
-}
-
 void Angel::Start(glm::vec2 coordinate) {
     pos = coordinate;
     scale = {0.5f, 0.5f};
     move_speed = 0.0f;
 
     m_atk = 0;
+    exp_supply = 0;
     name = "Angel";
 }
 

@@ -69,15 +69,15 @@ void Arrow::Update() {
     pos += m_Direction * 20.0f; // 假設箭以固定速度移動
 
     if (!bool_skill_rebound_arrow){
-        if (m_Wall->boundary_collision_check_leftright(pos) == "right" || m_Wall->boundary_collision_check_leftright(pos) == "left") {
+        if (m_Wall->boundary_collision_check_leftright(pos,"arrow") == "right" || m_Wall->boundary_collision_check_leftright(pos,"arrow") == "left") {
             m_ShouldDelete = true;
             std::cout << "Arrow hit wall" << std::endl;
         }
-        else if (m_Wall->boundary_collision_check_updown(pos) == "up" || m_Wall->boundary_collision_check_updown(pos) == "down") {
+        else if (m_Wall->boundary_collision_check_updown(pos,"arrow") == "up" || m_Wall->boundary_collision_check_updown(pos,"arrow") == "down") {
             m_ShouldDelete = true;
             std::cout << "Arrow hit wall" << std::endl;
         }
-        else if (m_Wall -> boundary_collision_check_leftright(pos) == "lr" || m_Wall -> boundary_collision_check_updown(pos) == "ud") {
+        else if (m_Wall -> boundary_collision_check_leftright(pos,"arrow") == "lr" || m_Wall -> boundary_collision_check_updown(pos,"arrow") == "ud") {
             m_ShouldDelete = true;
             std::cout << "Arrow hit wall" << std::endl;
         }
@@ -99,15 +99,15 @@ void Arrow::Update() {
             m_ShouldDelete = true;
         }
         // 反彈箭的邊界檢查
-        else if (m_Wall->boundary_collision_check_leftright(pos) == "right" || m_Wall->boundary_collision_check_leftright(pos) == "left") {
+        else if (m_Wall->boundary_collision_check_leftright(pos,"arrow") == "right" || m_Wall->boundary_collision_check_leftright(pos,"arrow") == "left") {
             m_Direction.x *= -1; // 反彈
             std::cout << "Arrow rebound wall" << std::endl;
         }
-        else if (m_Wall->boundary_collision_check_updown(pos) == "up" || m_Wall->boundary_collision_check_updown(pos) == "down") {
+        else if (m_Wall->boundary_collision_check_updown(pos,"arrow") == "up" || m_Wall->boundary_collision_check_updown(pos,"arrow") == "down") {
             m_Direction.y *= -1; // 反彈
             std::cout << "Arrow rebound wall" << std::endl;
         }
-        else if (m_Wall -> boundary_collision_check_leftright(pos) == "lr" || m_Wall -> boundary_collision_check_updown(pos) == "ud") {
+        else if (m_Wall -> boundary_collision_check_leftright(pos,"arrow") == "lr" || m_Wall -> boundary_collision_check_updown(pos,"arrow") == "ud") {
             m_Direction.x *= -1; // 反彈
             m_Direction.y *= -1; // 反彈
             std::cout << "Arrow rebound wall" << std::endl;

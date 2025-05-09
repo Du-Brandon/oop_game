@@ -2,15 +2,11 @@
 # include "config.hpp"
 # include <iostream>
 
-void Enemy_2::Start() {
-    pos = {100, 100};
-
-    scale = {0.2f, 0.2f};
-
-    enemy_hp_start();
-}
-
 void Enemy_2::Start(glm::vec2 coordinate) {
+    this->SetDrawable(
+        std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+    this->SetZIndex(5);
+
     pos = coordinate;
     scale = {0.2f, 0.2f};
     this->setHP(100);

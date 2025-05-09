@@ -9,7 +9,6 @@ public:
     ~Angel() override = default;
 
     void Update() override;
-    void Start() override;
     void Start(glm::vec2 coordinate) override;
     bool getVisible() const override;
 

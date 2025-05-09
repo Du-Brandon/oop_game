@@ -18,7 +18,6 @@ public:
     ~Boss_1_1() override = default;
 
     void Update() override;
-    void Start() override;
     void Start(glm::vec2 coordinate) override;
 
     glm::vec2 move() override;
@@ -37,7 +36,6 @@ class Boss_1_2 : public Enemy , public std::enable_shared_from_this<Enemy> {
         ~Boss_1_2() override = default;
     
         void Update() override;
-        void Start() override;
         void Start(glm::vec2 coordinate) override;
     
         glm::vec2 move() override;
@@ -56,7 +54,6 @@ class Boss_1_3 : public Enemy , public std::enable_shared_from_this<Enemy> {
         ~Boss_1_3() override = default;
     
         void Update() override;
-        void Start() override;
         void Start(glm::vec2 coordinate) override;
     
         glm::vec2 move() override;
@@ -75,7 +72,6 @@ class Boss_1_4 : public Enemy , public std::enable_shared_from_this<Enemy> {
         ~Boss_1_4() override = default;
     
         void Update() override;
-        void Start() override;
         void Start(glm::vec2 coordinate) override;
     
         glm::vec2 move() override;
