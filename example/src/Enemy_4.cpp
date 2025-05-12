@@ -6,7 +6,8 @@
 void Enemy_4::Start(glm::vec2 coordinate) {
     pos = coordinate;
     scale = {0.2f, 0.2f};
-    move_speed = 3.0f;
+    move_speed = 1.0f;
+    m_HP = 200;
     this->SetZIndex(5);
     this->SetDrawable(std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
 
@@ -49,17 +50,17 @@ void Enemy_4::Update() {
         count ++;
 
     }
-    if (rotation_count <= 20 && rotation_count >= 270) {
+    if (rotation_count <= 19 || rotation_count >= 341) {
         rotation += glm::radians(18.0f); // 每次更新旋轉 36 度（轉換為弧度）
         rotation_count ++ ;
     }
-    else {
+    else if(rotation_count ==360){
         rotation_count = 0;
     }
 
     for (auto it = m_stones.begin(); it != m_stones.end();) {
         (*it)->setTarget(m_Giraffe);
-        (*it)->Update(true);
+        (*it)->Update();
         if ((*it)->shouldDelete()) {
             this->RemoveChild(*it);
             it = m_stones.erase(it); // 刪除箭
@@ -86,16 +87,33 @@ glm::vec2 Enemy_4::move() {
 
 // 同時向giraffe和兩側射擊
 void Enemy_4::shoot() {
-    glm::vec2 toGiraffe = m_Giraffe->coordinate() - pos;
-    
-    // 計算敵人到長頸鹿的距離
+    glm::vec2 toGiraffe = glm::normalize(m_Giraffe->coordinate() - pos); // 朝向玩家的方向向量
+
+    // 計算左偏 45 度和右偏 45 度的方向向量
+    glm::vec2 left45 = glm::vec2(
+        toGiraffe.x * cos(glm::radians(45.0f)) - toGiraffe.y * sin(glm::radians(45.0f)),
+        toGiraffe.x * sin(glm::radians(45.0f)) + toGiraffe.y * cos(glm::radians(45.0f))
+    );
+
+    glm::vec2 right45 = glm::vec2(
+        toGiraffe.x * cos(glm::radians(-45.0f)) - toGiraffe.y * sin(glm::radians(-45.0f)),
+        toGiraffe.x * sin(glm::radians(-45.0f)) + toGiraffe.y * cos(glm::radians(-45.0f))
+    );
+
+    // 創建三顆石頭
     std::shared_ptr<EnemyArrow> m_stone_mid = std::make_shared<EnemyArrow>();
     std::shared_ptr<EnemyArrow> m_stone_left = std::make_shared<EnemyArrow>();
     std::shared_ptr<EnemyArrow> m_stone_right = std::make_shared<EnemyArrow>();
 
-    stone_shoot(m_stone_mid); // 射向長頸鹿
-    stone_shoot(m_stone_left, glm::vec2(-1, 0)); // 向左射擊
-    stone_shoot(m_stone_right, glm::vec2(1, 0)); // 向右射擊
+    // 射向玩家
+    stone_shoot(m_stone_mid, toGiraffe);
+
+    // 射向左偏 45 度
+    stone_shoot(m_stone_left, left45);
+
+    // 射向右偏 45 度
+    stone_shoot(m_stone_right, right45);
+
     if (bool_logger) {
         Logger::info("Enemy_4 shoot: finish shoot stone to Giraffe and left and right");
     }
@@ -105,7 +123,7 @@ void Enemy_4::stone_shoot(std::shared_ptr<EnemyArrow> m_stone , glm::vec2 direct
     m_stone->setTarget(shared_from_this());
     m_stone->setTarget(m_Giraffe);
     m_stone->setWall(m_wall);
-    m_stone->Start("../assets/sprites/redball.png", direction); // 設置箭的圖片和方向
+    m_stone->Start("../assets/sprites/redball.png", direction, "stone");
     m_stones.push_back(m_stone); // 將箭存儲到向量中
     this->AddChild(m_stone);
 }

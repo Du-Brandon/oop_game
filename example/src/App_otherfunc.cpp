@@ -115,7 +115,7 @@ void App::ValidTask() {
         m_Enemies.push_back(m_Enemy8);
         m_Root.AddChild(m_Enemy8);
 
-        std::shared_ptr<Enemy_3> m_Enemy9 = std::make_shared<Enemy_3>();
+        std::shared_ptr<Enemy_4> m_Enemy9 = std::make_shared<Enemy_4>();
         m_Enemy9->SetDrawable(
             std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
         m_Enemy9->SetZIndex(5);
@@ -326,7 +326,7 @@ void App::ValidTask() {
         wall->setwall(glm::vec2(-381.412,-132.446) , glm::vec2(234.358, -90.0606),"lake");
         wall->setwall(glm::vec2(-458.084,-134.085) , glm::vec2(-381.412, -92.4253));
         
-        std::shared_ptr<Enemy_3> m_Enemy16 = std::make_shared<Enemy_3>();
+        std::shared_ptr<Enemy_4> m_Enemy16 = std::make_shared<Enemy_4>();
         m_Enemy16->Start(glm::vec2(123.611,-72)); // 初始化敵人的位置
         m_Enemy16->setWall(wall);
         m_Enemies.push_back(m_Enemy16);
@@ -344,7 +344,6 @@ void App::ValidTask() {
 
         is_enemy_empty = false;
         break;
-    
     }
 
     case player_level::tenth_level:{
@@ -360,8 +359,6 @@ void App::ValidTask() {
 
         wall->clear();
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
-        // wall->setwall(glm::vec2 (-460.86f, 83.006f) , glm::vec2(267.116f , 125.659f));
-        // wall->setwall(glm::vec2 (-462.523f, -119.287f) , glm::vec2(267.459f , -85.414f));
         
         std::shared_ptr<Boss_1_1> m_Boss_1_1 = std::make_shared<Boss_1_1>();
         m_Boss_1_1->Start(glm::vec2(0, 0)); // 初始化敵人的位置

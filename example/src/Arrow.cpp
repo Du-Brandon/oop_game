@@ -94,22 +94,25 @@ void Arrow::Update() {
         }
     }
     else {
-        if (Frame_rate >= 180) { // 每180幀檢查一次
+        if (Frame_rate >= 150) { // 每180幀檢查一次
             Frame_rate = 0; // 重置幀率計數器
             m_ShouldDelete = true;
         }
         // 反彈箭的邊界檢查
         else if (m_Wall->boundary_collision_check_leftright(pos,"arrow") == "right" || m_Wall->boundary_collision_check_leftright(pos,"arrow") == "left") {
             m_Direction.x *= -1; // 反彈
+            rotation = atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f; // 更新旋轉角度
             std::cout << "Arrow rebound wall" << std::endl;
         }
         else if (m_Wall->boundary_collision_check_updown(pos,"arrow") == "up" || m_Wall->boundary_collision_check_updown(pos,"arrow") == "down") {
             m_Direction.y *= -1; // 反彈
+            rotation = atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f; // 更新旋轉角度
             std::cout << "Arrow rebound wall" << std::endl;
         }
         else if (m_Wall -> boundary_collision_check_leftright(pos,"arrow") == "lr" || m_Wall -> boundary_collision_check_updown(pos,"arrow") == "ud") {
             m_Direction.x *= -1; // 反彈
             m_Direction.y *= -1; // 反彈
+            rotation = atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f; // 更新旋轉角度
             std::cout << "Arrow rebound wall" << std::endl;
         }
 

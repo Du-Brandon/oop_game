@@ -15,7 +15,7 @@ void EnemyArrow::setWall(std::shared_ptr<Wall> wall) {
     m_Wall = wall;
 }
 
-void EnemyArrow::Start(std::string image_path , glm::vec2 direction) {
+void EnemyArrow::Start(std::string image_path , glm::vec2 direction, std::string enemy_arrow_name) {
     if (image_path == "") {
         image_path = "../assets/sprites/redball.png"; // 使用默認圖片路徑
     }
@@ -35,12 +35,14 @@ void EnemyArrow::Start(std::string image_path , glm::vec2 direction) {
     // 初始化箭的大小
     scale = {0.5f, 0.5f};
 
+    this->m_enemy_arrow_name = enemy_arrow_name; // 設置箭的名稱
     // // 初始化箭的旋轉角度
     // rotation = atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
 }
 
 void EnemyArrow::Update(){
     pos += m_Direction * shoot_speed; // 假設箭以固定速度移動;
+    
     if (m_Wall-> boundary_collision_check_leftright(pos) == "right" || m_Wall->boundary_collision_check_leftright(pos) == "left") {
         m_ShouldDelete = true;
     }
@@ -53,12 +55,11 @@ void EnemyArrow::Update(){
     else {
         if ((glm::distance(m_PlayerCoordinate,pos)) <=18.0f) {
             m_ShouldDelete = true;
-            m_Giraffe_->setHP(- (m_Enemy_->getAtk()));
+            m_Giraffe_->addHP(- (m_Enemy_->getAtk()));
             std::cout << "Arrow hit player" << m_Giraffe_->getHP() << std::endl;
         }
     }
 }
-
 void EnemyArrow::Update(bool ignorewall) {
     pos += m_Direction * shoot_speed; // 假設箭以固定速度移動;
     if (m_Wall-> boundary_collision_check_leftright(pos) == "right" || m_Wall->boundary_collision_check_leftright(pos) == "left") {
