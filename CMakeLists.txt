@@ -6,8 +6,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 if (MSVC)
     set(TARGET_COMPILE_OPTIONS
-        /W4
+        /W4 /Zi 
     )
+    set(CMAKE_EXE_LINKER_FLAGS "/DEBUG /INCREMENTAL:NO")
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build)
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/build)
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_CURRENT_SOURCE_DIR}/build)
@@ -113,6 +114,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/Enemy_2.cpp
     ${EXAMPLE_DIR}/src/Enemy_3.cpp
     ${EXAMPLE_DIR}/src/Enemy_4.cpp
+    ${EXAMPLE_DIR}/src/Enemy_5.cpp
     ${EXAMPLE_DIR}/src/EnemyArrow.cpp
     ${EXAMPLE_DIR}/src/Exp.cpp
     ${EXAMPLE_DIR}/src/Giraffe.cpp
@@ -122,8 +124,9 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/Hp.cpp
     ${EXAMPLE_DIR}/src/Skill.cpp
     ${EXAMPLE_DIR}/src/Wall.cpp
-    ${EXAMPLE_DIR}/src/main.cpp
-
+    ${EXAMPLE_DIR}/src/main.cpp 
+    # ../public/TracyClient.cpp
+    
     ${EXAMPLE_DIR}/include/Angel.hpp
     ${EXAMPLE_DIR}/include/App.hpp
     ${EXAMPLE_DIR}/include/Arrow.hpp
@@ -136,6 +139,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/include/Enemy_2.hpp
     ${EXAMPLE_DIR}/include/Enemy_3.hpp
     ${EXAMPLE_DIR}/include/Enemy_4.hpp
+    ${EXAMPLE_DIR}/include/Enemy_5.hpp
     ${EXAMPLE_DIR}/include/EnemyArrow.hpp
     ${EXAMPLE_DIR}/include/Exp.hpp
     ${EXAMPLE_DIR}/include/Giraffe.hpp
@@ -144,7 +148,8 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/include/Hp.hpp
     ${EXAMPLE_DIR}/include/Skill.hpp
     ${EXAMPLE_DIR}/include/Wall.hpp
-    
+    # ../public/tracy/Tracy.hpp
+
 )
 set(TEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/test)
 set(TEST_FILES

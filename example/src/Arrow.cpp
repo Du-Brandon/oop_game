@@ -63,10 +63,33 @@ void Arrow::Start(bool rebound_arrow){
     this->Start();
 }
 
+void Arrow::Start_b(std::string skill_name){
+    
+    if (skill_name == "back_arrow") {
+        this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
+        this -> SetZIndex(6);
+
+        m_ShouldDelete = false;
+        
+        // 方向轉180度
+        m_Direction =  glm::normalize(m_PlayerCoordinate - m_EnemyCoordinate);
+
+        // 初始化箭的位置
+        pos = m_PlayerCoordinate;
+        
+        // 初始化箭的大小
+        scale = {0.03f, 0.03f};
+
+        // 初始化箭的旋轉角度
+        rotation =atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
+    }
+}
+
 void Arrow::Update() {
     // 更新箭的位置
     Frame_rate += 1; 
     pos += m_Direction * 20.0f; // 假設箭以固定速度移動
+    bool_skill_rebound_arrow = m_Giraffe_ ->getSkill_rebound_arrow();
 
     if (!bool_skill_rebound_arrow){
         if (m_Wall->boundary_collision_check_leftright(pos,"arrow") == "right" || m_Wall->boundary_collision_check_leftright(pos,"arrow") == "left") {

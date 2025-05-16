@@ -38,6 +38,7 @@ void Giraffe::Start() {
 
 void Giraffe::Update() {
 
+
     if (!m_Wall) {
         Logger::error("m_Wall is nullptr in Giraffe::Update");
         return;
@@ -110,7 +111,7 @@ void Giraffe::Update() {
 
     //按Q鍵測試弓箭
     if (((Util::Input::IsKeyDown(Util::Keycode::Q) || !anyKeyPressed) && (contral_Atk_Speed() )) && !enemy_is_empty && m_Enemies.size() > 0) {
-        ShootArrow(bool_skill_double_arrow, false);
+        ShootArrow(bool_skill_double_arrow, false );
     }
     for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
         if (!(*it)) {
@@ -201,6 +202,22 @@ void Giraffe::ShootArrow(int double_arrow , bool rebound_arrow) {
     
     if (double_arrow) {
         // arrow->setDoubleArrow();
+    }
+
+    if (skill_back_arrow_count >= 1){
+        Logger::info("Giraffe shoot back arrow");
+        auto back_arrow = std::make_shared<Arrow>();
+        if (!back_arrow) {
+            Logger::error("Failed to create back arrow in Giraffe::ShootArrow");
+            return;
+        }
+        back_arrow->setTarget(shared_from_this());
+        back_arrow->setTarget(checkNearestEnemy());
+        back_arrow->setWall(m_Wall);
+        back_arrow->Start_b("back_arrow");
+
+        m_Arrows.push_back(back_arrow); // 將箭存儲到向量中
+        this->AddChild(back_arrow);
     }
     
     m_Arrows.push_back(arrow); // 將箭存儲到向量中

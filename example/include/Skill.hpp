@@ -39,6 +39,7 @@ private:
     void trigger_skill5();
     void trigger_skill6();
     void trigger_skill7();
+    void trigger_skill8();
     void end();
 
     std::shared_ptr<Dark_pic> m_Dark_pic = std::make_shared<Dark_pic>();
@@ -54,6 +55,7 @@ private:
     int skill_atk_speed = 0;
     int skill_add_hp = 0;
     bool bool_skill_invincible = false;
+    bool bool_skill_back_arrow = false;
     
 
     // 外部傳入的 giraffe 指標

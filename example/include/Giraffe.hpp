@@ -32,7 +32,7 @@ public:
     void Update();
 
     void Start();
-    void ShootArrow(int double_arrow , bool rebound_arrow); // 添加生成 Arrow 的方法
+    void ShootArrow(int double_arrow , bool rebound_arrow); // 添加這個方法來射箭
     void SetEnemy(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemy 的指針
     void SetEnemies(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemies 的向量
     void SetEnemies(std::vector<std::shared_ptr<Enemy>> enemies); // 添加這個方法來設置 m_Enemies 的向量
@@ -66,6 +66,7 @@ public:
     void cleararrow(); // 添加這個方法來清除箭矢
 
     bool bool_skill_double_arrow = false; // 判斷技能1是否被使用
+    int skill_back_arrow_count = 0; 
     void addSkill_double_arrow(); // 添加這個方法來增加箭數量
     bool bool_skill_rebound_arrow = false; // 判斷技能2是否被使用
     bool bool_skill_smart = false; // 判斷技能3是否被使用

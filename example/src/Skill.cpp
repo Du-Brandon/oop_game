@@ -9,11 +9,12 @@ Skill_choose::Skill_choose() {
         {"憤怒", [this]() { this->trigger_skill4(); }, "../assets/buttons/angry.png"},
         {"加速攻擊", [this]() { this->trigger_skill5(); }, "../assets/buttons/atk_speed.png"},
         {"提升最大血量", [this]() { this->trigger_skill6(); }, "../assets/buttons/add_hp.png"},
-        {"無敵", [this]() { this->trigger_skill7(); }, "../assets/buttons/invincible.png"}
+        {"無敵", [this]() { this->trigger_skill7(); }, "../assets/buttons/invincible.png"},
+        {"背向射擊", [this]() { this->trigger_skill8(); }, "../assets/buttons/back_arrow.png"},
     };
     present = {
         {"加速攻擊", [this]() { this->trigger_skill5(); }, "../assets/buttons/atk_speed.png"},
-        {"加血", [this]() { this->trigger_skill6(); }, "../assets/buttons/add_hp.png"},
+        {"提升最大血量", [this]() { this->trigger_skill6(); }, "../assets/buttons/add_hp.png"},
         {"補血", [this]() { this->trigger_skill0(); }, "../assets/buttons/add_hp.png"},
         // {"無敵", [this]() { this->trigger_skill7(); }, "../assets/buttons/invincible.png"}
     };
@@ -21,11 +22,6 @@ Skill_choose::Skill_choose() {
 
 void Skill_choose::choose_three_skill() {
     if (is_running) {
-
-        // Logger::info("Skill_choose is running");
-        // Logger::info("Dark_pic visible: " );
-        // Logger::info("Button1 visible: " );
-
         
         m_Button1->SetVisible(true);   // 確保按鈕可見
         m_Button2->SetVisible(true);
@@ -265,6 +261,13 @@ void Skill_choose::trigger_skill7() {
     bool_skill_invincible = true;
     if (giraffe) giraffe->bool_skill_invincible = true;
     removeSkill("無敵");
+}
+
+void Skill_choose::trigger_skill8() {
+    Logger::info("技能8被選擇：背向射擊");
+    bool_skill_back_arrow = true;
+    if (giraffe) giraffe->skill_back_arrow_count = 1; // 設置長頸鹿的背向射擊技能
+    removeSkill("背向射擊");
 }
 
 

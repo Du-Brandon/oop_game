@@ -1,5 +1,9 @@
 #pragma once
 
+/* */
+// #define TRACY_ENABLE
+// #include "../public/tracy/Tracy.hpp"
+
 #include <memory>
 #include "background.hpp"
 #include "pch.hpp" // IWYU pragma: export
@@ -17,6 +21,7 @@
 #include "Enemy_2.hpp"
 #include "Enemy_3.hpp"
 #include "Enemy_4.hpp"
+#include "Enemy_5.hpp"
 #include "Angel.hpp"
 #include "Arrow.hpp"
 #include "Skill.hpp"
@@ -64,6 +69,7 @@ private:
         sixth_level,
         seventh_level,
         eighth_level,
+        ninth_level,
         tenth_level,
         end
     };

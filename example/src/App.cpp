@@ -1,3 +1,4 @@
+
 #include "App.hpp"
 
 #include "log_my.hpp"
@@ -71,6 +72,10 @@ void App::Start() {
 }
 
 void App::Update(){
+
+    // ZoneScopedN("App::Update");
+
+    std::cout << "Update" << std::endl;
 
     if (Util::Input::IsKeyUp(Util::Keycode::ESCAPE) || Util::Input::IfExit()) {
         m_CurrentState = State::END;
@@ -179,7 +184,7 @@ void App::normal_level_Update() {
         }
 
         if (enemy_it->getHP() <= 0) {
-            if (enemy_it->getFinal_wish() == "Add player's hp") {
+            if (enemy_it->getFinal_wish() == "Add player's hp" && enemy_it->getVisible()) {
                 Logger::info("Adding player's HP");
                 m_Giraffe->addHP(50);
                 Logger::info("Giraffe HP: " + std::to_string(m_Giraffe->getHP()));
