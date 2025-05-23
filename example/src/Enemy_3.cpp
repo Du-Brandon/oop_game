@@ -18,6 +18,8 @@ void Enemy_3::Start(glm::vec2 coordinate) {
     scale = {0.2f, 0.2f};
     move_speed = 0.0f;
 
+    m_atk = 20;
+
     enemy_hp_start();
 }
 

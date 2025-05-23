@@ -17,6 +17,7 @@ void Enemy_7::Start(glm::vec2 coordinate) {
     this->SetZIndex(5);
 
     m_HP = 400;
+    m_atk = 30;
     pos = coordinate;
     scale = {0.2f, 0.2f};
     move_speed = 2.0f;
@@ -40,6 +41,7 @@ void Enemy_7::Update() {
             this->RemoveChild(*it);
             it = m_Arrows.erase(it); // 刪除箭
         }
+        m_attack->End();
         return;
     }
 

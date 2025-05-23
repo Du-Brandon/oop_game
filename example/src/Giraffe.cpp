@@ -4,6 +4,7 @@
 #include <cmath>
 #include <iostream>
 #include <chrono>
+#include <string>
 #include <vector>
 
 #include "Util/Image.hpp"
@@ -107,6 +108,8 @@ void Giraffe::Update() {
     // 按下P取得位置
     if(Util::Input::IsKeyDown(Util::Keycode::P)){
         std::cout << pos.x << "   "<< pos.y << std::endl; 
+        std::string pos_str = std::to_string(pos.x) + " " + std::to_string(pos.y);
+        Logger::info("Giraffe position: " + pos_str);
     }
 
     //按Q鍵測試弓箭

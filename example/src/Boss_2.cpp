@@ -11,6 +11,7 @@ void Boss_2::Start(glm::vec2 coordinate) {
     name = "Boss_2";
 
     m_HP = 2000;
+    m_atk = 15;
     exp_supply = 160;
     
     pos = coordinate;
@@ -108,7 +109,7 @@ void Boss_2::shoot_random() {
     m_Arrow->setTarget(m_Giraffe);
     m_Arrow->setWall(m_wall);
     m_Arrow->Start("", adjustedDirection); // 假設 Start 支援方向參數
-    m_Arrow->Setspeed(8.0f); // 設置箭的速度
+    m_Arrow->Setspeed(7.5f); // 設置箭的速度
     m_Arrows.push_back(m_Arrow);
     this->AddChild(m_Arrow);
 

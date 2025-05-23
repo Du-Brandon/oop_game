@@ -305,9 +305,9 @@ void App::ValidTask() {
         wall->clear();
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
         wall->setwall(glm::vec2(-378.354,79.6777) , glm::vec2(234.131, 122.405),"lake");
-        wall->setwall(glm::vec2(-463.447,86.7026) , glm::vec2(-378.354, 121.696));
+        wall->setwall(glm::vec2(-463.447,86.7026) , glm::vec2(-378.354, 121.696),"");
         wall->setwall(glm::vec2(-381.412,-132.446) , glm::vec2(234.358, -90.0606),"lake");
-        wall->setwall(glm::vec2(-458.084,-134.085) , glm::vec2(-381.412, -92.4253));
+        wall->setwall(glm::vec2(-458.084,-134.085) , glm::vec2(-381.412, -92.4253),"");
         
         std::shared_ptr<Enemy_4> m_Enemy16 = std::make_shared<Enemy_4>();
         m_Enemy16->Start(glm::vec2(123.611,-70)); // 初始化敵人的位置
@@ -411,16 +411,42 @@ void App::ValidTask() {
         wall->clear();
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
         
-        std::shared_ptr<Boss_1_1> m_Boss_1_1 = std::make_shared<Boss_1_1>();
-        // std::shared_ptr<Boss_2> m_Boss_1_1 = std::make_shared<Boss_2>();
+        // std::shared_ptr<Boss_1_1> m_Boss_1_1 = std::make_shared<Boss_1_1>();
+        std::shared_ptr<Boss_2> m_Boss_1_1 = std::make_shared<Boss_2>();
         m_Boss_1_1->Start(glm::vec2(0, 0)); // 初始化敵人的位置
         m_Boss_1_1->setWall(wall);
         m_Enemies.push_back(m_Boss_1_1);
         m_Root.AddChild(m_Boss_1_1);    
 
+        giraffe_exp = 0;
         // std::cout << "m_Boss_1_1 finish" << std::endl;
         m_Giraffe -> setpos(glm::vec2(-420, 0));
         // std::cout << "m_Giraffe set finish" << std::endl;
+        m_Giraffe -> Setwall(wall);
+
+        is_enemy_empty = false;
+        break;
+    }
+    case player_level::eleventh_level:{
+        LOG_DEBUG("eleventh_level");
+        levelstatus = levelstatus::normal_level;
+        now_level = 11;
+        m_Background->nextbackground(now_level);
+        this->removeEnemy();
+        m_Giraffe->cleararrow();
+        m_Enemies.clear();
+        m_Ground_Spikes->Start();
+
+        wall->clear();
+        wall->Start(220.0f, -220.0f, -455.0f, 194.0f, 24.0f, -26.0f);
+        wall->setwall(glm::vec2(-325.162933 , 151.094772), glm::vec2(75 , 200));
+        wall->setwall(glm::vec2(-325.162933 , 76.490715), glm::vec2(-276.849213 , 151.094772));
+        
+        InitializeEnemy_7(glm::vec2 (100, -100), 100);
+        InitializeEnemy_7(glm::vec2 (100, 100), 100);
+        
+        giraffe_exp = 0;
+        m_Giraffe -> setpos(glm::vec2(-420, 0));
         m_Giraffe -> Setwall(wall);
 
         is_enemy_empty = false;

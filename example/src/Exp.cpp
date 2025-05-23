@@ -11,12 +11,12 @@ void exp_pic::Start(){
     this->SetDrawable(
         std::make_shared<Util::Image>("../assets/other/exp.png"));
     this->SetZIndex(7);
-    pos = glm::vec2(-200.0f, 250.0f);
+    pos = glm::vec2(-200.0f, 300.0f);
     max_exp_list.clear();
 
     m_Background = std::make_shared<exp_pic_background>();
     m_Background->Start();
-    m_Background->setpos(glm::vec2(0.0f, 250.0f));
+    m_Background->setpos(glm::vec2(0.0f, 300.0f));
     this->AddChild(m_Background);
 
     m_Dark_pic->Appear();
@@ -31,7 +31,7 @@ void exp_pic::Start(){
 void exp_pic::Update(){
     // Logger::info("exp_pic Update");
     exp_scale = static_cast<float>(exp) / max_exp_list[max_exp_iterator];
-    pos = glm::vec2(-200.0f, 250.0f) + (exp_scale * glm::vec2(200.0f, 0.0f));
+    pos = glm::vec2(-200.0f, 300.0f) + (exp_scale * glm::vec2(200.0f, 0.0f));
     scale = glm::vec2(exp_scale, 1.0f);
 
     m_LevelText->Update();
@@ -93,7 +93,7 @@ void exp_pic_text::Start(){
     m_LevelText = std::make_unique<Util::Text>(m_Font, m_Size, fmt::format("Level: {}", level),
         Util::Color::FromRGB(255, 255, 255));
     
-    pos = glm::vec2(0.0f, 300.0f);
+    pos = glm::vec2(0.0f, 350.0f);
 
     SetDrawable(m_LevelText);
 }
