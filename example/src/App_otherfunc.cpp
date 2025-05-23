@@ -38,28 +38,11 @@ void App::ValidTask() {
         wall->setwall(glm::vec2 (-134.625f,60.9083f) , glm::vec2(-90.1393f , 162.386f));
         wall->setwall(glm::vec2 (-134.625f,-163.9083f) , glm::vec2(-90.1393f , -64.2383f));                   
 
-        std::shared_ptr<Enemy_2> m_Enemy3 = std::make_shared<Enemy_2>();
-        m_Enemy3->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
-        m_Enemy3->SetZIndex(5);
-        m_Enemy3->Start(glm::vec2(144, 116)); // 初始化敵人的位置
-        m_Enemy3->setWall(wall);
-        m_Enemies.push_back(m_Enemy3);
-        m_Root.AddChild(m_Enemy3);
-        
-        std::shared_ptr<Enemy_2> m_Enemy4 = std::make_shared<Enemy_2>();
-        m_Enemy4->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
-        m_Enemy4->SetZIndex(5);
-        m_Enemy4->Start(glm::vec2(144, -116)); // 初始化敵人的位置
-        m_Enemy4->setWall(wall);
-        m_Enemies.push_back(m_Enemy4);
-        m_Root.AddChild(m_Enemy4);
+        InitializeEnemy_2(glm::vec2(144, 116));
+
+        InitializeEnemy_2(glm::vec2(144, -116));
 
         std::shared_ptr<Enemy_2> m_Enemy5 = std::make_shared<Enemy_2>();
-        m_Enemy5->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
-        m_Enemy5->SetZIndex(5);
         m_Enemy5->setHP(100);
         m_Enemy5->Start(glm::vec2(250, 0)); // 初始化敵人的位置
         m_Enemy5->setWall(wall);
@@ -373,7 +356,7 @@ void App::ValidTask() {
         wall->setwall(glm::vec2(195.252,-188.736) , glm::vec2(245.433,-53.9041));
         wall->setwall(glm::vec2(70.5935,-60.51) , glm::vec2(112.325,48.3685));
         wall->setwall(glm::vec2(-355.065,23.7796) , glm::vec2(-255.647,118.883),"lake");
-        wall->setwall(glm::vec2(-257.874,-25.9397) , glm::vec2(-351.156,-126.621),"lake");
+        wall->setwall(glm::vec2(-351.156,-126.621) , glm::vec2(-257.874,-25.9397),"lake");
         
         std::shared_ptr<Enemy_1> m_Enemy20 = std::make_shared<Enemy_1>();
         m_Enemy20->Start(glm::vec2(-123.611,70)); // 初始化敵人的位置
@@ -387,14 +370,14 @@ void App::ValidTask() {
         m_Enemies.push_back(m_Enemy21);
         m_Root.AddChild(m_Enemy21);
 
-        std::shared_ptr<Enemy_2> m_Enemy22 = std::make_shared<Enemy_2>();
-        m_Enemy22->Start(glm::vec2(247.056,70)); // 初始化敵人的位置
+        std::shared_ptr<Enemy_3> m_Enemy22 = std::make_shared<Enemy_3>();
+        m_Enemy22->Start(glm::vec2(230.056,70)); // 初始化敵人的位置
         m_Enemy22->setWall(wall);
         m_Enemies.push_back(m_Enemy22);
         m_Root.AddChild(m_Enemy22);
 
-        std::shared_ptr<Enemy_2> m_Enemy23 = std::make_shared<Enemy_2>();
-        m_Enemy23->Start(glm::vec2(247.056,-70)); // 初始化敵人的位置
+        std::shared_ptr<Enemy_3> m_Enemy23 = std::make_shared<Enemy_3>();
+        m_Enemy23->Start(glm::vec2(230.056,-70)); // 初始化敵人的位置
         m_Enemy23->setWall(wall);
         m_Enemies.push_back(m_Enemy23);
         m_Root.AddChild(m_Enemy23);
@@ -451,41 +434,41 @@ void App::ValidTask() {
     }
 }
 
-void App::InitializeEnemy_1() {
+void App::InitializeEnemy_1(glm::vec2 coordinate) {
     std::shared_ptr<Enemy_1> m_Enemy20 = std::make_shared<Enemy_1>();
-    m_Enemy20->Start(glm::vec2(-123.611,70)); // 初始化敵人的位置
+    m_Enemy20->Start(coordinate); // 初始化敵人的位置
     m_Enemy20->setWall(wall);
     m_Enemies.push_back(m_Enemy20);
     m_Root.AddChild(m_Enemy20);
 }
 
-void App::InitializeEnemy_2() {
+void App::InitializeEnemy_2(glm::vec2 coordinate) {
     std::shared_ptr<Enemy_2> m_Enemy22 = std::make_shared<Enemy_2>();
-    m_Enemy22->Start(glm::vec2(247.056,70)); // 初始化敵人的位置
+    m_Enemy22->Start(coordinate); // 初始化敵人的位置
     m_Enemy22->setWall(wall);
     m_Enemies.push_back(m_Enemy22);
     m_Root.AddChild(m_Enemy22);
 }
 
-void App::InitializeEnemy_3() {
+void App::InitializeEnemy_3(glm::vec2 coordinate) {
     std::shared_ptr<Enemy_3> m_Enemy18 = std::make_shared<Enemy_3>();
-    m_Enemy18->Start(glm::vec2(247.056,-13.8528)); // 初始化敵人的位置
+    m_Enemy18->Start(coordinate); // 初始化敵人的位置
     m_Enemy18->setWall(wall);
     m_Enemies.push_back(m_Enemy18);
     m_Root.AddChild(m_Enemy18);
 }
 
-void App::InitializeEnemy_4() {
+void App::InitializeEnemy_4(glm::vec2 coordinate) {
     std::shared_ptr<Enemy_4> m_Enemy16 = std::make_shared<Enemy_4>();
-    m_Enemy16->Start(glm::vec2(123.611,70.2924)); // 初始化敵人的位置
+    m_Enemy16->Start(coordinate); // 初始化敵人的位置
     m_Enemy16->setWall(wall);
     m_Enemies.push_back(m_Enemy16);
     m_Root.AddChild(m_Enemy16);
 }
 
-void App::InitializeEnemy_5() {
+void App::InitializeEnemy_5(glm::vec2 coordinate) {
     std::shared_ptr<Enemy_5> m_Enemy18 = std::make_shared<Enemy_5>();
-    m_Enemy18->Start(glm::vec2(247.056,-13.8528)); // 初始化敵人的位置
+    m_Enemy18->Start(coordinate); // 初始化敵人的位置
     m_Enemy18->setWall(wall);
     m_Enemies.push_back(m_Enemy18);
     m_Root.AddChild(m_Enemy18);
@@ -498,5 +481,14 @@ void App::InitializeEnemy_5() {
 //     m_Enemies.push_back(m_Enemy18);
 //     m_Root.AddChild(m_Enemy18);
 // }
+
+void App::InitializeEnemy_7(glm::vec2 coordinate) {
+    std::shared_ptr<Enemy_7> m_Enemy18 = std::make_shared<Enemy_7>();
+    m_Enemy18->setGiraffe(m_Giraffe);
+    m_Enemy18->Start(coordinate); // 初始化敵人的位置
+    m_Enemy18->setWall(wall);
+    m_Enemies.push_back(m_Enemy18);
+    m_Root.AddChild(m_Enemy18);
+}
 
 

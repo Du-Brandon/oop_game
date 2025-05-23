@@ -19,7 +19,7 @@ void EnemyArrow::Start(std::string image_path , glm::vec2 direction, std::string
     if (image_path == "") {
         image_path = "../assets/sprites/redball.png"; // 使用默認圖片路徑
     }
-    this->SetDrawable(std::make_shared<Util::Image>("../assets/sprites/redball.png"));
+    this->SetDrawable(std::make_shared<Util::Image>(image_path));
     this->SetZIndex(6);
 
     shoot_speed = 6.0f; // Initialize shoot_speed
@@ -37,7 +37,7 @@ void EnemyArrow::Start(std::string image_path , glm::vec2 direction, std::string
 
     this->m_enemy_arrow_name = enemy_arrow_name; // 設置箭的名稱
     // // 初始化箭的旋轉角度
-    // rotation = atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
+    rotation = atan2(m_Direction.y, m_Direction.x) + 3.1415926f ;
 }
 
 void EnemyArrow::Update(){
@@ -75,6 +75,10 @@ void EnemyArrow::Update(bool ignorewall) {
             std::cout << "Arrow hit player" << m_Giraffe_->getHP() << std::endl;
         }
     }
+}
+
+void EnemyArrow::Setspeed(float speed) {
+    shoot_speed = speed; // 設置箭的速度
 }
 
 glm::vec2 EnemyArrow::coordinate() {

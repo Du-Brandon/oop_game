@@ -26,6 +26,7 @@ public:
     void Start(std::string image_path = "", glm::vec2 direction = glm::vec2(0.0f,0.0f),std::string enemy_arrow_name = ""); // 設置箭的圖片和方向
     void Update();
     void Update(bool ignorewall);
+    void Setspeed(float speed); // 設置箭的速度
     glm::vec2 coordinate();
     bool shouldDelete() const; // 添加這個方法來檢查箭是否應該被刪除
 

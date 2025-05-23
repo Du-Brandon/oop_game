@@ -1,10 +1,12 @@
 #pragma once
 
+#include <Util/GameObject.hpp>
 #include <cmath>
 #include <vector>
 #include <memory>
 
 #include "Enemy.hpp"
+#include "Enemy_7.hpp"
 #include "Wall.hpp"
 #include "EnemyArrow.hpp"
 
@@ -27,3 +29,4 @@ private:
 
     float attect_interval = 0.0f; // 攻擊間隔
 };
+

@@ -23,6 +23,7 @@
 #include "Enemy_4.hpp"
 #include "Enemy_5.hpp"
 #include "Enemy_6.hpp"
+#include "Enemy_7.hpp"
 #include "Angel.hpp"
 #include "Arrow.hpp"
 #include "Skill.hpp"
@@ -50,12 +51,13 @@ public:
 private:
 void ValidTask();
 
-void InitializeEnemy_1();
-void InitializeEnemy_2();
-void InitializeEnemy_3();
-void InitializeEnemy_4();
-void InitializeEnemy_5();
-void InitializeEnemy_6();
+void InitializeEnemy_1(glm::vec2 coordinate);
+void InitializeEnemy_2(glm::vec2 coordinate);
+void InitializeEnemy_3(glm::vec2 coordinate);
+void InitializeEnemy_4(glm::vec2 coordinate);
+void InitializeEnemy_5(glm::vec2 coordinate);
+void InitializeEnemy_6(glm::vec2 coordinate);
+void InitializeEnemy_7(glm::vec2 coordinate);
 
 private:
     // log or not

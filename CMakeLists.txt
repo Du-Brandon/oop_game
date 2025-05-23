@@ -116,6 +116,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/Enemy_4.cpp
     ${EXAMPLE_DIR}/src/Enemy_5.cpp
     ${EXAMPLE_DIR}/src/Enemy_6.cpp
+    ${EXAMPLE_DIR}/src/Enemy_7.cpp
     ${EXAMPLE_DIR}/src/EnemyArrow.cpp
     ${EXAMPLE_DIR}/src/Exp.cpp
     ${EXAMPLE_DIR}/src/Giraffe.cpp
@@ -142,6 +143,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/include/Enemy_4.hpp
     ${EXAMPLE_DIR}/include/Enemy_5.hpp
     ${EXAMPLE_DIR}/include/Enemy_6.hpp
+    ${EXAMPLE_DIR}/include/Enemy_7.hpp
     ${EXAMPLE_DIR}/include/EnemyArrow.hpp
     ${EXAMPLE_DIR}/include/Exp.hpp
     ${EXAMPLE_DIR}/include/Giraffe.hpp

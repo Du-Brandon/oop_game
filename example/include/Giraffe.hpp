@@ -81,7 +81,7 @@ private:
     std::chrono::high_resolution_clock::time_point start ; // 添加這個成員變數來記錄開始時間
     std::chrono::high_resolution_clock::time_point now ; // 添加這個成員變數來記錄結束時間
     
-    int atk = 100; // 添加這個成員變數來表示長頸鹿的攻擊力
+    int atk = 50; // 添加這個成員變數來表示長頸鹿的攻擊力
     float atk_speed = 0.9f; // 添加這個成員變數來表示長頸鹿的攻擊速度
     int m_HP = 150; // 添加這個成員變數來表示長頸鹿的血量
     int max_hp = 150; // 添加這個成員變數來表示長頸鹿的最大血量
