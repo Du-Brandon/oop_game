@@ -107,6 +107,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/Boss_1_2.cpp
     ${EXAMPLE_DIR}/src/Boss_1_3.cpp
     ${EXAMPLE_DIR}/src/Boss_1_4.cpp
+    ${EXAMPLE_DIR}/src/Boss_2.cpp
     ${EXAMPLE_DIR}/src/Button.cpp
     ${EXAMPLE_DIR}/src/Cat.cpp
     ${EXAMPLE_DIR}/src/Enemy.cpp

@@ -1,6 +1,5 @@
 #include "Boss.hpp"
 
-
 void Boss_1_4::Start(glm::vec2 coordinate) {
     this->SetDrawable(
         std::make_shared<Util::Image>("../assets/sprites/enemy.png"));

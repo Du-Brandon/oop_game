@@ -12,7 +12,7 @@
 #include <iostream>
 #include <memory>
 #include <ostream>
-
+#include <random>
 
 void App::Start() {
     LOG_TRACE("Start");
@@ -275,6 +275,26 @@ void App::Boss_Update() {
         enemy_it->Update();
         m_Enemy_pos = enemy_it->coordinate();
 
+        // boss_2 處理
+        if (auto boss_2 = std::dynamic_pointer_cast<Boss_2>(enemy_it)) {
+            if (boss_2->summon_enemy_3){
+                std::random_device rd;
+                std::mt19937 gen(rd());
+                std::uniform_real_distribution<float> dist(-100.0f, 100.0f);
+
+                glm::vec2 boss_position = boss_2->coordinate();
+                glm::vec2 random_offset(dist(gen), dist(gen));
+                glm::vec2 new_position = boss_position + random_offset;
+
+                Logger::info("Generated random position near Boss_2: (" +
+                             std::to_string(new_position.x) + ", " +
+                             std::to_string(new_position.y) + ")");
+
+                InitializeEnemy_3(new_position,0);
+                boss_2->summon_enemy_3 = false;
+            }
+        }
+
         if (glm::distance(m_Giraffe_pos, m_Enemy_pos) < 50 && enemy_it->getVisible()) {
             m_Giraffe->addHP(-enemy_it->getAtk());
             Logger::info("Collision detected! Giraffe HP: " + std::to_string(m_Giraffe->getHP()));
@@ -335,7 +355,13 @@ void App::Boss_Update() {
                 Logger::info("Adding player's HP");
                 m_Giraffe->addHP(10);
                 Logger::info("Giraffe HP: " + std::to_string(m_Giraffe->getHP()));
-            }
+            } else if (enemy_it->getFinal_wish() == "Add player's 200 hp") {
+                Logger::info("Adding player's 200 HP");
+                m_Giraffe->addHP(200);
+                Logger::info("Giraffe HP: " + std::to_string(m_Giraffe->getHP()));
+            } 
+            
+            
 
             if (enemy_it) {
                 enemy_it->SetVisible(false);

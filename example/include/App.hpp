@@ -51,13 +51,13 @@ public:
 private:
 void ValidTask();
 
-void InitializeEnemy_1(glm::vec2 coordinate);
-void InitializeEnemy_2(glm::vec2 coordinate);
-void InitializeEnemy_3(glm::vec2 coordinate);
-void InitializeEnemy_4(glm::vec2 coordinate);
-void InitializeEnemy_5(glm::vec2 coordinate);
-void InitializeEnemy_6(glm::vec2 coordinate);
-void InitializeEnemy_7(glm::vec2 coordinate);
+void InitializeEnemy_1(glm::vec2 coordinate , int hp = 0);
+void InitializeEnemy_2(glm::vec2 coordinate , int hp = 0);
+void InitializeEnemy_3(glm::vec2 coordinate , int hp , int exp = 0);
+void InitializeEnemy_4(glm::vec2 coordinate , int hp = 0);
+void InitializeEnemy_5(glm::vec2 coordinate , int hp = 0);
+void InitializeEnemy_6(glm::vec2 coordinate , int hp = 0);
+void InitializeEnemy_7(glm::vec2 coordinate , int hp = 0);
 
 private:
     // log or not
