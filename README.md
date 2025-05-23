@@ -87,7 +87,7 @@ ESC：退出遊戲 -->
 - **Enemy_6，新地圖自作中**
 
 ### ver 4.5.0 ：(2025/5/23)
-- **新增Enemy_7(會有預警的主動攻擊)，確任windows上執行會有卡頓的情形(用mingw、llvm編譯都會觸發，MSVC無法編譯)**
+- **bugfix(log資料夾消失)，新增Enemy_7(會有預警的主動攻擊)，確任windows上執行會有卡頓的情形(用mingw、llvm編譯都會觸發，MSVC無法編譯)**
 
 ## 代辦事項
 ### 技能輪盤
@@ -108,6 +108,8 @@ ESC：退出遊戲 -->
 
 
 ## Bug list
--**windows上執行會有卡頓的情形(mingw、llvm都會觸發，MSVC無法編譯)**
+- **windows上執行會有卡頓的情形(mingw、llvm都會觸發，MSVC無法編譯)**
+
+- **rebound_arrow，轉向有bug**
 
 <!-- ###  -->
