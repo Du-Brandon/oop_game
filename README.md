@@ -108,7 +108,7 @@ ESC：退出遊戲 -->
 
 
 ## Bug list
-- **windows上執行會有卡頓的情形(mingw、llvm都會觸發，MSVC無法編譯)**
+- **windows上執行會有卡頓的情形(用mingw、llvm編譯都會觸發，MSVC無法編譯)**
 
 - **rebound_arrow，轉向有bug**
 
