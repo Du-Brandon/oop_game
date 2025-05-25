@@ -427,31 +427,31 @@ void App::ValidTask() {
         is_enemy_empty = false;
         break;
     }
-    case player_level::eleventh_level:{
-        LOG_DEBUG("eleventh_level");
-        levelstatus = levelstatus::normal_level;
-        now_level = 11;
-        m_Background->nextbackground(now_level);
-        this->removeEnemy();
-        m_Giraffe->cleararrow();
-        m_Enemies.clear();
-        m_Ground_Spikes->Start();
+    // case player_level::eleventh_level:{
+    //     LOG_DEBUG("eleventh_level");
+    //     levelstatus = levelstatus::normal_level;
+    //     now_level = 11;
+    //     m_Background->nextbackground(now_level);
+    //     this->removeEnemy();
+    //     m_Giraffe->cleararrow();
+    //     m_Enemies.clear();
+    //     m_Ground_Spikes->Start();
 
-        wall->clear();
-        wall->Start(220.0f, -220.0f, -455.0f, 194.0f, 24.0f, -26.0f);
-        wall->setwall(glm::vec2(-325.162933 , 151.094772), glm::vec2(75 , 200));
-        wall->setwall(glm::vec2(-325.162933 , 76.490715), glm::vec2(-276.849213 , 151.094772));
+    //     wall->clear();
+    //     wall->Start(220.0f, -220.0f, -455.0f, 194.0f, 24.0f, -26.0f);
+    //     wall->setwall(glm::vec2(-325.162933 , 151.094772), glm::vec2(75 , 200));
+    //     wall->setwall(glm::vec2(-325.162933 , 76.490715), glm::vec2(-276.849213 , 151.094772));
         
-        InitializeEnemy_7(glm::vec2 (100, -100), 100);
-        InitializeEnemy_7(glm::vec2 (100, 100), 100);
+    //     InitializeEnemy_7(glm::vec2 (100, -100), 100);
+    //     InitializeEnemy_7(glm::vec2 (100, 100), 100);
         
-        giraffe_exp = 0;
-        m_Giraffe -> setpos(glm::vec2(-420, 0));
-        m_Giraffe -> Setwall(wall);
+    //     giraffe_exp = 0;
+    //     m_Giraffe -> setpos(glm::vec2(-420, 0));
+    //     m_Giraffe -> Setwall(wall);
 
-        is_enemy_empty = false;
-        break;
-    }
+    //     is_enemy_empty = false;
+    //     break;
+    // }
 
     case player_level::end:
         this->End();

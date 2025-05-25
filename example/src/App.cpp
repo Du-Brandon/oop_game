@@ -31,7 +31,7 @@ void App::Start() {
     m_Skill_choose->setGiraffe(m_Giraffe); // 只設定 m_Skill_choose
     m_Root.AddChild(m_Skill_choose);       // 只加 m_Skill_choose
 
-    if (Util::Input::IsKeyDown(Util::Keycode::KP_ENTER)) {
+    if (Util::Input::IsKeyDown(Util::Keycode::KP_ENTER) || Util::Input::IsKeyDown(Util::Keycode::RETURN)) {
         Logger::info("First level");
         wall->Start(180.0f, -180.0f, -464.0f, 267.0f, 32.0f, -19.0f);
 
