@@ -23,86 +23,95 @@ void Enemy_6::Start(glm::vec2 coordinate) {
 
 void Enemy_6::Update() {
     if (m_Visible == false){
-        for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
-            this->RemoveChild(*it);
-            it = m_Arrows.erase(it); // 刪除箭
-        }
         return;
     }
 
     dir = move();
     if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "right") {
-        dir.x = 0;
+        stuck_move();
     }
     else if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "left") {
-        dir.x = 0;
+        // dir.x = 0;
+        stuck_move();
     }
     else if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "lr") {
-        dir.x = 0;
+        // dir.x = 0;
+        stuck_move();
     }
 
     if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "up") {
-        dir.y = 0;
+        // dir.y = 0;
+        stuck_move();
     }
     else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "down") {
-        dir.y = 0;
+        // dir.y = 0;
+        stuck_move();
     }
     else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "ud") {
-        dir.y = 0;
+        // dir.y = 0;
+        stuck_move();
     }
 
     pos += dir * move_speed;
-
-    attect_interval += static_cast<float>(Util::Time::GetDeltaTimeMs()) / 16.0f;
-    if (attect_interval >= 100.0f) {
-        shoot();
-        attect_interval = 0.0f;
-    }
-    for (auto it = m_Arrows.begin(); it != m_Arrows.end();) {
-        (*it)->setTarget(m_Giraffe);
-        (*it)->Update(true);
-        if ((*it)->shouldDelete()) {
-            this->RemoveChild(*it);
-            it = m_Arrows.erase(it); // 刪除箭
-            // std::cout << "Arrow deleted" << std::endl;
-        } else {
-            ++it;
-        }
-    
-    }
 
     enemy_hp_update();
 }
 
 glm::vec2 Enemy_6::move() {
-    if (count >= 15 && !decide_dir){
-        decide_dir = true;
-        dir = randomMove('z');
+    if (!m_Giraffe) {
+        Logger::warn("Giraffe is nullptr, cannot move towards it.");
+        return {0.0f, 0.0f};
     }
-    else if (count <= 45 && decide_dir){
-        decide_dir = false;
+
+    // 計算朝向玩家的方向向量
+    glm::vec2 toGiraffe = m_Giraffe->coordinate() - pos;
+
+    // 判斷主要移動方向（上下或左右）
+    if (std::abs(toGiraffe.x) > std::abs(toGiraffe.y)) {
+        // 左右移動
+        dir = {toGiraffe.x > 0 ? 1.0f : -1.0f, 0.0f};
+    } else {
+        // 上下移動
+        dir = {0.0f, toGiraffe.y > 0 ? 1.0f : -1.0f};
     }
     return dir;
 }
 
 void Enemy_6 ::shoot() {
+    return;
+}
 
+void Enemy_6::stuck_move() {
+    if (!m_Giraffe) {
+        Logger::warn("Giraffe is nullptr, cannot determine stuck movement.");
+        return;
+    }
+
+    // 計算朝向玩家的方向向量
     glm::vec2 toGiraffe = m_Giraffe->coordinate() - pos;
-    // 計算敵人到長頸鹿的距離
 
+    // 儲存原本的方向
+    glm::vec2 original_dir = dir;
 
-    // 生成一個子彈
-    std::shared_ptr<EnemyArrow> m_arrow = std::make_shared<EnemyArrow>();
+    // 判斷主要移動方向（上下或左右）
+    if (std::abs(toGiraffe.x) > std::abs(toGiraffe.y)) {
+        // 原本是左右移動，改為上下移動
+        if (original_dir.x != 0.0f) {
+            dir = {0.0f, toGiraffe.y > 0 ? 1.0f : -1.0f};
+        }
+    } else {
+        // 原本是上下移動，改為左右移動
+        if (original_dir.y != 0.0f) {
+            dir = {toGiraffe.x > 0 ? 1.0f : -1.0f, 0.0f};
+        }
+    }
 
-    m_arrow->setTarget(shared_from_this());
-    m_arrow->setTarget(m_Giraffe);
-    m_arrow->setWall(m_wall);
+    // 如果新的方向仍然無法移動，則嘗試其他方向
+    if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) != "" ||
+        m_wall->boundary_collision_check_updown(pos + dir * move_speed) != "") {
+        dir = -original_dir; // 嘗試反方向
+    }
 
-    m_arrow->Start();
-    m_Arrows.push_back(m_arrow); // 將箭存儲到向量中
-    this->AddChild(m_arrow);
-    // // 設置子彈的位置
-    // arrow->Start(pos);
-    // // 設置子彈的方向
-    // arrow->setDirection(dir);
+    Logger::info("Enemy_6 stuck_move: Adjusted direction to (" +
+                 std::to_string(dir.x) + ", " + std::to_string(dir.y) + ")");
 }

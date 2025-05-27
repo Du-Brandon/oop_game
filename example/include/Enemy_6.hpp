@@ -21,12 +21,9 @@ public:
     glm::vec2 move() override;
     void shoot() override;
 private:
-    int atk_speed = 300;
-    int count = 0; // 計數器
     bool decide_dir = false; // 判斷是否要改變方向
-    
-    std::vector<std::shared_ptr<EnemyArrow>> m_Arrows; // 射出的箭
 
-    float attect_interval = 0.0f; // 攻擊間隔
+    void stuck_move(); // 用來卡住敵人
+
 };
 

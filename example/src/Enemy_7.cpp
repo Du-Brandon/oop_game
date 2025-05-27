@@ -146,15 +146,15 @@ void Enemy_7_attack::run(glm::vec2 enemy_pos) {
 
 void Enemy_7_attack::End(){
     this->SetVisible(false);
-    Logger::info("Enemy_7_attack End");
+    // Logger::info("Enemy_7_attack End");
 }
 
 void Enemy_7_attack::Set_giraffe_pos(glm::vec2 giraffe_pos){
     this->giraffe_pos = giraffe_pos;
-    Logger::info("Set giraffe pos");
+    // Logger::info("Set giraffe pos");
 }
 
 void Enemy_7_attack::Set_enemy_pos(glm::vec2 enemy_pos){
     this->enemy_pos = enemy_pos;
-    Logger::info("Set enemy pos");
+    // Logger::info("Set enemy pos");
 }

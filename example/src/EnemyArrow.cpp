@@ -43,13 +43,13 @@ void EnemyArrow::Start(std::string image_path , glm::vec2 direction, std::string
 void EnemyArrow::Update(){
     pos += m_Direction * shoot_speed; // 假設箭以固定速度移動;
     
-    if (m_Wall-> boundary_collision_check_leftright(pos) == "right" || m_Wall->boundary_collision_check_leftright(pos) == "left") {
+    if (m_Wall-> boundary_collision_check_leftright(pos , "arrow") == "right" || m_Wall->boundary_collision_check_leftright(pos, "arrow") == "left") {
         m_ShouldDelete = true;
     }
-    else if (m_Wall->boundary_collision_check_updown(pos) == "up" || m_Wall->boundary_collision_check_updown(pos) == "down") {
+    else if (m_Wall->boundary_collision_check_updown(pos, "arrow") == "up" || m_Wall->boundary_collision_check_updown(pos, "arrow") == "down") {
         m_ShouldDelete = true;
     }
-    else if (m_Wall -> boundary_collision_check_leftright(pos) == "lr" || m_Wall -> boundary_collision_check_updown(pos) == "ud") {
+    else if (m_Wall -> boundary_collision_check_leftright(pos, "arrow") == "lr" || m_Wall -> boundary_collision_check_updown(pos, "arrow") == "ud") {
         m_ShouldDelete = true;
     }
     else {
