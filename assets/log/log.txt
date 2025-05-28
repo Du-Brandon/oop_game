@@ -1,1124 +1,166 @@
-[2025-05-27 14:28:49] [INFO] Game start
-[2025-05-27 14:28:50] [INFO] First level
-[2025-05-27 14:28:50] [INFO] exp_pic Start
-[2025-05-27 14:29:02] [INFO] Dark_pic Start
-[2025-05-27 14:29:02] [INFO] 技能選擇界面已啟動
-[2025-05-27 14:29:03] [INFO] Button clicked: 反彈箭矢
-[2025-05-27 14:29:03] [INFO] 技能2被選擇：反彈箭矢
-[2025-05-27 14:29:03] [INFO] 技能已刪除：反彈箭矢
-[2025-05-27 14:29:06] [INFO] Now exp 20
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:08] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:11] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:12] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 149
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 148
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 147
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 146
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 145
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 144
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 143
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 142
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 141
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 140
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 139
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 138
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 137
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 136
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 135
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 134
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 133
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 132
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 131
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 130
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 129
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 128
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 127
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 126
-[2025-05-27 14:29:13] [INFO] Collision detected! Giraffe HP: 125
-[2025-05-27 14:29:14] [INFO] Collision detected! Giraffe HP: 124
-[2025-05-27 14:29:14] [INFO] Collision detected! Giraffe HP: 123
-[2025-05-27 14:29:14] [INFO] Collision detected! Giraffe HP: 122
-[2025-05-27 14:29:14] [INFO] Collision detected! Giraffe HP: 121
-[2025-05-27 14:29:14] [INFO] Collision detected! Giraffe HP: 120
-[2025-05-27 14:29:14] [INFO] Collision detected! Giraffe HP: 119
-[2025-05-27 14:29:14] [INFO] Collision detected! Giraffe HP: 118
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:17] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:18] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 117
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 116
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 115
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 114
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 113
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 112
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 111
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 110
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 109
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 108
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 107
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 106
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 105
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 104
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 103
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 102
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 101
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 100
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 99
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 98
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 97
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 96
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 95
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:19] [INFO] Collision detected! Giraffe HP: 94
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Collision detected! Giraffe HP: 93
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Collision detected! Giraffe HP: 92
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Collision detected! Giraffe HP: 91
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Collision detected! Giraffe HP: 90
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Collision detected! Giraffe HP: 89
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Collision detected! Giraffe HP: 88
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Collision detected! Giraffe HP: 87
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Collision detected! Giraffe HP: 86
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Collision detected! Giraffe HP: 85
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:20] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 84
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 83
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 82
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 81
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 80
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 79
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 78
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 77
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 76
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 75
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 74
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 73
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Collision detected! Giraffe HP: 72
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:21] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 71
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 70
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 69
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 68
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 67
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 66
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 65
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 64
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 63
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 62
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 61
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 60
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 59
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 58
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 57
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Collision detected! Giraffe HP: 56
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:22] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 55
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 54
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 53
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 52
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 51
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 50
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 49
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 48
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 47
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 46
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 45
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 44
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 43
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 42
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 41
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 40
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 39
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 38
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 37
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 36
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 35
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 34
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 33
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 32
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 31
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 30
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 29
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 28
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 27
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 26
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 25
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 24
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 23
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 22
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 21
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 20
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 19
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 18
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 17
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 16
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 15
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 14
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 13
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 12
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 11
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 10
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 9
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 8
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 7
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 6
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:23] [INFO] Collision detected! Giraffe HP: 5
-[2025-05-27 14:29:24] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:24] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:24] [INFO] Collision detected! Giraffe HP: 4
-[2025-05-27 14:29:24] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:24] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:24] [INFO] Collision detected! Giraffe HP: 3
-[2025-05-27 14:29:24] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:24] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:24] [INFO] Collision detected! Giraffe HP: 2
-[2025-05-27 14:29:24] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:24] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, 1.000000)
-[2025-05-27 14:29:24] [INFO] Collision detected! Giraffe HP: 1
-[2025-05-27 14:29:24] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:24] [INFO] Enemy_6 stuck_move: Adjusted direction to (0.000000, -1.000000)
-[2025-05-27 14:29:24] [INFO] Collision detected! Giraffe HP: 0
-[2025-05-27 14:29:24] [INFO] Giraffe HP is 0. Game over.
+[2025-05-28 15:36:26] [INFO] Game start
+[2025-05-28 15:36:39] [INFO] First level
+[2025-05-28 15:36:39] [INFO] exp_pic Start
+[2025-05-28 15:36:41] [INFO] Dark_pic Start
+[2025-05-28 15:36:41] [INFO] 技能選擇界面已啟動
+[2025-05-28 15:36:46] [INFO] Button clicked: 聰明
+[2025-05-28 15:36:46] [INFO] 技能3被選擇：聰明
+[2025-05-28 15:36:46] [INFO] 技能已刪除：聰明
+[2025-05-28 15:36:50] [INFO] Now exp 20
+[2025-05-28 15:36:54] [INFO] Now exp 80
+[2025-05-28 15:36:59] [INFO] Dark_pic Start
+[2025-05-28 15:36:59] [INFO] 技能選擇界面已啟動
+[2025-05-28 15:37:03] [INFO] Button clicked: 提升最大血量
+[2025-05-28 15:37:03] [INFO] 技能6被選擇：加血
+[2025-05-28 15:37:04] [INFO] Now exp 160
+[2025-05-28 15:37:10] [INFO] Now exp 220
+[2025-05-28 15:37:11] [INFO] Angel skill choose triggered.
+[2025-05-28 15:37:11] [INFO] Dark_pic Start
+[2025-05-28 15:37:11] [INFO] 禮物技能選擇界面已啟動
+[2025-05-28 15:37:17] [INFO] Button clicked: 加速攻擊
+[2025-05-28 15:37:17] [INFO] 技能5被選擇：加速攻擊
+[2025-05-28 15:37:20] [INFO] Now exp 220
+[2025-05-28 15:37:23] [INFO] Dark_pic Start
+[2025-05-28 15:37:23] [INFO] 技能選擇界面已啟動
+[2025-05-28 15:37:38] [INFO] Button clicked: 加速攻擊
+[2025-05-28 15:37:38] [INFO] 技能5被選擇：加速攻擊
+[2025-05-28 15:37:41] [INFO] Now exp 280
+[2025-05-28 15:37:43] [INFO] Now exp 320
+[2025-05-28 15:37:48] [INFO] Now exp 400
+[2025-05-28 15:37:51] [INFO] Collision detected! Giraffe HP: 349
+[2025-05-28 15:37:51] [INFO] Collision detected! Giraffe HP: 348
+[2025-05-28 15:37:54] [INFO] Adding player's HP
+[2025-05-28 15:37:54] [INFO] Giraffe HP: 350
+[2025-05-28 15:37:54] [INFO] Dark_pic Start
+[2025-05-28 15:37:54] [INFO] 技能選擇界面已啟動
+[2025-05-28 15:38:20] [INFO] Button clicked: 反彈箭矢
+[2025-05-28 15:38:20] [INFO] 技能2被選擇：反彈箭矢
+[2025-05-28 15:38:20] [INFO] 技能已刪除：反彈箭矢
+[2025-05-28 15:38:23] [INFO] Now exp 510
+[2025-05-28 15:38:25] [INFO] Spawning two Boss_1_2
+[2025-05-28 15:38:25] [INFO] Set enemy visibility to false for enemy: Boss_1_1
+[2025-05-28 15:38:26] [INFO] Collision detected! Giraffe HP: 349
+[2025-05-28 15:38:26] [INFO] Collision detected! Giraffe HP: 348
+[2025-05-28 15:38:26] [INFO] Collision detected! Giraffe HP: 347
+[2025-05-28 15:38:26] [INFO] Collision detected! Giraffe HP: 346
+[2025-05-28 15:38:28] [INFO] Spawning two Boss_1_3
+[2025-05-28 15:38:28] [INFO] Add two Boss_1_3 finish
+[2025-05-28 15:38:28] [INFO] Set enemy visibility to false for enemy: Boss_1_2
+[2025-05-28 15:38:28] [INFO] Spawning two Boss_1_3
+[2025-05-28 15:38:28] [INFO] Add two Boss_1_3 finish
+[2025-05-28 15:38:28] [INFO] Set enemy visibility to false for enemy: Boss_1_2
+[2025-05-28 15:38:29] [INFO] Spawning two Boss_1_4
+[2025-05-28 15:38:29] [INFO] Set enemy visibility to false for enemy: Boss_1_3
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 345
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 344
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 343
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 342
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 341
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 340
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 339
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 338
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 337
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 336
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 335
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 334
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 333
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 332
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 331
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 330
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 329
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 328
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 327
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 326
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 325
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 324
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 323
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 322
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 321
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 320
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 319
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 318
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 317
+[2025-05-28 15:38:29] [INFO] Collision detected! Giraffe HP: 316
+[2025-05-28 15:38:30] [INFO] Adding player's HP
+[2025-05-28 15:38:30] [INFO] Giraffe HP: 326
+[2025-05-28 15:38:30] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-05-28 15:38:30] [INFO] Spawning two Boss_1_4
+[2025-05-28 15:38:30] [INFO] Set enemy visibility to false for enemy: Boss_1_3
+[2025-05-28 15:38:30] [INFO] Collision detected! Giraffe HP: 325
+[2025-05-28 15:38:30] [INFO] Collision detected! Giraffe HP: 324
+[2025-05-28 15:38:30] [INFO] Collision detected! Giraffe HP: 323
+[2025-05-28 15:38:30] [INFO] Collision detected! Giraffe HP: 322
+[2025-05-28 15:38:30] [INFO] Collision detected! Giraffe HP: 321
+[2025-05-28 15:38:31] [INFO] Collision detected! Giraffe HP: 320
+[2025-05-28 15:38:31] [INFO] Collision detected! Giraffe HP: 319
+[2025-05-28 15:38:31] [INFO] Collision detected! Giraffe HP: 318
+[2025-05-28 15:38:33] [INFO] Spawning two Boss_1_4
+[2025-05-28 15:38:33] [INFO] Set enemy visibility to false for enemy: Boss_1_3
+[2025-05-28 15:38:33] [INFO] Collision detected! Giraffe HP: 317
+[2025-05-28 15:38:33] [INFO] Collision detected! Giraffe HP: 316
+[2025-05-28 15:38:33] [INFO] Collision detected! Giraffe HP: 315
+[2025-05-28 15:38:33] [INFO] Collision detected! Giraffe HP: 314
+[2025-05-28 15:38:33] [INFO] Collision detected! Giraffe HP: 313
+[2025-05-28 15:38:33] [INFO] Collision detected! Giraffe HP: 312
+[2025-05-28 15:38:33] [INFO] Collision detected! Giraffe HP: 311
+[2025-05-28 15:38:33] [INFO] Collision detected! Giraffe HP: 310
+[2025-05-28 15:38:33] [INFO] Collision detected! Giraffe HP: 309
+[2025-05-28 15:38:33] [INFO] Collision detected! Giraffe HP: 308
+[2025-05-28 15:38:33] [INFO] Collision detected! Giraffe HP: 307
+[2025-05-28 15:38:33] [INFO] Collision detected! Giraffe HP: 306
+[2025-05-28 15:38:33] [INFO] Adding player's HP
+[2025-05-28 15:38:33] [INFO] Giraffe HP: 316
+[2025-05-28 15:38:33] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-05-28 15:38:34] [INFO] Collision detected! Giraffe HP: 315
+[2025-05-28 15:38:34] [INFO] Collision detected! Giraffe HP: 314
+[2025-05-28 15:38:34] [INFO] Collision detected! Giraffe HP: 313
+[2025-05-28 15:38:34] [INFO] Collision detected! Giraffe HP: 312
+[2025-05-28 15:38:34] [INFO] Collision detected! Giraffe HP: 311
+[2025-05-28 15:38:34] [INFO] Collision detected! Giraffe HP: 310
+[2025-05-28 15:38:34] [INFO] Adding player's HP
+[2025-05-28 15:38:34] [INFO] Giraffe HP: 320
+[2025-05-28 15:38:34] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-05-28 15:38:35] [INFO] Collision detected! Giraffe HP: 319
+[2025-05-28 15:38:35] [INFO] Collision detected! Giraffe HP: 318
+[2025-05-28 15:38:35] [INFO] Collision detected! Giraffe HP: 317
+[2025-05-28 15:38:35] [INFO] Collision detected! Giraffe HP: 316
+[2025-05-28 15:38:35] [INFO] Collision detected! Giraffe HP: 315
+[2025-05-28 15:38:35] [INFO] Collision detected! Giraffe HP: 314
+[2025-05-28 15:38:35] [INFO] Adding player's HP
+[2025-05-28 15:38:35] [INFO] Giraffe HP: 324
+[2025-05-28 15:38:35] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-05-28 15:38:35] [INFO] Collision detected! Giraffe HP: 323
+[2025-05-28 15:38:35] [INFO] Spawning two Boss_1_4
+[2025-05-28 15:38:35] [INFO] Set enemy visibility to false for enemy: Boss_1_3
+[2025-05-28 15:38:35] [INFO] Collision detected! Giraffe HP: 322
+[2025-05-28 15:38:35] [INFO] Collision detected! Giraffe HP: 321
+[2025-05-28 15:38:35] [INFO] Collision detected! Giraffe HP: 320
+[2025-05-28 15:38:37] [INFO] Adding player's HP
+[2025-05-28 15:38:37] [INFO] Giraffe HP: 330
+[2025-05-28 15:38:37] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-05-28 15:38:38] [INFO] Adding player's HP
+[2025-05-28 15:38:38] [INFO] Giraffe HP: 340
+[2025-05-28 15:38:38] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-05-28 15:38:42] [INFO] Adding player's HP
+[2025-05-28 15:38:42] [INFO] Giraffe HP: 350
+[2025-05-28 15:38:42] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-05-28 15:38:42] [INFO] Adding player's HP
+[2025-05-28 15:38:42] [INFO] Giraffe HP: 350
+[2025-05-28 15:38:42] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-05-28 15:38:42] [INFO] Dark_pic Start
+[2025-05-28 15:38:42] [INFO] 技能選擇界面已啟動
+[2025-05-28 15:39:40] [INFO] Button clicked: 背向射擊
+[2025-05-28 15:39:40] [INFO] 技能8被選擇：背向射擊
+[2025-05-28 15:39:40] [INFO] 技能已刪除：背向射擊
+[2025-05-28 15:39:46] [INFO] Now exp 810
+[2025-05-28 15:39:46] [INFO] Enemy_7_attack Start
+[2025-05-28 15:39:46] [INFO] Enemy_7_attack Start
+[2025-05-28 15:39:46] [INFO] Enemy_7_attack Start
+[2025-05-28 15:39:46] [INFO] Enemy_7_attack Start
+[2025-05-28 15:39:47] [INFO] Giraffe shoot back arrow
+[2025-05-28 15:39:48] [INFO] Giraffe shoot back arrow
+[2025-05-28 15:39:49] [INFO] Giraffe shoot back arrow
+[2025-05-28 15:39:49] [INFO] Giraffe shoot back arrow
+[2025-05-28 15:39:50] [INFO] Giraffe shoot back arrow
+[2025-05-28 15:39:51] [INFO] Giraffe shoot back arrow
+[2025-05-28 15:39:52] [INFO] Giraffe shoot back arrow

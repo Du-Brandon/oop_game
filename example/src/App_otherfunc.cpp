@@ -411,8 +411,8 @@ void App::ValidTask() {
         wall->clear();
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
         
-        // std::shared_ptr<Boss_1_1> m_Boss_1_1 = std::make_shared<Boss_1_1>();
-        std::shared_ptr<Boss_2> m_Boss_1_1 = std::make_shared<Boss_2>();
+        std::shared_ptr<Boss_1_1> m_Boss_1_1 = std::make_shared<Boss_1_1>();
+        // std::shared_ptr<Boss_2> m_Boss_1_1 = std::make_shared<Boss_2>();
         m_Boss_1_1->Start(glm::vec2(0, 0)); // 初始化敵人的位置
         m_Boss_1_1->setWall(wall);
         m_Enemies.push_back(m_Boss_1_1);
@@ -442,8 +442,8 @@ void App::ValidTask() {
         wall->setwall(glm::vec2(-325.162933 , 151.094772), glm::vec2(75 , 200),"lake");
         wall->setwall(glm::vec2(-325.162933 , 76.490715), glm::vec2(-276.849213 , 151.094772),"lake");
         wall->setwall(glm::vec2(22.515726, -201.125214), glm::vec2(75 , 200),"lake");
-        wall->setwall(glm::vec2(-315.187531 , -196.484528), glm::vec2(73.025383 , -146.556702),"lake");
-        wall->setwall(glm::vec2(-315.187531 , -196.484528), glm::vec2(-282.300720 -71.500229),"lake");
+        wall->setwall(glm::vec2(-317.187531 , -196.484528), glm::vec2(73.025383 , -146.556702),"lake");
+        wall->setwall(glm::vec2(-317.187531 , -196.484528), glm::vec2(-282.300720 , -71.500229),"lake");
         
 
         InitializeEnemy_7(glm::vec2 (100, -100), 100);

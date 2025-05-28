@@ -60,7 +60,7 @@ void Enemy_4::Update() {
 
     for (auto it = m_stones.begin(); it != m_stones.end();) {
         (*it)->setTarget(m_Giraffe);
-        (*it)->Update();
+        (*it)->Update(true);
         if ((*it)->shouldDelete()) {
             this->RemoveChild(*it);
             it = m_stones.erase(it); // 刪除箭
