@@ -22,6 +22,8 @@ void Enemy_4::Update() {
         }
         return;
     }
+
+    is_burning();
     
     if(count >= atk_speed) {
         shoot();
@@ -60,7 +62,7 @@ void Enemy_4::Update() {
 
     for (auto it = m_stones.begin(); it != m_stones.end();) {
         (*it)->setTarget(m_Giraffe);
-        (*it)->Update(true);
+        (*it)->Update();
         if ((*it)->shouldDelete()) {
             this->RemoveChild(*it);
             it = m_stones.erase(it); // 刪除箭

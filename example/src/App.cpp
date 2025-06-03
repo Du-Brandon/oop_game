@@ -179,7 +179,7 @@ void App::normal_level_Update() {
         m_Enemy_pos = enemy_it->coordinate();
 
         if (glm::distance(m_Giraffe_pos, m_Enemy_pos) < 50 && enemy_it->getVisible()) {
-            m_Giraffe->addHP(-enemy_it->getAtk());
+            m_Giraffe->addHP(-1);
             Logger::info("Collision detected! Giraffe HP: " + std::to_string(m_Giraffe->getHP()));
         }
 

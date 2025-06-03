@@ -99,6 +99,17 @@ glm::vec2 Enemy::randomMove(char x) {
     }
 }
 
+void Enemy::is_burning() {
+    // 判斷是否燃燒
+    if (burning and burning_clock >= 2) {
+        m_HP -= 1; // 每次更新減少1點血量
+        burning_clock = 0; // 重置燃燒計時器
+    }
+    else {
+        burning_clock++; // 增加燃燒計時器
+    }
+}
+
 void Enemy::enemy_hp_start() {
     // 初始化血量
     m_hp_pic->Start(pos);

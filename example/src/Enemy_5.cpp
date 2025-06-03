@@ -21,6 +21,8 @@ void Enemy_5::Update() {
     if (m_Visible == false){
         return;
     }
+
+    is_burning();
     
     enemy_hp_update();
 }

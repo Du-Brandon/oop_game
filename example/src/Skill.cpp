@@ -11,6 +11,7 @@ Skill_choose::Skill_choose() {
         {"提升最大血量", [this]() { this->trigger_skill6(); }, "../assets/buttons/add_hp.png"},
         {"無敵", [this]() { this->trigger_skill7(); }, "../assets/buttons/invincible.png"},
         {"背向射擊", [this]() { this->trigger_skill8(); }, "../assets/buttons/back_arrow.png"},
+        {"燃燒箭矢", [this]() { this->trigger_skill9(); }, "../assets/buttons/burn_arrow.png"}
     };
     present = {
         {"加速攻擊", [this]() { this->trigger_skill5(); }, "../assets/buttons/atk_speed.png"},
@@ -268,6 +269,12 @@ void Skill_choose::trigger_skill8() {
     bool_skill_back_arrow = true;
     if (giraffe) giraffe->skill_back_arrow_count = 1; // 設置長頸鹿的背向射擊技能
     removeSkill("背向射擊");
+}
+
+void Skill_choose::trigger_skill9() {
+    Logger::info("技能9被選擇：未實現");
+    if(giraffe) giraffe->burnarrow = true; // 設置長頸鹿的燃燒箭矢技能
+    removeSkill("燃燒箭矢");
 }
 
 

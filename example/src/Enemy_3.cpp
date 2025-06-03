@@ -32,6 +32,8 @@ void Enemy_3::Update() {
         return;
     }
 
+    is_burning();
+
     attect_interval += static_cast<float>(Util::Time::GetDeltaTimeMs()) / 16.0f;
     if (attect_interval >= 100.0f) {
         shoot();

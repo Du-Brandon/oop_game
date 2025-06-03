@@ -42,12 +42,7 @@ void App::ValidTask() {
 
         InitializeEnemy_2(glm::vec2(144, -116));
 
-        std::shared_ptr<Enemy_2> m_Enemy5 = std::make_shared<Enemy_2>();
-        m_Enemy5->setHP(100);
-        m_Enemy5->Start(glm::vec2(250, 0)); // 初始化敵人的位置
-        m_Enemy5->setWall(wall);
-        m_Enemies.push_back(m_Enemy5);
-        m_Root.AddChild(m_Enemy5);
+        InitializeEnemy_2(glm::vec2(250, 0));
         
         giraffe_exp = 0;
         m_Giraffe -> setpos(glm::vec2(-420, 0));

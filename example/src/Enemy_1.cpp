@@ -24,6 +24,9 @@ void Enemy_1::Update() {
     if (m_Visible == false){
         return;
     }
+
+    is_burning();
+    
     // 輸出新的位置
     // std::cout << "Enemy position: (" << pos.x << ", " << pos.y << ")" << std::endl;
 

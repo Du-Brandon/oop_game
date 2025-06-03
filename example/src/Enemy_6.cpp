@@ -87,6 +87,8 @@ void Enemy_6::stuck_move() {
         return;
     }
 
+    is_burning();
+
     // 計算朝向玩家的方向向量
     glm::vec2 toGiraffe = m_Giraffe->coordinate() - pos;
 

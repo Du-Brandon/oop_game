@@ -3,6 +3,7 @@
 #include <cmath>
 #include <iostream>
 
+#include "App.hpp"
 #include "Enemy.hpp"
 #include "Giraffe.hpp"
 #include "pch.hpp" // IWYU pragma: export
@@ -111,6 +112,9 @@ void Arrow::Update() {
                 if (glm::distance((*enemy)->coordinate(), pos) <= 20.0f) {
                     m_ShouldDelete = true;
                     (*enemy)->setHP(-(m_Giraffe_ ->getAtk()));
+                    if (m_Giraffe_->burnarrow){
+                        (*enemy)->setburning(true);   
+                    }
                     std::cout << "Arrow hit enemy" << (*enemy)->getHP() <<std::endl;
                 }
             }
@@ -144,6 +148,9 @@ void Arrow::Update() {
                 if (glm::distance((*enemy)->coordinate(), pos) <= 20.0f) {
                     m_ShouldDelete = true;
                     (*enemy)->setHP(-(m_Giraffe_ ->getAtk()));
+                    if (!(*enemy)->isburning()){
+                        (*enemy)->setburning(true);   
+                    }
                     std::cout << "Arrow hit enemy" << (*enemy)->getHP() <<std::endl;
                 }
             }

@@ -42,6 +42,9 @@ class Enemy : public Util::GameObject {
     std::string getFinal_wish() const;
     virtual bool getVisible() const;  
 
+    bool isburning() const { return burning; } // 添加這個方法來檢查是否燃燒
+    void setburning(bool burn) { burning = burn; } // 添加這個方法來設置是否燃燒
+
     virtual bool isAngel() const { return false; } // 添加這個方法來檢查是否為天使
 
 protected:
@@ -61,9 +64,11 @@ protected:
     std::shared_ptr<Wall> m_wall; // 敵人的碰撞邊界
     std::shared_ptr<hp_pic> m_hp_pic = std::make_shared<hp_pic>(); // 敵人的血量
     
-
+    bool burning = false; // 是否燃燒
+    int burning_clock = 0; // 燃燒時間
 
     glm::vec2 randomMove(char x); // 生成隨機移動方向的方法
+    void is_burning(); // 判斷是否燃燒的方法
     void enemy_hp_start(); 
     void enemy_hp_update();
 };

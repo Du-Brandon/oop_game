@@ -2,6 +2,7 @@
 
 #include <memory>
 #include <string>
+#include <type_traits>
 
 #include "Button.hpp"
 #include "Giraffe.hpp"
@@ -40,6 +41,7 @@ private:
     void trigger_skill6();
     void trigger_skill7();
     void trigger_skill8();
+    void trigger_skill9();
     void end();
 
     std::shared_ptr<Dark_pic> m_Dark_pic = std::make_shared<Dark_pic>();

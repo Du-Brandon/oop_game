@@ -45,6 +45,8 @@ void Enemy_7::Update() {
         return;
     }
 
+    is_burning();
+
     if (count > atk_speed - 60 and count < atk_speed) {
         m_attack -> Set_giraffe_pos(m_Giraffe->coordinate());
         m_attack->run(pos);
@@ -98,7 +100,7 @@ glm::vec2 Enemy_7::move() {
         decide_dir = true;
         dir = randomMove('z');
     }
-    else if (count <= 170 && decide_dir){
+    else if (count >= 170 && decide_dir){
         decide_dir = false;
     }
     return dir;

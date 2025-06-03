@@ -21,6 +21,9 @@ void Enemy_2::Update(){
     if (m_Visible == false){
         return;
     }
+
+    is_burning();
+
     if ((m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "right") ) {
         dir.x = 0;
     }
