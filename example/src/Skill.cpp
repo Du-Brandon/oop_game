@@ -272,7 +272,7 @@ void Skill_choose::trigger_skill8() {
 }
 
 void Skill_choose::trigger_skill9() {
-    Logger::info("技能9被選擇：未實現");
+    Logger::info("技能9被選擇：燃燒箭矢");
     if(giraffe) giraffe->burnarrow = true; // 設置長頸鹿的燃燒箭矢技能
     removeSkill("燃燒箭矢");
 }

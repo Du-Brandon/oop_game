@@ -148,7 +148,7 @@ void Arrow::Update() {
                 if (glm::distance((*enemy)->coordinate(), pos) <= 20.0f) {
                     m_ShouldDelete = true;
                     (*enemy)->setHP(-(m_Giraffe_ ->getAtk()));
-                    if (!(*enemy)->isburning()){
+                    if (m_Giraffe_->burnarrow){
                         (*enemy)->setburning(true);   
                     }
                     std::cout << "Arrow hit enemy" << (*enemy)->getHP() <<std::endl;

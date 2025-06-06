@@ -100,7 +100,6 @@ void exp_pic_text::Start(){
 
 void exp_pic_text::Update(){
     m_LevelText->SetText(fmt::format("Level: {}", level));
-
 }
 
 void exp_pic_text::addlevel(int level){

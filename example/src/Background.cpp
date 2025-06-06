@@ -26,7 +26,8 @@ void BackgroundImage::nextbackground(int now_level) {
     }
     else {
         if_level_pass = 0;
-        level++;
+        
+        level = now_level ;
         this->SetBackground("test" + std::to_string(level) + std::to_string(if_level_pass));
     }
 }

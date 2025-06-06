@@ -1,6 +1,6 @@
-#ifndef GIRAFFE_HPP
-#define GIRAFFE_HPP
+#pragma once
 
+#include <string>
 #include <utility>
 #include <vector>
 #include <chrono>
@@ -15,7 +15,6 @@
 
 #include "pch.hpp" // IWYU pragma: export
 #include "Util/Renderer.hpp"
-#include "GiraffeText.hpp"
 #include "Util/GameObject.hpp"
 #include "Util/Text.hpp"
 
@@ -25,6 +24,7 @@ class Arrow;
 class Enemy;
 class exp_pic;
 class Dark_pic;
+class GiraffeText;
 class Giraffe : public Util::GameObject , public std::enable_shared_from_this<Giraffe> {
 
 public:
@@ -82,7 +82,7 @@ private:
     std::chrono::high_resolution_clock::time_point start ; // 添加這個成員變數來記錄開始時間
     std::chrono::high_resolution_clock::time_point now ; // 添加這個成員變數來記錄結束時間
     
-    int atk = 40; // 添加這個成員變數來表示長頸鹿的攻擊力
+    int atk = 80 ; // 添加這個成員變數來表示長頸鹿的攻擊力
     float atk_speed = 0.9f; // 添加這個成員變數來表示長頸鹿的攻擊速度
     int m_HP = 150; // 添加這個成員變數來表示長頸鹿的血量
     int max_hp = 150; // 添加這個成員變數來表示長頸鹿的最大血量
@@ -110,7 +110,7 @@ private:
     // bool Is_move; // 判斷長頸鹿是否移動
     bool anyKeyPressed ; // 判斷是否有按鍵被按下
 
-    std::shared_ptr<GiraffeText> m_GiraffeText;
+
     std::shared_ptr<Dark_pic> m_Dark_pic = std::make_shared<Dark_pic>(); // 添加這個成員變數來存儲黑色遮罩的指針
     std::shared_ptr<Wall> m_Wall; // 添加這個成員變數來存儲牆的指針
     std::shared_ptr<Enemy> m_Enemy; // 添加這個成員變數來存儲敵人的指針
@@ -120,7 +120,14 @@ private:
     std::shared_ptr<exp_pic> m_exp_pic = std::make_shared<exp_pic>(); // 添加這個成員變數來存儲經驗值的指針
     std::vector<int> m_exp_list = {20, 80, 150, 200, 250, 280, 300, 320, 350, 380, 400, 400}; // 經驗值列表
 
+    std::shared_ptr<GiraffeText> m_Giraffe_atk_Text = std::make_shared<GiraffeText>(); 
+    std::shared_ptr<GiraffeText> m_Giraffe_hp_Text = std::make_shared<GiraffeText>(); 
+    std::shared_ptr<GiraffeText> m_Giraffe_if_invincible_Text = std::make_shared<GiraffeText>(); 
+    std::vector<std::shared_ptr<GiraffeText>> m_GiraffeTexts; // 添加這個成員變數來存儲 GiraffeText 對象
+
     bool enemy_is_empty = false; // 判斷敵人是否存在
+
+
 };
 
 class Dark_pic : public Util::GameObject {
@@ -136,4 +143,25 @@ private:
     glm::vec2 &scale = m_Transform.scale; // 
 };
 
-#endif // GIRAFFE_HPP
+class GiraffeText : public Util::GameObject {
+public:
+    GiraffeText() = default;
+    ~GiraffeText() override = default;
+    void Start(std::string word, glm::vec2 pos, std::shared_ptr<Giraffe> giraffe = nullptr);
+    void Update();
+    void end();
+
+private:
+    glm::vec2 &pos = m_Transform.translation;
+    glm::vec2 &scale = m_Transform.scale;
+
+    std::string m_Word = ""; // 攻擊力顯示的字串
+    std::string parameter = "0"; // 攻擊力顯示的參數
+
+    std::string m_Font = "../assets/fonts/wb.ttf";
+    int m_Size = 32;
+    int level = 1; // 等級
+    std::shared_ptr<Util::Text> m_Text; // 用於顯示角色攻擊力，血量，無敵
+
+    std::shared_ptr<Giraffe> giraffe; 
+};

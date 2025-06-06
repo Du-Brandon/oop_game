@@ -33,8 +33,16 @@ void Giraffe::Start() {
     m_exp_pic -> set_maxexp(m_exp_list);
     this -> AddChild(m_exp_pic);
 
-    std::vector<std::string> skill_list_name = {"double_arrow", "rebound_arrow", "skill_smart", "skill_4"}; // 技能名稱列表
+    m_Giraffe_atk_Text->Start("atk", glm::vec2(-400, -300), shared_from_this());
+    m_Giraffe_hp_Text->Start("hp", glm::vec2(-200, -300), shared_from_this());
+    m_Giraffe_if_invincible_Text->Start("是否無敵", glm::vec2(00, -300), shared_from_this());
+    m_GiraffeTexts.push_back(m_Giraffe_atk_Text);
+    m_GiraffeTexts.push_back(m_Giraffe_hp_Text);
+    m_GiraffeTexts.push_back(m_Giraffe_if_invincible_Text);
 
+    this->AddChild(m_Giraffe_atk_Text);
+    this->AddChild(m_Giraffe_hp_Text);
+    this->AddChild(m_Giraffe_if_invincible_Text);
 }
 
 void Giraffe::Update() {
@@ -108,7 +116,7 @@ void Giraffe::Update() {
     // 按下P取得位置
     if(Util::Input::IsKeyDown(Util::Keycode::P)){
         std::cout << pos.x << "   "<< pos.y << std::endl; 
-        std::string pos_str = std::to_string(pos.x) + " " + std::to_string(pos.y);
+        std::string pos_str = std::to_string(pos.x) + ", " + std::to_string(pos.y);
         Logger::info("Giraffe position: " + pos_str);
     }
 
@@ -148,7 +156,9 @@ void Giraffe::Update() {
         skill_invincible_time_count++;
     }
 
-    // m_GiraffeText->Update();
+    for (const auto& text : m_GiraffeTexts) {
+        text->Update();
+    }
 }
 
 void Giraffe::set_enemy_is_empty(bool is_empty) {
@@ -245,6 +255,8 @@ int Giraffe::getAtk()  {
 
         // 確保倍率不低於 1 倍
         multiplier = std::max(multiplier, 1.0f);
+
+        return static_cast<int>(atk * multiplier); // 返回計算後的攻擊力
     }
     return atk;
 }
@@ -373,4 +385,41 @@ void Giraffe::skill_double_arrow() {
         // double_arrow_is_shoot = false; // 重置技能狀態
     }
 
+}
+
+void GiraffeText::Start(std::string word, glm::vec2 pos, std::shared_ptr<Giraffe> giraffe) {
+    m_Word = word;
+    this->giraffe = giraffe;
+    m_Text = std::make_unique<Util::Text>(m_Font, m_Size, fmt::format(word , "{}", 0),
+        Util::Color::FromRGB(255, 255, 255));
+
+    this->pos = pos; // 設置位置
+
+    SetDrawable(m_Text);
+    
+}
+
+void GiraffeText::Update() {
+    if (m_Word == "atk"){
+        parameter = std::to_string(giraffe->getAtk());
+    }
+    else if (m_Word == "hp") {
+        parameter = std::to_string(giraffe->getHP());
+    }
+    else if (m_Word == "是否無敵") {
+        if (giraffe->bool_skill_invincible) {
+            parameter = "是"; 
+        }
+        else {
+            parameter = "否"; 
+        }
+    }
+    else {
+        parameter = "0"; // 預設值
+    }
+    m_Text->SetText(fmt::format( "{}", m_Word + ":" + parameter));
+};
+
+void GiraffeText::end() {
+    m_Text->SetText(fmt::format("{}"));
 }

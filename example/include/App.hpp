@@ -14,7 +14,6 @@
 #include "Wall.hpp"
 #include "Ground_Spikes.hpp"
 #include "Giraffe.hpp"
-#include "GiraffeText.hpp"
 #include "Boss.hpp"
 #include "Enemy.hpp"
 #include "Enemy_1.hpp"
@@ -82,6 +81,8 @@ private:
         ninth_level,
         tenth_level,
         eleventh_level,
+        twelfth_level,
+        thirteenth_level,
         end
     };
 

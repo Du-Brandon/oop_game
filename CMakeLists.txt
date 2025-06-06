@@ -121,7 +121,6 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/src/EnemyArrow.cpp
     ${EXAMPLE_DIR}/src/Exp.cpp
     ${EXAMPLE_DIR}/src/Giraffe.cpp
-    ${EXAMPLE_DIR}/src/GiraffeText.cpp
     ${EXAMPLE_DIR}/src/Giraffe_other_func.cpp
     ${EXAMPLE_DIR}/src/Ground_Spikes.cpp
     ${EXAMPLE_DIR}/src/Hp.cpp
@@ -148,7 +147,6 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/include/EnemyArrow.hpp
     ${EXAMPLE_DIR}/include/Exp.hpp
     ${EXAMPLE_DIR}/include/Giraffe.hpp
-    ${EXAMPLE_DIR}/include/GiraffeText.hpp
     ${EXAMPLE_DIR}/include/Ground_Spikes.hpp
     ${EXAMPLE_DIR}/include/Hp.hpp
     ${EXAMPLE_DIR}/include/Skill.hpp
