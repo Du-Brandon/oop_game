@@ -141,6 +141,20 @@ void Giraffe::Update() {
         }
     }
 
+    // debug
+    if (Util::Input::IsKeyDown(Util::Keycode::NUM_1)) {
+        this->setAtk(100);
+        Logger::info("用外掛讓攻擊變成" + std::to_string(this->getAtk()));
+    }
+    if (Util::Input::IsKeyDown(Util::Keycode::NUM_2)) {
+        this->addMaxHP(150);
+        Logger::info("用外掛讓血量變成" + std::to_string(this->getHP()));
+    }
+    if (Util::Input::IsKeyDown(Util::Keycode::NUM_3)) {
+        this->setAtk_speed(atk_speed* 0.1f);
+        Logger::info("用外掛讓攻擊速度變成" + std::to_string(this->getAtk_speed()));
+    }
+
     if (std::get<0>(double_arrow_is_shoot) && m_Enemies.size() > 0) {
         skill_double_arrow();
     }
@@ -266,6 +280,10 @@ void Giraffe::setAtk(int atk) {
 }
 
 void Giraffe::setAtk_speed(float atk_speed) {
+    if (atk_speed < 0.3) {
+        Logger::warn("Attack speed cannot be less than 0.3 in Giraffe::setAtk_speed");
+        return;
+    }
     this->atk_speed = this->atk_speed - atk_speed;
 }
 

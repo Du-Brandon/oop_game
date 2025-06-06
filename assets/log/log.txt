@@ -1,161 +1,116 @@
-[2025-06-06 11:29:53] [INFO] Game start
-[2025-06-06 11:29:58] [INFO] First level
-[2025-06-06 11:29:58] [INFO] exp_pic Start
-[2025-06-06 11:30:00] [INFO] Collision detected! Giraffe HP: 149
-[2025-06-06 11:30:00] [INFO] Collision detected! Giraffe HP: 148
-[2025-06-06 11:30:00] [INFO] Collision detected! Giraffe HP: 147
-[2025-06-06 11:30:00] [INFO] Collision detected! Giraffe HP: 146
-[2025-06-06 11:30:00] [INFO] Collision detected! Giraffe HP: 145
-[2025-06-06 11:30:00] [INFO] Collision detected! Giraffe HP: 144
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 143
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 142
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 141
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 140
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 139
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 138
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 137
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 136
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 135
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 134
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 133
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 132
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 131
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 130
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 129
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 128
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 127
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 126
-[2025-06-06 11:30:05] [INFO] Collision detected! Giraffe HP: 125
-[2025-06-06 11:30:05] [INFO] Dark_pic Start
-[2025-06-06 11:30:05] [INFO] 技能選擇界面已啟動
-[2025-06-06 11:30:08] [INFO] Button clicked: 憤怒
-[2025-06-06 11:30:08] [INFO] 技能4被選擇：憤怒
-[2025-06-06 11:30:08] [INFO] 技能已刪除：憤怒
-[2025-06-06 11:30:09] [INFO] Now exp 20
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 124
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 123
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 122
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 121
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 120
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 119
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 118
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 117
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 116
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 115
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 114
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 113
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 112
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 111
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 110
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 109
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 108
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 107
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 106
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 105
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 104
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 103
-[2025-06-06 11:30:11] [INFO] Collision detected! Giraffe HP: 102
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 101
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 100
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 99
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 98
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 97
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 96
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 95
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 94
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 93
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 92
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 91
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 90
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 89
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 88
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 87
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 86
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 85
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 84
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 83
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 82
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 81
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 80
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 79
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 78
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 77
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 76
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 75
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 74
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 73
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 72
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 71
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 70
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 69
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 68
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 67
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 66
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 65
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 64
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 63
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 62
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 61
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 60
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 59
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 58
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 57
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 56
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 55
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 54
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 53
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 52
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 51
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 50
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 49
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 48
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 47
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 46
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 45
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 44
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 43
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 42
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 41
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 40
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 39
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 38
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 37
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 36
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 35
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 34
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 33
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 32
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 31
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 30
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 29
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 28
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 27
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 26
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 25
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 24
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 23
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 22
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 21
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 20
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 19
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 18
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 17
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 16
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 15
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 14
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 13
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 12
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 11
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 10
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 9
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 8
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 7
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 6
-[2025-06-06 11:30:12] [INFO] Collision detected! Giraffe HP: 5
-[2025-06-06 11:30:13] [INFO] Collision detected! Giraffe HP: 4
-[2025-06-06 11:30:13] [INFO] Collision detected! Giraffe HP: 3
-[2025-06-06 11:30:13] [INFO] Collision detected! Giraffe HP: 2
-[2025-06-06 11:30:13] [INFO] Collision detected! Giraffe HP: 1
-[2025-06-06 11:30:13] [INFO] Collision detected! Giraffe HP: 0
-[2025-06-06 11:30:13] [INFO] Collision detected! Giraffe HP: -1
-[2025-06-06 11:30:13] [INFO] Giraffe HP is 0. Game over.
+[2025-06-06 15:56:24] [INFO] Game start
+[2025-06-06 15:56:26] [INFO] First level
+[2025-06-06 15:56:26] [INFO] exp_pic Start
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 149
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 148
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 147
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 146
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 145
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 144
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 143
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 142
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 141
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 140
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 139
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 138
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 137
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 136
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 135
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 134
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 133
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 132
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 131
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 130
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 129
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 128
+[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 127
+[2025-06-06 15:56:32] [INFO] Dark_pic Start
+[2025-06-06 15:56:32] [INFO] 技能選擇界面已啟動
+[2025-06-06 15:56:34] [INFO] Button clicked: 憤怒
+[2025-06-06 15:56:34] [INFO] 技能4被選擇：憤怒
+[2025-06-06 15:56:34] [INFO] 技能已刪除：憤怒
+[2025-06-06 15:56:36] [INFO] Now exp 20
+[2025-06-06 15:56:37] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:37] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:37] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:41] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:41] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:42] [INFO] Generated random position near Boss_2: (142.426483, 60.899872)
+[2025-06-06 15:56:45] [INFO] Generated random position near Boss_2: (134.195480, 45.679276)
+[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:50] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:50] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:50] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:50] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
+[2025-06-06 15:56:51] [INFO] Generated random position near Boss_2: (36.441628, -34.603615)
+[2025-06-06 15:56:52] [INFO] Giraffe HP is 0. Game over.

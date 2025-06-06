@@ -52,7 +52,7 @@ void ValidTask();
 
 void InitializeEnemy_1(glm::vec2 coordinate , int hp = 0);
 void InitializeEnemy_2(glm::vec2 coordinate , int hp = 0);
-void InitializeEnemy_3(glm::vec2 coordinate , int hp , int exp = 0);
+void InitializeEnemy_3(glm::vec2 coordinate , int hp = 0 , int exp = 0);
 void InitializeEnemy_4(glm::vec2 coordinate , int hp = 0);
 void InitializeEnemy_5(glm::vec2 coordinate , int hp = 0);
 void InitializeEnemy_6(glm::vec2 coordinate , int hp = 0);
@@ -71,6 +71,7 @@ private:
     enum class player_level  {
         lobby,
         first_level,
+
         second_level,
         third_level,
         fourth_level,
@@ -83,6 +84,10 @@ private:
         eleventh_level,
         twelfth_level,
         thirteenth_level,
+        fourteenth_level,
+        fifteenth_level,
+        sixteenth_level,
+        twenty_level,
         end
     };
 
