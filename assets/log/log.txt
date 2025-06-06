@@ -1,116 +1,35 @@
-[2025-06-06 15:56:24] [INFO] Game start
-[2025-06-06 15:56:26] [INFO] First level
-[2025-06-06 15:56:26] [INFO] exp_pic Start
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 149
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 148
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 147
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 146
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 145
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 144
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 143
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 142
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 141
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 140
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 139
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 138
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 137
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 136
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 135
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 134
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 133
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 132
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 131
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 130
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 129
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 128
-[2025-06-06 15:56:32] [INFO] Collision detected! Giraffe HP: 127
-[2025-06-06 15:56:32] [INFO] Dark_pic Start
-[2025-06-06 15:56:32] [INFO] 技能選擇界面已啟動
-[2025-06-06 15:56:34] [INFO] Button clicked: 憤怒
-[2025-06-06 15:56:34] [INFO] 技能4被選擇：憤怒
-[2025-06-06 15:56:34] [INFO] 技能已刪除：憤怒
-[2025-06-06 15:56:36] [INFO] Now exp 20
-[2025-06-06 15:56:37] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:37] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:37] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:38] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:39] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:40] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:41] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:41] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:42] [INFO] Generated random position near Boss_2: (142.426483, 60.899872)
-[2025-06-06 15:56:45] [INFO] Generated random position near Boss_2: (134.195480, 45.679276)
-[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:47] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:48] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:49] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:50] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:50] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:50] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:50] [INFO] Boss_2 shoot_random: shot arrow with random angle offset towards Giraffe.
-[2025-06-06 15:56:51] [INFO] Generated random position near Boss_2: (36.441628, -34.603615)
-[2025-06-06 15:56:52] [INFO] Giraffe HP is 0. Game over.
+[2025-06-06 21:09:42] [INFO] Game start
+[2025-06-06 21:09:43] [INFO] First level
+[2025-06-06 21:09:43] [INFO] exp_pic Start
+[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 149
+[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 148
+[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 147
+[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 146
+[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 145
+[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 144
+[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 143
+[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 142
+[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 141
+[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 140
+[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 139
+[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 138
+[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 137
+[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 136
+[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 135
+[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 134
+[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 133
+[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 132
+[2025-06-06 21:09:51] [INFO] Dark_pic Start
+[2025-06-06 21:09:52] [INFO] 技能選擇界面已啟動
+[2025-06-06 21:09:53] [INFO] Button clicked: 加速攻擊
+[2025-06-06 21:09:53] [INFO] 技能5被選擇：加速攻擊
+[2025-06-06 21:09:53] [WARNING] Attack speed cannot be less than 0.3 in Giraffe::setAtk_speed
+[2025-06-06 21:09:53] [INFO] 用外掛讓攻擊變成180
+[2025-06-06 21:09:53] [INFO] 用外掛讓攻擊變成280
+[2025-06-06 21:09:53] [INFO] 用外掛讓攻擊變成380
+[2025-06-06 21:09:53] [INFO] 用外掛讓血量變成282
+[2025-06-06 21:09:54] [INFO] 用外掛讓血量變成432
+[2025-06-06 21:09:54] [INFO] 用外掛讓血量變成582
+[2025-06-06 21:09:55] [INFO] Now exp 20
+[2025-06-06 21:10:02] [INFO] Now exp 60
+[2025-06-06 21:10:09] [INFO] Now exp 90

@@ -71,7 +71,7 @@ private:
     enum class player_level  {
         lobby,
         first_level,
-
+        seventeenth_level,
         second_level,
         third_level,
         fourth_level,
@@ -87,6 +87,7 @@ private:
         fourteenth_level,
         fifteenth_level,
         sixteenth_level,
+        // seventeenth_level,
         twenty_level,
         end
     };
