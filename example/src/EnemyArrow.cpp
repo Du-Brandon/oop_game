@@ -68,6 +68,7 @@ void EnemyArrow::Update(bool ignorewall) {
     else if (m_Wall->boundary_collision_check_updown(pos) == "up" || m_Wall->boundary_collision_check_updown(pos) == "down") {
         m_ShouldDelete = true;
     }
+
     else {
         if ((glm::distance(m_PlayerCoordinate,pos)) <=18.0f) {
             m_ShouldDelete = true;

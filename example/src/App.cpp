@@ -110,6 +110,15 @@ void App::Update(){
                 Boss_Update();
                 break;
             }
+            case levelstatus::win:{
+                if (Util::Input::IsKeyDown(Util::Keycode::RETURN) || Util::Input::IsKeyDown(Util::Keycode::KP_ENTER)) {
+                    Logger::info("You win the game!");
+                    m_player_level = player_level::end;
+                    ValidTask();
+                }
+                break;
+            }
+                
             
         }
     }

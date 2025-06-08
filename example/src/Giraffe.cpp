@@ -175,6 +175,19 @@ void Giraffe::Update() {
     }
 }
 
+void Giraffe::End() {
+    // 清理資源或進行其他必要的結束操作
+    m_Arrows.clear();
+    m_Enemies.clear();
+
+    m_hp_pic->SetVisible(false);
+    m_exp_pic->End();
+    for (const auto& text : m_GiraffeTexts) {
+        text->SetVisible(false);
+    }
+    this->SetVisible(false); // 隱藏長頸鹿對象
+}
+
 void Giraffe::set_enemy_is_empty(bool is_empty) {
     enemy_is_empty = is_empty;
 }

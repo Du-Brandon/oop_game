@@ -18,7 +18,7 @@ void Enemy_3::Start(glm::vec2 coordinate) {
     scale = {0.2f, 0.2f};
     move_speed = 0.0f;
 
-    m_atk = 20;
+    m_atk = 10;
 
     enemy_hp_start();
 }
@@ -72,7 +72,7 @@ void Enemy_3 ::shoot() {
     m_arrow->setTarget(m_Giraffe);
     m_arrow->setWall(m_wall);
 
-    m_arrow->Start();
+    m_arrow->Start("",glm::normalize(m_Giraffe->coordinate() - pos),"arrow");
     m_Arrows.push_back(m_arrow); // 將箭存儲到向量中
     this->AddChild(m_arrow);
     // // 設置子彈的位置

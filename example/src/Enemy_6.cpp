@@ -16,7 +16,7 @@ void Enemy_6::Start(glm::vec2 coordinate) {
 
     pos = coordinate;
     scale = {0.2f, 0.2f};
-    move_speed = 4.0f;
+    move_speed = 2.5f;
 
     enemy_hp_start();
 }
@@ -39,7 +39,7 @@ void Enemy_6::Update() {
         stuck_move();
     }
 
-    if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "up") {
+    else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "up") {
         // dir.y = 0;
         stuck_move();
     }
@@ -50,6 +50,9 @@ void Enemy_6::Update() {
     else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "ud") {
         // dir.y = 0;
         stuck_move();
+    }
+    else {
+        decide_dir = false; // 重置決定方向的標誌
     }
 
     pos += dir * move_speed;
@@ -87,7 +90,6 @@ void Enemy_6::stuck_move() {
         return;
     }
 
-    is_burning();
 
     // 計算朝向玩家的方向向量
     glm::vec2 toGiraffe = m_Giraffe->coordinate() - pos;
@@ -96,24 +98,33 @@ void Enemy_6::stuck_move() {
     glm::vec2 original_dir = dir;
 
     // 判斷主要移動方向（上下或左右）
-    if (std::abs(toGiraffe.x) > std::abs(toGiraffe.y)) {
-        // 原本是左右移動，改為上下移動
-        if (original_dir.x != 0.0f) {
-            dir = {0.0f, toGiraffe.y > 0 ? 1.0f : -1.0f};
+    if (!decide_dir){
+        if (std::abs(toGiraffe.x) > std::abs(toGiraffe.y)) {
+            // 原本是左右移動，改為上下移動
+            if (original_dir.x != 0.0f) {
+                dir = {0.0f, toGiraffe.y > 0 ? 1.0f : -1.0f};
+                decide_dir = true; // 設置為需要決定新方向
+            }
+        } else {
+            // 原本是上下移動，改為左右移動
+            if (original_dir.y != 0.0f) {
+                dir = {toGiraffe.x > 0 ? 1.0f : -1.0f, 0.0f};
+                decide_dir = true; // 設置為需要決定新方向
+            }
+            
         }
-    } else {
-        // 原本是上下移動，改為左右移動
-        if (original_dir.y != 0.0f) {
-            dir = {toGiraffe.x > 0 ? 1.0f : -1.0f, 0.0f};
+
+        // 如果新的方向仍然無法移動，則嘗試其他方向
+        if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) != "no" ||
+            m_wall->boundary_collision_check_updown(pos + dir * move_speed) != "no") {
+            dir = -original_dir; // 嘗試反方向
+            decide_dir = true; // 設置為需要決定新方向
         }
     }
-
-    // 如果新的方向仍然無法移動，則嘗試其他方向
-    if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) != "" ||
-        m_wall->boundary_collision_check_updown(pos + dir * move_speed) != "") {
-        dir = -original_dir; // 嘗試反方向
+    else {
+        // 如果已經決定了新方向，則保持原來的方向
+        dir = original_dir;
     }
-
-    Logger::info("Enemy_6 stuck_move: Adjusted direction to (" +
-                 std::to_string(dir.x) + ", " + std::to_string(dir.y) + ")");
+    // Logger::info("Enemy_6 stuck_move: Adjusted direction to (" +
+    //              std::to_string(dir.x) + ", " + std::to_string(dir.y) + ")");
 }

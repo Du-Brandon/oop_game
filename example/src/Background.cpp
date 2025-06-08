@@ -32,6 +32,10 @@ void BackgroundImage::nextbackground(int now_level) {
     }
 }
 
+void BackgroundImage::win_background() {
+    this->SetBackground("win_background");
+}
+
 bool BackgroundImage::getVisible() const {
     return m_Visible;
 }

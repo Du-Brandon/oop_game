@@ -107,6 +107,9 @@ ESC：退出遊戲 -->
 ### ver 4.7.1 ：(2025/6/6)
 - **新增13~16關+20王關**
 
+### ver 4.8.0 ：(2025/6/9)
+- **新增1718,21~23關，過關畫面，修正大量邏輯判斷**
+
 ## 代辦事項
 ### 技能輪盤
 ### 17~19關 21~25/30
@@ -117,12 +120,12 @@ ESC：退出遊戲 -->
 - [x] skill_smart
 - [x] angry
 - [ ] heart
-- [ ] add_atk_speed
+- [x] add_atk_speed
 - [x] add_hp
 - [x] add_atk
 - [C] invincible(無敵)
 - [ ] side_arrow
-- [ ] element arrow
+- [x] element arrow
 
 
 ## Bug list

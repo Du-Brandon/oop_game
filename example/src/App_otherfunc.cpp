@@ -125,7 +125,7 @@ void App::ValidTask() {
 
         wall->clear();
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
-        wall->setwall(glm::vec2 (-398.86f, 73.006f) , glm::vec2(-149.116f , 121.659f));
+        wall->setwall(glm::vec2 (-398.86f, 73.006f) , glm::vec2(-152.0f , 125.7f));
         wall->setwall(glm::vec2 (-398.523f, -131.287f) , glm::vec2(-364.459f , 124.414f));
         wall->setwall(glm::vec2 (-398.883f,-124.099f) , glm::vec2(-146.449f , -52.8387f));
         
@@ -680,6 +680,40 @@ void App::ValidTask() {
         break;
     }
 
+    case player_level::eighteenth_level:{
+        LOG_DEBUG("eighteenth_level");
+        now_level = 18;
+        m_Background->nextbackground(now_level);
+        this->removeEnemy();
+        m_Giraffe->cleararrow();
+        m_Enemies.clear();
+        m_Ground_Spikes->Start();
+
+        wall->clear();
+        wall->Start(230.0f, -230.0f, -475.0f, 180.0f, 48.0f, -48.0f);
+        wall->setwall(glm::vec2(-390.495453, -59.882023), glm::vec2(-345.509277, 59.222626), "lake");
+        wall->setwall(glm::vec2(-303.594177, 109.434303), glm::vec2(5.466681, 151.446411), "lake");
+        wall->setwall(glm::vec2(-295.030243, -155.815262), glm::vec2(-0.398125, -110.415459), "lake");
+        wall->setwall(glm::vec2(58.704426, -59.142815), glm::vec2(95.822876, 58.691250), "lake");
+
+        InitializeEnemy_1(glm::vec2 (132.233276, 192.515762), 200);
+        InitializeEnemy_1(glm::vec2 (132.233276, -191.878372), 200);
+        InitializeEnemy_1(glm::vec2 (-118.634865, -191.878372), 200);
+        InitializeEnemy_1(glm::vec2 (-126.444153, 193.411774), 200);
+        InitializeEnemy_1(glm::vec2 (-142.797424, 58.775059), 200);
+        InitializeEnemy_1(glm::vec2 (-142.797424, -68.996490), 200);
+        InitializeEnemy_2(glm::vec2 (65.689125, 115.513664));
+        InitializeEnemy_2(glm::vec2 (50.659519, -110.812569));
+        InitializeEnemy_4(glm::vec2 (-16.902779, -1.473674));
+
+        giraffe_exp = 0;
+        m_Giraffe -> setpos(glm::vec2(-420, 0));
+        m_Giraffe -> Setwall(wall);
+
+        is_enemy_empty = false;
+        break;        
+    }
+
     case player_level::twenty_level:{
         LOG_DEBUG("twenty_level");
         levelstatus = levelstatus::boss_level;
@@ -700,8 +734,8 @@ void App::ValidTask() {
         wall->setwall(glm::vec2(-375.013794, -244.494827), glm::vec2(-325.598450, -203.411026));
         wall->setwall(glm::vec2(126.792557, -241.796036), glm::vec2(202.352661, -199.882370));
         wall->setwall(glm::vec2(177.901947, -199.882370), glm::vec2(203.106796, -166.517120));
-        wall->setwall(glm::vec2(178.024857, 158.600372), glm::vec2(203.374710, 241.962524));
-        wall->setwall(glm::vec2(129.000977, 201.114243), glm::vec2(204.437668, 242.315247));
+        wall->setwall(glm::vec2(178.024857, 158.600372), glm::vec2(203.374710, 250.962524));
+        wall->setwall(glm::vec2(129.000977, 201.114243), glm::vec2(204.437668, 250.315247));
 
         std::shared_ptr<Boss_2> m_Boss_2 = std::make_shared<Boss_2>();
         m_Boss_2->Start(glm::vec2(100, 0)); // 初始化敵人的位置
@@ -718,11 +752,120 @@ void App::ValidTask() {
 
     }
 
+    case player_level::twenty_first_level:{
+        LOG_DEBUG("twenty_first_level");
+        levelstatus = levelstatus::normal_level;
+        now_level = 21;
+        m_Background->nextbackground(now_level);
+        this->removeEnemy();
+        m_Giraffe->cleararrow();
+        m_Enemies.clear();
+        m_Ground_Spikes->Start();
+
+        wall->clear();
+        wall->Start(235.0f, -240.0f, -450.0f, 215.0f, 48.0f, -48.0f);
+        wall->setwall(glm::vec2(-366.887848, -186.954880), glm::vec2(-303.774506, 235.0));
+        wall->setwall(glm::vec2(-138.331192, -240.0), glm::vec2(-80.999413, 187.920807));
+        wall->setwall(glm::vec2(86.839645, -188.079285), glm::vec2(138.339249, 235.0));
+
+        InitializeEnemy_1(glm::vec2 (15.477321, 198.745087));
+        InitializeEnemy_3(glm::vec2 (181.306564, 199.091248));
+        InitializeEnemy_6(glm::vec2 (181.306564, -2.618350));
+        InitializeEnemy_6(glm::vec2 (181.306564, -211.763260));
+        InitializeEnemy_6(glm::vec2 (-3.174521, -211.763260), 100);
+
+        giraffe_exp = 0;
+        m_Giraffe -> setpos(glm::vec2(-420, 0));
+        m_Giraffe -> Setwall(wall);
+
+        is_enemy_empty = false;
+        break;        
+    }
+
+    case player_level::twenty_second_level:{
+        LOG_DEBUG("twenty_second_level");
+        levelstatus = levelstatus::normal_level;
+        now_level = 22;
+        m_Background->nextbackground(now_level);
+        this->removeEnemy();
+        m_Giraffe->cleararrow();
+        m_Enemies.clear();
+        m_Ground_Spikes->Start();
+
+        wall->clear();
+        wall->Start(235.0f, -240.0f, -450.0f, 215.0f, 48.0f, -48.0f);
+
+        InitializeEnemy_6(glm::vec2 (153.146423, 175.476807));
+        InitializeEnemy_6(glm::vec2 (153.146423, -0.254951));
+        InitializeEnemy_6(glm::vec2 (153.146423, -184.290619));
+        InitializeEnemy_6(glm::vec2 (-199.249924, -184.290619));
+        InitializeEnemy_6(glm::vec2 (-199.249924, 182.493637));
+        InitializeEnemy_6(glm::vec2 (-23.299168, -1.273765));
+
+        giraffe_exp = 0;
+        m_Giraffe -> setpos(glm::vec2(-420, 0));
+        m_Giraffe -> Setwall(wall);
+
+        is_enemy_empty = false;
+        break;
+    }
+
+    case player_level::twenty_third_level:{
+        LOG_DEBUG("twenty_third_level");
+        levelstatus = levelstatus::normal_level;
+        now_level = 23;
+        m_Background->nextbackground(now_level);
+        this->removeEnemy();
+        m_Giraffe->cleararrow();
+        m_Enemies.clear();
+        m_Ground_Spikes->Start();
+
+        wall->clear();
+        wall->Start(235.0f, -240.0f, -450.0f, 215.0f, 48.0f, -48.0f);
+        wall->setwall(glm::vec2(-182.620544, 116.973503), glm::vec2(-134.713150,235.0));
+        wall->setwall(glm::vec2(-182.620544, 116.973503), glm::vec2(-0.205011, 156.017517));
+        wall->setwall(glm::vec2(-42.285759, 116.973503), glm::vec2(-0.381256, 231.127579));
+        wall->setwall(glm::vec2(-4.143783, -63.975700), glm::vec2(54.412170, 70.450104));
+        wall->setwall(glm::vec2(-188.913315,-240.0), glm::vec2(-140.054001, -106.056313));
+        wall->setwall(glm::vec2(-188.913315, -164.376907), glm::vec2(3.388461, -105.519012));
+        wall->setwall(glm::vec2(-38.928951, -240.0), glm::vec2(3.388461, -105.519012));
+
+        InitializeEnemy_7(glm::vec2 (-92.024170, 132.065842),200);
+        InitializeEnemy_7(glm::vec2 (-92.024170, -132.065842),200);
+        InitializeEnemy_4(glm::vec2 (-88.305328, 14.892389));
+        InitializeEnemy_5(glm::vec2 (208.483414, 7.385991));
+
+        giraffe_exp = 0;
+        m_Giraffe -> setpos(glm::vec2(-420, 0));
+        m_Giraffe -> Setwall(wall);
+
+        is_enemy_empty = false;
+        break;
+    }
+
+    case player_level::win_end:
+        levelstatus = levelstatus::win;
+        m_Background->win_background();
+        this->removeEnemy();
+        m_Giraffe->cleararrow();
+        m_Enemies.clear();
+        m_Ground_Spikes->Start();
+
+        wall->clear();
+
+        giraffe_exp = 0;
+        m_Giraffe -> End();
+
+        is_enemy_empty = false;
+
+        Logger::info("You win the game!");
+
+        break;
+
     case player_level::end:
         this->End();
         m_CurrentState = State::END;
         break;
-
     }
 }
 
@@ -784,7 +927,7 @@ void App::InitializeEnemy_5(glm::vec2 coordinate , int hp) {
 
 void App::InitializeEnemy_6(glm::vec2 coordinate , int hp) {
     std::shared_ptr<Enemy_6> m_Enemy18 = std::make_shared<Enemy_6>();
-    m_Enemy18->Start(glm::vec2(247.056,-13.8528)); // 初始化敵人的位置
+    m_Enemy18->Start(coordinate); // 初始化敵人的位置
     if (hp > 0) {
         m_Enemy18->setHP(hp);
     }

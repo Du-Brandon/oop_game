@@ -37,6 +37,14 @@ void exp_pic::Update(){
     m_LevelText->Update();
 }
 
+void exp_pic::End(){
+    Logger::info("exp_pic End");
+    m_Background->SetVisible(false);
+    m_Dark_pic->Disappear();
+    m_LevelText->SetVisible(false);
+    this->SetVisible(false);
+}
+
 void exp_pic::setpos(glm::vec2 position){
     pos = position;
 }

@@ -1,35 +1,71 @@
-[2025-06-06 21:09:42] [INFO] Game start
-[2025-06-06 21:09:43] [INFO] First level
-[2025-06-06 21:09:43] [INFO] exp_pic Start
-[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 149
-[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 148
-[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 147
-[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 146
-[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 145
-[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 144
-[2025-06-06 21:09:50] [INFO] Collision detected! Giraffe HP: 143
-[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 142
-[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 141
-[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 140
-[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 139
-[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 138
-[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 137
-[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 136
-[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 135
-[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 134
-[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 133
-[2025-06-06 21:09:51] [INFO] Collision detected! Giraffe HP: 132
-[2025-06-06 21:09:51] [INFO] Dark_pic Start
-[2025-06-06 21:09:52] [INFO] 技能選擇界面已啟動
-[2025-06-06 21:09:53] [INFO] Button clicked: 加速攻擊
-[2025-06-06 21:09:53] [INFO] 技能5被選擇：加速攻擊
-[2025-06-06 21:09:53] [WARNING] Attack speed cannot be less than 0.3 in Giraffe::setAtk_speed
-[2025-06-06 21:09:53] [INFO] 用外掛讓攻擊變成180
-[2025-06-06 21:09:53] [INFO] 用外掛讓攻擊變成280
-[2025-06-06 21:09:53] [INFO] 用外掛讓攻擊變成380
-[2025-06-06 21:09:53] [INFO] 用外掛讓血量變成282
-[2025-06-06 21:09:54] [INFO] 用外掛讓血量變成432
-[2025-06-06 21:09:54] [INFO] 用外掛讓血量變成582
-[2025-06-06 21:09:55] [INFO] Now exp 20
-[2025-06-06 21:10:02] [INFO] Now exp 60
-[2025-06-06 21:10:09] [INFO] Now exp 90
+[2025-06-09 00:11:18] [INFO] Game start
+[2025-06-09 00:11:21] [INFO] First level
+[2025-06-09 00:11:21] [INFO] exp_pic Start
+[2025-06-09 00:11:22] [INFO] Collision detected! Giraffe HP: 149
+[2025-06-09 00:11:22] [INFO] Collision detected! Giraffe HP: 148
+[2025-06-09 00:11:22] [INFO] Collision detected! Giraffe HP: 147
+[2025-06-09 00:11:22] [INFO] Collision detected! Giraffe HP: 146
+[2025-06-09 00:11:22] [INFO] Collision detected! Giraffe HP: 145
+[2025-06-09 00:11:22] [INFO] Collision detected! Giraffe HP: 144
+[2025-06-09 00:11:22] [INFO] Collision detected! Giraffe HP: 143
+[2025-06-09 00:11:22] [INFO] Collision detected! Giraffe HP: 142
+[2025-06-09 00:11:22] [INFO] Collision detected! Giraffe HP: 141
+[2025-06-09 00:11:23] [INFO] 用外掛讓攻擊變成180
+[2025-06-09 00:11:23] [INFO] 用外掛讓攻擊變成280
+[2025-06-09 00:11:23] [INFO] 用外掛讓攻擊變成380
+[2025-06-09 00:11:23] [INFO] 用外掛讓攻擊變成480
+[2025-06-09 00:11:23] [INFO] 用外掛讓攻擊變成580
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 140
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 139
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 138
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 137
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 136
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 135
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 134
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 133
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 132
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 131
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 130
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 129
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 128
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 127
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 126
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 125
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 124
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 123
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 122
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 121
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 120
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 119
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 118
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 117
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 116
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 115
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 114
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 113
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 112
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 111
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 110
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 109
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 108
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 107
+[2025-06-09 00:11:24] [INFO] Collision detected! Giraffe HP: 106
+[2025-06-09 00:11:25] [INFO] Collision detected! Giraffe HP: 105
+[2025-06-09 00:11:25] [INFO] Collision detected! Giraffe HP: 104
+[2025-06-09 00:11:25] [INFO] Collision detected! Giraffe HP: 103
+[2025-06-09 00:11:25] [INFO] Collision detected! Giraffe HP: 102
+[2025-06-09 00:11:25] [INFO] Collision detected! Giraffe HP: 101
+[2025-06-09 00:11:25] [INFO] Collision detected! Giraffe HP: 100
+[2025-06-09 00:11:25] [INFO] Collision detected! Giraffe HP: 99
+[2025-06-09 00:11:25] [INFO] Collision detected! Giraffe HP: 98
+[2025-06-09 00:11:25] [INFO] Collision detected! Giraffe HP: 97
+[2025-06-09 00:11:25] [INFO] Collision detected! Giraffe HP: 96
+[2025-06-09 00:11:25] [INFO] Dark_pic Start
+[2025-06-09 00:11:25] [INFO] 技能選擇界面已啟動
+[2025-06-09 00:11:27] [INFO] Button clicked: 燃燒箭矢
+[2025-06-09 00:11:27] [INFO] 技能9被選擇：燃燒箭矢
+[2025-06-09 00:11:27] [INFO] 技能已刪除：燃燒箭矢
+[2025-06-09 00:11:28] [INFO] Now exp 20
+[2025-06-09 00:11:28] [INFO] exp_pic End
+[2025-06-09 00:11:28] [INFO] You win the game!
+[2025-06-09 00:11:29] [INFO] You win the game!

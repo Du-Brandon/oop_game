@@ -30,23 +30,34 @@ void Enemy_1::Update() {
     // 輸出新的位置
     // std::cout << "Enemy position: (" << pos.x << ", " << pos.y << ")" << std::endl;
 
-    // 確保敵人不會超出視窗範圍
-    if ((m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "right") || m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "lr") {
-        dir.x = - dir.x;
-    }
-    else if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "left") {
-        dir.x = - dir.x;
-    }
-    if ((m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "up") || m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "ud") {
-        dir.y = - dir.y;
-    }
-    else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "down") {
-        dir.y = - dir.y;
-    }
+    static bool decide_dir = false; // 用於決定是否隨機生成移動方向
 
+    // 確保敵人不會超出視窗範圍
+    if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "ud" or m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "lr") {
+        // 重新隨機生成移動方向
+        dir = randomMove('z');
+        decide_dir = true;
+    }
+    else {
+        if ((m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "right") || m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "lr") {
+            dir.x = - dir.x;
+        }
+        else if (m_wall->boundary_collision_check_leftright(pos + dir * move_speed) == "left") {
+            dir.x = - dir.x;
+        }
+
+        if ((m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "up") || m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "ud") {
+            dir.y = - dir.y;
+        }
+        else if (m_wall->boundary_collision_check_updown(pos + dir * move_speed) == "down") {
+            dir.y = - dir.y;
+        }
+    }
     // 更新敵人的位置
-    pos += dir * move_speed;
-    
+    if (!decide_dir){ 
+        pos += dir * move_speed;
+    }
+    decide_dir = false; // 重置決定方向的標誌
     enemy_hp_update();
 }
 

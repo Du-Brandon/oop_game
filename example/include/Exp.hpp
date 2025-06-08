@@ -24,6 +24,7 @@ public:
 
     void Start();
     void Update();
+    void End(); // 結束時清理資源
 
     void setpos(glm::vec2 position); 
     void set_maxexp(int max_exp); 

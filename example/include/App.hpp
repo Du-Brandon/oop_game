@@ -65,13 +65,14 @@ private:
 
     enum class levelstatus {
         normal_level,
-        boss_level
+        boss_level,
+        win
     };
 
     enum class player_level  {
         lobby,
         first_level,
-        seventeenth_level,
+        win_end,
         second_level,
         third_level,
         fourth_level,
@@ -87,8 +88,14 @@ private:
         fourteenth_level,
         fifteenth_level,
         sixteenth_level,
-        // seventeenth_level,
+        seventeenth_level,
+        eighteenth_level,
+        // nineteenth_level,
         twenty_level,
+        twenty_first_level,
+        twenty_second_level,
+        twenty_third_level,
+        // win_end,
         end
     };
 

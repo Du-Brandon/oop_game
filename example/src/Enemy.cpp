@@ -48,6 +48,13 @@ int Enemy::getHP() const {
 
 void Enemy::setHP(int hp) {
     m_HP += hp;
+    if (hp > 0){
+        m_hp_pic->add_maxhp(hp); 
+    }
+}
+
+void Enemy::set_MaxHP(int hp) {
+    m_MaxHP = hp;
 }
 
 void Enemy::setAtk(int atk) {
@@ -78,11 +85,10 @@ glm::vec2 Enemy::randomMove(char x) {
     float deltaY = dis(gen);
 
     // 確保移動幅度不大於 1
-    if (std::abs(deltaX) > 1.0f) {
-        deltaX = (deltaX > 0 ? 1.0f : -1.0f);
-    }
-    if (std::abs(deltaY) > 1.0f) {
-        deltaY = (deltaY > 0 ? 1.0f : -1.0f);
+    float length = std::sqrt(deltaX * deltaX + deltaY * deltaY);
+    if (length > 0.0f) {
+        deltaX /= length;
+        deltaY /= length;
     }
     // 根據輸入的參數 x 生成移動方向
     switch (x) {

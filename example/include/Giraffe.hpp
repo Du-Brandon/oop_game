@@ -29,9 +29,9 @@ class Giraffe : public Util::GameObject , public std::enable_shared_from_this<Gi
 
 public:
 
-    void Update();
-
     void Start();
+    void Update();
+    void End(); 
     void ShootArrow(int double_arrow , bool rebound_arrow); // 添加這個方法來射箭
     void SetEnemy(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemy 的指針
     void SetEnemies(std::shared_ptr<Enemy> enemy); // 添加這個方法來設置 m_Enemies 的向量
