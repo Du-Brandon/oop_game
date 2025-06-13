@@ -110,23 +110,8 @@ ESC：退出遊戲 -->
 ### ver 4.8.0 ：(2025/6/9)
 - **新增1718,21~23關，過關畫面，修正大量邏輯判斷**
 
-## 代辦事項
-### 技能輪盤
-### 17~19關 21~25/30
-
-## 技能列表&進度
-- [x] double_arrow
-- [x] rebound_arrow(反彈箭，約120禎之後自殺)
-- [x] skill_smart
-- [x] angry
-- [ ] heart
-- [x] add_atk_speed
-- [x] add_hp
-- [x] add_atk
-- [C] invincible(無敵)
-- [ ] side_arrow
-- [x] element arrow
-
+### ver 4.9.0 ：(2025/6/13)
+- **25關完成，bugfix**
 
 ## Bug list
 - **windows上執行會有卡頓的情形(用mingw、llvm編譯都會觸發，MSVC無法編譯)**
