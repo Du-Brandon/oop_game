@@ -32,9 +32,9 @@
 ```mermaid
 graph TD
     Update --> 是否升級
+    Update --> 是否碰到天使
     Update --> Boss關邏輯
     Update --> 小怪關邏輯
-    Update --> 是否碰到天使
 
     是否升級 -->  選技能
     是否碰到天使 --> 選技能
@@ -50,15 +50,15 @@ graph TD
     敵人 --> boss
     敵人 --> 天使
 
+    玩家 --> HP
+    敵人 --> HP
+
     玩家 --> 弓箭
     小怪 --> 敵人弓箭(enemyarrow)
     boss --> 敵人弓箭(enemyarrow)
 
     玩家 --> EXP
     玩家 --> 玩家狀態
-
-    玩家 --> HP
-    敵人 --> HP
 
     wall --> 角色
     wall --> 弓箭
