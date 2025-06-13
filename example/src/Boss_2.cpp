@@ -10,7 +10,7 @@ void Boss_2::Start(glm::vec2 coordinate) {
     final_wish = "Add player's 200 hp";
     name = "Boss_2";
 
-    m_HP = 2000;
+    m_HP = 1500;
     m_atk = 15;
     exp_supply = 160;
     

@@ -74,6 +74,8 @@ public:
     bool bool_skill_invincible = false; // 判斷技能無敵是否被使用
     int skill_invincible_time_count = 0; // 設置技能無敵的時間計數器
     bool burnarrow = false; // 判斷是否燃燒箭矢
+    int right_left_side_arrow = 0 ;
+    int incline_arrow = 0 ; 
     
 
 private:
@@ -82,10 +84,10 @@ private:
     std::chrono::high_resolution_clock::time_point start ; // 添加這個成員變數來記錄開始時間
     std::chrono::high_resolution_clock::time_point now ; // 添加這個成員變數來記錄結束時間
     
-    int atk = 80 ; // 添加這個成員變數來表示長頸鹿的攻擊力
+    int atk = 45 ; // 添加這個成員變數來表示長頸鹿的攻擊力
     float atk_speed = 0.9f; // 添加這個成員變數來表示長頸鹿的攻擊速度
-    int m_HP = 150; // 添加這個成員變數來表示長頸鹿的血量
-    int max_hp = 150; // 添加這個成員變數來表示長頸鹿的最大血量
+    int m_HP = 250; // 添加這個成員變數來表示長頸鹿的血量
+    int max_hp = 250; // 添加這個成員變數來表示長頸鹿的最大血量
     int exp = 0; // 添加這個成員變數來表示長頸鹿的經驗值
     float delta = 0.0f; // 添加這個成員變數來表示長頸鹿的速度
 
@@ -118,7 +120,7 @@ private:
     std::vector<std::shared_ptr<Arrow>> m_Arrows; // 添加這個成員變數來存儲 Arrow 對象
     std::shared_ptr<hp_pic> m_hp_pic = std::make_shared<hp_pic>(); // 添加這個成員變數來存儲血量的指針
     std::shared_ptr<exp_pic> m_exp_pic = std::make_shared<exp_pic>(); // 添加這個成員變數來存儲經驗值的指針
-    std::vector<int> m_exp_list = {20, 80, 150, 200, 250, 280, 300, 320, 350, 380, 400, 400}; // 經驗值列表
+    std::vector<int> m_exp_list = {20, 80, 150, 200, 250, 280, 300, 320, 350, 380, 400, 400,10000}; // 經驗值列表
 
     std::shared_ptr<GiraffeText> m_Giraffe_atk_Text = std::make_shared<GiraffeText>(); 
     std::shared_ptr<GiraffeText> m_Giraffe_hp_Text = std::make_shared<GiraffeText>(); 

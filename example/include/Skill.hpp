@@ -42,6 +42,9 @@ private:
     void trigger_skill7();
     void trigger_skill8();
     void trigger_skill9();
+    void trigger_skill10();
+    void trigger_skill11();
+    void trigger_skill12();
     void end();
 
     std::shared_ptr<Dark_pic> m_Dark_pic = std::make_shared<Dark_pic>();

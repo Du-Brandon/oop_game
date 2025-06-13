@@ -73,6 +73,7 @@ void Enemy_3 ::shoot() {
     m_arrow->setWall(m_wall);
 
     m_arrow->Start("",glm::normalize(m_Giraffe->coordinate() - pos),"arrow");
+    m_arrow->Setspeed(4.0f); // 設置子彈速度
     m_Arrows.push_back(m_arrow); // 將箭存儲到向量中
     this->AddChild(m_arrow);
     // // 設置子彈的位置

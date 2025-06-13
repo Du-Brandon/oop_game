@@ -15,7 +15,7 @@ void EnemyArrow::setWall(std::shared_ptr<Wall> wall) {
     m_Wall = wall;
 }
 
-void EnemyArrow::Start(std::string image_path , glm::vec2 direction, std::string enemy_arrow_name) {
+void EnemyArrow::Start(std::string image_path , glm::vec2 direction, std::string enemy_arrow_name, bool rebound) {
     if (image_path == "") {
         image_path = "../assets/sprites/redball.png"; // 使用默認圖片路徑
     }
@@ -25,6 +25,10 @@ void EnemyArrow::Start(std::string image_path , glm::vec2 direction, std::string
     shoot_speed = 6.0f; // Initialize shoot_speed
 
     m_ShouldDelete = false;
+
+    if (rebound){
+        m_Rebound = rebound;
+    }
 
     m_Direction = glm::normalize(m_PlayerCoordinate - m_EnemyCoordinate);
     m_Direction += direction; // 設置箭的方向
@@ -44,10 +48,26 @@ void EnemyArrow::Update(){
     pos += m_Direction * shoot_speed; // 假設箭以固定速度移動;
     
     if (m_Wall-> boundary_collision_check_leftright(pos , "arrow") == "right" || m_Wall->boundary_collision_check_leftright(pos, "arrow") == "left") {
-        m_ShouldDelete = true;
+        if (m_Rebound) {
+            m_Direction.x = -m_Direction.x; // 反彈
+            m_LifeCycle++;
+            if (m_LifeCycle >= 3) { // 反彈三次後刪除箭
+                m_ShouldDelete = true;
+            }
+        } else {
+            m_ShouldDelete = true; // 不反彈則刪除箭
+        }
     }
     else if (m_Wall->boundary_collision_check_updown(pos, "arrow") == "up" || m_Wall->boundary_collision_check_updown(pos, "arrow") == "down") {
-        m_ShouldDelete = true;
+        if (m_Rebound) {
+            m_Direction.y = -m_Direction.y; // 反彈
+            m_LifeCycle++;
+            if (m_LifeCycle >= 3) { // 反彈三次後刪除箭
+                m_ShouldDelete = true;
+            }
+        } else {
+            m_ShouldDelete = true; // 不反彈則刪除箭
+        }
     }
     else if (m_Wall -> boundary_collision_check_leftright(pos, "arrow") == "lr" || m_Wall -> boundary_collision_check_updown(pos, "arrow") == "ud") {
         m_ShouldDelete = true;

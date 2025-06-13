@@ -14,7 +14,7 @@ void Boss_1_2::Start(glm::vec2 coordinate) {
     pos = coordinate;
     scale = {0.2f, 0.2f};
 
-    move_speed = 10.0f;
+    move_speed = 7.0f;
     enemy_hp_start();
 }
 

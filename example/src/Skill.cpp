@@ -11,7 +11,11 @@ Skill_choose::Skill_choose() {
         {"提升最大血量", [this]() { this->trigger_skill6(); }, "../assets/buttons/add_hp.png"},
         {"無敵", [this]() { this->trigger_skill7(); }, "../assets/buttons/invincible.png"},
         {"背向射擊", [this]() { this->trigger_skill8(); }, "../assets/buttons/back_arrow.png"},
-        {"燃燒箭矢", [this]() { this->trigger_skill9(); }, "../assets/buttons/burn_arrow.png"}
+        {"燃燒箭矢", [this]() { this->trigger_skill9(); }, "../assets/buttons/burn_arrow.png"},
+        {"攻擊力提升", [this]() { this->trigger_skill10(); }, "../assets/buttons/attack_power.png"},
+        {"兩側射擊", [this]() { this->trigger_skill11(); }, "../assets/buttons/two_side_arrow.png"},
+        {"斜向射擊", [this]() { this->trigger_skill12(); }, "../assets/buttons/diagonal_arrow.png"},
+        
     };
     present = {
         {"加速攻擊", [this]() { this->trigger_skill5(); }, "../assets/buttons/atk_speed.png"},
@@ -218,6 +222,7 @@ void Skill_choose::trigger_skill1() {
     Logger::info("技能1被選擇：雙重射擊");
     bool_skill_double_arrow = true;
     if (giraffe) giraffe->bool_skill_double_arrow = true;
+    if (giraffe) giraffe->setAtk(-(giraffe->getAtk() * 0.1)); // 減少長頸鹿傷害的10%
     if (giraffe) giraffe->addSkill_double_arrow(); // 設置長頸鹿的雙重射擊技能
 }
 
@@ -254,7 +259,7 @@ void Skill_choose::trigger_skill5() {
 void Skill_choose::trigger_skill6() {
     Logger::info("技能6被選擇：加血");
     skill_add_hp = skill_add_hp + 1; // 增加血量
-    if (giraffe) giraffe-> addMaxHP(200); // 設置長頸鹿的血量
+    if (giraffe) giraffe-> addMaxHP(120); // 設置長頸鹿的血量
 }
 
 void Skill_choose::trigger_skill7() {
@@ -277,7 +282,21 @@ void Skill_choose::trigger_skill9() {
     removeSkill("燃燒箭矢");
 }
 
+void Skill_choose::trigger_skill10() {
+    Logger::info("技能10被選擇：攻擊力提升");
+    if (giraffe) giraffe->setAtk(20); // 增加長頸鹿的攻擊力
+}
+void Skill_choose::trigger_skill11() {
+    Logger::info("技能11被選擇：兩側射擊");
+    if (giraffe) giraffe->right_left_side_arrow = 1; // 設置長頸鹿的兩側射擊技能
+    removeSkill("兩側射擊");
+}
 
+void Skill_choose::trigger_skill12() {
+    Logger::info("技能12被選擇：斜向射擊");
+    if (giraffe) giraffe->incline_arrow = 1; // 設置長頸鹿的斜向射擊技能
+    removeSkill("斜向射擊");
+}
 
 void Skill_choose::end() {
     // 結束技能選擇

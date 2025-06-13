@@ -44,6 +44,7 @@ void App::Start() {
         m_Enemy2->SetZIndex(5);
         m_Enemy2->Start(glm::vec2(100, 100)); // 初始化敵人的位置
         m_Enemy2->setWall(wall);
+        m_Enemy2->setHP(-100); // 設定敵人的血量
     
         m_Enemy->SetDrawable(
             std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
@@ -362,7 +363,7 @@ void App::Boss_Update() {
                 m_Root.AddChild(m_Boss_1_4_2);
             } else if (enemy_it->getFinal_wish() == "Add player's hp") {
                 Logger::info("Adding player's HP");
-                m_Giraffe->addHP(10);
+                m_Giraffe->addHP(15);
                 Logger::info("Giraffe HP: " + std::to_string(m_Giraffe->getHP()));
             } else if (enemy_it->getFinal_wish() == "Add player's 200 hp") {
                 Logger::info("Adding player's 200 HP");

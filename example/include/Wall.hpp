@@ -29,6 +29,11 @@ public:
     bool nextlevel_collision_check(glm::vec2 coordinate);
     bool collision_check(glm::vec2 coordinate,std::string username = ""); // 判斷是否碰撞
 
+    float getLeftBoundary() const { return left_boundary; } // 獲取左邊界
+    float getRightBoundary() const { return right_boundary; } // 獲取右邊界
+    float getTopBoundary() const { return up_boundary; } // 獲取上邊界
+    float getBottomBoundary() const { return down_boundary; } // 獲取下邊界
+
 private:
     void set_Square_Coordinate(glm::vec2 coordinate_left_bottom, glm::vec2 coordinate_right_top);
     void set_Circle_Coordinate(glm::vec2 coordinate_center, float radius);

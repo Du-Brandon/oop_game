@@ -23,7 +23,7 @@ public:
     void setTarget(std::shared_ptr<Giraffe> giraffe); // 設置目標(玩家)
     void setWall(std::shared_ptr<Wall> wall); // 設置射箭的牆壁
 
-    void Start(std::string image_path = "", glm::vec2 direction = glm::vec2(0.0f,0.0f),std::string enemy_arrow_name = ""); // 設置箭的圖片和方向
+    void Start(std::string image_path = "", glm::vec2 direction = glm::vec2(0.0f,0.0f),std::string enemy_arrow_name = "",bool rebound = false); // 設置箭的圖片和方向
     void Update();
     void Update(bool ignorewall);
     void Setspeed(float speed); // 設置箭的速度
@@ -47,5 +47,7 @@ private:
     glm::vec2 m_Direction; // 箭的方向
 
     bool m_ShouldDelete; // 添加這個成員變數來指示箭是否應該被刪除
+    bool m_Rebound = false; // 是否反彈
+    int m_LifeCycle = 0; // 生命週期
 };
 

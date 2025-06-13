@@ -84,6 +84,88 @@ void Arrow::Start_b(std::string skill_name){
         // 初始化箭的旋轉角度
         rotation =atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
     }
+    else if (skill_name == "right_arrow") {
+        this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
+        this -> SetZIndex(6);
+
+        m_ShouldDelete = false;
+
+        // 方向轉90度
+        m_Direction = glm::normalize(glm::vec2(m_EnemyCoordinate.x - m_PlayerCoordinate.x, m_EnemyCoordinate.y - m_PlayerCoordinate.y));
+        m_Direction = glm::vec2(-m_Direction.y, m_Direction.x); // 逆時針旋轉90度
+
+        // 初始化箭的位置
+        pos = m_PlayerCoordinate;
+        
+        // 初始化箭的大小
+        scale = {0.03f, 0.03f};
+
+        // 初始化箭的旋轉角度
+        rotation = atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
+    }
+    else if (skill_name == "left_arrow") {
+        this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
+        this -> SetZIndex(6);
+
+        m_ShouldDelete = false;
+
+        // 方向轉-90度
+        m_Direction = glm::normalize(glm::vec2(m_EnemyCoordinate.x - m_PlayerCoordinate.x, m_EnemyCoordinate.y - m_PlayerCoordinate.y));
+        m_Direction = glm::vec2(m_Direction.y, -m_Direction.x); // 順時針旋轉90度
+
+        // 初始化箭的位置
+        pos = m_PlayerCoordinate;
+        
+        // 初始化箭的大小
+        scale = {0.03f, 0.03f};
+
+        // 初始化箭的旋轉角度
+        rotation = atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
+    
+    }
+    else if (skill_name == "incline_arrow_1") {
+        this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
+        this -> SetZIndex(6);
+
+        m_ShouldDelete = false;
+
+        // 方向轉30度
+        m_Direction = glm::normalize(glm::vec2(m_EnemyCoordinate.x - m_PlayerCoordinate.x, m_EnemyCoordinate.y - m_PlayerCoordinate.y));
+        float angle = 3.1415926f / 6; // 30度轉弧度
+        m_Direction = glm::vec2(m_Direction.x * cos(angle) - m_Direction.y * sin(angle), 
+                                m_Direction.x * sin(angle) + m_Direction.y * cos(angle));
+
+        // 初始化箭的位置
+        pos = m_PlayerCoordinate;
+        
+        // 初始化箭的大小
+        scale = {0.03f, 0.03f};
+
+        // 初始化箭的旋轉角度
+        rotation = atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
+    }
+    else if (skill_name == "incline_arrow_2") {
+        this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
+        this -> SetZIndex(6);
+
+        m_ShouldDelete = false;
+
+        // 方向轉-30度
+        m_Direction = glm::normalize(glm::vec2(m_EnemyCoordinate.x - m_PlayerCoordinate.x, m_EnemyCoordinate.y - m_PlayerCoordinate.y));
+        float angle = -3.1415926f / 6; // -30度轉弧度
+        m_Direction = glm::vec2(m_Direction.x * cos(angle) - m_Direction.y * sin(angle), 
+                                m_Direction.x * sin(angle) + m_Direction.y * cos(angle));
+
+        // 初始化箭的位置
+        pos = m_PlayerCoordinate;
+        
+        // 初始化箭的大小
+        scale = {0.03f, 0.03f};
+
+        // 初始化箭的旋轉角度
+        rotation = atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
+    }
+
 }
 
 void Arrow::Update() {

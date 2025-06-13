@@ -75,6 +75,14 @@ void Giraffe::Update() {
     if ((m_Wall->boundary_collision_check_updown(pos+dir_Down * 9.0f) == "down" )|| (m_Wall->boundary_collision_check_updown(pos+dir_Down * 9.0f) == "ud")) {
         dir_Down.y *= 0;
     }
+
+    if (m_Wall->boundary_collision_check_updown(pos) == "ud" and m_Wall->boundary_collision_check_leftright(pos) == "lr") {
+        dir_Right.x = 1;
+        dir_Left.x = 1;
+        dir_Up.y = 1;
+        dir_Down.y = 1;
+    }
+
     // // sonarcloud called it redundant, but ms_t = float is just a coincidence.
 
     Util::Transform deltaTransform_Right{
@@ -259,7 +267,58 @@ void Giraffe::ShootArrow(int double_arrow , bool rebound_arrow) {
         m_Arrows.push_back(back_arrow); // 將箭存儲到向量中
         this->AddChild(back_arrow);
     }
-    
+
+    if (right_left_side_arrow >=1){
+        auto right_arrow = std::make_shared<Arrow>();
+        if (!right_arrow) {
+            Logger::error("Failed to create right arrow in Giraffe::ShootArrow");
+            return;
+        }
+        right_arrow->setTarget(shared_from_this());
+        right_arrow->setTarget(checkNearestEnemy());
+        right_arrow->setWall(m_Wall);
+        right_arrow->Start_b("right_arrow");
+        m_Arrows.push_back(right_arrow); // 將箭存儲到向量中
+        this->AddChild(right_arrow);
+
+        auto left_arrow = std::make_shared<Arrow>();
+        if (!left_arrow) {
+            Logger::error("Failed to create left arrow in Giraffe::ShootArrow");
+            return;
+        }
+        left_arrow->setTarget(shared_from_this());
+        left_arrow->setTarget(checkNearestEnemy());
+        left_arrow->setWall(m_Wall);
+        left_arrow->Start_b("left_arrow");
+        m_Arrows.push_back(left_arrow); // 將箭存儲到向量中
+        this->AddChild(left_arrow);
+    }
+    if (incline_arrow >= 1) {
+        auto incline_arrow_1 = std::make_shared<Arrow>();
+        if (!incline_arrow_1) {
+            Logger::error("Failed to create incline arrow in Giraffe::ShootArrow");
+            return;
+        }
+        incline_arrow_1->setTarget(shared_from_this());
+        incline_arrow_1->setTarget(checkNearestEnemy());
+        incline_arrow_1->setWall(m_Wall);
+        incline_arrow_1->Start_b("incline_arrow_1");
+        m_Arrows.push_back(incline_arrow_1); // 將箭存儲到向量中
+        this->AddChild(incline_arrow_1);
+
+        auto incline_arrow_2 = std::make_shared<Arrow>();
+        if (!incline_arrow_2) {
+            Logger::error("Failed to create incline arrow in Giraffe::ShootArrow");
+            return;
+        }
+        incline_arrow_2->setTarget(shared_from_this());
+        incline_arrow_2->setTarget(checkNearestEnemy());
+        incline_arrow_2->setWall(m_Wall);
+        incline_arrow_2->Start_b("incline_arrow_2");
+        m_Arrows.push_back(incline_arrow_2); // 將箭存儲到向量中
+        this->AddChild(incline_arrow_2);
+    }
+
     m_Arrows.push_back(arrow); // 將箭存儲到向量中
     this->AddChild(arrow);
 }
