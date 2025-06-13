@@ -35,14 +35,14 @@ void Giraffe::Start() {
 
     m_Giraffe_atk_Text->Start("atk", glm::vec2(-400, -300), shared_from_this());
     m_Giraffe_hp_Text->Start("hp", glm::vec2(-200, -300), shared_from_this());
-    m_Giraffe_if_invincible_Text->Start("是否無敵", glm::vec2(00, -300), shared_from_this());
+    // m_Giraffe_if_invincible_Text->Start("是否無敵", glm::vec2(00, -300), shared_from_this());
     m_GiraffeTexts.push_back(m_Giraffe_atk_Text);
     m_GiraffeTexts.push_back(m_Giraffe_hp_Text);
-    m_GiraffeTexts.push_back(m_Giraffe_if_invincible_Text);
+    // m_GiraffeTexts.push_back(m_Giraffe_if_invincible_Text);
 
     this->AddChild(m_Giraffe_atk_Text);
     this->AddChild(m_Giraffe_hp_Text);
-    this->AddChild(m_Giraffe_if_invincible_Text);
+    // this->AddChild(m_Giraffe_if_invincible_Text);
 }
 
 void Giraffe::Update() {
