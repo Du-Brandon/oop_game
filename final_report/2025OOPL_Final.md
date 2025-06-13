@@ -42,8 +42,8 @@ graph TD
     小怪 --> 敵人弓箭(enemyarrow)
     boss --> 敵人弓箭(enemyarrow)
 
-    EXP --> 玩家
-    玩家狀態 --> 玩家
+    EXP <-- 玩家
+    玩家狀態 <-- 玩家
 
     HP --> 玩家
     HP --> 敵人
