@@ -48,6 +48,12 @@ graph TD
     玩家 --> HP
     敵人 --> HP
 
+    wall --> 角色
+    wall --> 弓箭
+    wall --> 敵人
+    wall --> 敵人弓箭(enemyarrow)
+
+
 ```
 ### 程式技術
 
