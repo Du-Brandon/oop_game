@@ -31,6 +31,18 @@
 ### 程式架構
 ```mermaid
 graph TD
+    Update --> 是否升級
+    Update --> Boss關邏輯
+    Update --> 小怪關邏輯
+    Update --> 是否碰到天使
+
+    是否升級 -->  選技能
+    是否碰到天使 --> 選技能
+
+```
+
+```mermaid
+graph TD
     角色 --> 玩家
     角色 --> 敵人
 
