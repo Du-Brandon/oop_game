@@ -60,8 +60,8 @@ graph TD
     玩家 --> EXP
     玩家 --> 玩家狀態
 
-    wall --> 角色
     wall --> 弓箭
+    wall --> 角色
     wall --> 敵人
     wall --> 敵人弓箭(enemyarrow)
 
