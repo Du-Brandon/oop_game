@@ -9,7 +9,7 @@ void Enemy_5::Start(glm::vec2 coordinate) {
     m_HP = 200;
     exp_supply = 15;
     this->SetZIndex(5);
-    this->SetDrawable(std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+    this->SetDrawable(std::make_shared<Util::Image>("../assets/sprites/enemy5.png"));
     
     final_wish = "Add player's hp";
     name = "Enemy_5";

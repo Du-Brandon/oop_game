@@ -12,7 +12,7 @@ void Boss_1_2::Start(glm::vec2 coordinate) {
     dir = randomMove('z'); // 長頸鹿的移動方向
 
     pos = coordinate;
-    scale = {0.2f, 0.2f};
+    scale = {0.25f, 0.25f};
 
     move_speed = 7.0f;
     enemy_hp_start();

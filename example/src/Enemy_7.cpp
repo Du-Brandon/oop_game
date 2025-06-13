@@ -13,7 +13,7 @@
 void Enemy_7::Start(glm::vec2 coordinate) {
     // Logger::info("Enemy_7 Start");
     this->SetDrawable(
-    std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+    std::make_shared<Util::Image>("../assets/sprites/enemy7.png"));
     this->SetZIndex(5);
 
     m_HP = 400;

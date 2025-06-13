@@ -9,7 +9,7 @@ void Enemy_4::Start(glm::vec2 coordinate) {
     move_speed = 1.0f;
     m_HP = 250;
     this->SetZIndex(5);
-    this->SetDrawable(std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+    this->SetDrawable(std::make_shared<Util::Image>("../assets/sprites/enemy4.png"));
 
     enemy_hp_start();
 }

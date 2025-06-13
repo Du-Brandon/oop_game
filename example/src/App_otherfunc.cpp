@@ -160,9 +160,6 @@ void App::ValidTask() {
         wall->setwall(glm::vec2 (-462.523f, -119.287f) , glm::vec2(267.459f , -85.414f));
         
         std::shared_ptr<Angel> m_Angel = std::make_shared<Angel>();
-        m_Angel->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/angel.png"));
-        m_Angel->SetZIndex(10);
         m_Angel->Start(glm::vec2(200, 0)); // 初始化敵人的位置
         m_Angel->setWall(wall);
         m_Enemies.push_back(m_Angel);
@@ -576,9 +573,6 @@ void App::ValidTask() {
         wall->setwall(glm::vec2(14.567785, -184.639801), glm::vec2(104.600082, -59.154007));
 
         std::shared_ptr<Angel> m_Angel = std::make_shared<Angel>();
-        m_Angel->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/angel.png"));
-        m_Angel->SetZIndex(10);
         m_Angel->Start(glm::vec2(140, 0)); // 初始化敵人的位置
         m_Angel->setWall(wall);
         m_Enemies.push_back(m_Angel);
@@ -874,9 +868,6 @@ void App::ValidTask() {
         wall->setwall(glm::vec2(-481.154449, 120.486084), glm::vec2(197.545319, 154.800262));
         
         std::shared_ptr<Angel> m_Angel = std::make_shared<Angel>();
-        m_Angel->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/angel.png"));
-        m_Angel->SetZIndex(10);
         m_Angel->Start(glm::vec2(140, 0)); // 初始化敵人的位置
         m_Angel->setWall(wall);
         m_Enemies.push_back(m_Angel);

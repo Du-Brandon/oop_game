@@ -3,8 +3,12 @@
 #include <glm/geometric.hpp>
 
 void Angel::Start(glm::vec2 coordinate) {
+    this->SetDrawable(
+        std::make_shared<Util::Image>("../assets/sprites/999.png"));
+    this->SetZIndex(10);
+
     pos = coordinate;
-    scale = {0.5f, 0.5f};
+    scale = {0.5f * (260.0/1200.0), 0.5f * (224.0/1200.0)};
     move_speed = 0.0f;
 
     m_atk = 0;

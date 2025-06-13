@@ -1,118 +1,148 @@
-[2025-06-13 13:49:20] [INFO] Game start
-[2025-06-13 13:49:21] [INFO] First level
-[2025-06-13 13:49:21] [INFO] exp_pic Start
-[2025-06-13 13:49:22] [INFO] Collision detected! Giraffe HP: 249
-[2025-06-13 13:49:22] [INFO] Collision detected! Giraffe HP: 248
-[2025-06-13 13:49:22] [INFO] Collision detected! Giraffe HP: 247
-[2025-06-13 13:49:22] [INFO] Collision detected! Giraffe HP: 246
-[2025-06-13 13:49:22] [INFO] Collision detected! Giraffe HP: 245
-[2025-06-13 13:49:22] [INFO] Collision detected! Giraffe HP: 244
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 243
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 242
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 241
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 240
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 239
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 238
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 237
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 236
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 235
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 234
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 233
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 232
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 231
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 230
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 229
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 228
-[2025-06-13 13:49:23] [INFO] Collision detected! Giraffe HP: 227
-[2025-06-13 13:49:24] [INFO] Collision detected! Giraffe HP: 226
-[2025-06-13 13:49:24] [INFO] Collision detected! Giraffe HP: 225
-[2025-06-13 13:49:24] [INFO] Collision detected! Giraffe HP: 224
-[2025-06-13 13:49:24] [INFO] Collision detected! Giraffe HP: 223
-[2025-06-13 13:49:24] [INFO] Collision detected! Giraffe HP: 222
-[2025-06-13 13:49:24] [INFO] Collision detected! Giraffe HP: 221
-[2025-06-13 13:49:24] [INFO] Collision detected! Giraffe HP: 220
-[2025-06-13 13:49:24] [INFO] Collision detected! Giraffe HP: 219
-[2025-06-13 13:49:24] [INFO] Collision detected! Giraffe HP: 218
-[2025-06-13 13:49:25] [INFO] Collision detected! Giraffe HP: 217
-[2025-06-13 13:49:25] [INFO] Collision detected! Giraffe HP: 216
-[2025-06-13 13:49:25] [INFO] Collision detected! Giraffe HP: 215
-[2025-06-13 13:49:25] [INFO] Collision detected! Giraffe HP: 214
-[2025-06-13 13:49:25] [INFO] Collision detected! Giraffe HP: 213
-[2025-06-13 13:49:25] [INFO] Collision detected! Giraffe HP: 212
-[2025-06-13 13:49:25] [INFO] Collision detected! Giraffe HP: 211
-[2025-06-13 13:49:25] [INFO] Collision detected! Giraffe HP: 210
-[2025-06-13 13:49:25] [INFO] Collision detected! Giraffe HP: 209
-[2025-06-13 13:49:25] [INFO] Collision detected! Giraffe HP: 208
-[2025-06-13 13:49:25] [INFO] Collision detected! Giraffe HP: 207
-[2025-06-13 13:49:25] [INFO] Collision detected! Giraffe HP: 206
-[2025-06-13 13:49:26] [INFO] Dark_pic Start
-[2025-06-13 13:49:26] [INFO] 技能選擇界面已啟動
-[2025-06-13 13:49:28] [INFO] Button clicked: 反彈箭矢
-[2025-06-13 13:49:28] [INFO] 技能2被選擇：反彈箭矢
-[2025-06-13 13:49:28] [INFO] 技能已刪除：反彈箭矢
-[2025-06-13 13:49:29] [INFO] Now exp 20
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 205
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 204
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 203
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 202
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 201
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 200
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 199
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 198
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 197
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 196
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 195
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 194
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 193
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 192
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 191
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 190
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 189
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 188
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 187
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 186
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 185
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 184
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 183
-[2025-06-13 13:49:30] [INFO] Collision detected! Giraffe HP: 182
-[2025-06-13 13:49:31] [INFO] 用外掛讓攻擊變成145
-[2025-06-13 13:49:31] [INFO] 用外掛讓攻擊變成245
-[2025-06-13 13:49:32] [INFO] 用外掛讓攻擊變成345
-[2025-06-13 13:49:32] [INFO] 用外掛讓攻擊變成445
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 181
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 180
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 179
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 178
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 177
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 176
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 175
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 174
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 173
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 172
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 171
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 170
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 169
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 168
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 167
-[2025-06-13 13:49:33] [INFO] Collision detected! Giraffe HP: 166
-[2025-06-13 13:49:35] [INFO] Now exp 50
-[2025-06-13 13:49:40] [INFO] Now exp 90
-[2025-06-13 13:49:50] [INFO] Dark_pic Start
-[2025-06-13 13:49:50] [INFO] 技能選擇界面已啟動
-[2025-06-13 13:49:52] [INFO] Button clicked: 背向射擊
-[2025-06-13 13:49:52] [INFO] 技能8被選擇：背向射擊
-[2025-06-13 13:49:52] [INFO] 技能已刪除：背向射擊
-[2025-06-13 13:49:54] [INFO] Now exp 100
-[2025-06-13 13:50:50] [INFO] Angel skill choose triggered.
-[2025-06-13 13:50:50] [INFO] Dark_pic Start
-[2025-06-13 13:50:50] [INFO] 禮物技能選擇界面已啟動
-[2025-06-13 13:50:51] [INFO] Button clicked: 加速攻擊
-[2025-06-13 13:50:51] [INFO] 技能5被選擇：加速攻擊
-[2025-06-13 13:50:51] [WARNING] Attack speed cannot be less than 0.3 in Giraffe::setAtk_speed
-[2025-06-13 13:50:52] [INFO] Now exp 100
-[2025-06-13 13:50:52] [INFO] Giraffe shoot back arrow
-[2025-06-13 13:50:53] [INFO] Giraffe shoot back arrow
-[2025-06-13 13:50:54] [INFO] Giraffe shoot back arrow
-[2025-06-13 13:50:59] [INFO] Now exp 130
-[2025-06-13 13:51:00] [INFO] Giraffe shoot back arrow
-[2025-06-13 13:51:01] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:07:18] [INFO] Game start
+[2025-06-14 03:07:30] [INFO] First level
+[2025-06-14 03:07:30] [INFO] exp_pic Start
+[2025-06-14 03:07:31] [INFO] Collision detected! Giraffe HP: 249
+[2025-06-14 03:07:31] [INFO] Collision detected! Giraffe HP: 248
+[2025-06-14 03:07:31] [INFO] Collision detected! Giraffe HP: 247
+[2025-06-14 03:07:31] [INFO] Collision detected! Giraffe HP: 246
+[2025-06-14 03:07:31] [INFO] Collision detected! Giraffe HP: 245
+[2025-06-14 03:07:31] [INFO] Collision detected! Giraffe HP: 244
+[2025-06-14 03:07:31] [INFO] Collision detected! Giraffe HP: 243
+[2025-06-14 03:07:31] [INFO] Collision detected! Giraffe HP: 242
+[2025-06-14 03:07:31] [INFO] Collision detected! Giraffe HP: 241
+[2025-06-14 03:07:31] [INFO] Collision detected! Giraffe HP: 240
+[2025-06-14 03:07:32] [INFO] 用外掛讓攻擊變成145
+[2025-06-14 03:07:32] [INFO] 用外掛讓攻擊變成245
+[2025-06-14 03:07:32] [INFO] 用外掛讓攻擊變成345
+[2025-06-14 03:07:33] [INFO] 用外掛讓攻擊變成445
+[2025-06-14 03:07:35] [INFO] Dark_pic Start
+[2025-06-14 03:07:35] [INFO] 技能選擇界面已啟動
+[2025-06-14 03:07:46] [INFO] Button clicked: 反彈箭矢
+[2025-06-14 03:07:46] [INFO] 技能2被選擇：反彈箭矢
+[2025-06-14 03:07:46] [INFO] 技能已刪除：反彈箭矢
+[2025-06-14 03:07:47] [INFO] Now exp 20
+[2025-06-14 03:07:51] [INFO] Now exp 50
+[2025-06-14 03:07:56] [INFO] Now exp 90
+[2025-06-14 03:08:00] [INFO] Dark_pic Start
+[2025-06-14 03:08:00] [INFO] 技能選擇界面已啟動
+[2025-06-14 03:08:02] [INFO] Button clicked: 背向射擊
+[2025-06-14 03:08:02] [INFO] 技能8被選擇：背向射擊
+[2025-06-14 03:08:02] [INFO] 技能已刪除：背向射擊
+[2025-06-14 03:09:17] [INFO] Now exp 100
+[2025-06-14 03:09:18] [INFO] Angel skill choose triggered.
+[2025-06-14 03:09:18] [INFO] Dark_pic Start
+[2025-06-14 03:09:18] [INFO] 禮物技能選擇界面已啟動
+[2025-06-14 03:09:20] [INFO] Button clicked: 提升最大血量
+[2025-06-14 03:09:20] [INFO] 技能6被選擇：加血
+[2025-06-14 03:09:21] [INFO] Now exp 100
+[2025-06-14 03:09:21] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:22] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:23] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:25] [INFO] Ground_Spikes collision detected! Giraffe HP: 359
+[2025-06-14 03:09:25] [INFO] Ground_Spikes collision detected! Giraffe HP: 358
+[2025-06-14 03:09:25] [INFO] Ground_Spikes collision detected! Giraffe HP: 357
+[2025-06-14 03:09:25] [INFO] Ground_Spikes collision detected! Giraffe HP: 356
+[2025-06-14 03:09:25] [INFO] Ground_Spikes collision detected! Giraffe HP: 355
+[2025-06-14 03:09:25] [INFO] Now exp 130
+[2025-06-14 03:09:26] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:27] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:30] [INFO] Now exp 150
+[2025-06-14 03:09:31] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:32] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:33] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:34] [INFO] Now exp 190
+[2025-06-14 03:09:35] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:36] [INFO] Adding player's HP
+[2025-06-14 03:09:36] [INFO] Giraffe HP: 370
+[2025-06-14 03:09:36] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:37] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:38] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:40] [INFO] Now exp 245
+[2025-06-14 03:09:41] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:41] [INFO] Spawning two Boss_1_2
+[2025-06-14 03:09:41] [INFO] Set enemy visibility to false for enemy: Boss_1_1
+[2025-06-14 03:09:42] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:42] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:43] [INFO] Spawning two Boss_1_3
+[2025-06-14 03:09:43] [INFO] Add two Boss_1_3 finish
+[2025-06-14 03:09:43] [INFO] Set enemy visibility to false for enemy: Boss_1_2
+[2025-06-14 03:09:43] [INFO] Spawning two Boss_1_4
+[2025-06-14 03:09:43] [INFO] Set enemy visibility to false for enemy: Boss_1_3
+[2025-06-14 03:09:43] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:44] [INFO] Spawning two Boss_1_4
+[2025-06-14 03:09:44] [INFO] Set enemy visibility to false for enemy: Boss_1_3
+[2025-06-14 03:09:44] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:45] [INFO] Adding player's HP
+[2025-06-14 03:09:45] [INFO] Giraffe HP: 370
+[2025-06-14 03:09:45] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-06-14 03:09:45] [INFO] Adding player's HP
+[2025-06-14 03:09:45] [INFO] Giraffe HP: 370
+[2025-06-14 03:09:45] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-06-14 03:09:45] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:45] [INFO] Collision detected! Giraffe HP: 369
+[2025-06-14 03:09:46] [INFO] Collision detected! Giraffe HP: 368
+[2025-06-14 03:09:46] [INFO] Collision detected! Giraffe HP: 367
+[2025-06-14 03:09:46] [INFO] Collision detected! Giraffe HP: 366
+[2025-06-14 03:09:46] [INFO] Collision detected! Giraffe HP: 365
+[2025-06-14 03:09:46] [INFO] Collision detected! Giraffe HP: 364
+[2025-06-14 03:09:46] [INFO] Collision detected! Giraffe HP: 363
+[2025-06-14 03:09:46] [INFO] Adding player's HP
+[2025-06-14 03:09:46] [INFO] Giraffe HP: 370
+[2025-06-14 03:09:46] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-06-14 03:09:46] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:47] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:47] [INFO] Spawning two Boss_1_3
+[2025-06-14 03:09:47] [INFO] Add two Boss_1_3 finish
+[2025-06-14 03:09:47] [INFO] Set enemy visibility to false for enemy: Boss_1_2
+[2025-06-14 03:09:48] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:48] [INFO] Spawning two Boss_1_4
+[2025-06-14 03:09:48] [INFO] Set enemy visibility to false for enemy: Boss_1_3
+[2025-06-14 03:09:48] [INFO] Spawning two Boss_1_4
+[2025-06-14 03:09:48] [INFO] Set enemy visibility to false for enemy: Boss_1_3
+[2025-06-14 03:09:49] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:49] [INFO] Adding player's HP
+[2025-06-14 03:09:49] [INFO] Giraffe HP: 370
+[2025-06-14 03:09:49] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-06-14 03:09:50] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:50] [INFO] Adding player's HP
+[2025-06-14 03:09:50] [INFO] Giraffe HP: 370
+[2025-06-14 03:09:50] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 369
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 368
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 367
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 366
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 365
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 364
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 363
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 362
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 361
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 360
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 359
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 358
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 357
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 356
+[2025-06-14 03:09:50] [INFO] Collision detected! Giraffe HP: 355
+[2025-06-14 03:09:51] [INFO] Collision detected! Giraffe HP: 354
+[2025-06-14 03:09:51] [INFO] Collision detected! Giraffe HP: 353
+[2025-06-14 03:09:51] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:51] [INFO] Adding player's HP
+[2025-06-14 03:09:51] [INFO] Giraffe HP: 368
+[2025-06-14 03:09:51] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-06-14 03:09:51] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:52] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:53] [INFO] Collision detected! Giraffe HP: 367
+[2025-06-14 03:09:53] [INFO] Collision detected! Giraffe HP: 366
+[2025-06-14 03:09:53] [INFO] Collision detected! Giraffe HP: 365
+[2025-06-14 03:09:53] [INFO] Collision detected! Giraffe HP: 364
+[2025-06-14 03:09:53] [INFO] Collision detected! Giraffe HP: 363
+[2025-06-14 03:09:53] [INFO] Collision detected! Giraffe HP: 362
+[2025-06-14 03:09:53] [INFO] Collision detected! Giraffe HP: 361
+[2025-06-14 03:09:53] [INFO] Giraffe shoot back arrow
+[2025-06-14 03:09:54] [INFO] Adding player's HP
+[2025-06-14 03:09:54] [INFO] Giraffe HP: 370
+[2025-06-14 03:09:54] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-06-14 03:09:54] [INFO] Adding player's HP
+[2025-06-14 03:09:54] [INFO] Giraffe HP: 370
+[2025-06-14 03:09:54] [INFO] Set enemy visibility to false for enemy: Boss_1_4
+[2025-06-14 03:09:54] [INFO] Dark_pic Start
+[2025-06-14 03:09:54] [INFO] 技能選擇界面已啟動

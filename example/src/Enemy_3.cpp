@@ -11,7 +11,7 @@
 
 void Enemy_3::Start(glm::vec2 coordinate) {
     this->SetDrawable(
-    std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+    std::make_shared<Util::Image>("../assets/sprites/enemy3.png"));
     this->SetZIndex(5);
 
     pos = coordinate;
