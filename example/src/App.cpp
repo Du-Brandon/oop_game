@@ -119,6 +119,14 @@ void App::Update(){
                 }
                 break;
             }
+            case levelstatus::loss:{
+                if (Util::Input::IsKeyDown(Util::Keycode::RETURN) || Util::Input::IsKeyDown(Util::Keycode::KP_ENTER)) {
+                    Logger::info("You loss the game!");
+                    m_player_level = player_level::end;
+                    ValidTask();
+                }
+                break;
+            }
                 
             
         }
@@ -233,7 +241,7 @@ void App::normal_level_Update() {
     }
 
     if (m_Giraffe->getHP() <= 0) {
-        m_player_level = player_level::end;
+        m_player_level = player_level::loss_end;
         Logger::info("Giraffe HP is 0. Game over.");
         ValidTask();
     }
@@ -423,7 +431,7 @@ void App::Boss_Update() {
         Logger::info("m_Giraffe->set_enemy_is_empty(is_enemy_empty);");
     }
     if (m_Giraffe->getHP() <= 0) {
-        m_player_level = player_level::end;
+        m_player_level = player_level::loss_end;
         Logger::info("Giraffe HP is 0. Game over.");
         ValidTask();
     }

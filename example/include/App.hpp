@@ -66,7 +66,8 @@ private:
     enum class levelstatus {
         normal_level,
         boss_level,
-        win
+        win,
+        loss
     };
 
     enum class player_level  {
@@ -99,6 +100,7 @@ private:
         twenty_fourth_level,
         twenty_fifth_level,
         win_end,
+        loss_end,
         end
     };
 

@@ -925,7 +925,25 @@ void App::ValidTask() {
         is_enemy_empty = false;
 
         Logger::info("You win the game!");
+        break;
 
+    
+    case player_level::loss_end:
+        levelstatus = levelstatus::loss;
+        m_Background->loss_background();
+        this->removeEnemy();
+        m_Giraffe->cleararrow();
+        m_Enemies.clear();
+        m_Ground_Spikes->Start();
+
+        wall->clear();
+
+        giraffe_exp = 0;
+        m_Giraffe -> End();
+
+        is_enemy_empty = false;
+
+        Logger::info("You loss the game!");
         break;
 
     case player_level::end:

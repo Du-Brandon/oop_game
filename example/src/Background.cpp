@@ -36,6 +36,10 @@ void BackgroundImage::win_background() {
     this->SetBackground("win_background");
 }
 
+void BackgroundImage::loss_background() {
+    this->SetBackground("loss_background");
+}
+
 bool BackgroundImage::getVisible() const {
     return m_Visible;
 }
