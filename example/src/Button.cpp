@@ -27,7 +27,7 @@ void Button::Start( const std::string& name,
     this -> scale = scale; // 設定按鈕的大小
 
 }
-
+ 
 void Button::Update() {
     glm::vec2 mouse_pos = Util::Input::GetCursorPosition();	
     bool inside = IsMouseInside(mouse_pos);

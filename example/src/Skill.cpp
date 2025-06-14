@@ -225,7 +225,7 @@ void Skill_choose::trigger_skill1() {
     if (giraffe) giraffe->setAtk(-(giraffe->getAtk() * 0.1)); // 減少長頸鹿傷害的10%
     if (giraffe) giraffe->addSkill_double_arrow(); // 設置長頸鹿的雙重射擊技能
 }
-
+ 
 void Skill_choose::trigger_skill2() {
     // 觸發反彈箭矢技能
     Logger::info("技能2被選擇：反彈箭矢");
