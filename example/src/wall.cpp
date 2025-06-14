@@ -6,7 +6,7 @@
 #include "Wall.hpp"
 
 void Wall::Start(float up_boundary, float down_boundary, float left_boundary, float right_boundary , float nextleveldoorup , float nextleveldoordown) {
-    // up208 down590 left-458 right262
+    
     this->up_boundary = up_boundary;
     this->down_boundary = down_boundary;
     this->left_boundary = left_boundary;

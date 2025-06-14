@@ -83,8 +83,6 @@ void Giraffe::Update() {
         dir_Down.y = 1;
     }
 
-    // // sonarcloud called it redundant, but ms_t = float is just a coincidence.
-
     Util::Transform deltaTransform_Right{
         dir_Right * delta, 0.002F * delta,
         glm::vec2(1, 1) * (std::sin(rotation / 2) + 1.0F) * 100.0F};
@@ -97,8 +95,7 @@ void Giraffe::Update() {
     Util::Transform deltaTransform_Down{
         dir_Down * delta, 0.002F * delta,
         glm::vec2(1, 1) * (std::sin(rotation / 2) + 1.0F) * 100.0F};
-    // pos += deltaTransform.translation;
-    // rotation += deltaTransform.rotation;
+
     bool anyKeyPressed = false;
 
     if (Util::Input::IsKeyPressed(Util::Keycode::D)) {
@@ -184,7 +181,7 @@ void Giraffe::Update() {
 }
 
 void Giraffe::End() {
-    // 清理資源或進行其他必要的結束操作
+
     m_Arrows.clear();
     m_Enemies.clear();
 

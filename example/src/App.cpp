@@ -16,7 +16,6 @@
 
 void App::Start() {
     LOG_TRACE("Start");
-    // std::cout << "Start" << std::endl;
 
     if (Util::Input::IsKeyUp(Util::Keycode::ESCAPE) || Util::Input::IfExit()) {
         m_CurrentState = State::END;
@@ -55,7 +54,6 @@ void App::Start() {
         m_Background->SetBackground("test10");
 
         m_Root.AddChild(m_Giraffe);
-        // m_Root.AddChild(m_Cat);
         m_Root.AddChild(m_Enemy);
         m_Root.AddChild(m_Enemy2);
 
@@ -73,8 +71,6 @@ void App::Start() {
 }
 
 void App::Update(){
-
-    // ZoneScopedN("App::Update");
 
     std::cout << "Update" << std::endl;
 
@@ -99,7 +95,6 @@ void App::Update(){
     }
 
     if (skill_choose == false && angel_skill_choose == false) {
-        // m_Dark_pic->Disappear();
         
         switch (levelstatus) {
             case levelstatus::normal_level:{
@@ -127,8 +122,7 @@ void App::Update(){
                 }
                 break;
             }
-                
-            
+
         }
     }
     else if (skill_choose == true && angel_skill_choose == false) {

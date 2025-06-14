@@ -150,6 +150,7 @@ set(EXAMPLE_FILES
     ${EXAMPLE_DIR}/include/Giraffe.hpp
     ${EXAMPLE_DIR}/include/Ground_Spikes.hpp
     ${EXAMPLE_DIR}/include/Hp.hpp
+    ${EXAMPLE_DIR}/include/log_my.hpp
     ${EXAMPLE_DIR}/include/Skill.hpp
     ${EXAMPLE_DIR}/include/Wall.hpp
     # ../public/tracy/Tracy.hpp

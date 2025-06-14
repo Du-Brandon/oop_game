@@ -35,10 +35,6 @@ void Angel::Update() {
 
 }
 
-// bool Angel::shouldTriggerSkillChoose() const {
-//     return m_Triggered; 
-// }
-
 bool Angel::getVisible() const {
     if (m_Visible == true){
         return true;
