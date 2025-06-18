@@ -10,6 +10,8 @@
 
 #include "config.hpp"
 
+// 快龍就是魯魯咪
+
 glm::vec2 Enemy::coordinate() {
     return pos;
 }
