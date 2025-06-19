@@ -330,7 +330,7 @@ void App::ValidTask() {
         wall->clear();
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
         wall->setwall(glm::vec2(202.875,26.502) , glm::vec2(237.063,192.0));
-        wall->setwall(glm::vec2(195.252,-188.736) , glm::vec2(245.433,-53.9041));
+        wall->setwall(glm::vec2(195.252,-192.736) , glm::vec2(245.433,-53.9041));
         wall->setwall(glm::vec2(70.5935,-60.51) , glm::vec2(112.325,48.3685));
         wall->setwall(glm::vec2(-355.065,23.7796) , glm::vec2(-255.647,118.883),"lake");
         wall->setwall(glm::vec2(-351.156,-126.621) , glm::vec2(-257.874,-25.9397),"lake");
@@ -449,7 +449,7 @@ void App::ValidTask() {
         wall->Start(235.0f, -240.0f, -470.0f, 202.0f, 24.0f, -26.0f);
         wall->setwall(glm::vec2(-432.511230, 160.448608), glm::vec2(-357.666656, 203.746307));
         wall->setwall(glm::vec2(-441.663910, -201.050659), glm::vec2(-360.018341, -158.928146));
-        wall->setwall(glm::vec2(-470.624908, -235.643326), glm::vec2(-399.687744, -202.771912));
+        // wall->setwall(glm::vec2(-470.624908, -235.643326), glm::vec2(-399.687744, -202.771912));
         wall->setwall(glm::vec2(-292.665344, -60.857697), glm::vec2(-216.186417, 64.015060), "lake");
         wall->setwall(glm::vec2(-70.850838, 28.361452), glm::vec2(15.405961, 147.361252), "lake");
         wall->setwall(glm::vec2(-68.163490, -148.589462), glm::vec2(6.261861, -29.998169), "lake");

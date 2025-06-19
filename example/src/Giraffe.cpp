@@ -22,7 +22,7 @@ void Giraffe::Start() {
         std::make_shared<Util::Image>("../assets/sprites/sticker.png"));
     this->SetZIndex(6);
     scale = glm::vec2(0.25f, 0.25f);
-    pos = glm::vec2(-100, 0);
+    pos = glm::vec2(-420, 0);
 
     start = std::chrono::high_resolution_clock::now();
     arrowCooldown = std::chrono::high_resolution_clock::now(); // 初始化 arrowCooldown
