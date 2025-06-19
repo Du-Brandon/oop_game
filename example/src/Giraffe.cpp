@@ -14,6 +14,8 @@
 
 #include "config.hpp"
 
+// Giraffe = 玩家，不要問為什麼
+
 void Giraffe::Start() {
 
     this->SetDrawable(
