@@ -279,10 +279,12 @@ void App::ValidTask() {
 
         wall->clear();
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
-        wall->setwall(glm::vec2(-378.354,79.6777) , glm::vec2(234.131, 122.405),"lake");
-        wall->setwall(glm::vec2(-463.447,86.7026) , glm::vec2(-378.354, 121.696),"");
+        
+        wall->setwall(glm::vec2(-465.447,86.7026) , glm::vec2(-378.354, 121.696));
+        wall->setwall(glm::vec2(-465.084,-134.085) , glm::vec2(-381.412, -92.4253));
+        wall->setwall(glm::vec2(-378.354,86.7026) , glm::vec2(234.131, 122.405),"lake");
         wall->setwall(glm::vec2(-381.412,-132.446) , glm::vec2(234.358, -90.0606),"lake");
-        wall->setwall(glm::vec2(-458.084,-134.085) , glm::vec2(-381.412, -92.4253),"");
+        
         
         std::shared_ptr<Enemy_4> m_Enemy16 = std::make_shared<Enemy_4>();
         m_Enemy16->Start(glm::vec2(123.611,-70)); // 初始化敵人的位置
@@ -327,7 +329,7 @@ void App::ValidTask() {
 
         wall->clear();
         wall->Start(192.0f, -192.0f, -465.0f, 267.0f, 32.0f, -19.0f);
-        wall->setwall(glm::vec2(202.875,26.502) , glm::vec2(237.063,184.1));
+        wall->setwall(glm::vec2(202.875,26.502) , glm::vec2(237.063,192.0));
         wall->setwall(glm::vec2(195.252,-188.736) , glm::vec2(245.433,-53.9041));
         wall->setwall(glm::vec2(70.5935,-60.51) , glm::vec2(112.325,48.3685));
         wall->setwall(glm::vec2(-355.065,23.7796) , glm::vec2(-255.647,118.883),"lake");
@@ -486,12 +488,12 @@ void App::ValidTask() {
         wall->clear();
         wall->Start(250.0f, -250.0f, -490.0f, 195.0f, 30.0f, -30.0f);
         wall->setwall(glm::vec2(-355.221863, 74.320007), glm::vec2(-269.014252, 252.169403));
-        wall->setwall(glm::vec2(-496.496490, 74.320007), glm::vec2(-368.915863, 248.594299), "lake");
-        wall->setwall(glm::vec2(-29.686546, 66.783104), glm::vec2(53.478371, 244.742615));
-        wall->setwall(glm::vec2(-162.399368, 76.539131), glm::vec2(-54.109024, 244.185028), "lake");
-        wall->setwall(glm::vec2(-165.320816, -248.419937), glm::vec2(-88.286804, -72.124863));
-        wall->setwall(glm::vec2(-297.598572, -248.793655), glm::vec2(-188.474152, -82.476753), "lake");
         wall->setwall(glm::vec2(156.562256, -249.213287), glm::vec2(197.296082, -76.307938));
+        wall->setwall(glm::vec2(-29.686546, 66.783104), glm::vec2(53.478371, 244.742615));
+        wall->setwall(glm::vec2(-165.320816, -248.419937), glm::vec2(-88.286804, -72.124863));
+        wall->setwall(glm::vec2(-162.399368, 76.539131), glm::vec2(-54.109024, 244.185028), "lake");
+        wall->setwall(glm::vec2(-297.598572, -248.793655), glm::vec2(-188.474152, -82.476753), "lake");
+        wall->setwall(glm::vec2(-496.496490, 74.320007), glm::vec2(-368.915863, 248.594299), "lake");
         wall->setwall(glm::vec2(22.488598, -249.213287), glm::vec2(139.354797, -73.107224), "lake");
         wall->setwall(glm::vec2(-441.235046, -195.966568), glm::vec2(-407.038239, -171.633972), "lake");
         wall->setwall(glm::vec2(110.519859, 170.852798), glm::vec2(144.349182, 198.310333), "lake");
@@ -603,9 +605,9 @@ void App::ValidTask() {
         wall->setwall(glm::vec2(-490.0, -250.0), glm::vec2(-267.868835, -212.427826));
         
 
-        InitializeEnemy_4(glm::vec2 (42.266777, -181.814926));
-        InitializeEnemy_4(glm::vec2 (42.266777, -5.069035));
-        InitializeEnemy_4(glm::vec2 (42.266777, 137.183334));
+        InitializeEnemy_4(glm::vec2 (42.266777, -181.814926),200);
+        InitializeEnemy_4(glm::vec2 (42.266777, -5.069035),200);
+        InitializeEnemy_4(glm::vec2 (42.266777, 137.183334),200);
         InitializeEnemy_4(glm::vec2 (-143.983749, -47.296814));
 
         giraffe_exp = 0;

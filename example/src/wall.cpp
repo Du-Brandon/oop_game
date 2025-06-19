@@ -23,6 +23,7 @@ void Wall::setwall(glm::vec2 coordinate_left_bottom,glm::vec2  coordinate_right_
 void Wall::setwall(glm::vec2 coordinate_left_bottom, glm::vec2 coordinate_right_top, std::string name) {
     std::get<2>(square_coordinate_tuple) = name;
     set_Square_Coordinate(coordinate_left_bottom, coordinate_right_top);
+    // std::get<2>(square_coordinate_tuple).clear();
     is_circle = false;
 }
 
