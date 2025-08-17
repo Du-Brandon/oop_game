@@ -42,7 +42,7 @@ void Arrow::setWall(std::shared_ptr<Wall> wall) {
 void Arrow::Start(){
     // std::cout << "Shoot Arrow" << std::endl;
     bool_skill_rebound_arrow = m_Giraffe_ ->getSkill_rebound_arrow();
-    this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
+    this -> SetDrawable(std::make_shared<Util::Image>("assets/sprites/arrow.png"));
     this -> SetZIndex(6);
 
     m_ShouldDelete = false;
@@ -67,7 +67,7 @@ void Arrow::Start(bool rebound_arrow){
 void Arrow::Start_b(std::string skill_name){
     
     if (skill_name == "back_arrow") {
-        this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
+        this -> SetDrawable(std::make_shared<Util::Image>("assets/sprites/arrow.png"));
         this -> SetZIndex(6);
 
         m_ShouldDelete = false;
@@ -85,7 +85,7 @@ void Arrow::Start_b(std::string skill_name){
         rotation =atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
     }
     else if (skill_name == "right_arrow") {
-        this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
+        this -> SetDrawable(std::make_shared<Util::Image>("assets/sprites/arrow.png"));
         this -> SetZIndex(6);
 
         m_ShouldDelete = false;
@@ -104,7 +104,7 @@ void Arrow::Start_b(std::string skill_name){
         rotation = atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
     }
     else if (skill_name == "left_arrow") {
-        this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
+        this -> SetDrawable(std::make_shared<Util::Image>("assets/sprites/arrow.png"));
         this -> SetZIndex(6);
 
         m_ShouldDelete = false;
@@ -124,7 +124,7 @@ void Arrow::Start_b(std::string skill_name){
     
     }
     else if (skill_name == "incline_arrow_1") {
-        this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
+        this -> SetDrawable(std::make_shared<Util::Image>("assets/sprites/arrow.png"));
         this -> SetZIndex(6);
 
         m_ShouldDelete = false;
@@ -145,7 +145,7 @@ void Arrow::Start_b(std::string skill_name){
         rotation = atan2(m_Direction.y, m_Direction.x) + 3.1415926f * 1.75f;
     }
     else if (skill_name == "incline_arrow_2") {
-        this -> SetDrawable(std::make_shared<Util::Image>("../assets/sprites/arrow.png"));
+        this -> SetDrawable(std::make_shared<Util::Image>("assets/sprites/arrow.png"));
         this -> SetZIndex(6);
 
         m_ShouldDelete = false;

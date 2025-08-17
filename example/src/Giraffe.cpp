@@ -19,7 +19,7 @@
 void Giraffe::Start() {
 
     this->SetDrawable(
-        std::make_shared<Util::Image>("../assets/sprites/sticker.png"));
+        std::make_shared<Util::Image>("assets/sprites/sticker.png"));
     this->SetZIndex(6);
     scale = glm::vec2(0.25f, 0.25f);
     pos = glm::vec2(-420, 0);

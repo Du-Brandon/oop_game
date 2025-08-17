@@ -17,7 +17,7 @@ void EnemyArrow::setWall(std::shared_ptr<Wall> wall) {
 
 void EnemyArrow::Start(std::string image_path , glm::vec2 direction, std::string enemy_arrow_name, bool rebound) {
     if (image_path == "") {
-        image_path = "../assets/sprites/redball.png"; // 使用默認圖片路徑
+        image_path = "assets/sprites/redball.png"; // 使用默認圖片路徑
     }
     this->SetDrawable(std::make_shared<Util::Image>(image_path));
     this->SetZIndex(6);

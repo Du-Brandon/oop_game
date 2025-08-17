@@ -160,7 +160,7 @@ private:
     std::string m_Word = ""; // 攻擊力顯示的字串
     std::string parameter = "0"; // 攻擊力顯示的參數
 
-    std::string m_Font = "../assets/fonts/wb.ttf";
+    std::string m_Font = "assets/fonts/wb.ttf";
     int m_Size = 32;
     int level = 1; // 等級
     std::shared_ptr<Util::Text> m_Text; // 用於顯示角色攻擊力，血量，無敵

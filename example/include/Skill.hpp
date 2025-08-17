@@ -91,7 +91,7 @@ private:
     glm::vec2 &pos = m_Transform.translation; // 位置
     glm::vec2 &scale = m_Transform.scale; // 縮放比例
 
-    std::string m_Font = "../assets/fonts/wb.ttf";
+    std::string m_Font = "assets/fonts/wb.ttf";
     int m_Size = 36;
     std::shared_ptr<Util::Text> m_Text;
 

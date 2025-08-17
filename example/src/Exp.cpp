@@ -9,7 +9,7 @@ void exp_pic::Start(){
 
     scale = {0.0f,1.0f};
     this->SetDrawable(
-        std::make_shared<Util::Image>("../assets/other/exp.png"));
+        std::make_shared<Util::Image>("assets/other/exp.png"));
     this->SetZIndex(7);
     pos = glm::vec2(-200.0f, 300.0f);
     max_exp_list.clear();
@@ -85,7 +85,7 @@ int exp_pic::getLevel() const{
 
 void exp_pic_background::Start(){
     this->SetDrawable(
-        std::make_shared<Util::Image>("../assets/other/exp_.png"));
+        std::make_shared<Util::Image>("assets/other/exp_.png"));
     this->SetZIndex(6);
     scale = {1.0f,1.0f};
     // this->setpos(glm::vec2(0.0f,230.0f));
@@ -96,7 +96,7 @@ void exp_pic_background::setpos(glm::vec2 position){
 }
 
 void exp_pic_text::Start(){
-    m_Font = "../assets/fonts/Inter.ttf";
+    m_Font = "assets/fonts/Inter.ttf";
     m_Size = 36;
     m_LevelText = std::make_unique<Util::Text>(m_Font, m_Size, fmt::format("Level: {}", level),
         Util::Color::FromRGB(255, 255, 255));

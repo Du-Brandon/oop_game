@@ -39,14 +39,14 @@ void App::Start() {
 
         std::shared_ptr<Enemy_2> m_Enemy2 = std::make_shared<Enemy_2>();
         m_Enemy2->SetDrawable( 
-            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+            std::make_shared<Util::Image>("assets/sprites/enemy.png"));
         m_Enemy2->SetZIndex(5);
         m_Enemy2->Start(glm::vec2(100, 100)); // 初始化敵人的位置
         m_Enemy2->setWall(wall);
         m_Enemy2->setHP(-100); // 設定敵人的血量
     
         m_Enemy->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+            std::make_shared<Util::Image>("assets/sprites/enemy.png"));
         m_Enemy->SetZIndex(5);
         m_Enemy->Start(glm::vec2(100,100)); // 初始化敵人的位置
         m_Enemy->setWall(wall);

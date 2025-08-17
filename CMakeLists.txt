@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 project(PracticalToolsForSimpleDesign)
 
+# 設定為 Release 模式以優化檔案大小和效能
+set(CMAKE_BUILD_TYPE Release)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -16,6 +19,8 @@ else()
     set(TARGET_COMPILE_OPTIONS
         -Wall -Wextra -pedantic
     )
+    # Release 模式優化設定
+    set(CMAKE_CXX_FLAGS_RELEASE "-O2 -s -DNDEBUG")
     # 靜態連結 MinGW 運行時庫
     if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
         set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static-libgcc -static-libstdc++ -static")

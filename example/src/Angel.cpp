@@ -4,7 +4,7 @@
 
 void Angel::Start(glm::vec2 coordinate) {
     this->SetDrawable(
-        std::make_shared<Util::Image>("../assets/sprites/999.png"));
+        std::make_shared<Util::Image>("assets/sprites/999.png"));
     this->SetZIndex(10);
 
     pos = coordinate;

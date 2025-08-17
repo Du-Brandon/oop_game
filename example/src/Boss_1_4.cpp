@@ -2,7 +2,7 @@
 
 void Boss_1_4::Start(glm::vec2 coordinate) {
     this->SetDrawable(
-        std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+        std::make_shared<Util::Image>("assets/sprites/enemy.png"));
     this->SetZIndex(5);
         
     final_wish = "Add player's hp";

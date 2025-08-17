@@ -3,25 +3,25 @@
 
 Skill_choose::Skill_choose() {
     skills = {
-        {"雙重射擊", [this]() { this->trigger_skill1(); }, "../assets/buttons/double_arrow.png"},
-        {"反彈箭矢", [this]() { this->trigger_skill2(); }, "../assets/buttons/rebound_arrow.png"},
-        {"聰明", [this]() { this->trigger_skill3(); }, "../assets/buttons/smart.png"},
-        {"憤怒", [this]() { this->trigger_skill4(); }, "../assets/buttons/angry.png"},
-        {"加速攻擊", [this]() { this->trigger_skill5(); }, "../assets/buttons/atk_speed.png"},
-        {"提升最大血量", [this]() { this->trigger_skill6(); }, "../assets/buttons/add_hp.png"},
-        {"無敵", [this]() { this->trigger_skill7(); }, "../assets/buttons/invincible.png"},
-        {"背向射擊", [this]() { this->trigger_skill8(); }, "../assets/buttons/back_arrow.png"},
-        {"燃燒箭矢", [this]() { this->trigger_skill9(); }, "../assets/buttons/burn_arrow.png"},
-        {"攻擊力提升", [this]() { this->trigger_skill10(); }, "../assets/buttons/attack_power.png"},
-        {"兩側射擊", [this]() { this->trigger_skill11(); }, "../assets/buttons/two_side_arrow.png"},
-        {"斜向射擊", [this]() { this->trigger_skill12(); }, "../assets/buttons/diagonal_arrow.png"},
+        {"雙重射擊", [this]() { this->trigger_skill1(); }, "assets/buttons/double_arrow.png"},
+        {"反彈箭矢", [this]() { this->trigger_skill2(); }, "assets/buttons/rebound_arrow.png"},
+        {"聰明", [this]() { this->trigger_skill3(); }, "assets/buttons/smart.png"},
+        {"憤怒", [this]() { this->trigger_skill4(); }, "assets/buttons/angry.png"},
+        {"加速攻擊", [this]() { this->trigger_skill5(); }, "assets/buttons/atk_speed.png"},
+        {"提升最大血量", [this]() { this->trigger_skill6(); }, "assets/buttons/add_hp.png"},
+        {"無敵", [this]() { this->trigger_skill7(); }, "assets/buttons/invincible.png"},
+        {"背向射擊", [this]() { this->trigger_skill8(); }, "assets/buttons/back_arrow.png"},
+        {"燃燒箭矢", [this]() { this->trigger_skill9(); }, "assets/buttons/burn_arrow.png"},
+        {"攻擊力提升", [this]() { this->trigger_skill10(); }, "assets/buttons/attack_power.png"},
+        {"兩側射擊", [this]() { this->trigger_skill11(); }, "assets/buttons/two_side_arrow.png"},
+        {"斜向射擊", [this]() { this->trigger_skill12(); }, "assets/buttons/diagonal_arrow.png"},
         
     };
     present = {
-        {"加速攻擊", [this]() { this->trigger_skill5(); }, "../assets/buttons/atk_speed.png"},
-        {"提升最大血量", [this]() { this->trigger_skill6(); }, "../assets/buttons/add_hp.png"},
-        {"補血", [this]() { this->trigger_skill0(); }, "../assets/buttons/add_hp.png"},
-        // {"無敵", [this]() { this->trigger_skill7(); }, "../assets/buttons/invincible.png"}
+        {"加速攻擊", [this]() { this->trigger_skill5(); }, "assets/buttons/atk_speed.png"},
+        {"提升最大血量", [this]() { this->trigger_skill6(); }, "assets/buttons/add_hp.png"},
+        {"補血", [this]() { this->trigger_skill0(); }, "assets/buttons/add_hp.png"},
+        // {"無敵", [this]() { this->trigger_skill7(); }, "assets/buttons/invincible.png"}
     };
 }
 

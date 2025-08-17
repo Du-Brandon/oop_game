@@ -18,7 +18,7 @@ void Dark_pic::Start() {
 
     // scale = {0.0f, 0.0f};
     this->SetDrawable(
-        std::make_shared<Util::Image>("../assets/other/low.png"));
+        std::make_shared<Util::Image>("assets/other/low.png"));
     this->SetZIndex(20);
     // pos = glm::vec2(0.0f, 0.0f);
     scale = glm::vec2(1024.0f / 1920.0f, 800.0f / 1080.0f);
@@ -46,7 +46,7 @@ void Giraffe::DrawDarkOverlay(){
 // void Giraffe::DrawDarkOverlay() {
 //     std::shared_ptr<Core::Drawable> m_Drawable = nullptr;
 
-//     static std::shared_ptr<Util::Image> overlay = std::make_shared<Util::Image>("../assets/other/low.png");
+//     static std::shared_ptr<Util::Image> overlay = std::make_shared<Util::Image>("assets/other/low.png");
 
 //     // 設定 model 矩陣，將圖片縮放到 1024x800
 //     Core::Matrices matrices;

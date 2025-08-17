@@ -6,7 +6,7 @@
 
 void Enemy_1::Start(glm::vec2 coordinate) {
     this->SetDrawable(
-    std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+    std::make_shared<Util::Image>("assets/sprites/enemy.png"));
     this->SetZIndex(5);
     // 初始化敵人的位置
     pos = coordinate;

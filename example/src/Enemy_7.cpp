@@ -13,7 +13,7 @@
 void Enemy_7::Start(glm::vec2 coordinate) {
     // Logger::info("Enemy_7 Start");
     this->SetDrawable(
-    std::make_shared<Util::Image>("../assets/sprites/enemy7.png"));
+    std::make_shared<Util::Image>("assets/sprites/enemy7.png"));
     this->SetZIndex(5);
 
     m_HP = 400;
@@ -117,7 +117,7 @@ void Enemy_7::shoot(){
     m_arrow->setTarget(shared_from_this());
     m_arrow->setTarget(m_Giraffe);
     m_arrow->setWall(m_wall);
-    m_arrow->Start("../assets/sprites/enemyarrow.png");
+    m_arrow->Start("assets/sprites/enemyarrow.png");
     m_arrow->Setspeed(18.0f); // 設置箭的速度
     m_Arrows.push_back(m_arrow); // 將箭存儲到向量中
     this->AddChild(m_arrow);
@@ -125,7 +125,7 @@ void Enemy_7::shoot(){
 
 void Enemy_7_attack::Start(){
     this->SetDrawable(
-    std::make_shared<Util::Image>("../assets/other/red.png"));
+    std::make_shared<Util::Image>("assets/other/red.png"));
     this->SetZIndex(4);
 
     this->SetPivot(glm::vec2 (1,0));

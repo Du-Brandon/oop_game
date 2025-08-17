@@ -9,7 +9,7 @@ void Enemy_4::Start(glm::vec2 coordinate) {
     move_speed = 1.0f;
     m_HP = 250;
     this->SetZIndex(5);
-    this->SetDrawable(std::make_shared<Util::Image>("../assets/sprites/enemy4.png"));
+    this->SetDrawable(std::make_shared<Util::Image>("assets/sprites/enemy4.png"));
 
     enemy_hp_start();
 }
@@ -125,7 +125,7 @@ void Enemy_4::stone_shoot(std::shared_ptr<EnemyArrow> m_stone , glm::vec2 direct
     m_stone->setTarget(shared_from_this());
     m_stone->setTarget(m_Giraffe);
     m_stone->setWall(m_wall);
-    m_stone->Start("../assets/sprites/redball.png", direction, "stone");
+    m_stone->Start("assets/sprites/redball.png", direction, "stone");
     m_stones.push_back(m_stone); // 將箭存儲到向量中
     this->AddChild(m_stone);
 }

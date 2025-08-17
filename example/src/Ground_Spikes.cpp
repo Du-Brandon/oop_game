@@ -7,7 +7,7 @@
 
 void Ground_Spikes::Start(glm::vec2 pos) {
     this->SetDrawable(
-        std::make_shared<Util::Image>("../assets/sprites/spikes.png"));
+        std::make_shared<Util::Image>("assets/sprites/spikes.png"));
     this->SetZIndex(5);
 
     this -> pos = pos;

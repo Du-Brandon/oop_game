@@ -71,7 +71,7 @@ void App::ValidTask() {
 
         std::shared_ptr<Enemy_3> m_Enemy6 = std::make_shared<Enemy_3>();
         m_Enemy6->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+            std::make_shared<Util::Image>("assets/sprites/enemy.png"));
         m_Enemy6->SetZIndex(5);
         m_Enemy6->Start(glm::vec2(226, 145)); // 初始化敵人的位置
         m_Enemy6->setWall(wall);
@@ -80,7 +80,7 @@ void App::ValidTask() {
         
         std::shared_ptr<Enemy_3> m_Enemy7 = std::make_shared<Enemy_3>();
         m_Enemy7->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+            std::make_shared<Util::Image>("assets/sprites/enemy.png"));
         m_Enemy7->SetZIndex(5);
         m_Enemy7->Start(glm::vec2(226, -140)); // 初始化敵人的位置
         m_Enemy7->setWall(wall);
@@ -89,7 +89,7 @@ void App::ValidTask() {
         
         std::shared_ptr<Enemy_3> m_Enemy8 = std::make_shared<Enemy_3>();
         m_Enemy8->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+            std::make_shared<Util::Image>("assets/sprites/enemy.png"));
         m_Enemy8->SetZIndex(5);
         m_Enemy8->Start(glm::vec2(-289, -156)); // 初始化敵人的位置
         m_Enemy8->setWall(wall);
@@ -98,7 +98,7 @@ void App::ValidTask() {
 
         std::shared_ptr<Enemy_3> m_Enemy9 = std::make_shared<Enemy_3>();
         m_Enemy9->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+            std::make_shared<Util::Image>("assets/sprites/enemy.png"));
         m_Enemy9->SetZIndex(5);
         m_Enemy9->Start(glm::vec2(-289, 156)); // 初始化敵人的位置
         m_Enemy9->setWall(wall);
@@ -187,7 +187,7 @@ void App::ValidTask() {
         
         std::shared_ptr<Enemy_2> m_Enemy13 = std::make_shared<Enemy_2>();
         m_Enemy13->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+            std::make_shared<Util::Image>("assets/sprites/enemy.png"));
         m_Enemy13->SetZIndex(5);
         m_Enemy13->Start(glm::vec2(200, 0)); // 初始化敵人的位置
         m_Enemy13->setWall(wall);
@@ -197,7 +197,7 @@ void App::ValidTask() {
 
         std::shared_ptr<Enemy_3> m_Enemy10 = std::make_shared<Enemy_3>();
         m_Enemy10->SetDrawable(
-            std::make_shared<Util::Image>("../assets/sprites/enemy.png"));
+            std::make_shared<Util::Image>("assets/sprites/enemy.png"));
         m_Enemy10->SetZIndex(5);
         m_Enemy10->Start(glm::vec2(237, 157)); // 初始化敵人的位置
         m_Enemy10->setWall(wall);
