@@ -500,3 +500,7 @@ lib/
 docs/html/
 
 Br_game/
+Adventure_Game_v1.0_Static.zip
+example/include/AssetPath.hpp
+for_AI_debug/
+game_package/

@@ -16,6 +16,10 @@ else()
     set(TARGET_COMPILE_OPTIONS
         -Wall -Wextra -pedantic
     )
+    # 靜態連結 MinGW 運行時庫
+    if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+        set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static-libgcc -static-libstdc++ -static")
+    endif()
 endif()
 
 if (WIN32 AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
@@ -178,11 +182,9 @@ target_include_directories(PTSD PRIVATE
     ${INCLUDE_DIR}
 )
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
-    target_compile_definitions(PTSD PRIVATE PTSD_ASSETS_DIR="${CMAKE_CURRENT_SOURCE_DIR}/assets")
+    target_compile_definitions(PTSD PRIVATE PTSD_ASSETS_DIR="./assets")
 else()
-    # TODO
-    message(AUTHOR_WARNING "relative PTSD_ASSETS_DIR is WIP, Please use `-DCMAKE_BUILD_TYPE=Debug` build for now.")
-    target_compile_definitions(PTSD PRIVATE PTSD_ASSETS_DIR="${CMAKE_CURRENT_SOURCE_DIR}/assets")
+    target_compile_definitions(PTSD PRIVATE PTSD_ASSETS_DIR="./assets")
 endif()
 if (${PTSD_ENABLE_PCH})
     target_precompile_headers(PTSD PRIVATE
@@ -214,7 +216,7 @@ target_include_directories(Example PRIVATE
     ${EXAMPLE_DIR}/include
 )
 
-target_compile_definitions(Example PRIVATE ASSETS_DIR="${CMAKE_CURRENT_SOURCE_DIR}/assets")
+target_compile_definitions(Example PRIVATE ASSETS_DIR="./assets")
 
 enable_testing()
 
